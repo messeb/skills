@@ -14,12 +14,6 @@ Register this marketplace as a source in Claude Code:
 /plugin marketplace add https://github.com/messeb/skills
 ```
 
-### Browse available plugins
-
-```
-/plugin marketplace browse messeb
-```
-
 ### Install a plugin
 
 ```
@@ -39,6 +33,11 @@ Register this marketplace as a source in Claude Code:
 ### `general-developer`
 
 Language-agnostic software engineering principles applicable to any codebase and technology stack.
+
+**Installation**
+```
+/plugin install general-developer@messeb
+```
 
 **Agent**
 
@@ -65,17 +64,17 @@ Language-agnostic software engineering principles applicable to any codebase and
 
 ---
 
-## Usage with Claude Code CLI
+## Usage with Coding CLI
 
 ### Run a skill
 
 Invoke any skill by its name as a slash command inside a Claude Code session:
 
 ```
-/github-repo
-/dry
-/solid
-/security
+/general-developer:github-repo
+/general-developer:dry
+/general-developer:solid
+/general-developer:security
 ```
 
 Claude will execute the skill's instructions against your current working directory.

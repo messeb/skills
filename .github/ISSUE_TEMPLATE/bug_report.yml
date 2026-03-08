@@ -1,0 +1,42 @@
+name: Bug Report
+description: Report incorrect or broken skill/agent behavior
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to report this!
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What did the skill or agent do wrong?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Run `/skill-name` in Claude Code
+        2. With codebase that has ...
+        3. See incorrect output
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      value: |
+        - Skill/Agent name:
+        - Claude Code version:
