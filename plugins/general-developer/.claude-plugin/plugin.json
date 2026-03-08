@@ -1,0 +1,6 @@
+{
+  "name": "general-developer",
+  "description": "Adds skills for general software development.",
+  "version": "1.0.0",
+  "agents": ["./agents/general-developer.md"]
+}
