@@ -61,6 +61,8 @@ Language-agnostic software engineering principles applicable to any codebase and
 | `bduf` | Big Design Up Front — identifies over-planned, under-iterated architecture |
 | `security` | OWASP Top 10, secrets management, authentication, and dependency hygiene |
 | `testing` | Testing pyramid balance, coverage gaps, and test anti-patterns |
+| `husky` | Husky pre-commit hooks — lint-staged integration, commitlint, hook timing, and CI parity |
+| `dangerfile` | Danger PR automation — rule authoring, severity levels, actionable messaging, and CI integration |
 
 ### `frontend-developer`
 

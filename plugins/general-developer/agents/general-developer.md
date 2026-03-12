@@ -25,6 +25,8 @@ Currently registered skills:
 | `testing` | Testing patterns and coverage |
 | `github-repo` | Repository setup and community files |
 | `cicd` | Pipeline setup for repository and tech stack |
+| `husky` | Pre-commit hooks — lint-staged, commitlint, hook hygiene |
+| `dangerfile` | PR automation — rule authoring, CI integration, actionable messaging |
 
 If new skill directories are present that are not in this list, include them in the audit automatically.
 
