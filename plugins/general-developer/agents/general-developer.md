@@ -24,6 +24,7 @@ Currently registered skills:
 | `security` | Security best practices |
 | `testing` | Testing patterns and coverage |
 | `github-repo` | Repository setup and community files |
+| `cicd` | Pipeline setup for repository and tech stack |
 
 If new skill directories are present that are not in this list, include them in the audit automatically.
 

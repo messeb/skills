@@ -8,6 +8,7 @@
       "name": "general-developer",
       "description": "Language-agnostic software development principles applicable to all developers",
       "source": "./plugins/general-developer",
+      "version": "1.0.1"
       "version": "1.0.0"
     }
   ]
