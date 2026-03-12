@@ -62,6 +62,41 @@ Language-agnostic software engineering principles applicable to any codebase and
 | `security` | OWASP Top 10, secrets management, authentication, and dependency hygiene |
 | `testing` | Testing pyramid balance, coverage gaps, and test anti-patterns |
 
+### `frontend-developer`
+
+Skills and an audit agent for modern frontend development — Vue, Nuxt, React, Vite, Turborepo, pnpm, testing, accessibility, performance, and more.
+
+**Installation**
+```
+/plugin install frontend-developer@messeb
+```
+
+**Agent**
+
+| Agent | Description |
+|-------|-------------|
+| `frontend-developer` | Audits a frontend codebase against all skills, detects the project stack, produces a structured report with severity-ranked findings grouped by Testing / Framework / Tooling / Architecture, and offers to apply fixes |
+
+**Skills**
+
+| Category | Skill | Description |
+|----------|-------|-------------|
+| Testing | `unit-testing` | Component and composable unit tests with Vitest/Jest, Vue Test Utils, React Testing Library, mocking, and test data factories |
+| Testing | `storybook` | Story authoring with CSF3, interaction tests, accessibility checks, and visual regression with Chromatic |
+| Testing | `e2e-testing` | Playwright end-to-end tests — page objects, auth state reuse, network interception, and CI integration |
+| Testing | `a11y-testing` | WCAG 2.1 AA compliance, axe-core, keyboard navigation, ARIA patterns, and screen reader testing |
+| Framework | `vue` | Vue 3 Composition API, reactivity model, composables, `<script setup>`, performance, and common pitfalls |
+| Framework | `nuxt` | Nuxt 3 rendering modes (SSR/SSG/ISR/hybrid), `useFetch`, routing conventions, middleware, and SEO |
+| Tooling | `vite` | Vite config best practices — plugins, environment variables, chunk splitting, and build optimization |
+| Tooling | `turborepo` | Turborepo monorepo setup — `turbo.json` pipeline, caching strategy, task dependencies, and CI integration |
+| Tooling | `pnpm` | pnpm workspace — catalog for centralized versions, filtering, lockfile discipline, and Changesets |
+| Tooling | `build-pipeline` | Full GitHub Actions CI/CD — lint, type-check, test, build, preview deploy, E2E gate, and release stages |
+| Architecture | `component-design` | Props API design, slots, atomic design, avoiding prop drilling, headless components, and compound patterns |
+| Architecture | `state-management` | Choosing between local state, TanStack Query (server state), Pinia/Zustand (global state), and form libraries |
+| Architecture | `performance` | Core Web Vitals, bundle analysis, code splitting, image optimization, list virtualization, and rendering performance |
+| Architecture | `css-architecture` | Design tokens, Tailwind CSS, CSS Modules, scoped styles, dark mode, and specificity management |
+| Architecture | `api-layer` | Typed HTTP client, OpenAPI codegen, centralized error handling, token refresh, and MSW for testing |
+
 ---
 
 ## Usage with Coding CLI
@@ -71,25 +106,27 @@ Language-agnostic software engineering principles applicable to any codebase and
 Invoke any skill by its name as a slash command inside a Claude Code session:
 
 ```
-/general-developer:github-repo
 /general-developer:dry
-/general-developer:solid
 /general-developer:security
+/frontend-developer:vue
+/frontend-developer:performance
+/frontend-developer:a11y-testing
 ```
 
 Claude will execute the skill's instructions against your current working directory.
 
 ### Run the audit agent
 
-The `general-developer` agent checks your codebase against **all skills at once** and produces a prioritised report:
+Each plugin ships an audit agent that checks your codebase against **all its skills at once** and produces a prioritised report:
 
 ```
 /general-developer
+/frontend-developer
 ```
 
 The agent will:
-1. Explore your codebase structure
-2. Run every skill as an audit lens
+1. Detect the project's tech stack and structure
+2. Run every relevant skill as an audit lens
 3. Output a summary table with `high / medium / low` findings per skill
 4. Offer to apply fixes one by one
 
@@ -100,16 +137,26 @@ The agent will:
 ```
 skills/
 ├── .claude-plugin/
-│   └── marketplace.json          # Marketplace index
+│   └── marketplace.json              # Marketplace index
 └── plugins/
-    └── general-developer/
+    ├── general-developer/
+    │   ├── .claude-plugin/
+    │   │   └── plugin.json           # Plugin manifest (registers agents)
+    │   ├── agents/
+    │   │   └── general-developer.md
+    │   └── skills/
+    │       ├── dry/SKILL.md
+    │       ├── security/SKILL.md
+    │       └── ...
+    └── frontend-developer/
         ├── .claude-plugin/
-        │   └── plugin.json       # Plugin manifest (registers agents)
+        │   └── plugin.json
         ├── agents/
-        │   └── general-developer.md
+        │   └── frontend-developer.md
         └── skills/
-            ├── github-repo/SKILL.md
-            ├── dry/SKILL.md
+            ├── unit-testing/SKILL.md
+            ├── vue/SKILL.md
+            ├── vite/SKILL.md
             └── ...
 ```
 
