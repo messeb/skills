@@ -96,6 +96,7 @@ Skills and an audit agent for modern frontend development — Vue, Nuxt, React, 
 | Architecture | `performance` | Core Web Vitals, bundle analysis, code splitting, image optimization, list virtualization, and rendering performance |
 | Architecture | `css-architecture` | Design tokens, Tailwind CSS, CSS Modules, scoped styles, dark mode, and specificity management |
 | Architecture | `api-layer` | Typed HTTP client, OpenAPI codegen, centralized error handling, token refresh, and MSW for testing |
+| Framework | `astro` | Astro Islands Architecture — hydration directives, content collections, SSR/SSG/hybrid modes, and cross-island state |
 
 ---
 
@@ -108,7 +109,10 @@ Invoke any skill by its name as a slash command inside a Claude Code session:
 ```
 /general-developer:dry
 /general-developer:security
+/general-developer:husky
+/general-developer:dangerfile
 /frontend-developer:vue
+/frontend-developer:astro
 /frontend-developer:performance
 /frontend-developer:a11y-testing
 ```
