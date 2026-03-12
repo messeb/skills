@@ -1,0 +1,6 @@
+{
+  "name": "frontend-developer",
+  "description": "Adds skills for frontend software development.",
+  "version": "1.0.0",
+  "agents": ["./agents/frontend-developer.md"]
+}
