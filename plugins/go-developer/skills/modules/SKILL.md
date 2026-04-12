@@ -10,7 +10,7 @@ description: Go modules — go.mod setup, dependency management, versioning, Go 
 go mod init github.com/myorg/myapp
 ```
 
-```
+```text
 # go.mod
 module github.com/myorg/myapp
 
@@ -78,7 +78,7 @@ go mod tidy && git diff --exit-code go.sum
 
 Go modules follow semantic versioning. Major version bumps require a module path change.
 
-```
+```text
 v0.x.y → no stability guarantee
 v1.x.y → stable API
 v2.x.y → breaking changes → module path becomes .../v2
@@ -111,7 +111,7 @@ go get github.com/some/package@abc1234
 
 Use `replace` to point a dependency at a local checkout during development.
 
-```
+```text
 # go.mod
 replace github.com/myorg/shared => ../shared
 ```
@@ -132,7 +132,7 @@ go work init ./app ./shared ./tools
 go work use ./another-module
 ```
 
-```
+```text
 # go.work
 go 1.23.0
 
@@ -163,11 +163,13 @@ go test -mod=vendor ./...
 ```
 
 Use vendoring when:
+
 - Building in air-gapped environments
 - You need to audit or patch dependencies
 - You want reproducible builds without a module proxy
 
 Skip vendoring when:
+
 - You trust the module proxy and GOPROXY is reliable
 - Repo size is a concern (vendor/ can be large)
 
@@ -213,6 +215,7 @@ go get -u ./...            # upgrade all (use carefully — review go.sum diff)
 ### Minimal version selection (MVS)
 
 Go's MVS algorithm selects the **minimum** version of each dependency that satisfies all requirements. This means:
+
 - Adding a dependency never silently upgrades others
 - Builds are reproducible without a lock file beyond `go.sum`
 - Upgrading is explicit, not implicit

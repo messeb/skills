@@ -9,6 +9,7 @@ description: Turborepo monorepo setup — workspace structure, turbo.json pipeli
 Turborepo adds task orchestration and caching on top of a package manager workspace. It does not replace the workspace — it accelerates it.
 
 Key benefits:
+
 - **Incremental builds**: only rebuild packages that changed
 - **Remote caching**: share build artifacts across CI runs and machines
 - **Parallel execution**: run tasks across packages concurrently where dependencies allow
@@ -18,7 +19,7 @@ Key benefits:
 
 ## Workspace Structure
 
-```
+```text
 monorepo/
 ├── apps/
 │   ├── web/              # Main application (Next.js / Nuxt)
@@ -258,6 +259,7 @@ turbo build --output-logs=new-only
 ### What gets cached
 
 Each task is cached by its **inputs hash**. Inputs:
+
 - Files matching `inputs` glob
 - Environment variables listed in `env`
 - The task's own config

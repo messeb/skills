@@ -28,7 +28,7 @@ npx husky init
 }
 ```
 
-```
+```text
 .husky/
 ├── pre-commit      ← runs before every commit
 ├── commit-msg      ← validates the commit message
@@ -107,7 +107,8 @@ export default {
 ```
 
 Valid commit message format:
-```
+
+```text
 <type>(<scope>): <subject>
 
 feat(auth): add OAuth2 login flow

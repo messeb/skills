@@ -8,7 +8,7 @@ description: Frontend unit testing with Vitest/Jest — component tests, composa
 
 Unit tests for frontend code verify **behavior, not implementation**. Test what the component does, not how it does it internally.
 
-```
+```text
         /\
        /  \  E2E (Playwright, Cypress)
       /____\
@@ -389,7 +389,7 @@ afterAll(() => server.close())
 
 ## Test Organization
 
-```
+```text
 tests/
 ├── setup.ts
 ├── utils/

@@ -35,6 +35,7 @@ If new skill directories are present that are not in this list, include them in 
 ## Step 2 — Explore the codebase
 
 Before running individual skill checks, build a map of the codebase:
+
 - Primary language(s) and framework(s)
 - Directory structure and layering (e.g. src/, tests/, docs/)
 - Entry points, key modules, and domain logic locations
@@ -52,6 +53,7 @@ For each skill, apply its principles as an audit lens on the codebase. Focus on 
 ### Code quality skills (dry, kiss, yagni, solid, soc, tda, die, gigo, bduf)
 
 For each:
+
 1. Identify the top 3–5 most significant violations in the codebase
 2. For each violation: note the file, line range, and a one-sentence explanation of the issue
 3. Assign a severity: `high` (actively harmful), `medium` (should fix soon), `low` (worth noting)
@@ -60,6 +62,7 @@ For each:
 ### Security skill
 
 Check against the OWASP Top 10 and the security skill's checklist:
+
 - Input validation and injection risks
 - Authentication and authorization patterns
 - Secrets in code or config files
@@ -72,6 +75,7 @@ Mark any `high` severity finding as a blocker.
 ### Testing skill
 
 Evaluate:
+
 - Test pyramid balance (unit / integration / E2E ratio)
 - Coverage of domain logic and business rules
 - Presence of anti-patterns (over-mocking, testing implementation details, flaky tests)
@@ -80,6 +84,7 @@ Evaluate:
 ### github-repo skill
 
 Run in **Mode B — Update existing repo**:
+
 - Audit all expected community and configuration files against the github-repo skill's checklist
 - Flag missing files as `high` if they affect security or contributor experience (e.g. `SECURITY.md`, `CODEOWNERS`), `medium` otherwise
 - Flag outdated files (e.g. legacy `.md` issue templates, missing `export-ignore` in `.gitattributes`)
@@ -90,7 +95,7 @@ Run in **Mode B — Update existing repo**:
 
 Output a structured report in this format:
 
-```
+```text
 # General Developer Audit Report
 
 ## Summary
@@ -162,6 +167,7 @@ Ask the user which fixes to apply, then execute them one by one, confirming each
 ## Step 5 — Apply fixes
 
 For each fix the user approves:
+
 - Apply the change using the relevant skill's guidance
 - Show a brief diff or summary of what changed
 - Move to the next fix

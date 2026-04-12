@@ -16,7 +16,7 @@ The goal is not just to reject bad input, but to **catch it at the boundary wher
 
 Validation must happen at every point where data crosses a trust boundary. Inner layers can trust data that has already been validated; they should not re-validate, but they also should not assume.
 
-```
+```text
 External input (API, file, queue, CLI)
         ↓  ← validate here: shape, type, format, presence
 Domain model

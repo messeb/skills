@@ -6,7 +6,7 @@ description: Go testing — table-driven tests, subtests, testify, mocks with in
 
 ## Test File Conventions
 
-```
+```text
 internal/service/
 ├── user_service.go
 └── user_service_test.go   ← same package (white-box) or _test suffix (black-box)

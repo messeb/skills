@@ -160,7 +160,7 @@ class EmailService:
 
 ### Classic Layers (Dependency Direction: Top → Bottom)
 
-```
+```text
 ┌─────────────────────────────────┐
 │   Presentation Layer            │  ← API, UI, Controllers
 ├─────────────────────────────────┤
@@ -378,4 +378,3 @@ When designing a module, ask:
 3. **Can I change this concern without affecting others?**
 4. **Are dependencies pointing in the right direction?**
 5. **Is business logic mixed with infrastructure?**
-

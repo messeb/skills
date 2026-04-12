@@ -14,7 +14,7 @@ A component should do one thing well. If you need "and" to describe it, split it
 
 ## Component Granularity — Atomic Design
 
-```
+```text
 Atoms       → AppButton, AppInput, AppBadge, AppIcon
 Molecules   → SearchField (Input + Button), FormField (Label + Input + Error)
 Organisms   → NavigationBar, ProductCard, UserProfileHeader
@@ -23,6 +23,7 @@ Pages       → DashboardPage, LoginPage
 ```
 
 Rules:
+
 - Atoms have no business logic — only visual variants and user interaction events
 - Molecules compose atoms with minor coordination logic
 - Organisms contain business-meaningful structure; may connect to stores
@@ -236,6 +237,7 @@ const { isSelected, toggleRow } = inject(TableContextKey)!
 ### When to split a component
 
 Split when:
+
 - The component has more than ~200 lines of template
 - Part of the component could be reused elsewhere
 - Part of the component has different update frequency (static header vs dynamic body)
@@ -245,7 +247,7 @@ Split when:
 
 Don't split just because it looks big. Premature decomposition creates indirection without value.
 
-```
+```text
 One Form.vue at 300 lines
   ↓ don't split into
 NameSection.vue + AddressSection.vue + PaymentSection.vue
@@ -258,7 +260,7 @@ NameSection.vue + AddressSection.vue + PaymentSection.vue
 
 ### Events flow up, data flows down
 
-```
+```text
 ParentPage
   ↓ props (data down)
   ProductList

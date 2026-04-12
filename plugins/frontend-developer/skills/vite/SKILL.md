@@ -7,6 +7,7 @@ description: Vite configuration best practices — plugins, environment variable
 ## Core Concepts
 
 Vite is a build tool with two modes:
+
 - **Dev**: native ES modules in the browser + HMR via esbuild
 - **Build**: Rollup bundler producing optimized production output
 
@@ -61,7 +62,7 @@ export default defineConfig(({ command, mode }) => {
 
 Vite exposes only variables prefixed with `VITE_` to client-side code. This is a security boundary.
 
-```
+```text
 .env                # loaded always
 .env.local          # loaded always, git-ignored
 .env.development    # loaded in dev mode only

@@ -108,6 +108,7 @@ class ConcreteOrderProcessor(AbstractOrderProcessor):
 ## Warning Signs
 
 **Too much BDUF:**
+
 - Design effort exceeds implementation effort
 - Large class hierarchies or interfaces with a single implementation
 - Configuration systems with options that are never set
@@ -115,6 +116,7 @@ class ConcreteOrderProcessor(AbstractOrderProcessor):
 - Code structured around requirements that don't exist yet
 
 **Too little design:**
+
 - No architectural discussion before building critical systems
 - Security, data model, or API shape figured out during implementation
 - High-risk integrations started without a spike
@@ -126,7 +128,7 @@ class ConcreteOrderProcessor(AbstractOrderProcessor):
 
 ### Design architecture, defer details
 
-```
+```text
 ✅ Decide upfront:          ⏸ Let emerge during development:
 - Layer boundaries          - Specific class structures
 - Data flow direction       - Method signatures
@@ -136,7 +138,7 @@ class ConcreteOrderProcessor(AbstractOrderProcessor):
 
 ### Risk-driven design
 
-```
+```text
 High risk → design first:   Low risk → design later:
 - Security mechanisms       - UI layout
 - Public API contracts      - Reporting logic

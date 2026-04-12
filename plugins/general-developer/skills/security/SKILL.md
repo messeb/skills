@@ -13,6 +13,7 @@ Input validation is the first line of defense against injection attacks. Always 
 ### SQL Injection Prevention
 
 **❌ Vulnerable to SQL Injection:**
+
 ```python
 # Python
 def get_user(user_id):
@@ -27,6 +28,7 @@ db.query(getUserQuery);
 ```
 
 **✅ Safe - Using Parameterized Queries:**
+
 ```python
 # Python with parameterized queries
 def get_user(user_id):
@@ -51,6 +53,7 @@ ResultSet rs = stmt.executeQuery();
 ### XSS (Cross-Site Scripting) Prevention
 
 **❌ Vulnerable to XSS:**
+
 ```javascript
 // Directly inserting user content
 element.innerHTML = userInput;
@@ -63,6 +66,7 @@ return f"<h1>Welcome {username}</h1>"
 ```
 
 **✅ Safe - Proper Escaping:**
+
 ```javascript
 // Use textContent or properly escape
 element.textContent = userInput;
@@ -93,6 +97,7 @@ import DOMPurify from 'isomorphic-dompurify';
 ### Command Injection Prevention
 
 **❌ Vulnerable to Command Injection:**
+
 ```python
 # Python
 import os
@@ -107,6 +112,7 @@ exec(`ls ${userInput}`);
 ```
 
 **✅ Safe - Avoid Shell Execution:**
+
 ```python
 # Python - use safe alternatives
 import subprocess
@@ -132,6 +138,7 @@ const content = await fs.readFile(filename, 'utf8');
 ### Path Traversal Prevention
 
 **❌ Vulnerable to Path Traversal:**
+
 ```python
 # Python
 filepath = os.path.join('/uploads', request.args.get('file'))
@@ -140,6 +147,7 @@ with open(filepath, 'r') as f:
 ```
 
 **✅ Safe - Validate and Normalize Paths:**
+
 ```python
 # Python
 import os
@@ -175,6 +183,7 @@ if (!filepath.startsWith(UPLOAD_DIR)) {
 ### Password Hashing
 
 **❌ Insecure Password Storage:**
+
 ```python
 # Never store plaintext passwords
 user.password = password
@@ -185,6 +194,7 @@ user.password = hashlib.md5(password.encode()).hexdigest()
 ```
 
 **✅ Secure Password Hashing:**
+
 ```python
 # Python - use bcrypt or Argon2
 import bcrypt
@@ -227,6 +237,7 @@ const match = await bcrypt.compare(password, hashed);
 ### JWT Best Practices
 
 **❌ Insecure JWT Implementation:**
+
 ```javascript
 // Using 'none' algorithm
 const token = jwt.sign({userId: user.id}, '', {algorithm: 'none'});
@@ -239,6 +250,7 @@ const token = jwt.sign({userId: user.id}, process.env.JWT_SECRET);
 ```
 
 **✅ Secure JWT Implementation:**
+
 ```javascript
 // Node.js
 const jwt = require('jsonwebtoken');
@@ -304,6 +316,7 @@ except jwt.InvalidTokenError:
 ### Session Management
 
 **✅ Secure Session Configuration:**
+
 ```javascript
 // Express.js
 const session = require('express-session');
@@ -342,6 +355,7 @@ Session(app)
 ### OAuth2 Implementation
 
 **✅ OAuth2 Best Practices:**
+
 ```javascript
 // Use PKCE (Proof Key for Code Exchange) for public clients
 const crypto = require('crypto');
@@ -380,6 +394,7 @@ const tokenResponse = await fetch(`${authServer}/token`, {
 ### Authorization Patterns
 
 **✅ Role-Based Access Control (RBAC):**
+
 ```python
 # Python decorator
 from functools import wraps
@@ -430,6 +445,7 @@ app.get('/admin/users', requireRole('admin', 'superadmin'), (req, res) => {
 ### Encryption at Rest
 
 **✅ Encrypting Sensitive Data:**
+
 ```python
 # Python - using cryptography library
 from cryptography.fernet import Fernet
@@ -488,6 +504,7 @@ function decrypt(encrypted, iv, authTag) {
 ### Encryption in Transit (TLS/HTTPS)
 
 **✅ Enforce HTTPS:**
+
 ```javascript
 // Express.js - redirect HTTP to HTTPS
 app.use((req, res, next) => {
@@ -508,6 +525,7 @@ Talisman(app, force_https=True)
 ```
 
 **✅ TLS Configuration (Node.js):**
+
 ```javascript
 const https = require('https');
 const fs = require('fs');
@@ -530,6 +548,7 @@ https.createServer(options, app).listen(443);
 ### A01:2021 – Broken Access Control
 
 **❌ Vulnerable - No Authorization Check:**
+
 ```python
 @app.route('/api/users/<user_id>/profile', methods=['PUT'])
 def update_profile(user_id):
@@ -540,6 +559,7 @@ def update_profile(user_id):
 ```
 
 **✅ Secure - Proper Authorization:**
+
 ```python
 @app.route('/api/users/<user_id>/profile', methods=['PUT'])
 @login_required
@@ -556,6 +576,7 @@ def update_profile(user_id):
 ### A02:2021 – Cryptographic Failures
 
 **❌ Vulnerable - Weak Encryption:**
+
 ```python
 # Using deprecated or weak algorithms
 from Crypto.Cipher import DES  # Weak
@@ -564,6 +585,7 @@ hash = hashlib.md5(password.encode())  # Weak for passwords
 ```
 
 **✅ Secure - Strong Encryption:**
+
 ```python
 # Use modern, secure algorithms
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
@@ -584,6 +606,7 @@ Covered in [Input Validation](#input-validation) section above.
 ### A04:2021 – Insecure Design
 
 **✅ Secure Design Principles:**
+
 - **Defense in Depth:** Multiple layers of security controls
 - **Least Privilege:** Grant minimum necessary permissions
 - **Fail Securely:** Default to secure state on errors
@@ -649,6 +672,7 @@ def confirm_password_reset():
 ### A05:2021 – Security Misconfiguration
 
 **❌ Common Misconfigurations:**
+
 ```python
 # Debug mode in production
 app.config['DEBUG'] = True
@@ -661,6 +685,7 @@ DATABASE_URL = 'postgresql://admin:admin@localhost/db'
 ```
 
 **✅ Secure Configuration:**
+
 ```python
 # Use environment-specific settings
 app.config['DEBUG'] = os.getenv('FLASK_ENV') == 'development'
@@ -690,6 +715,7 @@ Covered in [Dependency Security](#dependency-security) section below.
 Covered in [Authentication & Authorization](#authentication--authorization) section above.
 
 **✅ Additional: Rate Limiting for Login:**
+
 ```python
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -710,6 +736,7 @@ def login():
 ### A08:2021 – Software and Data Integrity Failures
 
 **✅ Verify Package Integrity:**
+
 ```bash
 # Python - use hash checking
 pip install --require-hashes -r requirements.txt
@@ -729,6 +756,7 @@ Flask==2.3.0 \
 ```
 
 **✅ Code Signing and Verification:**
+
 ```bash
 # Git commit signing
 git config --global commit.gpgsign true
@@ -742,6 +770,7 @@ Log authentication attempts, access denials, and sensitive operations. Never log
 ### A10:2021 – Server-Side Request Forgery (SSRF)
 
 **❌ Vulnerable to SSRF:**
+
 ```python
 @app.route('/api/fetch-url')
 def fetch_url():
@@ -751,6 +780,7 @@ def fetch_url():
 ```
 
 **✅ Protected Against SSRF:**
+
 ```python
 import ipaddress
 from urllib.parse import urlparse
@@ -796,6 +826,7 @@ def fetch_url():
 ### Environment Variables
 
 **❌ Hardcoded Secrets:**
+
 ```python
 # Never commit secrets to code
 API_KEY = "sk-abc123xyz789"
@@ -803,6 +834,7 @@ DATABASE_URL = "postgresql://user:password@localhost/db"
 ```
 
 **✅ Use Environment Variables:**
+
 ```python
 # Python
 import os
@@ -818,13 +850,15 @@ DATABASE_URL = os.getenv('DATABASE_URL')
 ```
 
 **.env file (never commit this):**
-```
+
+```text
 API_KEY=sk-abc123xyz789
 DATABASE_URL=postgresql://user:password@localhost/db
 ```
 
 **.gitignore:**
-```
+
+```text
 .env
 .env.local
 .env.*.local
@@ -833,6 +867,7 @@ DATABASE_URL=postgresql://user:password@localhost/db
 ### Key Rotation
 
 **✅ Implement Key Rotation:**
+
 ```python
 class KeyManager:
     def __init__(self):
@@ -865,6 +900,7 @@ class KeyManager:
 ### Secret Stores
 
 **✅ Use Secret Management Services:**
+
 ```python
 # AWS Secrets Manager
 import boto3
@@ -895,6 +931,7 @@ DATABASE_PASSWORD = secret['data']['data']['password']
 ### Rate Limiting
 
 **✅ Implement Rate Limiting:**
+
 ```javascript
 // Express.js
 const rateLimit = require('express-rate-limit');
@@ -922,12 +959,14 @@ app.post('/api/login', authLimiter, loginHandler);
 ### CORS Configuration
 
 **❌ Insecure CORS:**
+
 ```javascript
 // Allow all origins
 app.use(cors({ origin: '*' }));
 ```
 
 **✅ Secure CORS:**
+
 ```javascript
 const cors = require('cors');
 
@@ -956,6 +995,7 @@ app.use(cors(corsOptions));
 ### CSRF Protection
 
 **✅ CSRF Token Implementation:**
+
 ```javascript
 // Express.js
 const csrf = require('csurf');
@@ -991,6 +1031,7 @@ def login():
 ### API Authentication
 
 **✅ Bearer Token Authentication:**
+
 ```javascript
 function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization'];
@@ -1021,6 +1062,7 @@ app.get('/api/protected', authenticateToken, (req, res) => {
 ### Package Auditing
 
 **✅ Regular Security Audits:**
+
 ```bash
 # Node.js
 npm audit
@@ -1038,6 +1080,7 @@ bundle audit
 ### Version Pinning
 
 **✅ Lock File Usage:**
+
 ```bash
 # Node.js - commit package-lock.json
 npm ci  # Use in CI/CD for reproducible builds
@@ -1053,6 +1096,7 @@ poetry lock
 ### Automated Dependency Updates
 
 **✅ Dependabot Configuration (.github/dependabot.yml):**
+
 ```yaml
 version: 2
 updates:
@@ -1073,6 +1117,7 @@ updates:
 ## Security Headers
 
 **✅ Essential Security Headers:**
+
 ```javascript
 // Express.js - using Helmet
 const helmet = require('helmet');
@@ -1122,6 +1167,7 @@ Talisman(app, content_security_policy=csp, force_https=True)
 ## Logging & Monitoring
 
 **✅ Security Event Logging:**
+
 ```python
 import logging
 import json
@@ -1179,6 +1225,7 @@ def login():
 When reviewing a codebase for security issues:
 
 ### Input & Output
+
 - [ ] All user input validated on server side
 - [ ] SQL queries use parameterized statements
 - [ ] HTML output properly escaped
@@ -1186,6 +1233,7 @@ When reviewing a codebase for security issues:
 - [ ] Command execution avoided or properly sanitized
 
 ### Authentication & Authorization
+
 - [ ] Passwords hashed with bcrypt/Argon2 (12+ rounds)
 - [ ] JWT tokens have expiration (15min for access, 7d for refresh)
 - [ ] Session cookies have secure, httpOnly, sameSite flags
@@ -1194,6 +1242,7 @@ When reviewing a codebase for security issues:
 - [ ] Multi-factor authentication supported for sensitive operations
 
 ### Data Protection
+
 - [ ] Sensitive data encrypted at rest
 - [ ] HTTPS enforced in production
 - [ ] TLS 1.3 used (minimum TLS 1.2)
@@ -1202,6 +1251,7 @@ When reviewing a codebase for security issues:
 - [ ] Backup data encrypted
 
 ### API Security
+
 - [ ] CORS configured with specific origins
 - [ ] CSRF protection enabled for state-changing operations
 - [ ] Rate limiting configured
@@ -1209,7 +1259,8 @@ When reviewing a codebase for security issues:
 - [ ] Input validation on all endpoints
 - [ ] Error messages don't leak sensitive information
 
-### Secrets Management
+### Secrets Management Checklist
+
 - [ ] No hardcoded secrets in code
 - [ ] Environment variables used for configuration
 - [ ] .env files in .gitignore
@@ -1217,22 +1268,24 @@ When reviewing a codebase for security issues:
 - [ ] Production secrets in secure vault
 
 ### Dependencies
+
 - [ ] Dependencies regularly audited (npm audit, pip-audit)
 - [ ] Versions pinned in lock files
 - [ ] Automated dependency updates configured
 - [ ] Only necessary dependencies included
 
-### Security Headers
+### Security Headers Checklist
+
 - [ ] Content-Security-Policy configured
 - [ ] Strict-Transport-Security enabled
 - [ ] X-Content-Type-Options: nosniff
 - [ ] X-Frame-Options: DENY or SAMEORIGIN
 - [ ] Referrer-Policy configured
 
-### Logging & Monitoring
+### Logging & Monitoring Checklist
+
 - [ ] Security events logged (login attempts, access denials)
 - [ ] Sensitive data excluded from logs
 - [ ] Log rotation configured
 - [ ] Monitoring alerts for suspicious activity
 - [ ] Audit trail for sensitive operations
-

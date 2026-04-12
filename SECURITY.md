@@ -13,6 +13,7 @@
 Report via [GitHub Private Vulnerability Reporting](https://github.com/messeb/skills/security/advisories/new).
 
 Include:
+
 - Description of the vulnerability
 - Steps to reproduce
 - Potential impact

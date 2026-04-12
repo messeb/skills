@@ -8,7 +8,7 @@ description: Testing patterns for backend development — unit tests with AAA st
 
 ### Testing Pyramid
 
-```
+```text
         /\
        /  \  E2E Tests (Few)
       /____\
@@ -54,6 +54,7 @@ def test_order_calculates_total_correctly():
 ### Testing Domain Logic
 
 **Test entity behavior:**
+
 ```python
 class TestOrder:
     def test_new_order_starts_in_pending_status(self):
@@ -84,6 +85,7 @@ class TestOrder:
 ```
 
 **Test value objects:**
+
 ```python
 class TestMoney:
     def test_money_addition(self):
@@ -110,6 +112,7 @@ class TestMoney:
 ```
 
 **Test domain services:**
+
 ```python
 class TestTransferService:
     def test_transfer_moves_money_between_accounts(self):
@@ -413,7 +416,7 @@ class TestPostgresOrderRepository:
 
 ### Directory Structure
 
-```
+```text
 tests/
 ├── unit/
 │   ├── domain/

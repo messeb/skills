@@ -8,7 +8,7 @@ description: Astro best practices — Islands Architecture, component hydration,
 
 Astro ships **zero JavaScript by default**. Every component renders to static HTML unless you explicitly opt into interactivity with a `client:*` directive. Each interactive component is an isolated "island" hydrated independently.
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │  Static HTML (no JS)                                 │
 │  ┌─────────────────┐   ┌──────────────────────────┐  │
@@ -61,7 +61,7 @@ import Card from '../components/Card.tsx'
 
 ## Project Structure
 
-```
+```text
 src/
 ├── components/       # Reusable UI components (.astro, .tsx, .vue, etc.)
 ├── layouts/          # Page layout wrappers

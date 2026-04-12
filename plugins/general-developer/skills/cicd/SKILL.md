@@ -30,7 +30,7 @@ Guides developers through the full release lifecycle:
 
 ## Pipeline Flow
 
-```
+```text
  feature/foo
       │
       │  PR opened
@@ -99,9 +99,11 @@ Ask the developer which action they want to perform (or infer from context):
 ## Action A — Start a New Release Branch
 
 ### 1. Confirm the version number
+
 Ask the developer: *"What version are you releasing? (e.g. 1.3.0)"*
 
 ### 2. Check develop is up to date
+
 ```bash
 git checkout develop
 git pull origin develop
@@ -109,6 +111,7 @@ git log --oneline -5   # confirm state with developer
 ```
 
 ### 3. Create the release branch
+
 ```bash
 VERSION=<version>   # e.g. 1.3.0
 git checkout -b release/$VERSION
@@ -116,6 +119,7 @@ git push -u origin release/$VERSION
 ```
 
 ### 4. Confirm GitHub Actions will pick it up
+
 Remind the developer that pushing `release/*` triggers the QA deployment workflow.
 Read `references/workflows.md` for the expected CI behaviour.
 
@@ -124,12 +128,15 @@ Read `references/workflows.md` for the expected CI behaviour.
 ## Action B — Tag a New Release Candidate
 
 ### 1. Identify the release branch
+
 ```bash
 git branch -r | grep release/   # list remote release branches
 ```
+
 Ask the developer to confirm which branch if multiple exist.
 
 ### 2. Find the current RC number
+
 ```bash
 VERSION=<version>
 git tag --list "v${VERSION}-rc.*" | sort -V | tail -1
@@ -138,6 +145,7 @@ git tag --list "v${VERSION}-rc.*" | sort -V | tail -1
 ```
 
 ### 3. Compute next RC number
+
 ```bash
 LAST=$(git tag --list "v${VERSION}-rc.*" | sort -V | tail -1)
 if [ -z "$LAST" ]; then
@@ -150,12 +158,15 @@ echo "Next RC → v${VERSION}-rc.${NEXT_RC}"
 ```
 
 ### 4. Confirm with developer before tagging
+
 Show the developer:
+
 - Branch: `release/<version>`
 - Tag to create: `v<version>-rc.<N>`
 - Docker image that will be built: `registry.io/myapp:<version>-rc.<N>`
 
 ### 5. Create and push the tag
+
 ```bash
 git checkout release/$VERSION
 git pull origin release/$VERSION
@@ -164,6 +175,7 @@ git push origin v${VERSION}-rc.${NEXT_RC}
 ```
 
 ### 6. Monitor the RC workflow
+
 ```bash
 gh run list --branch release/$VERSION --limit 5
 gh run watch   # follow live
@@ -174,15 +186,18 @@ gh run watch   # follow live
 ## Action C — Promote RC to Production
 
 ### 1. Confirm QA sign-off
+
 Ask: *"Has QA approved the latest RC? Which RC is being promoted?"*
 
 ### 2. Verify the RC tag exists
+
 ```bash
 VERSION=<version>
 git tag --list "v${VERSION}-rc.*" | sort -V
 ```
 
 ### 3. Merge release branch into main
+
 ```bash
 gh pr create \
   --base main \
@@ -196,20 +211,25 @@ gh pr merge --merge
 ```
 
 ### 4. Tag the production release
+
 ```bash
 git checkout main && git pull
 git tag v$VERSION
 git push origin v$VERSION
 ```
+
 This triggers the production workflow which **retags** the last RC image — no rebuild.
 
 ### 5. Verify the GitHub Release
+
 ```bash
 gh release view v$VERSION
 ```
+
 The release notes will consolidate all RC entries under collapsible sections.
 
 ### 6. Back-merge into develop
+
 ```bash
 gh pr create \
   --base develop \

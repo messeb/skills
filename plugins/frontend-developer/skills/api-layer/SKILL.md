@@ -7,6 +7,7 @@ description: Frontend API layer — typed HTTP clients, error handling, request/
 ## Goals
 
 A well-designed API layer:
+
 - Provides **type safety** from network response to component
 - Centralizes **error handling** and **auth token injection**
 - Makes the app **testable** by swapping the HTTP client in tests

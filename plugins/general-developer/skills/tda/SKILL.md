@@ -313,6 +313,7 @@ account.withdraw(100)  # Tell, don't manipulate
 ### 2. Commands, Not Queries (CQS)
 
 Separate methods that:
+
 - **Command**: Change state (tell)
 - **Query**: Return information (ask)
 

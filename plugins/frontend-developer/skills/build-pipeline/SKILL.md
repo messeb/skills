@@ -7,12 +7,13 @@ description: Frontend CI/CD build pipeline — lint, type-check, test, build, pr
 ## Pipeline Philosophy
 
 A good frontend pipeline is:
+
 - **Fast**: developers get feedback in under 5 minutes
 - **Deterministic**: same input always produces same output
 - **Sequential where order matters, parallel everywhere else**
 - **Fail-fast**: cheap checks run before expensive ones
 
-```
+```text
 Push → Lint+Type-check (parallel, fast)
               ↓
          Unit Tests

@@ -7,6 +7,7 @@ description: CSS architecture — design tokens, utility-first with Tailwind, CS
 ## The Core Problem
 
 CSS is globally scoped by default. Without architecture, every project degrades into:
+
 - Specificity wars (`!important` everywhere)
 - Dead code (nothing deleted because "it might break something")
 - Unpredictable cascades (changing one style breaks another)
@@ -315,7 +316,7 @@ export default {
 
 ### Specificity hierarchy (lowest to highest)
 
-```
+```text
 0-0-0: * { }
 0-0-1: h1 { }, .foo h1 { } (element)
 0-1-0: .foo { } (class)
@@ -323,6 +324,7 @@ export default {
 ```
 
 Rules:
+
 - Never use `#id` selectors in component CSS
 - Never use `!important` except for utility classes by design
 - Prefer class selectors; use element selectors only for global resets
@@ -332,7 +334,7 @@ Rules:
 
 ## Global Styles Structure
 
-```
+```text
 src/assets/styles/
 ├── tokens.css           # Design tokens (CSS custom properties)
 ├── reset.css            # Modern CSS reset

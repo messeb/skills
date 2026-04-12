@@ -331,6 +331,7 @@ Run through these manually with only a keyboard (no mouse):
 | Android | TalkBack | Chrome |
 
 Basic VoiceOver test (macOS):
+
 1. `Cmd + F5` to enable VoiceOver
 2. `Tab` / `Shift+Tab` to navigate
 3. `VO + Right` to read content in sequence

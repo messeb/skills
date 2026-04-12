@@ -11,7 +11,7 @@ A Claude Code plugin marketplace providing skills (user-invocable prompts) and a
 
 ## Repository Structure
 
-```
+```text
 .claude-plugin/marketplace.json     # Marketplace index
 plugins/<plugin>/
   .claude-plugin/plugin.json        # Plugin manifest (registers agents)

@@ -59,6 +59,7 @@ Apply each skill as an audit lens on the codebase. Focus on concrete, file-speci
 ### Testing skills (unit-testing, storybook, e2e-testing, a11y-testing)
 
 For each:
+
 1. Check for presence and structure of the test setup
 2. Identify the top 3–5 violations from the skill's audit checklist
 3. Note missing test categories (e.g. no interaction tests, no a11y checks, no E2E for critical flows)
@@ -69,6 +70,7 @@ Flag as `high` if critical user journeys have no test coverage at all.
 ### Framework skills (vue, nuxt)
 
 Check only the skills that match the detected framework:
+
 - Reactivity pitfalls (`.value` misuse, destructuring reactive objects, prop mutation)
 - Anti-patterns in component structure (Options API mixed with Composition API, side effects in computed)
 - Data fetching patterns (double-fetching, missing error handling, wrong rendering mode)
@@ -77,6 +79,7 @@ Check only the skills that match the detected framework:
 ### Tooling skills (vite, turborepo, pnpm, build-pipeline)
 
 Only audit tools that are present in the project:
+
 - Config correctness and optimization opportunities
 - Security issues (secrets in public config, missing `--frozen-lockfile`)
 - CI pipeline completeness (missing cache, no E2E gate before deploy, no type-check job)
@@ -84,11 +87,13 @@ Only audit tools that are present in the project:
 ### Architecture skills (component-design, state-management, performance, css-architecture, api-layer)
 
 For each:
+
 1. Identify the top 3–5 most significant violations
 2. For each: file, line range, one-sentence explanation, severity
 3. Note architectural patterns that will compound over time if not addressed
 
 Severity scale:
+
 - `high` — actively harmful, causes bugs, security risk, or blocks scalability
 - `medium` — should fix in the next sprint; causes growing pain
 - `low` — worth noting; low urgency but good practice
@@ -99,7 +104,7 @@ Severity scale:
 
 Output a structured report in this format:
 
-```
+```text
 # Frontend Developer Audit Report
 
 ## Project Profile
@@ -218,6 +223,7 @@ Ask the user which fixes to apply, then execute them one by one, confirming each
 ## Step 5 — Apply fixes
 
 For each fix the user approves:
+
 - Apply the change using the guidance from the relevant skill's `SKILL.md`
 - Show a brief summary of what changed
 - Move to the next fix

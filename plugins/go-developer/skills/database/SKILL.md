@@ -422,7 +422,7 @@ Works with all four drivers above.
 go get -u github.com/golang-migrate/migrate/v4
 ```
 
-```
+```text
 migrations/
 ├── 000001_create_users.up.sql
 ├── 000001_create_users.down.sql

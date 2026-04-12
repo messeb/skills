@@ -5,10 +5,12 @@ Thank you for your interest in contributing!
 ## How to Contribute
 
 ### Reporting Bugs
+
 - Search existing issues before opening a new one
 - Include a clear description of the problem and steps to reproduce
 
 ### Suggesting New Skills or Plugins
+
 - Open a GitHub Discussion or issue with the `enhancement` label
 - Describe the software engineering principle or workflow the skill addresses
 
@@ -25,7 +27,7 @@ Thank you for your interest in contributing!
 
 This is a purely declarative repository — no build tools, no package managers. Content lives in Markdown and JSON files only.
 
-```
+```text
 plugins/<plugin-name>/
 ├── .claude-plugin/plugin.json   # Plugin manifest
 ├── skills/<name>/SKILL.md       # Skill definition
@@ -37,6 +39,7 @@ See `CLAUDE.md` for full authoring guidelines.
 ## Commit Message Convention
 
 Use [Conventional Commits](https://www.conventionalcommits.org):
+
 - `feat:` new skill or plugin
 - `fix:` correction to existing skill content
 - `docs:` documentation only

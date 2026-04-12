@@ -6,7 +6,7 @@ description: Go project layout — standard directory structure for CLI tools an
 
 ## Standard Layout
 
-```
+```text
 myapp/
 ├── cmd/
 │   └── myapp/
@@ -75,7 +75,7 @@ func run() error {
 
 Multiple binaries in one repo:
 
-```
+```text
 cmd/
 ├── api/main.go        # HTTP API server
 ├── worker/main.go     # Background job processor
@@ -88,7 +88,7 @@ cmd/
 
 Packages under `internal/` cannot be imported by code outside this module. Use it for everything that should not be a public API.
 
-```
+```text
 internal/
 ├── config/
 │   └── config.go        # Config struct + Load() function
@@ -107,7 +107,7 @@ internal/
 
 ### Layer dependencies (enforced by import paths)
 
-```
+```text
 handler → service → repository → domain
                               ↘ external packages (database/sql, etc.)
 ```
@@ -122,7 +122,7 @@ handler → service → repository → domain
 
 Only put packages here that you genuinely intend external consumers to import. When in doubt, use `internal/`.
 
-```
+```text
 pkg/
 ├── apierror/         # Standardized API error types
 ├── pagination/       # Cursor/offset pagination helpers
@@ -137,7 +137,7 @@ pkg/
 go mod init github.com/myorg/myapp
 ```
 
-```
+```text
 # go.mod
 module github.com/myorg/myapp
 
@@ -155,7 +155,7 @@ require (
 go work init ./app ./shared
 ```
 
-```
+```text
 # go.work
 go 1.23
 
@@ -173,22 +173,22 @@ use (
 .PHONY: build test lint vet tidy
 
 build:
-	go build -o bin/myapp ./cmd/myapp
+ go build -o bin/myapp ./cmd/myapp
 
 test:
-	go test ./... -race -count=1
+ go test ./... -race -count=1
 
 lint:
-	golangci-lint run ./...
+ golangci-lint run ./...
 
 vet:
-	go vet ./...
+ go vet ./...
 
 tidy:
-	go mod tidy
+ go mod tidy
 
 run:
-	go run ./cmd/myapp
+ go run ./cmd/myapp
 ```
 
 ---

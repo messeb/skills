@@ -8,7 +8,7 @@ description: Frontend state management — choosing between local state, composa
 
 Before reaching for a global store, ask:
 
-```
+```text
 Is the state used in only one component?
   → Local state (ref/useState)
 
@@ -59,6 +59,7 @@ function ProductPage() {
 ## Server State — TanStack Query
 
 Server state is fundamentally different from client state:
+
 - It lives on the server; local state is a cache
 - It can become stale
 - Multiple components might display the same data
@@ -176,6 +177,7 @@ const { mutate: updateProduct, isPending: isUpdating } = useUpdateProduct()
 ## Global Client State — Pinia
 
 Use Pinia for state that is:
+
 - Global (auth, user preferences, notifications)
 - Client-only (not from the server)
 - Mutated from multiple places
@@ -293,7 +295,7 @@ export const useAuthStore = create<AuthState>()(
 
 Keep state as close to where it's used as possible.
 
-```
+```text
 Bad: Everything in global store
   ├── useGlobalStore
   │   ├── user (global: ✓)

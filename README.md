@@ -10,19 +10,19 @@ A Claude Code plugin marketplace that provides plugins that add skills and agent
 
 Register this marketplace as a source in Claude Code:
 
-```
+```bash
 /plugin marketplace add https://github.com/messeb/skills
 ```
 
 ### Install a plugin
 
-```
+```bash
 /plugin install general-developer@messeb
 ```
 
 ### Remove the marketplace
 
-```
+```bash
 /plugin marketplace remove messeb --force
 ```
 
@@ -34,18 +34,19 @@ Register this marketplace as a source in Claude Code:
 
 Language-agnostic software engineering principles applicable to any codebase and technology stack.
 
-**Installation**
-```
+#### Installation
+
+```bash
 /plugin install general-developer@messeb
 ```
 
-**Agent**
+#### Agent
 
 | Agent | Description |
 |-------|-------------|
 | `general-developer` | Audits a codebase against all skills, produces a structured report with severity-ranked findings, and offers to apply fixes |
 
-**Skills**
+#### Skills
 
 | Skill | Description |
 |-------|-------------|
@@ -68,18 +69,19 @@ Language-agnostic software engineering principles applicable to any codebase and
 
 Skills and an audit agent for modern frontend development — Vue, Nuxt, React, Vite, Turborepo, pnpm, testing, accessibility, performance, and more.
 
-**Installation**
-```
+#### Installation
+
+```bash
 /plugin install frontend-developer@messeb
 ```
 
-**Agent**
+#### Agent
 
 | Agent | Description |
 |-------|-------------|
 | `frontend-developer` | Audits a frontend codebase against all skills, detects the project stack, produces a structured report with severity-ranked findings grouped by Testing / Framework / Tooling / Architecture, and offers to apply fixes |
 
-**Skills**
+#### Skills
 
 | Category | Skill | Description |
 |----------|-------|-------------|
@@ -105,18 +107,19 @@ Skills and an audit agent for modern frontend development — Vue, Nuxt, React, 
 
 Skills and an audit agent for Go CLI tools and backend services — idiomatic Go, project layout, Cobra CLI, HTTP APIs, concurrency, database access, modules, and testing.
 
-**Installation**
-```
+#### Installation
+
+```bash
 /plugin install go-developer@messeb
 ```
 
-**Agent**
+#### Agent
 
 | Agent | Description |
 |-------|-------------|
 | `go-developer` | Audits a Go codebase against all skills, detects the application type (CLI / HTTP API / mixed), produces a structured report with severity-ranked findings, and offers to apply fixes |
 
-**Skills**
+#### Skills
 
 | Category | Skill | Description |
 |----------|-------|-------------|
@@ -138,7 +141,7 @@ Skills and an audit agent for Go CLI tools and backend services — idiomatic Go
 
 Invoke any skill by its name as a slash command inside a Claude Code session:
 
-```
+```text
 /general-developer:dry
 /general-developer:security
 /general-developer:husky
@@ -160,13 +163,14 @@ Claude will execute the skill's instructions against your current working direct
 
 Each plugin ships an audit agent that checks your codebase against **all its skills at once** and produces a prioritised report:
 
-```
+```text
 /general-developer
 /frontend-developer
 /go-developer
 ```
 
 The agent will:
+
 1. Detect the project's tech stack and structure
 2. Run every relevant skill as an audit lens
 3. Output a summary table with `high / medium / low` findings per skill
@@ -174,9 +178,34 @@ The agent will:
 
 ---
 
+## Contributing
+
+### Setup
+
+```bash
+pnpm install
+```
+
+Installs dev dependencies and registers the Husky pre-commit hook automatically via the `prepare` script.
+
+### Markdown Linting
+
+All Markdown files are linted with [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) using the rules defined in `.markdownlint.json`.
+
+```bash
+pnpm lint:md        # check for violations
+pnpm lint:fix:md    # auto-fix where possible
+```
+
+The pre-commit hook runs `pnpm lint:md` automatically on every commit. Fix any remaining issues manually or with `pnpm lint:fix:md` before committing.
+
+VS Code users: install the recommended extensions (`.vscode/extensions.json`) to see lint violations inline and apply fixes on save.
+
+---
+
 ## Repository Structure
 
-```
+```text
 skills/
 ├── .claude-plugin/
 │   └── marketplace.json              # Marketplace index

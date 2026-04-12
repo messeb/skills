@@ -8,7 +8,7 @@ A collection of Claude Code plugins, each bundling **skills** (user-invocable pr
 
 ## Actual Structure
 
-```
+```text
 skills/
 ├── .claude-plugin/
 │   └── marketplace.json          # Root marketplace metadata

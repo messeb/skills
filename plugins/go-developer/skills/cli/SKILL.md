@@ -318,12 +318,12 @@ VERSION ?= $(shell git describe --tags --always --dirty)
 LDFLAGS := -ldflags "-X main.version=$(VERSION) -s -w"
 
 build:
-	go build $(LDFLAGS) -o bin/myapp ./cmd/myapp
+ go build $(LDFLAGS) -o bin/myapp ./cmd/myapp
 
 build-all:
-	GOOS=linux   GOARCH=amd64 go build $(LDFLAGS) -o bin/myapp-linux-amd64   ./cmd/myapp
-	GOOS=darwin  GOARCH=arm64 go build $(LDFLAGS) -o bin/myapp-darwin-arm64  ./cmd/myapp
-	GOOS=windows GOARCH=amd64 go build $(LDFLAGS) -o bin/myapp-windows-amd64.exe ./cmd/myapp
+ GOOS=linux   GOARCH=amd64 go build $(LDFLAGS) -o bin/myapp-linux-amd64   ./cmd/myapp
+ GOOS=darwin  GOARCH=arm64 go build $(LDFLAGS) -o bin/myapp-darwin-arm64  ./cmd/myapp
+ GOOS=windows GOARCH=amd64 go build $(LDFLAGS) -o bin/myapp-windows-amd64.exe ./cmd/myapp
 ```
 
 ```go

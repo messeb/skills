@@ -49,6 +49,7 @@ This context is shared across all skill checks — do not re-explore for each sk
 For each relevant skill, apply its principles as an audit lens on the codebase. Focus on concrete, file-specific findings — not generic advice.
 
 For each skill:
+
 1. Identify the top 3–5 most significant violations in the codebase
 2. For each violation: note the file, line range, and a one-sentence explanation of the issue
 3. Assign a severity: `high` (actively harmful), `medium` (should fix soon), `low` (worth noting)
@@ -66,7 +67,7 @@ For each skill:
 
 ## Step 4 — Produce the report
 
-```
+```text
 # Go Developer Audit Report
 
 ## Summary
@@ -130,6 +131,7 @@ Ask the user which fixes to apply, then execute them one by one, confirming each
 ## Step 5 — Apply fixes
 
 For each fix the user approves:
+
 - Apply the change using the relevant skill's guidance
 - Show a brief diff or summary of what changed
 - Move to the next fix

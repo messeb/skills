@@ -7,6 +7,7 @@ description: End-to-end testing with Playwright — test setup, page objects, us
 ## When to Write E2E Tests
 
 E2E tests are expensive to write and maintain. Reserve them for:
+
 - Critical user journeys (auth, checkout, core workflow)
 - Cross-page flows that unit tests cannot cover
 - Regressions in previously broken flows

@@ -15,6 +15,7 @@ You manage GitHub repository files across three modes. Detect the mode first, th
 | **C — Sync with source changes** | Source code changed; keep repo files consistent with the new state |
 
 **Gather project info** (for Mode A; infer from existing files for B and C):
+
 - Project name and one-sentence description
 - Primary language / tech stack
 - License (default: MIT)
@@ -31,6 +32,7 @@ You manage GitHub repository files across three modes. Detect the mode first, th
 Create every file from the **File Templates** section below. Follow each template exactly, filling in project-specific values gathered in Step 1.
 
 Order of creation:
+
 1. `.gitignore`, `.gitattributes`
 2. `README.md`, `LICENSE` (+ `NOTICE` if Apache 2.0)
 3. `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`
@@ -53,6 +55,7 @@ Then proceed to **Step 3 — Verify and summarize**.
 | **Present, current** | Skip |
 
 **Staleness checks to perform:**
+
 - `CODE_OF_CONDUCT.md` — is it using Contributor Covenant v2.1 or newer?
 - `.gitignore` — does it cover the current tech stack? Are OS/editor artifacts included?
 - `.gitattributes` — is `* text=auto eol=lf` present? Are export-ignore entries set?
@@ -95,7 +98,8 @@ For each affected file, show the proposed change and confirm before writing. Pro
 
 Output a checklist of all files, marking each as ✅ created, 🔄 updated, or ⏭ skipped:
 
-**Root-level**
+### Root-level files
+
 - [ ] `.gitignore`
 - [ ] `.gitattributes`
 - [ ] `.nojekyll` (GitHub Pages only)
@@ -112,6 +116,7 @@ Output a checklist of all files, marking each as ✅ created, 🔄 updated, or �
 - [ ] `CITATION.cff` (academic/citable projects)
 
 **`.github/`**
+
 - [ ] `.github/CODEOWNERS`
 - [ ] `.github/FUNDING.yml`
 - [ ] `.github/dependabot.yml`
@@ -126,12 +131,14 @@ Output a checklist of all files, marking each as ✅ created, 🔄 updated, or �
 - [ ] `.github/DISCUSSION_TEMPLATE/q-and-a.yml`
 
 **Suggest next steps based on mode:**
+
 - **Mode A**: Configure branch protection on `main` (require PR reviews, status checks, signed commits), enable Dependabot alerts + security updates + secret scanning, add CI workflows, enable GitHub Discussions, add topics/tags, set social preview image
 - **Mode B**: Highlight any files skipped due to customization that may need manual review
 - **Mode C**: Remind user to promote `[Unreleased]` entries to a versioned section before the next release
 
 **Complete repository structure:**
-```
+
+```text
 <project>/
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
@@ -176,7 +183,7 @@ Reference templates for all files. Used by all three modes.
 
 ### `README.md`
 
-```markdown
+````markdown
 # <Project Name>
 
 <One-paragraph description of what the project does and why it exists.>
@@ -221,9 +228,11 @@ This project is licensed under the <LICENSE NAME> — see [LICENSE](LICENSE) for
 ## Support
 
 For help, see [SUPPORT.md](SUPPORT.md) or open an issue.
-```
+
+````
 
 Best practices:
+
 - Lead with value: what problem does this solve?
 - Badge row immediately after the title — CI status, license, version
 - Keep code examples minimal but runnable
@@ -234,13 +243,15 @@ Best practices:
 ### `LICENSE` and `NOTICE` (if Apache 2.0)
 
 Common options — ask the user:
+
 - **MIT**: Permissive, simple, widely used
 - **Apache 2.0**: Permissive with patent grant; requires `NOTICE` file
 - **GPL-3.0**: Copyleft; derivatives must be open source
 - **BSD-3-Clause**: Permissive with attribution requirement
 
 MIT template:
-```
+
+```text
 MIT License
 
 Copyright (c) <YEAR> <AUTHOR>
@@ -262,10 +273,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
 ```
 
 **If Apache 2.0**, also create `NOTICE` (legally required in all distributions):
-```
+
+```text
 <Project Name>
 Copyright <YEAR> <AUTHOR>
 
@@ -283,7 +296,8 @@ limitations under the License.
 ```
 
 Add additional attributions for third-party Apache 2.0 code:
-```
+
+```text
 This product includes software developed by <Third Party> (<URL>).
 ```
 
@@ -292,6 +306,7 @@ This product includes software developed by <Third Party> (<URL>).
 ### `CODE_OF_CONDUCT.md`
 
 Use Contributor Covenant v2.1. Keep it concise — link to the full text rather than reproducing it:
+
 ```markdown
 # Code of Conduct
 
@@ -370,6 +385,7 @@ Use [Conventional Commits](https://www.conventionalcommits.org):
 ### `SECURITY.md`
 
 GitHub surfaces this in the Security tab and guides users to report vulnerabilities privately.
+
 ```markdown
 # Security Policy
 
@@ -406,6 +422,7 @@ We aim to respond within 48 hours and release a patch within 14 days for confirm
 ### `SUPPORT.md`
 
 GitHub shows a banner linking to this when users open a new issue.
+
 ```markdown
 # Support
 
@@ -435,6 +452,7 @@ GitHub shows a banner linking to this when users open a new issue.
 ### `GOVERNANCE.md`
 
 Skip for solo projects. Use for multi-maintainer or community projects.
+
 ```markdown
 # Governance
 
@@ -464,6 +482,7 @@ Releases follow [semver](https://semver.org). A CHANGELOG entry is required for 
 ### `CHANGELOG.md`
 
 Follow [Keep a Changelog](https://keepachangelog.com) format. Pairs with `.github/release.yml` for automated GitHub release notes.
+
 ```markdown
 # Changelog
 
@@ -504,6 +523,7 @@ Consider automating with the `all-contributors` GitHub Action for larger project
 ### `CITATION.cff`
 
 Ask the user if the project is academic/citable; skip if not relevant.
+
 ```yaml
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
@@ -521,6 +541,7 @@ abstract: "<One-sentence description>"
 ```
 
 Also add a `## Citation` section to `README.md`:
+
 ```markdown
 ## Citation
 
@@ -539,6 +560,7 @@ Also add a `## Citation` section to `README.md`:
 ### `.gitignore`
 
 Generate based on the detected tech stack using [gitignore.io](https://www.toptal.com/developers/gitignore) patterns. Always include:
+
 ```gitignore
 # Dependencies
 node_modules/
@@ -631,7 +653,7 @@ Create an empty `.nojekyll` file in the root (or the GitHub Pages publish direct
 
 ### `.github/CODEOWNERS`
 
-```
+```text
 # Global owner — reviews all PRs by default
 * @<github-handle>
 
@@ -656,6 +678,7 @@ ko_fi: <username>
 liberapay: <username>
 custom: ['https://...']        # any custom URL
 ```
+
 Include only platforms the user actually uses. Omit the file if funding is not wanted.
 
 ---
@@ -947,4 +970,3 @@ body:
     attributes:
       label: What have you tried or found so far?
 ```
-

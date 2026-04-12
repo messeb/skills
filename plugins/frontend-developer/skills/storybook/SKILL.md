@@ -7,6 +7,7 @@ description: Storybook setup, story authoring with CSF3, interaction tests, acce
 ## Purpose
 
 Storybook serves three jobs simultaneously:
+
 1. **Component workshop** — develop components in isolation without running the full app
 2. **Living documentation** — stories are the canonical reference for all component states
 3. **Test suite** — interaction tests, accessibility checks, and visual snapshots run in CI
@@ -344,7 +345,7 @@ interface Props {
 
 ## Story Hierarchy and Naming
 
-```
+```text
 title: 'Design System/Atoms/Button'       → Atoms > Button
 title: 'Design System/Molecules/SearchBar'
 title: 'Design System/Organisms/Header'

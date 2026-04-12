@@ -8,7 +8,9 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ### Added
 
-- Markdown linting setup: `markdownlint-cli2` dev dependency with `npm run lint:md` script
+- Markdown linting with `markdownlint-cli2`: `pnpm lint:md` and `pnpm lint:fix:md` scripts, `.markdownlint.json` config
+- Husky pre-commit hook running `pnpm lint:md` on every commit
+- Switched package manager from npm to pnpm 10.33.0 (`packageManager` field in `package.json`)
 - `.markdownlint.json` config with project-appropriate rule configuration
 - `.vscode/extensions.json` recommending `vscode-markdownlint` and `code-spell-checker`
 - `.vscode/settings.json` with fix-on-save and markdown editor settings

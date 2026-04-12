@@ -11,6 +11,7 @@ Simple code is not a sign of laziness — it is the hardest outcome to achieve. 
 **Complexity must earn its place.** Every abstraction layer, every design pattern, every generalization adds cognitive overhead for every future reader. If a piece of complexity does not pay for that cost with clear, measurable value, it should not exist.
 
 KISS violations are rarely malicious. They usually come from:
+
 - Solving a hypothetical future problem instead of the current one (see also: YAGNI)
 - Applying a pattern because it is familiar, not because it fits
 - Confusing "clever" with "good"

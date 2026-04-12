@@ -117,7 +117,7 @@ const { data: user } = await useFetch('/api/user')
 
 ## Routing Conventions
 
-```
+```text
 pages/
 ├── index.vue              → /
 ├── about.vue              → /about
@@ -198,7 +198,7 @@ definePageMeta({
 
 ## Layouts
 
-```
+```text
 layouts/
 ├── default.vue      → used automatically
 ├── auth.vue         → minimal layout for login/register

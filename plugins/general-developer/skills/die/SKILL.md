@@ -113,6 +113,7 @@ process_csv(file, lambda f: Product(*f))
 Not all similar code should be unified. Merging coincidentally similar code that represents different knowledge creates coupling that causes pain when the two concepts diverge.
 
 **Different domains — do not unify:**
+
 ```python
 class UserPassword:
     MIN_LENGTH = 8  # Password policy — will change independently
@@ -122,6 +123,7 @@ class ApiKey:
 ```
 
 **Accidental similarity — do not unify:**
+
 ```python
 def user_account_age_years(user):
     return (date.today() - user.created_at).days // 365
