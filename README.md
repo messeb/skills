@@ -101,6 +101,35 @@ Skills and an audit agent for modern frontend development — Vue, Nuxt, React, 
 | Framework | `astro` | Astro Islands Architecture — hydration directives, content collections, SSR/SSG/hybrid modes, and cross-island state |
 | Architecture | `nuxt-ddd` | Domain-Driven Design in Nuxt/TypeScript — value objects, entities, aggregates, domain events, use cases, Result type, repositories, policies, strategy registry, anti-corruption layer, composable bridge, and full client/server layer wiring |
 
+### `go-developer`
+
+Skills and an audit agent for Go CLI tools and backend services — idiomatic Go, project layout, Cobra CLI, HTTP APIs, concurrency, database access, modules, and testing.
+
+**Installation**
+```
+/plugin install go-developer@messeb
+```
+
+**Agent**
+
+| Agent | Description |
+|-------|-------------|
+| `go-developer` | Audits a Go codebase against all skills, detects the application type (CLI / HTTP API / mixed), produces a structured report with severity-ranked findings, and offers to apply fixes |
+
+**Skills**
+
+| Category | Skill | Description |
+|----------|-------|-------------|
+| Language | `idiomatic-go` | Error handling, naming conventions, interface design, zero values, and common Go pitfalls |
+| Structure | `project-layout` | Standard `cmd/` / `internal/` / `pkg/` layout, layer boundaries, config loading, and Makefile conventions |
+| CLI | `cli` | Cobra commands and subcommands, Viper config, flag design, argument validation, shell completion, and graceful shutdown |
+| Backend | `http-api` | Gin framework — server setup, route groups, middleware chain, request binding with validation, JSON responses, and health endpoints |
+| Language | `concurrency` | Goroutines, channels, `context` cancellation, `sync` primitives, worker pools, and leak prevention |
+| Data | `database` | GORM, sqlc, sqlx, and pgx — choosing the right tool, repository pattern, transactions, migrations, and connection pooling |
+| Tooling | `modules` | `go.mod` / `go.sum`, dependency management, versioning, Go workspaces, vendoring, and private modules |
+| Tooling | `dependency-injection` | Wire (compile-time DI by Google) and Fx (runtime DI by Uber) — providers, modules, lifecycle hooks, and interface binding |
+| Quality | `testing` | Table-driven tests, subtests, `testify`, interface mocks, `httptest`, integration tests, benchmarks, and race detection |
+
 ---
 
 ## Usage with Coding CLI
@@ -116,8 +145,13 @@ Invoke any skill by its name as a slash command inside a Claude Code session:
 /general-developer:dangerfile
 /frontend-developer:vue
 /frontend-developer:astro
+/frontend-developer:nuxt-ddd
 /frontend-developer:performance
 /frontend-developer:a11y-testing
+/go-developer:cli
+/go-developer:http-api
+/go-developer:concurrency
+/go-developer:testing
 ```
 
 Claude will execute the skill's instructions against your current working directory.
@@ -129,6 +163,7 @@ Each plugin ships an audit agent that checks your codebase against **all its ski
 ```
 /general-developer
 /frontend-developer
+/go-developer
 ```
 
 The agent will:

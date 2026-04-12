@@ -15,6 +15,12 @@
       "description": "Adds skills for frontend software development.",
       "source": "./plugins/frontend-developer",
       "version": "1.2.0"
+    },
+    {
+      "name": "go-developer",
+      "description": "Adds skills for Go CLI and backend service development.",
+      "source": "./plugins/go-developer",
+      "version": "1.0.0"
     }
   ]
 }
