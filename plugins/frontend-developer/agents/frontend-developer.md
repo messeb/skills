@@ -28,6 +28,7 @@ Currently registered skills:
 | `css-architecture` | Architecture — design tokens, scoping, dark mode, specificity |
 | `api-layer` | Architecture — typed HTTP client, error handling, OpenAPI codegen |
 | `astro` | Framework — Islands Architecture, hydration directives, content collections, SSR/SSG/hybrid |
+| `nuxt-ddd` | Architecture — DDD tactical patterns: value objects, aggregates, repositories, ... in Nuxt |
 
 If new skill directories are present that are not in this list, include them automatically.
 
