@@ -4,7 +4,7 @@ Nuxt runs in two distinct runtimes that share domain and application code but di
 
 ## Full Layer Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │  BROWSER (client runtime)                                   │
 │                                                             │
@@ -212,7 +212,7 @@ Use `Context` when the same dependency is shared across multiple use cases. For 
 
 Domain and application code shared across multiple Nuxt apps belongs in a `packages/` workspace package:
 
-```
+```text
 packages/
   order-domain/
     src/

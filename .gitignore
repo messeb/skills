@@ -1,5 +1,4 @@
 # IDE
-.vscode/
 .idea/
 *.swp
 
@@ -14,3 +13,6 @@ logs/
 # Temporary
 tmp/
 temp/
+
+# Dependencies
+node_modules/

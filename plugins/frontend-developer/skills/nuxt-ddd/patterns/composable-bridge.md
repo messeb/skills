@@ -112,7 +112,7 @@ const { charCount, status: usernameStatus, hint } = useUsernameLiveValidation(us
 - The import chain must always be: `domain/` → `composables/` → `components/`
 - **Components never call domain VOs directly** — create a dedicated composable instead
 
-```
+```typescript
 // WRONG — VO called inside a component
 import { Username } from '~/domain/Username'
 const validation = computed(() => Username.create(props.modelValue))

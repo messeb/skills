@@ -18,6 +18,7 @@ export interface UserRepository {
 ```
 
 Rules:
+
 - Interface lives in `domain/` — zero infrastructure imports
 - Returns `Promise<Result<…>>` — async, never `void` (which silently swallows errors)
 - Accepts aggregates + events, not raw primitives or DTOs

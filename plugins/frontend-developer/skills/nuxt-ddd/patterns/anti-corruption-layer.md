@@ -22,7 +22,7 @@ The domain defines *what it needs* (the port). Infrastructure defines *how to ge
 
 ## Structure
 
-```
+```text
 domain/
   <Concept>.ts              ← domain interface + private concrete classes
   <Concepts>.ts             ← port interface — domain terms only, no external types
@@ -91,6 +91,7 @@ export function <concept>FromExternal(
 ```
 
 Key points:
+
 - Concrete classes are **not exported** — consumers only see the interface
 - The mapper's parameters are plain primitives — it never imports external DTO types
 - The domain does not import anything from `infrastructure/`

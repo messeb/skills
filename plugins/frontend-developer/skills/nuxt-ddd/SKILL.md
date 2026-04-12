@@ -9,7 +9,7 @@ DDD in Nuxt separates concerns into four strict layers — domain, application, 
 
 ## Layer Map
 
-```
+```text
 pages/ & components/   ← Presentation: props in, events out — no use cases, no repos
 composables/           ← Presentation bridge: wire HttpRepo + UseCase, map Result → reactive state
 application/           ← Use cases, Result / AsyncResult type, DTOs, Context (composition root)

@@ -144,7 +144,7 @@ Use when multiple independent consumers need to react to the same event, or when
 
 Domain events are a **server-side concern** in Nuxt. They are raised and dispatched inside Nitro route handlers — never in composables or Vue components.
 
-```
+```text
 Nitro route handler (server/api/orders.post.ts)
   ↓ wire use case + repository + event bus
   ↓ use case runs: aggregate raises event, use case dispatches
