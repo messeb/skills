@@ -1,0 +1,56 @@
+plugins/seo/skills/third-party-scripts/SKILL.md
+  09e46f1852437f7d 1-427,429-466
+plugins/seo/skills/meta-tags/SKILL.md
+  09e46f1852437f7d 1-841
+plugins/seo/skills/structured-data-jsonld/SKILL.md
+  09e46f1852437f7d 1-1133
+plugins/seo/skills/core-web-vitals/SKILL.md
+  09e46f1852437f7d 1-478
+.claude-plugin/marketplace.json
+  09e46f1852437f7d 24-29
+plugins/seo/skills/crawl-control/SKILL.md
+  09e46f1852437f7d 22-467
+plugins/seo/skills/image-optimization/SKILL.md
+  09e46f1852437f7d 1-565
+plugins/seo/skills/seo-page-structure/SKILL.md
+  09e46f1852437f7d 1-869
+plugins/seo/skills/resource-hints/SKILL.md
+  09e46f1852437f7d 1-474
+plugins/seo/skills/internal-linking/SKILL.md
+  09e46f1852437f7d 1-529
+plugins/seo/.claude-plugin/plugin.json
+  09e46f1852437f7d 1-6
+plugins/seo/agents/seo.md
+  09e46f1852437f7d 1-227
+plugins/seo/skills/url-structure/SKILL.md
+  09e46f1852437f7d 1-604
+plugins/seo/skills/html5-microdata/SKILL.md
+  09e46f1852437f7d 1-838
+plugins/seo/skills/geo-content/SKILL.md
+  09e46f1852437f7d 1-369
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "a6d7f2aafe7d91e8dfb515369a1ea96a40005efc",
+  "prompts": {
+    "09e46f1852437f7d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0ffdb4e5-6f55-46ff-a69e-9d6cda9ced31",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Sebastian Messingfeld",
+      "messages": [],
+      "total_additions": 9898,
+      "total_deletions": 247,
+      "accepted_lines": 8761,
+      "overriden_lines": 4
+    }
+  },
+  "humans": {
+    "h_560a981bd10ccb": {
+      "author": "Sebastian Messingfeld"
+    }
+  }
+}
