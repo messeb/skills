@@ -1,0 +1,6 @@
+{
+  "name": "seo",
+  "description": "Adds skills for SEO, GEO (Generative Engine Optimization), and Lighthouse-driven page quality.",
+  "version": "1.0.0",
+  "agents": ["./agents/seo.md"]
+}

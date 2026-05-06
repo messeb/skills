@@ -21,6 +21,12 @@
       "description": "Adds skills for Go CLI and backend service development.",
       "source": "./plugins/go-developer",
       "version": "1.0.0"
+    },
+    {
+      "name": "seo",
+      "description": "Adds skills for SEO, GEO (Generative Engine Optimization), and Lighthouse-driven page quality.",
+      "source": "./plugins/seo",
+      "version": "1.0.0"
     }
   ]
 }
