@@ -1,0 +1,29 @@
+plugins/general-developer/skills/release-flow/SKILL.md
+  h_a51360f058d7fc 102-105,117,136,166,171-172,174-179,249
+  s_09e46f1852437f::t_49a20bf6082946 1-101,106-116,118-135,137-165,167-170,173,180-248,250-355
+plugins/general-developer/.claude-plugin/plugin.json
+  h_a51360f058d7fc 4
+plugins/general-developer/agents/general-developer.md
+  s_09e46f1852437f::t_f97d0d81f143ee 28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.8",
+  "base_commit_sha": "2e6f70d030625f9672a21b70f82d1b665ac3d3aa",
+  "prompts": {},
+  "humans": {
+    "h_a51360f058d7fc": {
+      "author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  },
+  "sessions": {
+    "s_09e46f1852437f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0ffdb4e5-6f55-46ff-a69e-9d6cda9ced31",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  }
+}
