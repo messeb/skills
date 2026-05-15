@@ -1,0 +1,25 @@
+CHANGELOG.md
+  h_a51360f058d7fc 7
+  s_09e46f1852437f::t_fc7f9c0b4ea090 11-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.8",
+  "base_commit_sha": "d7a17aa55a4cd9bef51bbc84a5731f0ec0f05129",
+  "prompts": {},
+  "humans": {
+    "h_a51360f058d7fc": {
+      "author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  },
+  "sessions": {
+    "s_09e46f1852437f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0ffdb4e5-6f55-46ff-a69e-9d6cda9ced31",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  }
+}
