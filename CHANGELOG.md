@@ -4,10 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres to [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## 2026-05-15
 
 ### Added
 
+- `seo` plugin with audit agent and 12 skills: `geo-content`, `meta-tags`, `seo-page-structure`, `crawl-control`, `html5-microdata`, `core-web-vitals`, `image-optimization`, `resource-hints`, `third-party-scripts`, `internal-linking`, `url-structure`, `structured-data-jsonld`
+- `release-flow` skill for `general-developer` — Git release flow: branch strategy, `PROJ-NNN` ticket conventions, environment promotion (TEST → QA → UAT → PROD), versioning, tagging, and artifact recipes for Docker, web bundles, libraries, CLI binaries, desktop, and mobile apps
 - Markdown linting with `markdownlint-cli2`: `pnpm lint:md` and `pnpm lint:fix:md` scripts, `.markdownlint.json` config
 - Husky pre-commit hook running `pnpm lint:md` on every commit
 - Switched package manager from npm to pnpm 10.33.0 (`packageManager` field in `package.json`)
