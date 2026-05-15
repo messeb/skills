@@ -25,6 +25,7 @@ Currently registered skills:
 | `testing` | Testing patterns and coverage |
 | `github-repo` | Repository setup and community files |
 | `cicd` | Pipeline setup for repository and tech stack |
+| `release-flow` | Release branch strategy, env promotion, ticket conventions, artifact types |
 | `husky` | Pre-commit hooks — lint-staged, commitlint, hook hygiene |
 | `dangerfile` | PR automation — rule authoring, CI integration, actionable messaging |
 
