@@ -1,5 +1,5 @@
 ---
-description: Ranking growth ideas — the ICE, PIE and BRASS scoring models with worked examples, when each fits, calibrating scores so they mean the same thing across people, expected-value ranking from the KPI tree, effort estimation, portfolio balance, and the failure modes that make scoring theatre rather than decision support.
+description: Ranking growth ideas — the Impact-Effort Matrix for fast workshop triage, then the ICE, PIE and BRASS scoring models with worked examples, when each fits, calibrating scores so they mean the same thing across people, expected-value ranking from the KPI tree, effort estimation, portfolio balance, and the failure modes that make scoring theatre rather than decision support.
 ---
 
 # Prioritizing experiments
@@ -50,10 +50,39 @@ A five-factor model aimed at channel selection rather than page tests:
 
 BRASS is the right instrument when choosing **which of the many channels to try** (`idea-generation`), because it weighs reach and access rather than page-level potential. It is a poor fit for ranking A/B tests.
 
+### Impact-Effort Matrix
+
+The fastest instrument, and the right one for a live workshop: a 2×2 of expected **impact** against **effort**, with ideas placed by discussion rather than scored.
+
+```text
+        high impact
+             │
+  Do now!    │   Big bets
+  (quick     │   (plan, resource,
+   wins)     │    split into slices)
+─────────────┼─────────────────────── effort →
+  Fill-in    │   Money pit
+  (when idle)│   (drop, or challenge
+             │    the effort estimate)
+        low impact
+```
+
+| Quadrant | Action |
+|----------|--------|
+| **High impact / low effort** | Do now — these are the quick wins that build credibility early (`growth-process`) |
+| **High impact / high effort** | Plan deliberately; slice into the cheapest falsifying test first |
+| **Low impact / low effort** | Fill-in work only; never let it crowd out the top-left |
+| **Low impact / high effort** | Drop — or challenge the impact estimate before dropping |
+
+Strengths: takes ten minutes, needs no calibration, and the *placement argument* surfaces disagreement about impact faster than scoring does. Weaknesses: it is coarse, it hides confidence entirely (a high-impact guess and a high-impact certainty land in the same square), and it produces ties.
+
+Use it to **triage a large pool down to a shortlist**, then score the shortlist with ICE or PIE. Adding a third dimension — dot size or colour for confidence — removes most of its weakness at no cost.
+
 ### Choosing
 
 | Situation | Model |
 |-----------|-------|
+| Live workshop, large unsorted pool | **Impact-Effort Matrix**, then score the shortlist |
 | Mixed backlog, fast weekly ranking | **ICE** |
 | Funnel and conversion work with analytics available | **PIE** |
 | Selecting new acquisition channels to test | **BRASS** |
@@ -169,6 +198,7 @@ Two rules: if instrumentation does not exist yet, that is part of the effort and
 
 ## 8. Checklist
 
+- [ ] Large idea pools triaged on an Impact-Effort Matrix before scoring
 - [ ] One scoring model chosen per backlog, and used consistently
 - [ ] Score anchors written down for each component
 - [ ] Confidence anchored to evidence strength, not enthusiasm

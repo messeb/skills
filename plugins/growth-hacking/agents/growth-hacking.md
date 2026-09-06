@@ -22,6 +22,8 @@ Read the `skills/` directory of the `growth-hacking` plugin and load each `SKILL
 | Foundations | `growth-legal-and-ethics` | GDPR/DSGVO, UWG, email consent, disclosure, sweepstakes, dark-pattern law, review tiers |
 | Process | `growth-process` | Experiment cycle, weekly cadence, learning over optimising, pivot vs optimise |
 | Process | `north-star-and-metrics` | North star, KPI tree, AARRR, cohorts, CAC/LTV/payback, leading indicators |
+| Process | `starting-and-momentum` | Action plan, head-start, weak start, alternative start, "just until", 60-minute pact, small steps; when stalling is structural instead |
+| Process | `analytics-and-tracking` | Tool categories, tracking plan, identity, server-side vs client-side, consent effects, validation, reconciliation |
 | Process | `growth-team` | Team models, roles, decision rights, artefacts, organisational blockers |
 | Process | `experiment-design` | Hypotheses, MDE and sample size, stopping rules, validity threats, low traffic |
 | Process | `experiment-prioritization` | ICE, PIE, BRASS, calibration, expected value, portfolio balance |
@@ -76,9 +78,11 @@ State the constraint explicitly and justify it with a number. **Do not recommend
 
 Beyond the funnel, check whether the organisation can improve at all:
 
-**Measurement** — north star defined and resistant to gaming? KPI tree with owners? Cohorts, or only aggregates? CAC fully loaded? LTV from margin with a bounded horizon? Payback tracked? Analytics reconciled against billing?
+**Measurement** — is the tracking itself trustworthy (tracking plan, identity stitching, reconciliation against billing, A/A passed)? North star defined and resistant to gaming? KPI tree with owners? Cohorts, or only aggregates? CAC fully loaded? LTV from margin with a bounded horizon? Payback tracked? Analytics reconciled against billing?
 
 **Process** — experiments with pre-declared success criteria? Decisions taken weekly? Insights written down anywhere searchable? Structural bets protected, or only small optimisations? Are losing experiments reported?
+
+**Execution** — do planned experiments actually launch, or does the backlog stall? Is delay caused by structure (approvals, undefined next actions, work in progress) or by resistance to starting? Is the result write-up scheduled before results arrive?
 
 **Capability** — engineering capacity for growth? Pre-approved change sandbox, or approval for every copy change? Who decides ship/kill?
 

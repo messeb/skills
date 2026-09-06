@@ -44,7 +44,7 @@
       "name": "growth-hacking",
       "description": "Adds skills for growth hacking — strategy, experiment process, AARRR funnel work across acquisition, activation, retention, referral and revenue, plus the legal and ethical limits.",
       "source": "./plugins/growth-hacking",
-      "version": "1.0.0"
+      "version": "1.1.0"
     }
   ]
 }

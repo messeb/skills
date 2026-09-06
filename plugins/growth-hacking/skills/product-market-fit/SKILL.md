@@ -61,6 +61,16 @@ The widely used rule of thumb is that **above roughly 40% "very disappointed"** 
 - Segment the result. 25% overall with 60% in one segment is a clear instruction to narrow.
 - A single number from a small, self-selected sample is not evidence; report n and the sampling method.
 
+### Net Promoter Score, and its limits
+
+NPS asks how likely someone is to recommend you, on 0–10, and subtracts the share of detractors (0–6) from promoters (9–10).
+
+It is worth tracking as a **trend on your own data**, and the free-text follow-up ("what is the main reason for your score?") is genuinely useful. But it is a weaker fit-signal than retention for three reasons: it measures stated intent rather than behaviour; the score is unstable at small sample sizes because it discards the middle; and cross-company benchmarks are close to meaningless given how differently it is sampled. Treat a rising NPS as corroboration of a flattening retention curve, never as a substitute for one.
+
+### Crowdsourced and pre-commitment validation
+
+Where the audience can be reached directly, demand can be validated by asking people to commit something: a crowdfunding campaign, a pre-order, a paid pilot, a waiting list with a deposit, or a public co-creation campaign where supporters vote and pay. Money and public commitment are far stronger evidence than survey intent (`idea-validation`), and the campaign itself produces an audience and a distribution list.
+
 ### Other qualitative signals
 
 Users building workarounds to keep using it, resisting a migration away, asking for an invoice so they can expense it, or spontaneously introducing colleagues — these are behavioural, unprompted, and harder to fake than any survey.
@@ -135,6 +145,7 @@ The organisational difficulty is that this decision is unpopular and usually cor
 - [ ] Curves segmented by channel, segment, and activation status
 - [ ] Retained subset identified and characterised
 - [ ] Supporting signals reviewed: organic share, frequency, unprompted renewal
+- [ ] NPS used as trend corroboration only, never as a substitute for the retention curve
 - [ ] Disappointment survey run on users past the activation event, with n reported
 - [ ] Free-text survey answers mined for positioning and targeting
 - [ ] Assumptions ranked by fatal × uncertain; the riskiest tested first

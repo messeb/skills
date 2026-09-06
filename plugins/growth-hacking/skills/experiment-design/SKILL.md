@@ -10,7 +10,9 @@ Use this skill before launching any test. The design decisions made here determi
 
 ---
 
-## 1. The experiment card
+## 1. The experiment card (growth story card)
+
+Also called a **growth story card**, and the board holding them a **growth story canvas** — the names differ by team, the artefact does not.
 
 One page, written before the experiment runs. This is the artefact that makes a growth backlog reviewable.
 

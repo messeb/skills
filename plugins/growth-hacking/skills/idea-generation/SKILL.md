@@ -1,5 +1,5 @@
 ---
-description: Filling the experiment backlog systematically — the nineteen traction channels as a coverage checklist, structured ideation methods (brainwriting 6-3-5, Walt Disney method, Osborn/SCAMPER checklist), mining data and customers for ideas, finding waterholes where your audience already gathers, competitor and adjacent-industry mining, and turning raw ideas into testable candidates.
+description: Filling the experiment backlog systematically — the nineteen traction channels as a coverage checklist, structured silent ideation (brainwriting 6-3-5, brainswarming, Walt Disney method, Osborn/SCAMPER checklist), mining data and customers for ideas, finding waterholes where your audience already gathers, competitor and adjacent-industry mining, and turning raw ideas into testable candidates.
 ---
 
 # Generating growth ideas
@@ -58,11 +58,15 @@ The last two are the most valuable, because they point at the mechanism rather t
 
 Unstructured brainstorming underperforms: the loudest voice anchors the room, and production drops as people wait their turn. Use a structure.
 
-### Brainwriting 6-3-5
+### Silent methods: brainwriting 6-3-5 and brainswarming
 
 Six people, three ideas each, five rounds. Everyone writes three ideas on a sheet in five minutes, then passes it on; the next person builds on what they read. Thirty minutes produces up to 108 ideas, with no anchoring and no interruption.
 
 Best for: volume and for teams where seniority otherwise dominates. Follow with clustering.
+
+**Brainswarming** is the same principle applied to a shared surface rather than passed sheets. The goal goes at the top, available resources at the bottom, and everyone silently adds notes — breaking the goal into sub-goals downward, and combining resources into capabilities upward — until the two halves meet in the middle. Nobody speaks; the board is the conversation.
+
+It fits growth work well because the two halves map directly onto the constraint (top) and the channels, assets, and audiences you already have (bottom). Where 6-3-5 maximises idea volume, brainswarming maximises the chance that an idea is actually feasible with what you have.
 
 ### The Walt Disney method
 
@@ -153,7 +157,7 @@ Cluster the pool before ranking: near-duplicates merge, and clusters reveal them
 - [ ] Three or four unused channels selected for a cheap test
 - [ ] Own data mined first: funnel drop-offs, site search, support, cancellations, reviews
 - [ ] Retained-versus-churned cohort differences examined for mechanism
-- [ ] A structured ideation method used instead of open brainstorming
+- [ ] A structured silent method (6-3-5 or brainswarming) used instead of open brainstorming
 - [ ] Critique separated in time from idea generation
 - [ ] Subtractive ideas ("eliminate") explicitly explored
 - [ ] Adjacent industries mined for transplantable mechanics
