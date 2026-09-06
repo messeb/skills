@@ -1,0 +1,66 @@
+plugins/python-ai-developer/skills/ocr/SKILL.md
+  s_f1c90ff2214919::t_3028294a7544f4 1-199
+plugins/python-ai-developer/skills/uv/SKILL.md
+  s_f1c90ff2214919::t_0674c0eb899415 1-252
+plugins/python-ai-developer/skills/async-and-background-work/SKILL.md
+  s_f1c90ff2214919::t_e13390bff1e1d6 1-178
+plugins/python-ai-developer/skills/fastapi/SKILL.md
+  s_f1c90ff2214919::t_e13390bff1e1d6 1-311
+plugins/python-ai-developer/skills/structured-output/SKILL.md
+  s_f1c90ff2214919::t_8e7220f480aed0 1-100,102-225
+  s_f1c90ff2214919::t_7390bdd51063e2 101
+plugins/python-ai-developer/skills/notebooks/SKILL.md
+  s_f1c90ff2214919::t_b51c4f32341414 1-178
+plugins/python-ai-developer/skills/orchestration-frameworks/SKILL.md
+  s_f1c90ff2214919::t_3c7a46c38548e2 1-197
+plugins/python-ai-developer/skills/operations-research/SKILL.md
+  s_f1c90ff2214919::t_5b6ad47b1d8148 1-222
+plugins/python-ai-developer/skills/tool-calling/SKILL.md
+  s_f1c90ff2214919::t_8e7220f480aed0 1-205
+plugins/python-ai-developer/agents/python-ai-developer.md
+  s_f1c90ff2214919::t_1f44ba3fd5039c 1-151
+plugins/python-ai-developer/skills/llm-reliability-and-cost/SKILL.md
+  s_f1c90ff2214919::t_a7edf3529bd6aa 1-194
+plugins/python-ai-developer/skills/ide-setup/SKILL.md
+  s_f1c90ff2214919::t_b51c4f32341414 1-215
+plugins/python-ai-developer/skills/dspy/SKILL.md
+  s_f1c90ff2214919::t_3c7a46c38548e2 1-206
+CHANGELOG.md
+  s_f1c90ff2214919::t_002f039e5f4735 7-15
+plugins/python-ai-developer/skills/provider-abstraction/SKILL.md
+  s_f1c90ff2214919::t_4b25744fbc1ae3 1-271
+plugins/python-ai-developer/skills/llm-testing-and-evals/SKILL.md
+  s_f1c90ff2214919::t_a7edf3529bd6aa 1-189
+README.md
+  s_f1c90ff2214919::t_002f039e5f4735 203-245
+plugins/python-ai-developer/skills/project-structure/SKILL.md
+  s_f1c90ff2214919::t_764e64aaeca2b9 115-123
+  s_f1c90ff2214919::t_0674c0eb899415 1-114,124-244
+plugins/python-ai-developer/.claude-plugin/plugin.json
+  s_f1c90ff2214919::t_9a33004ec034c3 1-6
+plugins/python-ai-developer/skills/machine-learning/SKILL.md
+  s_f1c90ff2214919::t_3028294a7544f4 1-201
+plugins/python-ai-developer/skills/llm-providers/SKILL.md
+  s_f1c90ff2214919::t_4b25744fbc1ae3 1-241
+plugins/python-ai-developer/skills/containerization/SKILL.md
+  s_f1c90ff2214919::t_5b6ad47b1d8148 1-246
+.claude-plugin/marketplace.json
+  s_f1c90ff2214919::t_4cd1ad0863518e 39
+  s_f1c90ff2214919::t_002f039e5f4735 36-38,40-41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "d1c3811ab304598905d742f4011d58b3e85bbc73",
+  "prompts": {},
+  "sessions": {
+    "s_f1c90ff2214919": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "03949624-b7a2-404c-b8ac-a0c0f2f85aa2",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  }
+}
