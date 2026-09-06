@@ -200,6 +200,49 @@ Every skill follows the same shape: an intake question set (idea, problem, scope
 
 ---
 
+### `python-ai-developer`
+
+Skills and an audit agent for Python AI application development — project tooling with uv, FastAPI services, a provider-agnostic LLM layer across OpenAI, Anthropic, Gemini, Grok and Mistral, orchestration frameworks, OCR / ML / operations-research workloads, containers, IDE run-and-debug configuration, and notebooks.
+
+#### Installation
+
+```bash
+/plugin install python-ai-developer@messeb
+```
+
+#### Agent
+
+| Agent | Description |
+|-------|-------------|
+| `python-ai-developer` | Detects the project profile (package manager, framework, providers, AI workloads), audits the codebase against every skill, and produces a severity-ranked report with `file:line` findings ordered by the cost of being wrong |
+
+#### Skills
+
+| Category | Skill | Description |
+|----------|-------|-------------|
+| Tooling | `uv` | Project init, dependency groups vs extras, the lockfile and `--frozen`, Python pinning, workspaces, PyTorch/CUDA index configuration, Docker and CI usage, migration from pip/Poetry/Conda |
+| Tooling | `project-structure` | src layout, module boundaries that keep provider SDKs at the edge, typed settings with `SecretStr`, structured logging, ruff/mypy/pytest configuration |
+| Tooling | `ide-setup` | VS Code `launch.json` and PyCharm run configurations for API, worker, tests and container attach; debugpy path mappings; async and multi-worker debugging pitfalls |
+| Tooling | `notebooks` | Kernel setup with uv, the import-from-`src` rule, nbstripout and jupytext, papermill parameterised reports, notebooks in CI, secrets and data hygiene |
+| Tooling | `containerization` | Multi-stage Dockerfiles with uv layer caching, non-root hardening, OCR/ML system dependencies, GPU images, model-weight strategies, Compose with remote debugging |
+| API | `fastapi` | App factory and lifespan-managed clients, dependency injection, Pydantic v2 models, the blocking-call trap, problem+json errors, streamed uploads, SSE with disconnect handling |
+| API | `async-and-background-work` | Inline vs job vs queue, idempotency keys that prevent double-charging, bounded fan-out, cancellation and deadlines, queue selection, worker deployment |
+| LLM | `llm-providers` | OpenAI, Anthropic, Gemini, Grok and Mistral — client setup, resolving model IDs instead of hardcoding them, capability matrix, token and cost accounting, error surfaces |
+| LLM | `provider-abstraction` | A `Protocol`-based client with normalized messages, usage and errors; adapters, registry, routing and fallback; build-vs-gateway; contract testing |
+| LLM | `structured-output` | Native schema-constrained output per provider, schema design models can satisfy, the repair loop, provenance verification, schema versioning |
+| LLM | `tool-calling` | Tool surface design, the agent loop and its four termination conditions, recoverable tool errors, provider differences, prompt-injection and confused-deputy defences |
+| LLM | `llm-reliability-and-cost` | One retry policy with jitter, rate limiting, prompt caching that actually hits, model tiering, batch APIs, enforced budgets, cost attribution and alerts |
+| LLM | `orchestration-frameworks` | When raw SDKs beat a framework; LangChain and LCEL; LangGraph for durable stateful agents with checkpointing and human-in-the-loop; PydanticAI, Instructor, LlamaIndex, Haystack |
+| LLM | `dspy` | Signatures, modules and optimizers, writing metrics that mean something, train/dev/test discipline, compiled-artifact versioning, teacher-student cost reduction |
+| Quality | `llm-testing-and-evals` | The pyramid for non-deterministic code, fakes and recorded fixtures, labelled evaluation sets, metrics and LLM-as-judge biases, CI gating, canary rollout |
+| Solutions | `ocr` | Engine selection per document class, preprocessing that decides accuracy, text-layer detection, OCR-then-LLM with provenance, CER/WER measurement, performance and operations |
+| Solutions | `machine-learning` | ML-vs-LLM decision, reproducible training, leakage-free pipelines, registry and serialization, serving and train/serve skew, drift monitoring and retraining gates |
+| Solutions | `operations-research` | Recognising an OR problem, CP-SAT vs MILP vs routing, modelling patterns, soft constraints, infeasibility diagnosis, determinism, scaling, safe LLM combination |
+
+Every skill follows the same shape: when to use it and when not to, the method with runnable Python, an anti-pattern table, and a checklist.
+
+---
+
 ## Usage with Coding CLI
 
 ### Run a skill

@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## 2026-09-06
+
+### Added
+
+- `python-ai-developer` plugin with an audit agent and 18 skills for Python AI application development, grouped as tooling (`uv`, `project-structure`, `ide-setup`, `notebooks`, `containerization`), API (`fastapi`, `async-and-background-work`), LLM (`llm-providers`, `provider-abstraction`, `structured-output`, `tool-calling`, `llm-reliability-and-cost`, `orchestration-frameworks`, `dspy`), quality (`llm-testing-and-evals`), and solution domains (`ocr`, `machine-learning`, `operations-research`)
+- Multi-provider coverage for OpenAI, Anthropic, Gemini, xAI Grok, and Mistral behind one `Protocol`-based client, with routing, fallback, and contract testing across adapters
+- Orchestration-framework guidance for LangChain, LangGraph, PydanticAI, Instructor, LlamaIndex and Haystack, plus a dedicated `dspy` skill for programmatic prompting and optimizer-compiled prompts
+- `python-ai-developer` audit agent that detects the project profile (package manager, web framework, providers, frameworks, AI workloads, containers, IDE config, CI) and ranks findings by the cost of being wrong
+
 ## 2026-09-05
 
 ### Added

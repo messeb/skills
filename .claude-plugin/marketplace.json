@@ -33,6 +33,12 @@
       "description": "Adds skills for product discovery, requirements elicitation, and collaborative domain modeling.",
       "source": "./plugins/product-discovery",
       "version": "1.0.0"
+    },
+    {
+      "name": "python-ai-developer",
+      "description": "Adds skills for Python AI application development — uv, FastAPI, multi-provider LLM clients, orchestration frameworks, OCR, ML, operations research, containerization, IDE setup, and notebooks.",
+      "source": "./plugins/python-ai-developer",
+      "version": "1.0.0"
     }
   ]
 }
