@@ -102,6 +102,7 @@ Skills and an audit agent for modern frontend development — Vue, Nuxt, React, 
 | Architecture | `api-layer` | Typed HTTP client, OpenAPI codegen, centralized error handling, token refresh, and MSW for testing |
 | Framework | `astro` | Astro Islands Architecture — hydration directives, content collections, SSR/SSG/hybrid modes, and cross-island state |
 | Architecture | `nuxt-ddd` | Domain-Driven Design in Nuxt/TypeScript — value objects, entities, aggregates, domain events, use cases, Result type, repositories, policies, strategy registry, anti-corruption layer, composable bridge, and full client/server layer wiring |
+| Architecture | `seo-geo-optimization` | SEO/GEO in a component framework — rendering strategy for crawlability, hydration and islands policy, LCP/CLS/INP at component level, server-rendered head tags and JSON-LD, Lighthouse CI as a PR gate |
 
 ### `go-developer`
 
@@ -132,6 +133,70 @@ Skills and an audit agent for Go CLI tools and backend services — idiomatic Go
 | Tooling | `modules` | `go.mod` / `go.sum`, dependency management, versioning, Go workspaces, vendoring, and private modules |
 | Tooling | `dependency-injection` | Wire (compile-time DI by Google) and Fx (runtime DI by Uber) — providers, modules, lifecycle hooks, and interface binding |
 | Quality | `testing` | Table-driven tests, subtests, `testify`, interface mocks, `httptest`, integration tests, benchmarks, and race detection |
+
+---
+
+### `product-discovery`
+
+Skills and a guiding agent for product discovery and requirements elicitation — collaborative domain modeling, user research, stakeholder alignment, and validation at scale. Every skill asks for the idea, problem, and scope it needs, then produces a filled Markdown template.
+
+#### Installation
+
+```bash
+/plugin install product-discovery@messeb
+```
+
+#### Agent
+
+| Agent | Description |
+|-------|-------------|
+| `product-discovery` | Diagnoses what is actually unknown, recommends and sequences the right methods, runs their intake, produces the artifacts, and audits existing discovery work for traceability, evidence, coverage, and currency gaps |
+
+#### Skills
+
+| Category | Skill | Description |
+|----------|-------|-------------|
+| Research | `stakeholder-interviews` | Stakeholder mapping, guide design, question types, laddering, note-taking, cross-interview synthesis |
+| Research | `contextual-inquiry` | Field observation with the master/apprentice model — workarounds, artifacts, interruptions, work models, say/do gaps |
+| Research | `jobs-to-be-done` | Job statements, four forces of switching, switch interviews, job maps, outcome statements and opportunity scores |
+| Research | `questionnaires` | When to survey, sampling and bias, wording rules, scales, standard instruments (SUS, UMUX-Lite, NPS, CES), pilots, analysis |
+| Framing | `design-thinking` | Personas and proto-personas, empathy maps, customer journey maps, POV statements and How Might We questions |
+| Framing | `impact-mapping` | Why → who → how → what maps, measurable goals, behaviour-change impacts, deliverables as experiments, visible scope cuts |
+| Framing | `goal-modeling` | KAOS AND/OR goal trees, requirements vs expectations vs domain properties, obstacle analysis, i\* dependency and softgoal models |
+| Alignment | `workshop-facilitation` | JAD roles, workshop design backwards from the outcome, diverge/converge structure, decision protocols, conflict handling, hybrid setup |
+| Analysis | `document-system-analysis` | Source inventory and trust ranking, regulatory traceability, legacy code archaeology, data and log analysis, contradiction handling |
+| Analysis | `risk-conflict-analysis` | Conflict types and resolution strategies, five-dimension feasibility checks, pre-mortem, risk storming, assumption mapping, risk register |
+| Domain modeling | `event-storming` | Big Picture / Process / Design level workshops — sticky-note grammar, facilitation script, timeboxes, bounded contexts and aggregates |
+| Domain modeling | `domain-storytelling` | Pictographic actor / work-object / activity stories, scope axes, recording session script, glossary harvesting, derived requirements |
+| Domain modeling | `context-mapping` | Bounded contexts, boundary heuristics, the nine DDD relationship patterns, Bounded Context Canvas, core/supporting/generic classification |
+| System modeling | `process-modeling` | BPMN subset, pools and lanes, gateways, timers, exception and irregular flows, handoff and cycle-time measurement, Mermaid swimlanes |
+| System modeling | `state-machines` | Entity lifecycles — states, events, guards, actions, invariants, complete transition matrix, timeouts, idempotency, derived test cases |
+| System modeling | `data-modeling` | Conceptual / logical / physical ER models, identifiers and cardinality, 3NF and deliberate denormalisation, historisation, GDPR erasure |
+| System modeling | `c4-diagrams` | C4 levels 1–4 plus landscape, dynamic and deployment views, abstraction discipline, legends, diagrams-as-code workflow |
+| Specification | `use-case-modeling` | Cockburn goal levels, actors, preconditions and guarantees, main success scenario, extensions for every exception path |
+| Specification | `user-stories` | Story formats, INVEST, the 3 C's, SPIDR and vertical splitting patterns, acceptance criteria styles, Definition of Ready/Done |
+| Specification | `story-mapping` | Backbone of user activities, narrative flow vs detail axes, walking skeleton, horizontal release slices, scope negotiation |
+| Specification | `example-mapping` | 25-minute four-colour card session — rules, examples, questions, split signals, Gherkin bridge |
+| Specification | `gherkin-bdd` | Feature/Rule/Scenario structure, declarative vs imperative style, step definition design, tags, living documentation |
+| Specification | `requirement-templates` | EARS patterns, the MASTeR/Rupp sentence template, ambiguity traps, ISO 29148 quality criteria, template selection |
+| Specification | `srs-templates` | Volere, IEEE 830, ISO/IEC/IEEE 29148 — when a formal SRS is justified, the Volere shell and fit criterion, tailoring, approval |
+| Specification | `glossary` | Ubiquitous language per bounded context, definition rules, homonyms and translation tables, harvesting and enforcement |
+| Specification | `prototyping` | Fidelity selection, paper to Wizard of Oz to fake door, the state inventory (empty/loading/error/max), annotation for handover |
+| Specification | `api-contracts` | Contract-first OpenAPI and AsyncAPI, resource and event modelling, RFC 9457 errors, versioning and compatibility, contract testing |
+| Specification | `formal-specs` | TLA+/PlusCal, Alloy, and Z — when formal specification pays, safety and liveness properties, modelling failures, refinement |
+| Specification | `quality-attributes` | Quality Attribute Workshop, six-part scenarios, ISO/IEC 25010:2023 checklist, utility trees, ATAM-lite trade-off and sensitivity points |
+| Validation | `requirements-reviews` | The formality ladder from desk check to Fagan inspection, requirement defect taxonomy, perspective-based reading, review metrics |
+| Validation | `three-amigos` | The three perspectives and their questions, the 25-minute format, when to add a fourth amigo, remote and asynchronous variants |
+| Validation | `acceptance-test-definition` | ATDD cycle, systematic case derivation (partitions, boundaries, decision tables, state transitions), test data, automation layers |
+| Validation | `usability-testing` | Study types and sample size, task design, think-aloud moderation, severity rating, benchmark metrics, accessibility testing |
+| Validation | `model-checking` | TLC / Apalache / Alloy Analyzer, state explosion tactics, fairness, reading counterexamples, simulation, CI integration |
+| Validation | `traceability` | Trace model and link types, identifier discipline, orphan and coverage checks, impact analysis, regulatory traceability |
+| Management | `prioritization` | MoSCoW, WSJF and cost of delay, Kano, RICE, opportunity scoring, Buy a Feature, Prune the Product Tree, revisit triggers |
+| Management | `backlog-refinement` | Refinement funnel and horizons, cadence, sizing approaches, honest DoR/DoD, refinement health metrics, backlog hygiene |
+| Management | `change-management` | When change control is justified, the CR lifecycle, impact analysis, change control board, versioning, communication obligations |
+| Management | `baselining` | What a baseline contains, entry criteria and approval, immutability and naming, partial and rolling baselines in agile delivery |
+
+Every skill follows the same shape: an intake question set (idea, problem, scope, participants, constraints), the method or session script, a fillable Markdown output template with Mermaid diagrams where a diagram helps, an anti-pattern table, and a checklist.
 
 ---
 

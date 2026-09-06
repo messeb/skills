@@ -29,6 +29,7 @@ Currently registered skills:
 | `api-layer` | Architecture — typed HTTP client, error handling, OpenAPI codegen |
 | `astro` | Framework — Islands Architecture, hydration directives, content collections, SSR/SSG/hybrid |
 | `nuxt-ddd` | Architecture — DDD tactical patterns: value objects, aggregates, repositories, ... in Nuxt |
+| `seo-geo-optimization` | Architecture — rendering strategy for crawlability, hydration policy, head tags and JSON-LD from components, Lighthouse CI gate |
 
 If new skill directories are present that are not in this list, include them automatically.
 

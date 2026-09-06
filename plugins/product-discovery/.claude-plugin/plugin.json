@@ -1,0 +1,8 @@
+{
+  "name": "product-discovery",
+  "description": "Adds skills for product discovery, requirements elicitation, and collaborative domain modeling.",
+  "version": "1.2.0",
+  "agents": [
+    "./agents/product-discovery.md"
+  ]
+}
