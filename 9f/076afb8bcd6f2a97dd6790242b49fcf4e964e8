@@ -1,0 +1,140 @@
+README.md
+  s_f1c90ff2214919::t_9651bbe1d3e0ce 105
+  s_f1c90ff2214919::t_6039027f646f85 139-163,166-167,200-202
+  s_f1c90ff2214919::t_43a9725e2e8539 169,178,180-186,188-197
+  s_f1c90ff2214919::t_10649b21cb7051 164-165,168,170-177,179,187,198-199
+plugins/product-discovery/skills/formal-specs/SKILL.md
+  s_f1c90ff2214919::t_176a33315fe8e8 1-195
+plugins/product-discovery/skills/traceability/SKILL.md
+  s_f1c90ff2214919::t_a1b9e13a23557f 1-228
+plugins/product-discovery/skills/backlog-refinement/SKILL.md
+  s_f1c90ff2214919::t_8346ee85e46938 1-222
+plugins/product-discovery/skills/design-thinking/SKILL.md
+  s_f1c90ff2214919::t_15e69d414f4d30 1-269
+plugins/product-discovery/skills/prioritization/SKILL.md
+  s_f1c90ff2214919::t_8346ee85e46938 1-206
+plugins/product-discovery/skills/domain-storytelling/SKILL.md
+  s_f1c90ff2214919::t_3c188506489ec7 1-207
+plugins/product-discovery/skills/stakeholder-interviews/SKILL.md
+  s_f1c90ff2214919::t_75c7aedb52f109 1-272
+plugins/product-discovery/skills/context-mapping/SKILL.md
+  s_f1c90ff2214919::t_2d31f9d00bd5d9 1-225
+plugins/product-discovery/skills/state-machines/SKILL.md
+  s_f1c90ff2214919::t_880573c5e70ca2 1-242
+plugins/product-discovery/skills/change-management/SKILL.md
+  s_f1c90ff2214919::t_54cbff10a290e1 1-260
+plugins/product-discovery/skills/usability-testing/SKILL.md
+  s_f1c90ff2214919::t_e4ef884b5ec778 89-94
+  s_f1c90ff2214919::t_a1b9e13a23557f 1-88,95-223
+plugins/product-discovery/skills/acceptance-test-definition/SKILL.md
+  s_f1c90ff2214919::t_57f442946392b2 1-199
+plugins/frontend-developer/skills/seo-geo-optimization/SKILL.md
+  s_f1c90ff2214919::t_4f71db4ec431b1 1-315,317-323,325-330,332-339,341-346,348-353,355-360
+  s_f1c90ff2214919::t_d510a26ea9de2e 316,324,331,340,347,354
+plugins/product-discovery/skills/questionnaires/SKILL.md
+  s_f1c90ff2214919::t_84b8479f45f086 1-276
+plugins/product-discovery/skills/requirements-reviews/SKILL.md
+  s_f1c90ff2214919::t_c4813f7cc03287 1-200
+plugins/product-discovery/skills/workshop-facilitation/SKILL.md
+  s_f1c90ff2214919::t_af0d1ca0292032 1-198
+plugins/product-discovery/skills/api-contracts/SKILL.md
+  s_f1c90ff2214919::t_1136fb0f842434 179
+  s_f1c90ff2214919::t_cbd660e6b80277 46,54,62,70,85
+  s_f1c90ff2214919::t_333ec21dda5e77 1-45,47-53,55-61,63-69,71-84,86-178,180-250
+plugins/product-discovery/skills/three-amigos/SKILL.md
+  s_f1c90ff2214919::t_cbd660e6b80277 63,70,77
+  s_f1c90ff2214919::t_c4813f7cc03287 1-62,64-69,71-76,78-180
+plugins/product-discovery/skills/c4-diagrams/SKILL.md
+  s_f1c90ff2214919::t_df61ae38a31b7b 1-250
+plugins/product-discovery/skills/glossary/SKILL.md
+  s_f1c90ff2214919::t_7abce97e1979f0 1-186
+plugins/product-discovery/skills/model-checking/SKILL.md
+  s_f1c90ff2214919::t_e4ef884b5ec778 73-77
+  s_f1c90ff2214919::t_e323a68d703c4a 72
+  s_f1c90ff2214919::t_57f442946392b2 1-71,78-227
+plugins/product-discovery/skills/baselining/SKILL.md
+  s_f1c90ff2214919::t_54cbff10a290e1 1-239
+plugins/product-discovery/skills/quality-attributes/SKILL.md
+  s_f1c90ff2214919::t_699578492c32e8 1-125,158-159,161-261
+  s_f1c90ff2214919::t_937d52967d0767 126-157,160
+CHANGELOG.md
+  s_f1c90ff2214919::t_6039027f646f85 7-12,24
+  s_f1c90ff2214919::t_43a9725e2e8539 15-18
+  s_f1c90ff2214919::t_9651bbe1d3e0ce 19-23
+  s_f1c90ff2214919::t_10649b21cb7051 13-14
+plugins/product-discovery/skills/srs-templates/SKILL.md
+  s_f1c90ff2214919::t_333ec21dda5e77 1-243
+plugins/product-discovery/skills/requirement-templates/SKILL.md
+  s_f1c90ff2214919::t_ec5ed51299623f 1-188
+plugins/product-discovery/skills/user-stories/SKILL.md
+  s_f1c90ff2214919::t_3b67d08d9393cf 1-268
+plugins/product-discovery/skills/prototyping/SKILL.md
+  s_f1c90ff2214919::t_176a33315fe8e8 1-179
+plugins/frontend-developer/agents/frontend-developer.md
+  s_f1c90ff2214919::t_9651bbe1d3e0ce 32
+plugins/product-discovery/agents/product-discovery.md
+  s_f1c90ff2214919::t_56e1d2f71821a7 187,193,227,235,240
+  s_f1c90ff2214919::t_0e53fd45ecc3d4 70
+  s_f1c90ff2214919::t_0a1c01a87cc850 15-16,22,25-29,31-40,42-46,48,56,68-69,108-115,154-158,173-176,199-207,233
+  s_f1c90ff2214919::t_8a7f123617ca7c 41,47,49-55,57-67,71-78,116-124,134-145,159-163,177,208-225
+  s_f1c90ff2214919::t_8a4248338fad2f 1-14,17-21,23-24,30,79-107,125-133,146-153,164-172,178-186,188-192,194-198,226,228-232,234,236-239,241-271
+plugins/product-discovery/skills/risk-conflict-analysis/SKILL.md
+  s_f1c90ff2214919::t_699578492c32e8 1-153,166-237
+  s_f1c90ff2214919::t_937d52967d0767 154-165
+plugins/product-discovery/skills/gherkin-bdd/SKILL.md
+  s_f1c90ff2214919::t_ec5ed51299623f 1-207
+plugins/product-discovery/skills/goal-modeling/SKILL.md
+  s_f1c90ff2214919::t_df61ae38a31b7b 1-283
+plugins/product-discovery/skills/example-mapping/SKILL.md
+  s_f1c90ff2214919::t_3c188506489ec7 1-173
+plugins/product-discovery/.claude-plugin/plugin.json
+  s_f1c90ff2214919::t_2186e7d2298036 1-3,8
+  s_f1c90ff2214919::t_43a9725e2e8539 4
+  s_f1c90ff2214919::t_10649b21cb7051 5-7
+plugins/product-discovery/skills/jobs-to-be-done/SKILL.md
+  s_f1c90ff2214919::t_15e69d414f4d30 1-247
+.claude-plugin/marketplace.json
+  s_f1c90ff2214919::t_6039027f646f85 30-34,38
+  s_f1c90ff2214919::t_9651bbe1d3e0ce 17
+  h_a51360f058d7fc 35
+plugins/frontend-developer/.claude-plugin/plugin.json
+  s_f1c90ff2214919::t_9651bbe1d3e0ce 4-8
+plugins/product-discovery/skills/impact-mapping/SKILL.md
+  s_f1c90ff2214919::t_af0d1ca0292032 1-188
+plugins/product-discovery/skills/use-case-modeling/SKILL.md
+  s_f1c90ff2214919::t_8e32da996dd837 1-245
+plugins/product-discovery/skills/contextual-inquiry/SKILL.md
+  s_f1c90ff2214919::t_75c7aedb52f109 1-233
+plugins/product-discovery/skills/process-modeling/SKILL.md
+  s_f1c90ff2214919::t_3b67d08d9393cf 1-246
+plugins/product-discovery/skills/event-storming/SKILL.md
+  s_f1c90ff2214919::t_83fed1a16ec06a 1-245
+plugins/product-discovery/skills/document-system-analysis/SKILL.md
+  s_f1c90ff2214919::t_84b8479f45f086 1-230
+plugins/product-discovery/skills/data-modeling/SKILL.md
+  s_f1c90ff2214919::t_4475242e56045b 45,51,58,65,69,79
+  s_f1c90ff2214919::t_880573c5e70ca2 1-44,46-50,52-57,59-64,66-68,70-78,80-245
+plugins/product-discovery/skills/story-mapping/SKILL.md
+  s_f1c90ff2214919::t_7abce97e1979f0 1-209
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "9f076afb8bcd6f2a97dd6790242b49fcf4e964e8",
+  "prompts": {},
+  "humans": {
+    "h_a51360f058d7fc": {
+      "author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  },
+  "sessions": {
+    "s_f1c90ff2214919": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "03949624-b7a2-404c-b8ac-a0c0f2f85aa2",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  }
+}
