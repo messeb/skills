@@ -1,0 +1,72 @@
+plugins/growth-hacking/skills/acquisition/SKILL.md
+  s_f1c90ff2214919::t_3f13018a11e573 1-146
+plugins/growth-hacking/skills/activation/SKILL.md
+  s_f1c90ff2214919::t_3f13018a11e573 1-154
+plugins/growth-hacking/skills/growth-legal-and-ethics/SKILL.md
+  s_f1c90ff2214919::t_c052d766f7f552 1-156
+plugins/growth-hacking/skills/idea-generation/SKILL.md
+  s_f1c90ff2214919::t_204423e010c4b7 1-164
+plugins/growth-hacking/skills/experiment-design/SKILL.md
+  s_f1c90ff2214919::t_e48d86f5f587c3 1-193
+plugins/growth-hacking/skills/growth-fundamentals/SKILL.md
+  s_f1c90ff2214919::t_9060cddaab1781 1-177
+plugins/growth-hacking/skills/behavioral-psychology/SKILL.md
+  s_f1c90ff2214919::t_27c4b0bcf91e32 1-155
+plugins/growth-hacking/skills/paid-acquisition/SKILL.md
+  s_f1c90ff2214919::t_d50d349840934e 1-158
+plugins/growth-hacking/.claude-plugin/plugin.json
+  s_f1c90ff2214919::t_285b6e9b884755 1-6
+plugins/growth-hacking/skills/retention/SKILL.md
+  s_f1c90ff2214919::t_7abe499eae1730 1-158
+CHANGELOG.md
+  s_f1c90ff2214919::t_00a2690eccfcb1 7-14
+plugins/growth-hacking/skills/growth-process/SKILL.md
+  s_f1c90ff2214919::t_e48d86f5f587c3 1-171
+plugins/growth-hacking/skills/north-star-and-metrics/SKILL.md
+  s_f1c90ff2214919::t_7ed092be5679ce 1-183
+plugins/growth-hacking/skills/growth-strategy/SKILL.md
+  s_f1c90ff2214919::t_9060cddaab1781 1-142
+plugins/growth-hacking/skills/referral/SKILL.md
+  s_f1c90ff2214919::t_7abe499eae1730 1-157
+plugins/growth-hacking/skills/experiment-prioritization/SKILL.md
+  s_f1c90ff2214919::t_204423e010c4b7 1-184
+plugins/growth-hacking/skills/growth-loops/SKILL.md
+  s_f1c90ff2214919::t_7ed092be5679ce 1-173
+plugins/growth-hacking/skills/product-market-fit/SKILL.md
+  s_f1c90ff2214919::t_f168bd2e55e7be 1-146
+plugins/growth-hacking/skills/content-and-seo-growth/SKILL.md
+  s_f1c90ff2214919::t_c052d766f7f552 1-156
+plugins/growth-hacking/skills/revenue/SKILL.md
+  s_f1c90ff2214919::t_27c4b0bcf91e32 1-174
+.claude-plugin/marketplace.json
+  s_f1c90ff2214919::t_00a2690eccfcb1 42-47
+README.md
+  s_f1c90ff2214919::t_00a2690eccfcb1 246-292
+plugins/growth-hacking/skills/growth-team/SKILL.md
+  s_f1c90ff2214919::t_551efe627f3305 1-147
+plugins/growth-hacking/skills/social-and-community/SKILL.md
+  s_f1c90ff2214919::t_d50d349840934e 1-150
+plugins/growth-hacking/agents/growth-hacking.md
+  s_f1c90ff2214919::t_efc5f1dbff4d54 1-128
+plugins/growth-hacking/skills/idea-validation/SKILL.md
+  s_f1c90ff2214919::t_551efe627f3305 1-157
+plugins/growth-hacking/skills/customer-research/SKILL.md
+  s_f1c90ff2214919::t_7230c0553517e4 81,83-98,109,125,143
+  s_f1c90ff2214919::t_f168bd2e55e7be 1-80,82,99-108,110-124,126-142,144-158
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "e2647f04800828cd3668d6b1c8c080a8a3c9708c",
+  "prompts": {},
+  "sessions": {
+    "s_f1c90ff2214919": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "03949624-b7a2-404c-b8ac-a0c0f2f85aa2",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  }
+}
