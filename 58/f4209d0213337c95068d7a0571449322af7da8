@@ -1,0 +1,43 @@
+plugins/growth-hacking/skills/product-market-fit/SKILL.md
+  s_f1c90ff2214919::t_cecbeaff622cdc 64-73,148
+.claude-plugin/marketplace.json
+  s_f1c90ff2214919::t_edaa02b07abfc4 47
+README.md
+  s_f1c90ff2214919::t_176562cb22ea30 274
+  s_f1c90ff2214919::t_35c534ff8157c1 275
+plugins/growth-hacking/skills/analytics-and-tracking/SKILL.md
+  s_f1c90ff2214919::t_ea3d8a0f124a7d 1-172
+plugins/growth-hacking/skills/experiment-design/SKILL.md
+  s_f1c90ff2214919::t_cecbeaff622cdc 13-15
+CHANGELOG.md
+  s_f1c90ff2214919::t_176562cb22ea30 11,17
+  s_f1c90ff2214919::t_35c534ff8157c1 13-16
+plugins/growth-hacking/skills/starting-and-momentum/SKILL.md
+  s_f1c90ff2214919::t_ed4b7242fe7c92 1-208
+plugins/growth-hacking/skills/idea-generation/SKILL.md
+  s_f1c90ff2214919::t_cecbeaff622cdc 2,61,67-70,160
+plugins/growth-hacking/skills/experiment-prioritization/SKILL.md
+  s_f1c90ff2214919::t_cecbeaff622cdc 2,53-80,85,201
+plugins/growth-hacking/.claude-plugin/plugin.json
+  s_f1c90ff2214919::t_edaa02b07abfc4 4
+plugins/growth-hacking/agents/growth-hacking.md
+  s_f1c90ff2214919::t_176562cb22ea30 25,85
+  s_f1c90ff2214919::t_35c534ff8157c1 26,81
+  s_f1c90ff2214919::t_de1baa64878abd 86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "58f4209d0213337c95068d7a0571449322af7da8",
+  "prompts": {},
+  "sessions": {
+    "s_f1c90ff2214919": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "03949624-b7a2-404c-b8ac-a0c0f2f85aa2",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  }
+}
