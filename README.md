@@ -243,6 +243,53 @@ Every skill follows the same shape: when to use it and when not to, the method w
 
 ---
 
+### `growth-hacking`
+
+Skills and an audit agent for growth practice — strategy and product-market fit, the experiment operating rhythm, the AARRR funnel from acquisition through revenue, and the legal and ethical limits that apply in the EU and Germany.
+
+#### Installation
+
+```bash
+/plugin install growth-hacking@messeb
+```
+
+#### Agent
+
+| Agent | Description |
+|-------|-------------|
+| `growth-hacking` | Finds the stage that actually constrains growth, audits the practice and funnel against every skill, and produces a severity-ranked report plus a prioritised experiment backlog — refusing to recommend acquisition spend before retention is established |
+
+#### Skills
+
+| Category | Skill | Description |
+|----------|-------|-------------|
+| Foundations | `growth-fundamentals` | A definition that survives scrutiny, the five pillars, applicability to B2B and established companies, hack versus lever, comparison with adjacent models, and the failure modes |
+| Foundations | `growth-strategy` | The first-mover myth, a one-page strategy, positioning as a growth constraint, defensibility, and competitor analysis from public sources |
+| Foundations | `growth-loops` | Loop anatomy and the four common types, k-factor and cycle time, saturation and decay, diagnosing a broken loop, the flywheel, and when a funnel is still right |
+| Foundations | `customer-research` | Interview technique that avoids false positives, switching forces, behavioural segmentation, evidenced versus proto-personas, and converting research into hypotheses |
+| Foundations | `product-market-fit` | Retention curves, the disappointment survey read honestly, riskiest-assumption tests versus MVPs, time to value, and what to do when the evidence says no fit |
+| Foundations | `growth-legal-and-ethics` | GDPR/DSGVO bases and consent, email under UWG, B2B cold outreach, influencer disclosure, sweepstakes, price indication and cancellation rules, DSA dark-pattern prohibitions, and a tiered review process |
+| Process | `growth-process` | The experiment cycle, weekly cadence and meeting structure, learning over optimising, optimise-before-pivot, guardrails, and the emotional cycle of change |
+| Process | `north-star-and-metrics` | Choosing a north star that resists gaming, the KPI tree, AARRR, cohort and retention analysis, CAC/LTV/payback, leading indicators, and benchmark scepticism |
+| Process | `growth-team` | Independent versus embedded models, roles, engineering access as the deciding factor, decision rights, artefacts, ramping, and organisational blockers |
+| Process | `experiment-design` | The experiment card and hypothesis format, one primary metric plus guardrails, MDE and sample size, stopping rules, validity threats, and low-traffic alternatives |
+| Process | `experiment-prioritization` | ICE, PIE and BRASS with worked examples, score calibration, expected-value ranking, effort estimation, and portfolio balance |
+| Process | `idea-generation` | The nineteen channels as a coverage checklist, mining your own data, brainwriting 6-3-5, the Disney method, SCAMPER, waterholes, and converting ideas to testable form |
+| Process | `idea-validation` | The validation ladder, landing-page smoke tests, painted doors handled ethically, concierge and Wizard of Oz, no-code, pre-sales, and reading evidence strength honestly |
+| Funnel | `acquisition` | Channel portfolio strategy, the probe-to-scale test protocol, cost per retained customer, attribution limits and incrementality, saturation and diversification risk |
+| Funnel | `content-and-seo-growth` | Content as a compounding loop, topic selection by business value, formats that earn citations, programmatic and user-generated content, distribution, cohort measurement |
+| Funnel | `paid-acquisition` | The lever hierarchy, account structure and learning periods, creative testing at volume, retargeting scepticism, incrementality testing, and consent-compliant tracking |
+| Funnel | `social-and-community` | Platform choice by audience, engagement triggers, employee advocacy, owned versus rented community, social listening, and measuring capture rather than followers |
+| Funnel | `activation` | Finding the aha moment from cohort data and validating it causally, time to value, landing pages, forms, usability methods, and CTA copy |
+| Funnel | `behavioral-psychology` | Persuasion principles applied honestly, the disclosure test, the dark patterns now prohibited in the EU, and testing persuasion with the right guardrails and horizon |
+| Funnel | `retention` | Cohort measurement, voluntary versus involuntary churn, habit formation, lifecycle automation with holdouts, honest offboarding, loyalty and expansion |
+| Funnel | `referral` | Word of mouth versus sharing versus programmes, incentive design that resists fraud, placement and timing, k-factor, in-product virality, creators and disclosure |
+| Funnel | `revenue` | Business model selection, pricing research and value metrics, the freemium conversion problem, expansion and cross-sell, discount discipline, checkout, honest copywriting |
+
+Every skill follows the same shape: when to use it and when not to, the method, an anti-pattern table, and a checklist.
+
+---
+
 ## Usage with Coding CLI
 
 ### Run a skill

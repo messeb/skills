@@ -39,6 +39,12 @@
       "description": "Adds skills for Python AI application development — uv, FastAPI, multi-provider LLM clients, orchestration frameworks, OCR, ML, operations research, containerization, IDE setup, and notebooks.",
       "source": "./plugins/python-ai-developer",
       "version": "1.0.0"
+    },
+    {
+      "name": "growth-hacking",
+      "description": "Adds skills for growth hacking — strategy, experiment process, AARRR funnel work across acquisition, activation, retention, referral and revenue, plus the legal and ethical limits.",
+      "source": "./plugins/growth-hacking",
+      "version": "1.0.0"
     }
   ]
 }

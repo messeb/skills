@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## 2026-09-07
+
+### Added
+
+- `growth-hacking` plugin with an audit agent and 22 skills, organised as foundations (`growth-fundamentals`, `growth-strategy`, `growth-loops`, `customer-research`, `product-market-fit`, `growth-legal-and-ethics`), process (`growth-process`, `north-star-and-metrics`, `growth-team`, `experiment-design`, `experiment-prioritization`, `idea-generation`, `idea-validation`), and the AARRR funnel (`acquisition`, `content-and-seo-growth`, `paid-acquisition`, `social-and-community`, `activation`, `behavioral-psychology`, `retention`, `referral`, `revenue`)
+- `growth-legal-and-ethics` skill covering the EU and German legal limits of growth tactics — GDPR/DSGVO lawful bases and consent, email marketing under UWG including B2B cold outreach, influencer disclosure, sweepstakes rules, price indication and cancellation requirements, DSA dark-pattern prohibitions, the Abmahnung risk, and a tiered review process that keeps experiment velocity
+- `growth-hacking` audit agent that works bottom-up through the funnel to identify the actual growth constraint, refuses to recommend acquisition spend before retention is established, and never recommends dark patterns or tactics that breach platform terms
+
 ## 2026-09-06
 
 ### Added
