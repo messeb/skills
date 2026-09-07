@@ -292,6 +292,37 @@ Every skill follows the same shape: when to use it and when not to, the method, 
 
 ---
 
+### `content-author`
+
+Skills and an authoring agent for readable text in **English and German** — readability measurement with the language-correct index, plain-language levels, the sentence and structure edits that actually raise comprehension, German-specific pitfalls, and a revision workflow.
+
+#### Installation
+
+```bash
+/plugin install content-author@messeb
+```
+
+#### Agent
+
+| Agent | Description |
+|-------|-------------|
+| `content-author` | Establishes audience, purpose and language level, drafts or revises against the skills, measures with the language-correct readability index, and reports quoted findings with concrete rewrites — never estimating a score or applying English formulas to German |
+
+#### Skills
+
+| Category | Skill | Description |
+|----------|-------|-------------|
+| Measurement | `readability` | Flesch Reading Ease and the Amstad German adaptation, Flesch-Kincaid, Gunning Fog, SMOG, Dale-Chall, LIX and the Wiener Sachtextformeln — exact formulas, interpretation scales, targets per text type, counting pitfalls, and improving a text versus gaming its score |
+| Standards | `plain-language` | Plain English and ISO 24495-1, the German three-level model of Fachsprache / Einfache Sprache / Leichte Sprache with their distinct rule sets, accessibility obligations (BFSG, BITV 2.0, WCAG 2.2, EN 301 549), and choosing and documenting a level |
+| Craft | `sentence-craft` | One idea per sentence, active voice and naming the actor, verbs instead of nominalisations, concrete words, cutting filler without cutting meaning, rhythm, keeping connectives, terminology consistency |
+| Craft | `text-structure` | Front-loading with the inverted pyramid and BLUF, heading hierarchy for scanning and screen readers, paragraph chunking, lists and tables instead of prose, information order per text type, progressive disclosure, layout |
+| Language | `german-writing` | Schachtelsätze and the verb bracket, Nominalstil and Funktionsverbgefüge, passive and impersonal constructions, Behördendeutsch replacements, long compounds, genitive chains, Sie/du, gendering, anglicisms |
+| Process | `editing-workflow` | Separating writing from editing, the revision passes in order, self-editing techniques that work, testing with five real readers, style guide and terminology management, CI checks, review roles, writing for translation |
+
+Every skill follows the same shape: when to use it and when not to, the method, an anti-pattern table, and a checklist.
+
+---
+
 ## Usage with Coding CLI
 
 ### Run a skill

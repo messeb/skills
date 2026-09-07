@@ -45,6 +45,12 @@
       "description": "Adds skills for growth hacking — strategy, experiment process, AARRR funnel work across acquisition, activation, retention, referral and revenue, plus the legal and ethical limits.",
       "source": "./plugins/growth-hacking",
       "version": "1.1.0"
+    },
+    {
+      "name": "content-author",
+      "description": "Adds skills for writing and editing readable text in English and German — readability indices, plain language, sentence craft, structure, German-specific pitfalls, and revision workflow.",
+      "source": "./plugins/content-author",
+      "version": "1.0.0"
     }
   ]
 }

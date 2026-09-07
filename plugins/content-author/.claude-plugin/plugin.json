@@ -1,0 +1,6 @@
+{
+  "name": "content-author",
+  "description": "Adds skills for writing and editing readable text in English and German — readability indices, plain language, sentence craft, structure, German-specific pitfalls, and revision workflow.",
+  "version": "1.0.0",
+  "agents": ["./agents/content-author.md"]
+}

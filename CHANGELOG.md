@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## 2026-09-08
+
+### Added
+
+- `content-author` plugin with an authoring agent and 6 skills for readable text in English and German: `readability`, `plain-language`, `sentence-craft`, `text-structure`, `german-writing`, `editing-workflow`
+- `readability` skill built on the formulas from the German Wikipedia article on Lesbarkeitsindex, with exact coefficients for Flesch Reading Ease (English and the Amstad German adaptation), Flesch-Kincaid, Gunning Fog, SMOG, Dale-Chall, LIX, and all four Wiener Sachtextformeln — plus the interpretation scales, per-text-type targets, the counting pitfalls that corrupt scores, and the distinction between improving a text and gaming its score
+- `german-writing` skill covering the constructions no English style guide catches — verb-bracket distance, Nominalstil and Funktionsverbgefüge, impersonal forms, Behördendeutsch, compound handling, gendering, and anglicism policy
+- `content-author` agent that establishes audience, purpose and language level before writing, runs revision passes top-down, refuses to apply English readability formulas to German, and never reports an estimated score as a measurement
+
 ## 2026-09-07
 
 ### Added
