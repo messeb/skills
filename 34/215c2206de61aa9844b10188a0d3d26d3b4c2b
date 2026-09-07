@@ -1,0 +1,42 @@
+.claude-plugin/marketplace.json
+  s_f1c90ff2214919::t_7a647c1ef99333 48-53
+plugins/content-author/.claude-plugin/plugin.json
+  s_f1c90ff2214919::t_fc90397284bcf9 1-6
+README.md
+  s_f1c90ff2214919::t_7a647c1ef99333 295-325
+plugins/content-author/skills/editing-workflow/SKILL.md
+  s_f1c90ff2214919::t_b34fe34f2ead62 1-181
+plugins/content-author/skills/plain-language/SKILL.md
+  s_f1c90ff2214919::t_4159b20b1f41b3 1-180
+plugins/content-author/skills/sentence-craft/SKILL.md
+  s_f1c90ff2214919::t_5b0580dc1af1e7 20,109
+  s_f1c90ff2214919::t_4159b20b1f41b3 1-19,21-108,110-176
+plugins/content-author/skills/german-writing/SKILL.md
+  s_f1c90ff2214919::t_f3a27f72adf448 1-17,19-105,107-192
+  s_f1c90ff2214919::t_5b0580dc1af1e7 18,106
+plugins/content-author/skills/text-structure/SKILL.md
+  s_f1c90ff2214919::t_f3a27f72adf448 1-25,27-170
+  s_f1c90ff2214919::t_5b0580dc1af1e7 26
+CHANGELOG.md
+  s_f1c90ff2214919::t_7a647c1ef99333 7-15
+plugins/content-author/agents/content-author.md
+  s_f1c90ff2214919::t_11c3a7d06cff0a 1-112
+plugins/content-author/skills/readability/SKILL.md
+  s_f1c90ff2214919::t_fc90397284bcf9 1-271
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "34215c2206de61aa9844b10188a0d3d26d3b4c2b",
+  "prompts": {},
+  "sessions": {
+    "s_f1c90ff2214919": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "03949624-b7a2-404c-b8ac-a0c0f2f85aa2",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  }
+}
