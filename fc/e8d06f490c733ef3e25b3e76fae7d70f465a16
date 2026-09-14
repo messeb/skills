@@ -1,0 +1,48 @@
+plugins/git-code-analyzer/agents/git-code-analyzer.md
+  s_3c40c3416df010::t_a60c8c479d9a40 11-13
+  s_3c40c3416df010::t_81866af8861ae4 1-10,14-50
+plugins/git-code-analyzer/.claude-plugin/plugin.json
+  s_3c40c3416df010::t_086c57477c953d 1-6
+plugins/git-code-analyzer/skills/pr-collaboration/SKILL.md
+  s_3c40c3416df010::t_9f0248963dd865 41-46,48-49
+  s_3c40c3416df010::t_7c69b8b9d7c11c 23,26
+  s_3c40c3416df010::t_b2e4db75805356 1-22,24-25,27-40,47,50-52,56-66,69-78,80-83
+  s_3c40c3416df010::t_8033fea2423079 67-68
+  s_3c40c3416df010::t_8741237a3798f8 79
+  s_3c40c3416df010::t_3051964c6a78d6 53-55
+  s_3c40c3416df010::t_688ed2aabceab5 84-86
+.claude-plugin/marketplace.json
+  s_3c40c3416df010::t_49e797b9d4b8dc 50-54
+  s_3c40c3416df010::t_d493c25a09ed19 49
+plugins/git-code-analyzer/skills/code-ownership/SKILL.md
+  s_3c40c3416df010::t_9d1a65e024f463 9-10
+  s_3c40c3416df010::t_c1042b0be8b66b 60-61
+  s_3c40c3416df010::t_4a06ed11aa3a5b 1-8,11-59,62-87
+plugins/git-code-analyzer/skills/contributor-activity/SKILL.md
+  s_3c40c3416df010::t_1ac33a0427ccb1 90-91
+  s_3c40c3416df010::t_868c1775305aed 82,84
+  s_3c40c3416df010::t_d77362d5f5f4e6 59,61-63,65-66
+  s_3c40c3416df010::t_86ec5786ac93aa 9-10
+  s_3c40c3416df010::t_6f41be6f759be9 1-8,11-38,40-58,60,64,67-70,73-75,78-81,83,85-89,92-98
+  s_3c40c3416df010::t_354658a6d62a11 71-72,76-77
+  s_3c40c3416df010::t_a3be489b069942 39
+plugins/git-code-analyzer/skills/contributor-impact/SKILL.md
+  s_3c40c3416df010::t_88a099b119771e 9-10
+  s_3c40c3416df010::t_a468cdc05c1dcc 1-8,11-65
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "fce8d06f490c733ef3e25b3e76fae7d70f465a16",
+  "prompts": {},
+  "sessions": {
+    "s_3c40c3416df010": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a05a3543-2330-462d-b78f-d35e639cb75b",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  }
+}
