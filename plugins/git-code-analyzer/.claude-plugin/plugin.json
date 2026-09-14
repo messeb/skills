@@ -1,0 +1,6 @@
+{
+  "name": "git-code-analyzer",
+  "description": "Analyzes git repositories via git and gh CLI — contributor activity over custom time periods, code ownership and bus factor per repo area, PR/review collaboration patterns, and individual contributor impact. Data collection is done entirely with git/gh commands; the model only interprets and summarizes structured results.",
+  "version": "1.0.0",
+  "agents": ["./agents/git-code-analyzer.md"]
+}

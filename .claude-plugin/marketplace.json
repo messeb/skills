@@ -47,6 +47,12 @@
       "version": "1.1.0"
     },
     {
+      "name": "git-code-analyzer",
+      "description": "Adds skills for git repository analysis — contributor activity over custom time periods, code ownership and bus factor per area, PR/review collaboration via the gh API, and contributor impact/churn analysis.",
+      "source": "./plugins/git-code-analyzer",
+      "version": "1.0.0"
+    },
+    {
       "name": "content-author",
       "description": "Adds skills for writing and editing readable text in English and German — readability indices, plain language, sentence craft, structure, German-specific pitfalls, and revision workflow.",
       "source": "./plugins/content-author",
