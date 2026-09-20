@@ -1,0 +1,37 @@
+.claude-plugin/marketplace.json
+  s_ab0450bfe3926c::t_e1117d915d729a 60-65
+CHANGELOG.md
+  s_ab0450bfe3926c::t_ac1d2db7f59d8b 7-14
+README.md
+  s_ab0450bfe3926c::t_888aab7b6892f7 326-355
+plugins/notion-summarizer/.claude-plugin/plugin.json
+  s_ab0450bfe3926c::t_9708594e96bcfc 1-6
+plugins/notion-summarizer/agents/notion-summarizer.md
+  s_ab0450bfe3926c::t_d73e440d8d0260 1-125
+plugins/notion-summarizer/skills/flashcard-page/SKILL.md
+  s_ab0450bfe3926c::t_e3be517536b66d 1-118
+plugins/notion-summarizer/skills/notion-page-styling/SKILL.md
+  s_ab0450bfe3926c::t_5da91427e69d46 1-213
+plugins/notion-summarizer/skills/section-summary/SKILL.md
+  s_ab0450bfe3926c::t_b3737e9a2edf5a 1-118
+plugins/notion-summarizer/skills/source-capture/SKILL.md
+  s_ab0450bfe3926c::t_e68294a0e075ae 1-138
+plugins/notion-summarizer/skills/summary-workspace/SKILL.md
+  s_ab0450bfe3926c::t_4f687bb08a3f44 1-135
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "d4a9d372f22fbe1f5d1470603b8917de9eec303a",
+  "prompts": {},
+  "sessions": {
+    "s_ab0450bfe3926c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1dcf40d5-3ef4-4cdc-b9a8-cd3629bf14ea",
+        "model": "unknown"
+      },
+      "human_author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  }
+}
