@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## 2026-09-20
+
+### Added
+
+- `notion-summarizer` plugin with an agent and 5 skills for summarizing long sources into Notion: `source-capture`, `summary-workspace`, `section-summary`, `notion-page-styling`, `flashcard-page`
+- `notion-page-styling` skill documenting the Notion enhanced Markdown patterns that matter for readable pages — full-width XML tables, callouts with native icons, colored headings, toggles and toggle headings, columns, the tab-indentation rule for nested blocks, and a copy-ready page template
+- `notion-summarizer` agent that reads one section, verifies it, writes one styled subpage, and only then continues — with explicit steps and defaults so it also works with smaller models, never copies source wording, and leaves personal database properties untouched
+
 ## 2026-09-08
 
 ### Added

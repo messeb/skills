@@ -1,0 +1,6 @@
+{
+  "name": "notion-summarizer",
+  "description": "Adds skills for turning long sources — books, courses, documentation, reports, article series — into a structured Notion summary: a detail page with filled properties and cover, one styled subpage per chapter, and a flashcard page for spaced-repetition tools.",
+  "version": "1.0.0",
+  "agents": ["./agents/notion-summarizer.md"]
+}

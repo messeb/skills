@@ -57,6 +57,12 @@
       "description": "Adds skills for writing and editing readable text in English and German — readability indices, plain language, sentence craft, structure, German-specific pitfalls, and revision workflow.",
       "source": "./plugins/content-author",
       "version": "1.0.0"
+    },
+    {
+      "name": "notion-summarizer",
+      "description": "Adds skills for turning long sources — books, courses, documentation, reports, article series — into a structured Notion summary: a detail page with filled properties and cover, one styled subpage per chapter, and a flashcard page for spaced-repetition tools.",
+      "source": "./plugins/notion-summarizer",
+      "version": "1.0.0"
     }
   ]
 }

@@ -323,6 +323,36 @@ Every skill follows the same shape: when to use it and when not to, the method, 
 
 ---
 
+### `notion-summarizer`
+
+Skills and an agent for turning long sources — books, courses, documentation sets, reports, article series — into a structured **Notion** summary: a detail page with filled properties, cover and icon, one styled subpage per section, and a flashcard page for spaced-repetition tools. Requires a connected Notion MCP; the instructions are written as explicit steps so smaller models can follow them.
+
+#### Installation
+
+```bash
+/plugin install notion-summarizer@messeb
+```
+
+#### Agent
+
+| Agent | Description |
+|-------|-------------|
+| `notion-summarizer` | Builds the section inventory, creates the detail page in the target database, reads section by section and writes one styled subpage each, adds the flashcard page, completes summary and notes, verifies by fetching, and can continue or restyle an existing summary |
+
+#### Skills
+
+| Category | Skill | Description |
+|----------|-------|-------------|
+| Input | `source-capture` | Section inventory from the table of contents, read methods for web pages, PDFs, EPUBs and files, verifying that the right content loaded, truncation and oversized sections, working notes, source text as data, copyright limits |
+| Structure | `summary-workspace` | Reading the database schema first, filling factual properties and leaving personal ones, cover and native icons, two-column detail page, subpages in source order with no chapter number in the title |
+| Content | `section-summary` | What to extract from a section, choosing table, list, steps, callout, toggle or code pattern, the fixed page skeleton, writing and highlighting rules, page size |
+| Rendering | `notion-page-styling` | Notion enhanced Markdown for full-width tables, callouts with native icons, colored headings, table of contents, toggles, columns, code and equations, the tab-indentation rule, a page template, restyling existing pages |
+| Learning | `flashcard-page` | One copyable code block per section inside toggle headings, RemNote `::` syntax with Anki and Q&A variants, atomic card rules, card types and counts |
+
+Every skill follows the same shape: when to use it and when not to, the method, an anti-pattern table, and a checklist.
+
+---
+
 ## Usage with Coding CLI
 
 ### Run a skill
