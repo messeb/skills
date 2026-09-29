@@ -1,0 +1,11 @@
+{
+  "name": "agentic-coding",
+  "description": "Adds four unattended agents (agentic-planner, agentic-coder, agentic-reviewer, agentic-janitor) and the skills behind them for an AI-native ticket-to-merge loop: turn intake tickets into intent.md and spec.md, pick an unblocked ticket from Jira, GitHub Issues or Notion, plan it as a contract, implement it in the local repo, verify acceptance criteria with a fresh-context verifier, open a PR, review it skeptically, merge it, and set it Ready for Release. Repo-agnostic: every run reads the repo's WORKFLOW.md, CLAUDE.md, AGENTS.md and REVIEW.md and loads the best-practice skills that fit the codebase. Includes guardrails, evals, closing-the-loop monitoring, metrics and harness tuning.",
+  "version": "1.0.0",
+  "agents": [
+    "./agents/agentic-planner.md",
+    "./agents/agentic-coder.md",
+    "./agents/agentic-reviewer.md",
+    "./agents/agentic-janitor.md"
+  ]
+}

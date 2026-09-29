@@ -36,32 +36,38 @@
     },
     {
       "name": "python-ai-developer",
-      "description": "Adds skills for Python AI application development — uv, FastAPI, multi-provider LLM clients, orchestration frameworks, OCR, ML, operations research, containerization, IDE setup, and notebooks.",
+      "description": "Adds skills for Python AI application development \u2014 uv, FastAPI, multi-provider LLM clients, orchestration frameworks, OCR, ML, operations research, containerization, IDE setup, and notebooks.",
       "source": "./plugins/python-ai-developer",
       "version": "1.0.0"
     },
     {
       "name": "growth-hacking",
-      "description": "Adds skills for growth hacking — strategy, experiment process, AARRR funnel work across acquisition, activation, retention, referral and revenue, plus the legal and ethical limits.",
+      "description": "Adds skills for growth hacking \u2014 strategy, experiment process, AARRR funnel work across acquisition, activation, retention, referral and revenue, plus the legal and ethical limits.",
       "source": "./plugins/growth-hacking",
       "version": "1.1.0"
     },
     {
       "name": "git-code-analyzer",
-      "description": "Adds skills for git repository analysis — contributor activity over custom time periods, code ownership and bus factor per area, PR/review collaboration via the gh API, and contributor impact/churn analysis.",
+      "description": "Adds skills for git repository analysis \u2014 contributor activity over custom time periods, code ownership and bus factor per area, PR/review collaboration via the gh API, and contributor impact/churn analysis.",
       "source": "./plugins/git-code-analyzer",
       "version": "1.0.0"
     },
     {
       "name": "content-author",
-      "description": "Adds skills for writing and editing readable text in English and German — readability indices, plain language, sentence craft, structure, German-specific pitfalls, and revision workflow.",
+      "description": "Adds skills for writing and editing readable text in English and German \u2014 readability indices, plain language, sentence craft, structure, German-specific pitfalls, and revision workflow.",
       "source": "./plugins/content-author",
       "version": "1.0.0"
     },
     {
       "name": "notion-summarizer",
-      "description": "Adds skills for turning long sources — books, courses, documentation, reports, article series — into a structured Notion summary: a detail page with filled properties and cover, one styled subpage per chapter, and a flashcard page for spaced-repetition tools.",
+      "description": "Adds skills for turning long sources \u2014 books, courses, documentation, reports, article series \u2014 into a structured Notion summary: a detail page with filled properties and cover, one styled subpage per chapter, and a flashcard page for spaced-repetition tools.",
       "source": "./plugins/notion-summarizer",
+      "version": "1.0.0"
+    },
+    {
+      "name": "agentic-coding",
+      "description": "Adds four unattended agents (planner, coder, reviewer, janitor) and 16 skills for an AI-native ticket-to-merge loop on Jira, GitHub Issues or Notion \u2014 intent and spec artifacts, contract-first implementation, skeptical review, guardrails, evals, closing-the-loop monitoring, metrics and harness tuning.",
+      "source": "./plugins/agentic-coding",
       "version": "1.0.0"
     }
   ]

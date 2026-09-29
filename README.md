@@ -351,6 +351,114 @@ Skills and an agent for turning long sources — books, courses, documentation s
 
 Every skill follows the same shape: when to use it and when not to, the method, an anti-pattern table, and a checklist.
 
+### `agentic-coding`
+
+Four unattended agents and the skills behind them for an **AI-native ticket-to-merge loop**: tickets flow from intake through spec, contract-first implementation, skeptical review and merge to Ready for Release, on **Jira**, **GitHub Issues** or **Notion**, with a local git clone as the workspace. The plugin is repo-agnostic: every run reads the repo's `WORKFLOW.md`, `CLAUDE.md`, `AGENTS.md` and `REVIEW.md` and loads the best-practice skills from the other plugins that fit the codebase. Runs as scheduled tasks that hand work to each other via triggers, or by hand. Based on Anthropic's AI-Native SDLC Playbook and its harness-design work for long-running application development.
+
+#### Installation
+
+```bash
+/plugin install agentic-coding@messeb
+```
+
+#### Agents
+
+| Agent | Description |
+|-------|-------------|
+| `agentic-planner` | Takes intake tickets, writes `intent.md` and `spec.md` under the organization's policy skills with testable requirements, flagged concerns and a risk class, puts the acceptance criteria on the ticket and moves it to the human approval gate |
+| `agentic-coder` | Picks an unblocked Todo ticket (or reworks / continues one), negotiates `plan.md` as a contract with a fresh-context reviewer, implements one criterion per commit with a navigator pass, fixes bugs test-first with frozen tests, verifies with a fresh-context verifier, ticks the criteria, opens the PR |
+| `agentic-reviewer` | Reproduces the gates, exercises the running app to re-verify every ticked criterion, runs the `REVIEW.md` passes with per-criterion thresholds, requests changes or merges, sets Ready for Release, routes repeated mistakes into `CLAUDE.md` |
+| `agentic-janitor` | Daily hygiene: releases stale claims, re-fires lost hand-offs, fixes merged-but-not-released tickets, repairs artifact linkage, posts weekly metrics |
+
+#### Skills
+
+| Category | Skill | Description |
+|----------|-------|-------------|
+| Foundation | `workflow-config` | Precedence `WORKFLOW.md` → repo instruction files → matching best-practice skills → defaults; setup mode that generates `WORKFLOW.md`; the full template |
+| Foundation | `ticket-tracker` | One set of operations (list, claim, transition, comment, tick criterion, PR link) implemented for Jira, GitHub Issues and Notion |
+| Foundation | `sdlc-artifacts` | The committed artifact chain: `intent.md`, `spec.md`, `plan.md`, `handoff.md`, `REVIEW.md`, `CLAUDE.md`, lessons; templates, source of truth, linkage rule |
+| Plan and design | `intent-and-spec` | Intent in the originator's words, spec with numbered testable requirements, real components, acceptance criteria, flagged concerns, risk class |
+| Build | `pick-ticket` | Selection with the dependency rule, verified claim, one ticket per run |
+| Build | `implement-ticket` | Contract-first `plan.md`, driver/navigator loop, one commit per criterion, refine-or-pivot decision, test-first bug fixes, handoff for long runs, verifier subagent |
+| Build | `verify-acceptance` | Every criterion re-verified against the final branch with an evidence table before it is ticked |
+| Deploy | `pull-request` | PR conventions and marker, rework replies per comment, hand-off by poll or trigger |
+| Deploy | `review-pr` | Reproduce, verify claims, `REVIEW.md` passes (bugs, security, compliance, tests), BLOCKER / SHOULD / NIT, decision rule, merge, `CLAUDE.md` feedback |
+| Evaluation | `evaluator-qa` | Generator/evaluator separation, exercising the running app, rubric with hard thresholds, the leniency failure modes, calibration examples, tuning loop |
+| Governance | `guardrails` | Hooks that protect the default branch, freeze tests during fixes, protect paths, block secrets, gate production; permissions and managed settings for unattended runs |
+| Governance | `agent-evals` | Eval suite for `CLAUDE.md`, skills, hooks and `WORKFLOW.md` changes; CI gate on pass rate; incidents become evals |
+| Maintain | `closing-the-loop` | Deterministic control bands with tiered responses, findings that re-enter as `intent.md`, tickets and channel mentions triaged into the loop, lessons files |
+| Maintain | `workflow-hygiene` | The janitor's checks with the evidence each one needs before acting |
+| Maintain | `loop-metrics` | Time to first review, rework rounds, first-pass merge share, plan match rate, lead times, escalations; tuning guidance for the limits |
+| Meta | `harness-tuning` | Every component is an assumption about the model; remove one at a time per model, context resets versus compaction, when the evaluator is worth its cost |
+
+Every skill follows the same shape: when to use it, the method, an anti-pattern table, and a checklist. Skills that describe files ship them: `guardrails/hooks/*.sh` and `settings.json`, `agent-evals/evals/check.sh` and `agent-evals.yml`, `sdlc-artifacts/templates/*.md`, `workflow-config/templates/WORKFLOW.md`, `closing-the-loop/templates/bands.yaml`.
+
+#### Setting up the loop for a repository
+
+The loop needs three things wired together: a local clone the agents can build and test in, a ticket system with the workflow statuses, and a schedule that runs the agents. Set up in this order; each step is verifiable before the next.
+
+##### 1. Install and prepare the repo
+
+```bash
+/plugin install agentic-coding@messeb
+cd <your-repo>
+```
+
+In a Claude Code session in that repo, run `/agentic-coding:workflow-config` in setup mode ("set up the agentic workflow for this repo"). It reads `CLAUDE.md`, `AGENTS.md`, `CONTRIBUTING.md` and the manifests, derives what it can (default branch, build, lint and test commands, GitHub project from the remote), asks for what it cannot (tracker, project key, bot user, merge strategy, hand-off mode) and writes `WORKFLOW.md` to the repo root. It then offers to install the rest:
+
+| File | From | Purpose |
+|------|------|---------|
+| `WORKFLOW.md` | `workflow-config/templates/WORKFLOW.md` | tracker, statuses, git rules, gates, limits, hand-off |
+| `REVIEW.md` | `sdlc-artifacts/templates/REVIEW.md` | review passes, thresholds, nit cap, calibration |
+| `.claude/hooks/*.sh`, `.claude/settings.json`, `.claude/protected-paths.txt` | `guardrails/` | deterministic guardrails: no push to main, frozen tests during fixes, protected paths, secrets, production gate |
+| `.github/workflows/agent-evals.yml`, `evals/check.sh` | `agent-evals/` | regression tests for the agent configuration |
+| `docs/sdlc/` | `sdlc-artifacts/templates/` | home of `intent.md`, `spec.md`, `plan.md`, `handoff.md`, `lessons/` |
+
+Commit all of it. `RUN_CMD` in `WORKFLOW.md` must start the app or service, because the verifier and the reviewer exercise the running application rather than only reading the diff.
+
+##### 2. Prepare the ticket system
+
+Create the statuses exactly as named in `WORKFLOW.md` (defaults: `Inbox`, `Needs Approval`, `Todo`, `In Progress`, `Ready for Review`, `In Review`, `Changes Requested`, `Ready for Release`) and the labels `needs-human` and `no-bot`. Create a dedicated tracker user for `BOT_USER` so every claim and comment is attributable. Dependencies must be structured, not prose: "is blocked by" links in Jira, `Blocked by #N` lines or task-list references in GitHub Issues, a `Blocked by` relation in Notion. Tickets the coder may take need acceptance criteria as a checkbox list; tickets without them go to `Inbox`, where the planner writes `intent.md` and `spec.md` and proposes the criteria.
+
+Which tracker is used is decided by `TRACKER` in `WORKFLOW.md`; the `ticket-tracker` skill maps every operation to the Atlassian MCP, `gh`, or the Notion MCP, so the same agents run against any of the three.
+
+##### 3. Protect the default branch
+
+Branch protection on `DEFAULT_BRANCH` requiring one approving review and green CI is the real safety net. Give the bots their own GitHub identity (machine user or App token with `contents`, `pull_requests`, `issues`), and preferably a second token for the reviewer, otherwise the "1 approving review" rule rejects the bot approving a PR its own identity opened.
+
+##### 4. Schedule the agents
+
+In Cowork, create four scheduled tasks that require the computer with the repo folder connected and have automatic approval turned on (without it, the first `git push` waits for a click nobody gives). Each prompt is one line; the behavior lives in the plugin:
+
+| Task | Prompt | Schedule (fallback) | Fired by |
+|------|--------|---------------------|----------|
+| `agentic-planner` | `Run the agentic-planner agent from the agentic-coding plugin on <repo path>.` | `CRON_TZ=Europe/Berlin 3 7,13 * * 1-5` | nobody |
+| `agentic-coder` | `Run the agentic-coder agent from the agentic-coding plugin on <repo path>. Payload: $ARGUMENTS` | `CRON_TZ=Europe/Berlin 7 6-20/2 * * 1-5` | `agentic-reviewer` (`REWORK <id> <pr>`), `agentic-janitor` (`CONTINUE <id>`) |
+| `agentic-reviewer` | `Run the agentic-reviewer agent from the agentic-coding plugin on <repo path>. Payload: $ARGUMENTS` | `CRON_TZ=Europe/Berlin 23 */3 * * *` | `agentic-coder` (`REVIEW <id> <pr>`), `agentic-janitor` |
+| `agentic-janitor` | `Run the agentic-janitor agent from the agentic-coding plugin on <repo path>.` | `CRON_TZ=Europe/Berlin 41 6 * * *` | nobody |
+
+Set `HANDOFF = cowork-trigger` in `WORKFLOW.md` so the coder fires the reviewer the moment a PR exists and the reviewer fires the coder for rework; the cron entries are only fallbacks. With `HANDOFF = poll` (Claude Code cron, CI, or any runner calling `claude -p`), the ticket status is the queue and the next scheduled run picks the work up.
+
+##### 5. Dry run
+
+Fire each task once by hand with a test ticket: a small `Todo` ticket with two acceptance criteria for the coder, then let the reviewer take the PR. Check that the ticket moved `Todo → In Progress → Ready for Review → In Review → Ready for Release`, that `docs/sdlc/<id>/plan.md` was committed before the first code commit, that the PR body carries the evidence table and the `agent-workflow: v1` marker, and that the merge SHA landed on the ticket. Then run the janitor once to confirm it reports "nothing to do".
+
+##### 6. What a ticket goes through
+
+```text
+Inbox ──planner──► Needs Approval ──human──► Todo ──coder──► In Progress
+                                                               │ plan.md, one commit per criterion, verifier
+                                                               ▼
+Ready for Release ◄──reviewer merges── In Review ◄──reviewer── Ready for Review
+        ▲                                 │
+        │                                 └── Changes Requested ──coder rework──► Ready for Review
+        └── janitor repairs stale states, re-fires lost hand-offs, posts weekly metrics
+```
+
+Humans stay at two gates: accepting the spec (`Needs Approval → Todo`) and anything labeled `needs-human`. Everything else is the loop. When a new model lands, `harness-tuning` says how to remove components that are no longer load-bearing, one at a time, against the `loop-metrics` numbers.
+
+---
+
 ---
 
 ## Usage with Coding CLI
@@ -373,6 +481,8 @@ Invoke any skill by its name as a slash command inside a Claude Code session:
 /go-developer:http-api
 /go-developer:concurrency
 /go-developer:testing
+/agentic-coding:workflow-config
+/agentic-coding:review-pr
 ```
 
 Claude will execute the skill's instructions against your current working directory.

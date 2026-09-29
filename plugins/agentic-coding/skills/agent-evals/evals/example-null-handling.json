@@ -1,0 +1,13 @@
+{
+  "id": "example-null-handling",
+  "source": "PROJ-123, merged 2026-09-12",
+  "prompt": "The endpoint GET /claims/{id}/status returns 500 when the claim has no next step. Reproduce it with a failing test first, then fix it so the response is 200 with nextStep: null. Do not change existing tests.",
+  "allowed_tools": "Read,Edit,Write,Bash(make test),Bash(git *)",
+  "checks": {
+    "commands": ["make test"],
+    "files_changed": ["claims-api/tests/test_status.py", "claims-api/routes/status.py"],
+    "files_unchanged": ["claims-api/tests/test_auth.py"],
+    "summary_contains": ["test_status", "nextStep"],
+    "diff_excludes": ["@pytest.mark.skip", "xfail"]
+  }
+}

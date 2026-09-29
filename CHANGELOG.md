@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## 2026-09-29
+
+### Added
+
+- `agentic-coding` plugin with four unattended agents (`agentic-planner`, `agentic-coder`, `agentic-reviewer`, `agentic-janitor`) and 16 skills for an AI-native ticket-to-merge loop on Jira, GitHub Issues or Notion: `workflow-config`, `ticket-tracker`, `sdlc-artifacts`, `intent-and-spec`, `pick-ticket`, `implement-ticket`, `verify-acceptance`, `pull-request`, `review-pr`, `evaluator-qa`, `guardrails`, `agent-evals`, `closing-the-loop`, `workflow-hygiene`, `loop-metrics`, `harness-tuning`
+- `workflow-config` skill that makes the agents repo-agnostic: precedence `WORKFLOW.md` → `AGENTS.md` / `CLAUDE.md` / `CONTRIBUTING.md` / `REVIEW.md` → best-practice skills matching the detected stack → plugin defaults, a setup mode that generates `WORKFLOW.md`, and the rule that a repo rule always beats a skill
+- `sdlc-artifacts` and `intent-and-spec` skills encoding the committed artifact chain of the AI-Native SDLC Playbook (`intent.md`, `spec.md`, `plan.md`, `handoff.md`, `REVIEW.md`, lessons) with templates, source-of-truth choice and the linkage rule
+- `evaluator-qa` and `harness-tuning` skills carrying the generator/evaluator lessons from Anthropic's harness-design work: skeptical evaluators that exercise the running app against hard per-criterion thresholds, contracts negotiated before code, context resets with handoff artifacts, and removing one harness component at a time per model
+- `guardrails` ships six tested hook scripts (default-branch protection, production gate, test freeze during fixes, protected paths, secret patterns, format on edit) with a `settings.json`; `agent-evals` ships `check.sh` and the CI workflow; `sdlc-artifacts` and `workflow-config` ship copy-ready templates
+- `guardrails`, `agent-evals`, `closing-the-loop` and `loop-metrics` skills covering hooks and managed settings for unattended runs, continuous evals on configuration changes, deterministic control-band monitoring that re-enters the loop as `intent.md`, and the git/PR-derived indicators that say whether the loop works
+
 ## 2026-09-20
 
 ### Added

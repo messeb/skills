@@ -1,0 +1,22 @@
+# Control bands for one metric. One file per metric, version controlled next to the detection script.
+metric: ci_test_failure_rate
+source: github_actions            # prometheus | github_actions | tracker | custom
+query: "workflow=ci status=failure / total, per day"
+baseline: rolling_30d
+rules: western_electric           # 1 point beyond 3σ, 2 of 3 beyond 2σ, 4 of 5 beyond 1σ, 8 in a row one side
+tiers:
+  1sigma:
+    action: log
+  2sigma:
+    action: diagnose
+    tools: "Read,Grep,Bash(gh run view *),Bash(gh run list *)"
+    output: intent_md             # written to SDLC_DIR/<new-ticket-id>/intent.md, ticket created in INTAKE_STATUS
+  3sigma:
+    action: propose
+    routes:
+      - ticket_with_intent
+      - pull_request              # e.g. quarantine a flaky test, revert a commit; goes through the review gate
+      - runbook:rollback-deploy   # pre-approved, rehearsed in staging, gated by production-gate.sh
+triage:
+  owner: "@service-owner"
+  dismiss_tunes_bands: true

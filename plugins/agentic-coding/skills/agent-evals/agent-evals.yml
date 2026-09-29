@@ -1,0 +1,29 @@
+# Copy to .github/workflows/agent-evals.yml
+name: Agent evals
+on:
+  pull_request:
+    paths: ['CLAUDE.md', 'AGENTS.md', 'REVIEW.md', 'WORKFLOW.md', '.claude/**']
+  schedule:
+    - cron: '0 2 * * *'
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm install -g @anthropic-ai/claude-code
+      - name: Run eval suite
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          EVAL_PASS_RATE: "0.9"
+        run: |
+          total=0; passed=0
+          for e in evals/*.json; do
+            total=$((total+1))
+            claude -p "$(jq -r .prompt "$e")" \
+              --allowedTools "$(jq -r .allowed_tools "$e")" \
+              --output-format json > result.json || true
+            if ./evals/check.sh "$e" result.json; then passed=$((passed+1)); fi
+          done
+          rate=$(awk "BEGIN{print $passed/$total}")
+          echo "pass rate: $rate ($passed/$total)"
+          awk "BEGIN{exit !($rate >= $EVAL_PASS_RATE)}"

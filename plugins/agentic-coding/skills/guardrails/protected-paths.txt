@@ -1,0 +1,11 @@
+# One glob per line. Edits under these paths are blocked unless .claude/allow-protected exists.
+src/gen/**
+**/generated/**
+migrations/**
+infra/**
+.github/workflows/**
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+Cargo.lock
+go.sum
