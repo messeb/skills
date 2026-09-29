@@ -1,0 +1,105 @@
+.claude-plugin/marketplace.json
+  s_c0383fcf81a5e1::t_5d2cc2cb9115c4 39,45,51,57,63,66-71
+CHANGELOG.md
+  s_c0383fcf81a5e1::t_9d251fc19687b7 7-17
+CLAUDE.md
+  s_c0383fcf81a5e1::t_f71406d660a10c 7,9,14-26,42,46,50,53-55,59-61,63,65,67-81,85-99,101,103-106,108,110
+README.md
+  s_c0383fcf81a5e1::t_70459d9de92fb9 354-461,484-485
+plugins/agentic-coding/.claude-plugin/plugin.json
+  s_c0383fcf81a5e1::t_ba2a9253b89c2d 1-11
+plugins/agentic-coding/agents/agentic-coder.md
+  s_c0383fcf81a5e1::t_acf9e3fb596f7d 1-46
+plugins/agentic-coding/agents/agentic-janitor.md
+  s_c0383fcf81a5e1::t_3f0cdbed3a6338 1-21
+plugins/agentic-coding/agents/agentic-planner.md
+  s_c0383fcf81a5e1::t_7034e46e633d39 1-31
+plugins/agentic-coding/agents/agentic-reviewer.md
+  s_c0383fcf81a5e1::t_0eea2bc80e7ae0 1-38
+plugins/agentic-coding/skills/agent-evals/SKILL.md
+  s_c0383fcf81a5e1::t_897054c9055de6 1-48
+plugins/agentic-coding/skills/agent-evals/agent-evals.yml
+  s_c0383fcf81a5e1::t_f6d0f4c4a52845 1-29
+plugins/agentic-coding/skills/agent-evals/evals/check.sh
+  s_c0383fcf81a5e1::t_2737a5f33e9b68 1-43
+plugins/agentic-coding/skills/agent-evals/evals/example-null-handling.json
+  s_c0383fcf81a5e1::t_64ee6a09f154e8 1-13
+plugins/agentic-coding/skills/closing-the-loop/SKILL.md
+  s_c0383fcf81a5e1::t_f28f27007a1f46 1-53
+plugins/agentic-coding/skills/closing-the-loop/templates/bands.yaml
+  s_c0383fcf81a5e1::t_53072f9db6fe37 1-22
+plugins/agentic-coding/skills/evaluator-qa/SKILL.md
+  s_c0383fcf81a5e1::t_95134c8650fc64 1-79
+plugins/agentic-coding/skills/guardrails/SKILL.md
+  s_c0383fcf81a5e1::t_0c284bc55bb3df 1-77
+plugins/agentic-coding/skills/guardrails/hooks/format-on-edit.sh
+  s_c0383fcf81a5e1::t_5cd9bd39691fa3 1-19
+plugins/agentic-coding/skills/guardrails/hooks/freeze-tests-during-fix.sh
+  s_c0383fcf81a5e1::t_234927331972fa 1-16
+plugins/agentic-coding/skills/guardrails/hooks/no-secrets.sh
+  s_c0383fcf81a5e1::t_a302599ba7990e 1-14
+plugins/agentic-coding/skills/guardrails/hooks/production-gate.sh
+  s_c0383fcf81a5e1::t_4cc4e6d0ebe66f 1-18
+plugins/agentic-coding/skills/guardrails/hooks/protect-default-branch.sh
+  s_c0383fcf81a5e1::t_df655bd07a74c7 1-30
+plugins/agentic-coding/skills/guardrails/hooks/protected-paths.sh
+  s_c0383fcf81a5e1::t_33499a274af67e 1-24
+plugins/agentic-coding/skills/guardrails/protected-paths.txt
+  s_c0383fcf81a5e1::t_71c6c9753e6851 1-11
+plugins/agentic-coding/skills/guardrails/settings.json
+  s_c0383fcf81a5e1::t_0a452b8049ee47 1-40
+plugins/agentic-coding/skills/harness-tuning/SKILL.md
+  s_c0383fcf81a5e1::t_cc2ebd764de2eb 1-61
+plugins/agentic-coding/skills/implement-ticket/SKILL.md
+  s_c0383fcf81a5e1::t_bff581b4e08af3 1-94
+plugins/agentic-coding/skills/intent-and-spec/SKILL.md
+  s_c0383fcf81a5e1::t_d586af953c3b10 1-54
+plugins/agentic-coding/skills/loop-metrics/SKILL.md
+  s_c0383fcf81a5e1::t_ae7347619ca107 1-44
+plugins/agentic-coding/skills/pick-ticket/SKILL.md
+  s_c0383fcf81a5e1::t_8a305fcc4d221c 1-38
+plugins/agentic-coding/skills/pull-request/SKILL.md
+  s_c0383fcf81a5e1::t_44dc73babdeced 1-72
+plugins/agentic-coding/skills/review-pr/SKILL.md
+  s_c0383fcf81a5e1::t_d7929a14c20e6d 1-89
+plugins/agentic-coding/skills/sdlc-artifacts/SKILL.md
+  s_c0383fcf81a5e1::t_f3c26cf1ec7532 1-134
+plugins/agentic-coding/skills/sdlc-artifacts/templates/REVIEW.md
+  s_c0383fcf81a5e1::t_354ae434e96151 1-30
+plugins/agentic-coding/skills/sdlc-artifacts/templates/handoff.md
+  s_c0383fcf81a5e1::t_c735267eb08410 1-20
+plugins/agentic-coding/skills/sdlc-artifacts/templates/intent.md
+  s_c0383fcf81a5e1::t_57111ae1485b4f 1-23
+plugins/agentic-coding/skills/sdlc-artifacts/templates/lessons.md
+  s_c0383fcf81a5e1::t_b5253c3a1568a9 1-15
+plugins/agentic-coding/skills/sdlc-artifacts/templates/plan.md
+  s_c0383fcf81a5e1::t_ebb5ddbd7f73df 1-19
+plugins/agentic-coding/skills/sdlc-artifacts/templates/spec.md
+  s_c0383fcf81a5e1::t_a18f8fd319e166 1-28
+plugins/agentic-coding/skills/ticket-tracker/SKILL.md
+  s_c0383fcf81a5e1::t_ba02a895d80455 1-89
+plugins/agentic-coding/skills/verify-acceptance/SKILL.md
+  s_c0383fcf81a5e1::t_cca5fd0b30543d 1-44
+plugins/agentic-coding/skills/workflow-config/SKILL.md
+  s_c0383fcf81a5e1::t_eb965c410cd76f 1-196
+plugins/agentic-coding/skills/workflow-config/templates/WORKFLOW.md
+  s_c0383fcf81a5e1::t_431e2a9e42f5dc 1-79
+plugins/agentic-coding/skills/workflow-hygiene/SKILL.md
+  s_c0383fcf81a5e1::t_5966afff2e1dc0 1-41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "40882bdb910232a5d1350007b457d27105664c13",
+  "prompts": {},
+  "sessions": {
+    "s_c0383fcf81a5e1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "aeb328b1-622e-410b-89f3-d21016bf7668",
+        "model": "unknown"
+      },
+      "human_author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  }
+}
