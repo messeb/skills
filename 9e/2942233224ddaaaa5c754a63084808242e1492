@@ -1,0 +1,38 @@
+README.md
+  s_3c40c3416df010::t_6b01afced3fe26 387
+  s_3c40c3416df010::t_72c70e713fd3c4 364-373
+  s_3c40c3416df010::t_07e06549e0f824 407,409
+  s_3c40c3416df010::t_02e31e9a034a04 418
+CLAUDE.md
+  s_3c40c3416df010::t_9aa9ce8bb97df3 79
+plugins/agentic-coding/skills/workflow-config/SKILL.md
+  s_3c40c3416df010::t_ab670bc157f588 179-181,183
+  s_3c40c3416df010::t_3e6dea435e2d0f 14-15
+  s_3c40c3416df010::t_24045df560918b 36
+  s_3c40c3416df010::t_ea471367508c42 59
+plugins/agentic-coding/.claude-plugin/plugin.json
+  s_3c40c3416df010::t_9aa9ce8bb97df3 4
+.claude-plugin/marketplace.json
+  s_3c40c3416df010::t_9aa9ce8bb97df3 69,71
+plugins/agentic-coding/skills/quickstart/SKILL.md
+  s_3c40c3416df010::t_767c8bec8a7ff2 1-75
+CHANGELOG.md
+  s_3c40c3416df010::t_eb888ef446a30c 9,11,15
+  s_3c40c3416df010::t_f642d481a96259 18-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9e2942233224ddaaaa5c754a63084808242e1492",
+  "prompts": {},
+  "sessions": {
+    "s_3c40c3416df010": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a05a3543-2330-462d-b78f-d35e639cb75b",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  }
+}
