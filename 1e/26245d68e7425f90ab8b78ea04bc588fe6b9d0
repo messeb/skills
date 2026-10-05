@@ -1,0 +1,28 @@
+.claude-plugin/marketplace.json
+  s_3c40c3416df010::t_4cfcde2313e0d2 11
+plugins/general-developer/skills/github-repo/SKILL.md
+  s_3c40c3416df010::t_cb7ddac0835a18 67
+  s_3c40c3416df010::t_fdb49354b1062a 688-695,699-701,705,711-728,733,737-741,744-755
+plugins/general-developer/.claude-plugin/plugin.json
+  s_3c40c3416df010::t_4cfcde2313e0d2 4
+CHANGELOG.md
+  s_3c40c3416df010::t_c32359f42ab887 7-12
+plugins/general-developer/skills/security/SKILL.md
+  s_3c40c3416df010::t_e77e5a451b23f7 1100-1101,1105,1109-1123,1127-1129
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1e26245d68e7425f90ab8b78ea04bc588fe6b9d0",
+  "prompts": {},
+  "sessions": {
+    "s_3c40c3416df010": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a05a3543-2330-462d-b78f-d35e639cb75b",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  }
+}
