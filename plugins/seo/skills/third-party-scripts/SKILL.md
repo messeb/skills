@@ -30,7 +30,7 @@ The default for any third-party script is therefore **"not on the critical path,
 ## 2. The four loading strategies
 
 | Strategy | Trigger | Use for |
-|----------|---------|---------|
+| ---------- | --------- | --------- |
 | **Sync in `<head>`** | Parsing of `<head>` | Almost never — only for things that must run before paint (consent banner) |
 | **`async`** | Available; runs as soon as it downloads, in any order | Independent scripts that don't block render and don't depend on others |
 | **`defer`** | After HTML parsed, before `DOMContentLoaded`, in document order | Scripts that need the DOM and depend on each other |
@@ -251,7 +251,7 @@ window.addEventListener('cookieConsentGiven', (e) => {
 A measurable guardrail for "how many third parties is too many".
 
 | Route | Max third-party origins | Max third-party JS bytes (gzip) | Critical path third-party JS |
-|-------|-------------------------|--------------------------------|------------------------------|
+| ------- | ------------------------- | -------------------------------- | ------------------------------ |
 | Home | 4 | 80 KB | 0 |
 | Article / blog | 3 | 60 KB | 0 |
 | Category | 3 | 60 KB | 0 |

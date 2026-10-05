@@ -33,7 +33,7 @@ Once identified, the activation event becomes the primary metric for onboarding,
 Between signup and value, everything is friction and risk. Measure median and 90th-percentile time to the activation event, then attack it:
 
 | Lever | Practice |
-|-------|----------|
+| ------- | ---------- |
 | Remove steps | Every step before value costs a share of users. Delete, defer, or default them |
 | Defer data collection | Ask after value is delivered, not before. Company size and phone number can wait |
 | Delay account creation | Let people experience the product before signing up where the model allows |
@@ -53,7 +53,7 @@ Email and lifecycle messaging support activation but cannot replace it: a well-w
 The landing page is where the channel's promise is either kept or broken.
 
 | Element | Rule |
-|---------|------|
+| --------- | ------ |
 | **Message match** | The headline must continue the ad, email, or search result. A mismatch is the largest single cause of bounce |
 | **Above the fold** | What it is, who it is for, what it replaces, and one action |
 | **One primary action** | Competing CTAs reduce total conversion |
@@ -88,7 +88,7 @@ Instrument **field-level abandonment**. It tells you exactly which question lose
 ## 5. Testing and observation methods
 
 | Method | Answers | Cost |
-|--------|---------|------|
+| -------- | --------- | ------ |
 | **A/B test** | Which variant performs better | Needs traffic (`experiment-design`) |
 | **Session recordings** | Where people struggle, rage-click, or abandon | Low; sample rather than watch everything |
 | **Heatmaps and scroll maps** | What is seen and what is never reached | Low |
@@ -118,7 +118,7 @@ For usability sessions, give people a realistic goal in their own words — neve
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Assuming the aha moment instead of finding it | Onboarding optimised toward a number that causes nothing |
 | Correlated activation metric never validated causally | A metric that rises while retention does not |
 | Long onboarding before any value | Users leave before understanding the product |

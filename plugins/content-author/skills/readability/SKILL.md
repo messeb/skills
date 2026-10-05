@@ -28,7 +28,7 @@ Treat a score the way you treat a temperature: a fast, cheap indicator that some
 **Do not apply an English formula to German text.** German has systematically longer words — compounds (`Geschwindigkeitsbegrenzung`), inflection, and a preference for nominal constructions — so an English formula reports German as far harder than it is to a German reader.
 
 | Index type | Travels between languages? | Why |
-|------------|---------------------------|-----|
+| ------------ | --------------------------- | ----- |
 | **Syllable-based** (Flesch, Flesch-Kincaid, Gunning Fog, SMOG) | **No** — needs recalibration per language | Syllable norms differ; German averages more syllables per word |
 | **Letter-based** (LIX, ARI, Coleman-Liau) | **Better** — more robust across languages | Character counts avoid language-specific syllabification |
 | **Word-list-based** (Dale-Chall) | **No** — the list is the formula | Requires a validated list for that language |
@@ -110,7 +110,7 @@ ASW = syllables ÷ words
 ```
 
 | Score | Label | Suitable for |
-|-------|-------|--------------|
+| ------- | ------- | -------------- |
 | 0–30 | Sehr schwer (very difficult) | Academics |
 | 30–50 | Schwer (difficult) | |
 | 50–60 | Mittelschwer (moderately difficult) | |
@@ -162,7 +162,7 @@ LIX is the most useful index in a bilingual setting because it counts letters ra
 Targets, not laws. Choose one index, state it, and hold the whole team to the same one.
 
 | Text type | German Flesch (Amstad) | WSTF grade | LIX |
-|-----------|------------------------|-----------|-----|
+| ----------- | ------------------------ | ----------- | ----- |
 | Public-sector information for the general public | 60–70+ | ≤ 8 | ≤ 40 |
 | Consumer marketing, landing pages | 60–70 | 6–9 | 35–45 |
 | Product documentation, help centre | 50–65 | 8–11 | 40–50 |
@@ -179,7 +179,7 @@ Two adjustments worth making. **Set the target from the audience, not from the g
 Two tools will give you different scores for the same text. Before comparing anything, know how yours counts:
 
 | Element | Problem | Practice |
-|---------|---------|----------|
+| --------- | --------- | ---------- |
 | **Headings** | Verbless fragments count as sentences, inflating ease | Measure body text separately from headings |
 | **Lists** | Bullets counted as one long sentence, or as many tiny ones | Decide and apply consistently |
 | **Abbreviations** | `z. B.`, `etc.`, `Dr.` split sentences at the period | Use a tool with abbreviation handling, or expand before measuring |
@@ -197,7 +197,7 @@ Because of all this: **report the index, the tool, and the version**, and compar
 Both raise the number. Only one helps the reader.
 
 | Gaming the score | Genuinely improving readability |
-|------------------|--------------------------------|
+| ------------------ | -------------------------------- |
 | Splitting a sentence at a comma into two fragments | Splitting one sentence carrying three ideas into three sentences |
 | Replacing a precise term with a vaguer short one | Introducing the precise term once, in plain words, then using it |
 | Deleting subordinate clauses that carried the condition | Moving the condition to its own sentence, keeping the meaning |
@@ -214,7 +214,7 @@ The honest workflow is the reverse of score-chasing: **rewrite for the reader fi
 ## 8. Tooling
 
 | Need | Approach |
-|------|----------|
+| ------ | ---------- |
 | Quick check while writing | Editor extension or web tool; verify it supports German formulas before trusting German numbers |
 | German-specific | A tool implementing Amstad and/or WSTF explicitly — not an English tool with German text pasted in |
 | Automated in CI | A script over the source files, excluding code blocks, failing the build above a threshold |
@@ -240,7 +240,7 @@ For a documentation repository, a CI check is worth the effort: compute the scor
 ## 10. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | English Flesch applied to German text | German text judged far harder than it is; wrong rewrites follow |
 | Comparing scores from different tools or indices | Meaningless deltas treated as progress |
 | Optimising the score instead of the text | Fragmented, connective-free prose that scores well and reads badly |

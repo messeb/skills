@@ -17,7 +17,7 @@ Do **not** use it as a substitute for examples — a perfectly templated require
 Five patterns plus one combination. Choose the pattern by asking **when does this behaviour apply?**
 
 | Pattern | Template | Use for |
-|---------|----------|---------|
+| --------- | ---------- | --------- |
 | **Ubiquitous** | The `<system>` shall `<response>`. | Behaviour that always holds |
 | **Event-driven** | When `<trigger>`, the `<system>` shall `<response>`. | Response to a discrete event |
 | **State-driven** | While `<state>`, the `<system>` shall `<response>`. | Behaviour that holds during a state |
@@ -28,7 +28,7 @@ Five patterns plus one combination. Choose the pattern by asking **when does thi
 Examples:
 
 | Pattern | Requirement |
-|---------|-------------|
+| --------- | ------------- |
 | Ubiquitous | The booking service shall record every state change in the audit log. |
 | Event-driven | When a payment confirmation is received, the booking service shall confirm the booking within 2 seconds. |
 | State-driven | While a booking is in state `AwaitingPayment`, the booking service shall keep the seat reserved. |
@@ -47,7 +47,7 @@ Build every requirement from fixed slots, left to right:
 `<condition>` + `THE SYSTEM` + `<obligation>` + `<capability type>` + `<object + complement>`
 
 | Slot | Options | Notes |
-|------|---------|-------|
+| ------ | --------- | ------- |
 | **Condition** | temporal (`After …`, `As soon as …`), logical (`If …`) | Optional; omit for always-true requirements |
 | **System name** | the actual system name | Never "the system" in a multi-system landscape |
 | **Obligation** | `shall` (mandatory) · `should` (desirable) · `may` (optional) | Exactly one, and defined in the glossary |
@@ -65,7 +65,7 @@ The three capability types are the heart of the method: they make you decide whe
 ## 3. Ambiguity traps and how the templates catch them
 
 | Trap | Example | Why it hurts | Fix |
-|------|---------|--------------|-----|
+| ------ | --------- | -------------- | ----- |
 | **Passive voice** | "The order is validated." | The actor is missing — who validates? | Name the system as the subject |
 | **Nominalisation** | "After registration, …" | A whole process compressed into a noun | Expand: "After the customer has submitted the registration form, …" |
 | **Incomplete comparison** | "…shall be faster." | Faster than what? | State the reference and the value |
@@ -92,7 +92,7 @@ Practical test: hand the requirement to two people, ask each to write the accept
 ## 5. Choosing between the templates
 
 | Situation | Use |
-|-----------|-----|
+| ----------- | ----- |
 | Embedded, control, or safety systems; many event- and state-driven behaviours | **EARS** |
 | Business software, supplier contracts, German-speaking RE practice | **MASTeR / Rupp** |
 | Mixed | EARS for behaviour, Rupp's capability types for user- and interface-facing requirements |
@@ -157,7 +157,7 @@ See `glossary.md`. Terms introduced here: <term> — <definition>.
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Templating every backlog item | Bureaucracy, resentment, no added clarity | Template what must survive as a contract |
 | "The system" in a multi-system landscape | Nobody knows which component owns it | Name the actual system |
 | Mixing `shall`, `will`, `must`, `has to` | Obligation level becomes guesswork | Three defined keywords only |

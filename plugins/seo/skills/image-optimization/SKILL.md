@@ -29,7 +29,7 @@ Skip a step and a regression follows.
 ## 2. Formats — pick the right one
 
 | Format | Use for | Strengths | Weaknesses |
-|--------|---------|-----------|------------|
+| -------- | --------- | ----------- | ------------ |
 | **AVIF** | Photos, hero images | Best compression (~50% smaller than JPEG at equal quality) | Slow encoder, some unfurlers reject |
 | **WebP** | Photos, screenshots | 25–35% smaller than JPEG, ~95% browser support | Larger than AVIF |
 | **JPEG** | Photo fallback | Universal | Largest |
@@ -172,21 +172,21 @@ But ideally store the dimensions in your CMS at upload time and emit them.
 ### `loading`
 
 | Value | When |
-|-------|------|
+| ------- | ------ |
 | `eager` | Above-the-fold images. The default for `<img>` is `eager`, so this is mostly for explicit clarity. |
 | `lazy` | Below-the-fold content images. Native browser lazy loading. |
 
 ### `decoding`
 
 | Value | When |
-|-------|------|
+| ------- | ------ |
 | `async` | Almost always. Lets the browser decode off the main thread. |
 | `sync` | Rarely needed; only when you need the image to be ready before the next paint of an animation. |
 
 ### `fetchpriority`
 
 | Value | When |
-|-------|------|
+| ------- | ------ |
 | `high` | The LCP image only. One per page. |
 | `low` | Below-the-fold images that should be deprioritized (e.g. social proof images that don't matter for first paint). |
 | `auto` | Default. |
@@ -194,7 +194,7 @@ But ideally store the dimensions in your CMS at upload time and emit them.
 ### Combinations
 
 | Image role | loading | decoding | fetchpriority |
-|------------|---------|----------|---------------|
+| ------------ | --------- | ---------- | --------------- |
 | LCP (hero) | `eager` | `async` | `high` |
 | Above-the-fold (non-LCP) | `eager` | `async` | `auto` |
 | Below-the-fold | `lazy` | `async` | `auto` |
@@ -256,7 +256,7 @@ Setting `loading="lazy"` on the LCP image. The browser delays the fetch, LCP tim
 Social unfurlers (Facebook, LinkedIn, Slack, iMessage, Discord, X) read `og:image`. They have stricter requirements than browser images.
 
 | Requirement | Value |
-|-------------|-------|
+| ------------- | ------- |
 | Dimensions | 1200 × 630 px (1.91:1) |
 | Format | PNG or JPEG |
 | File size | ≤ 1 MB; ≤ 300 KB preferred |
@@ -340,7 +340,7 @@ Image filenames are a weak ranking signal. Use descriptive kebab-case:
 ## 10. Compression targets
 
 | Image type | Target |
-|------------|--------|
+| ------------ | -------- |
 | Hero / LCP image | ≤ 200 KB (AVIF), ≤ 250 KB (WebP), ≤ 400 KB (JPEG fallback) |
 | Above-the-fold card images (combined) | ≤ 300 KB |
 | Article inline images | ≤ 80 KB each |
@@ -383,7 +383,7 @@ node -e '
 ### Build-tool integration
 
 | Stack | Plugin / loader |
-|-------|-----------------|
+| ------- | ----------------- |
 | Astro | `astro:assets` (built-in `<Image />` and `<Picture />`) |
 | Next.js | `next/image` with the default loader or Cloudinary/Imgix loader |
 | Nuxt | `@nuxt/image` |

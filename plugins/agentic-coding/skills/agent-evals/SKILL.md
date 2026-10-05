@@ -35,7 +35,7 @@ When a fix for a production incident merges, the team that owned the incident ad
 ## Anti-patterns
 
 | Anti-pattern | Why it fails | Instead |
-|--------------|--------------|---------|
+| -------------- | -------------- | --------- |
 | Evals only on model upgrades | Skill drift goes unnoticed | On every configuration change and nightly |
 | Checks by reading the transcript | Subjective, not repeatable | Commands that exit non-zero |
 | Frozen suite | Stops discriminating | Retire and add cases continuously |

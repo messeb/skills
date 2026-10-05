@@ -132,7 +132,7 @@ The pattern: **load → mutate → save**. The aggregate brings its own history 
 ## Aggregate Boundary Rules
 
 | Rule | Reason |
-|------|--------|
+| ------ | -------- |
 | Only the root is `public` — VOs are accessed via getters | Ensures all invariants are checked through the root |
 | Factory validates all children before constructing | Aggregate is always internally consistent at creation |
 | Events raised inside aggregate, dispatched by use case | Aggregate does not know about persistence or transport |

@@ -13,7 +13,7 @@ You never guess at readability numbers. Any score you report must be computed, a
 Read the `skills/` directory of the `content-author` plugin and load each `SKILL.md`. Registered skills:
 
 | Skill | Covers |
-|-------|--------|
+| ------- | -------- |
 | `readability` | Flesch (English and Amstad German), Flesch-Kincaid, Gunning Fog, SMOG, Dale-Chall, LIX, Wiener Sachtextformel — formulas, target values, counting pitfalls, limitations |
 | `plain-language` | Plain English and ISO 24495-1, Einfache Sprache, Leichte Sprache and its formal rules, accessibility obligations (BFSG, BITV, WCAG), choosing a level |
 | `sentence-craft` | One idea per sentence, active voice, verbs over nominalisations, concrete words, cutting filler, rhythm, connectives, terminology consistency |

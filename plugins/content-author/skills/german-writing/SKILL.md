@@ -29,7 +29,7 @@ Diagnostic: read the sentence aloud. If you have to look back to find the verb, 
 The most characteristic problem of German professional writing: turning actions into nouns and attaching a weak verb.
 
 | Nominalstil | Verbal |
-|-------------|--------|
+| ------------- | -------- |
 | zur Anwendung kommen | anwenden |
 | eine Überprüfung durchführen | überprüfen |
 | in Abzug bringen | abziehen |
@@ -49,7 +49,7 @@ The gain is double: shorter, and the actor reappears. `Die Prüfung erfolgt` tel
 German offers several ways to hide the actor, and administrative writing uses all of them:
 
 | Construction | Example | Fix |
-|--------------|---------|-----|
+| -------------- | --------- | ----- |
 | Vorgangspassiv | Der Antrag wird geprüft. | Wir prüfen Ihren Antrag. |
 | `man` | Man muss das Formular unterschreiben. | Unterschreiben Sie das Formular. |
 | `es wird` | Es wird empfohlen, … | Wir empfehlen Ihnen, … |
@@ -63,7 +63,7 @@ In instructions, the imperative or `Sie können` is almost always the right form
 ## 4. Behördendeutsch — standard replacements
 
 | Instead of | Use |
-|-----------|-----|
+| ----------- | ----- |
 | aufgrund der Tatsache, dass | weil |
 | im Rahmen von / im Zuge von | bei, während |
 | zum jetzigen Zeitpunkt | jetzt |
@@ -87,7 +87,7 @@ Also worth removing: `grundsätzlich` (usually means the opposite of what reader
 German compounds are a feature, not a defect: `Krankenversicherungsbeitrag` is precise and one concept. But they drive up every readability score, and beyond a certain length they genuinely slow readers.
 
 | Length | Handling |
-|--------|----------|
+| -------- | ---------- |
 | Two elements (`Antragsformular`) | Leave it |
 | Three elements (`Krankenversicherungsbeitrag`) | Usually fine in specialist text; consider unfolding for a general audience |
 | Four or more (`Grundstücksverkehrsgenehmigungszuständigkeitsübertragungsverordnung`) | Unfold, or introduce once and then use a short form |
@@ -117,7 +117,7 @@ Related patterns: **extended participial attributes** (`die vom Ausschuss in der
 **Gendering** is contested and has readability consequences. The main options:
 
 | Form | Example | Readability note |
-|------|---------|------------------|
+| ------ | --------- | ------------------ |
 | Neutral rephrasing | `Studierende`, `die Person`, `das Team` | Best for readability; no special characters |
 | Paired forms | `Mitarbeiterinnen und Mitarbeiter` | Longer; clear; screen-reader friendly |
 | Gender star / colon | `Nutzer*innen`, `Nutzer:innen` | Screen-reader pronunciation varies; some accessibility guidance advises against inside Leichte Sprache |
@@ -132,7 +132,7 @@ Practical guidance: prefer **neutral rephrasing** where it exists — it is shor
 Decide per audience and record the decision:
 
 | Term | Consumer audience | Engineering audience |
-|------|-------------------|---------------------|
+| ------ | ------------------- | --------------------- |
 | `downloaden` / `herunterladen` | herunterladen | either |
 | `Deployment` | Veröffentlichung | Deployment |
 | `Feature` | Funktion | Feature |
@@ -157,7 +157,7 @@ Recap of the points that matter here (full detail in `readability`):
 ## 10. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Relative clause inserted inside the verb bracket | The classic unreadable German sentence |
 | Nominalstil throughout | Long, actorless, bureaucratic |
 | `Es wird …` and `man` as the default voice | Nobody is responsible for anything |

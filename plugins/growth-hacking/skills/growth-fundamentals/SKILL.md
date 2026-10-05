@@ -27,7 +27,7 @@ A useful test for any growth claim: **would this still look like growth if the m
 Four load-bearing parts of that sentence:
 
 | Part | Why it matters |
-|------|----------------|
+| ------ | ---------------- |
 | **Cross-functional** | Levers sit in product, engineering, data, support and pricing, not just in campaigns |
 | **Experiment-driven** | Ideas are hypotheses with defined success criteria, not decisions |
 | **The whole product** | The strongest levers are usually built into the product (sharing, onboarding, referral), not bolted on |
@@ -42,7 +42,7 @@ What it is **not**: a synonym for "cheap", a list of tricks, a substitute for a 
 The practice is associated with startups because startups have no budget and no brand to protect, so experimentation is the only option. But the method transfers, with adjustments:
 
 | Context | What changes |
-|---------|--------------|
+| --------- | -------------- |
 | **Startup** | Speed and channel discovery dominate; almost nothing is off-limits; the bottleneck is finding product-market fit |
 | **Scale-up** | Loops and retention dominate; the bottleneck is making acquisition repeatable and efficient |
 | **Established company** | Brand risk, legal review, and existing traffic change the calculus — but existing traffic also makes experiments statistically viable in days rather than months |
@@ -78,7 +78,7 @@ The honest framing: growth practice improves the **return on marketing and produ
 Distinguish three things that get called the same name:
 
 | | Definition | Lifespan |
-|---|---|---|
+| --- | --- | --- |
 | **A trick** | Exploits a loophole in a platform's rules or a user's inattention | Short — closes, or damages trust |
 | **A hack** | An unconventional, disproportionately effective use of an existing system, within its rules | Medium — works until copied or the platform changes |
 | **A lever** | A structural property of the product that produces growth repeatedly | Long — compounds (`growth-loops`) |
@@ -118,7 +118,7 @@ Finding a channel is the beginning. Compounding comes from repeated improvement 
 ## 7. Compared with adjacent models
 
 | Model | Relationship to growth hacking |
-|-------|-------------------------------|
+| ------- | ------------------------------- |
 | **Lean Startup** | The parent methodology — build-measure-learn applied to the whole business. Growth practice is the operational version focused on growth metrics |
 | **Digital marketing** | Overlaps on channels, differs in scope: growth work changes the product, pricing, and onboarding, not only the campaign |
 | **CRO** | A subset — activation and conversion optimization is one stage of the funnel |
@@ -133,7 +133,7 @@ The honest answer to "is this old wine in new bottles?": largely yes on the indi
 ## 8. The dangers
 
 | Danger | What it looks like | Guard |
-|--------|--------------------|-------|
+| -------- | -------------------- | ------- |
 | **Growth before product-market fit** | Pouring acquisition into a product people leave | Measure retention first (`product-market-fit`) |
 | **Vanity metrics** | Impressions and signups reported as growth | One north star tied to value delivered (`north-star-and-metrics`) |
 | **Local optimisation** | Twelve button tests, no structural change | Balance the portfolio between small and structural bets |
@@ -149,7 +149,7 @@ The honest answer to "is this old wine in new bottles?": largely yes on the indi
 ## 9. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | "Growth hacking" used to mean "marketing without a budget" | The product levers, where the real leverage is, are never touched |
 | Copying a famous company's hack without its context | The mechanism depended on a platform, an era, or an audience you do not have |
 | A single growth person with no engineering access | Can only run campaigns; cannot change the product |

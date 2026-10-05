@@ -15,7 +15,7 @@ Do **not** use it to explore a whole domain (use `event-storming` or `domain-sto
 ## 1. The four cards
 
 | Card | Colour | Content | Rule of thumb |
-|------|--------|---------|---------------|
+| ------ | -------- | --------- | --------------- |
 | **Story** | yellow | The user story under discussion | Exactly one per session, at the top |
 | **Rule** | blue | An acceptance criterion or business rule | 3–6 is healthy; more means split |
 | **Example** | green | A concrete case illustrating a rule | At least one per rule; ambiguous rules need 2–3 |
@@ -56,7 +56,7 @@ Stop at 25 minutes regardless. A map that needs more time is telling you the sto
 ## 4. Reading the map — the verdict
 
 | Shape | Meaning | Action |
-|-------|---------|--------|
+| ------- | --------- | -------- |
 | 3–6 rules, 1–3 examples each, 0–1 questions | Well understood, right size | **Ready** — pull into the sprint |
 | Many rules (7+) | Story is too big | **Split** along rule groups — each cluster is a story |
 | Many examples under one rule (5+) | Rule is ambiguous or hides sub-rules | Split the rule; the examples usually cluster |
@@ -147,7 +147,7 @@ Write to `docs/discovery/example-map-<story-id>.md`, or straight into the ticket
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Answering red cards during the session | 25 min becomes 90 min, energy gone | Park with an owner and a date |
 | Abstract examples ("a large order") | The ambiguity survives into code | Use real values |
 | Only the developer talks | Business rules stay implicit | Three Amigos, all three speak |

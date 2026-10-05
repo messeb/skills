@@ -59,7 +59,7 @@ Two fields do the heavy lifting. **The observation** forces the idea to come fro
 > **Because** `<observed evidence>`, **we believe that** `<change>` **will cause** `<metric>` **to move from** `<baseline>` **to** `<target>` **for** `<segment>`.
 
 | Requirement | Why |
-|-------------|-----|
+| ------------- | ----- |
 | Grounded in an observation | Distinguishes a hypothesis from a guess |
 | Names one primary metric | Multiple primaries mean multiple chances to declare victory |
 | States a **quantified** expected effect | Determines sample size; makes the result falsifiable |
@@ -73,7 +73,7 @@ Two fields do the heavy lifting. **The observation** forces the idea to come fro
 ## 3. Metrics: one primary, several guardrails
 
 | Type | Rule |
-|------|------|
+| ------ | ------ |
 | **Primary** | Exactly one. The metric the decision rests on |
 | **Guardrails** | Declared in advance; any breach fails the test regardless of the primary |
 | **Secondary** | Explanatory, for understanding mechanism — never for declaring a win |
@@ -105,7 +105,7 @@ Duration rules that matter as much as sample size:
 ## 5. Test types
 
 | Type | Use | Caution |
-|------|-----|---------|
+| ------ | ----- | --------- |
 | **A/B** | One change, clean attribution | The default; prefer it |
 | **A/B/n** | Several distinct alternatives | Correct for multiple comparisons |
 | **Multivariate** | Interaction between elements | Sample requirement multiplies; rarely justified |
@@ -122,7 +122,7 @@ Prefer one change per test. A variant that changes headline, layout, and price t
 ## 6. Validity threats
 
 | Threat | Symptom | Guard |
-|--------|---------|-------|
+| -------- | --------- | ------- |
 | **Peeking** | Called early on a "significant" result | Fix duration in advance, or use sequential methods |
 | **Sample ratio mismatch** | Split is 52/48 when it should be 50/50 | Check SRM before reading results; a mismatch invalidates the test |
 | **Novelty effect** | Big early lift that fades | Run longer; compare new versus returning users |
@@ -143,7 +143,7 @@ An **A/A test** on a new experimentation setup is cheap insurance: if two identi
 Most teams do not have the volume for classical significance on every question. Honest alternatives:
 
 | Approach | Trade-off |
-|----------|-----------|
+| ---------- | ----------- |
 | Test higher up the funnel | More volume, weaker link to revenue |
 | Choose bigger, bolder changes | Large effects need smaller samples |
 | Bayesian methods with a stated prior | Gives usable probability statements at small n |
@@ -160,7 +160,7 @@ The important discipline is honesty: run the test, report the observed direction
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Hypothesis without an observation behind it | Testing opinions at random |
 | No quantified expected effect | Cannot size the test; result is unfalsifiable |
 | Several primary metrics | Multiple chances to declare a win |

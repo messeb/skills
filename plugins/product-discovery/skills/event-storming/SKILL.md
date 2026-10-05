@@ -15,7 +15,7 @@ Do **not** use it for a well-understood CRUD screen, a single user story (use `e
 ## 1. Pick the level first
 
 | Level | Question it answers | Participants | Duration | Output |
-|-------|---------------------|--------------|----------|--------|
+| ------- | --------------------- | -------------- | ---------- | -------- |
 | **Big Picture** | What happens in this business, end to end? | 10–25, wide mix incl. sceptics | 2–4 h (up to a day) | Timeline, hotspots, candidate bounded contexts |
 | **Process Level** | How does this one flow really work? | 6–12, deep knowledge of the flow | 2–4 h per flow | Commands, actors, policies, read models, external systems |
 | **Design Level** | How do we implement this? | 3–6, mostly developers + 1 domain expert | 2–4 h per aggregate | Aggregates, invariants, command→event contracts |
@@ -43,7 +43,7 @@ Follow-ups only if relevant: existing systems the flow touches, regulatory const
 Colour is convention, not law — but be consistent and put the legend on the wall.
 
 | Element | Colour | Notation | Rule |
-|---------|--------|----------|------|
+| --------- | -------- | ---------- | ------ |
 | **Domain event** | orange | past tense verb: `Order Placed`, `Payment Captured` | Something that happened, relevant to a domain expert. The only element in a Big Picture pass. |
 | **Command** | blue | imperative: `Place Order`, `Capture Payment` | The intent that causes an event. |
 | **Actor / role** | small yellow | `Customer`, `Dispatcher` | The person issuing the command. Stick it on the command. |
@@ -113,7 +113,7 @@ Walk the wall once more, read the hotspots aloud, assign an owner and a next act
 ## 5. Timeboxes
 
 | Big Picture (half day) | Process Level (half day) |
-|------------------------|--------------------------|
+| ------------------------ | -------------------------- |
 | 15 min — intro, legend, rules | 10 min — recap of the Big Picture slice |
 | 40 min — chaotic exploration | 45 min — commands + actors |
 | 45 min — enforce timeline | 30 min — read models |
@@ -216,7 +216,7 @@ Write the harvested wall to `docs/discovery/event-storming-<scope>.md`.
 ## 8. Anti-patterns
 
 | Anti-pattern | Why it breaks the session | Do instead |
-|--------------|---------------------------|------------|
+| -------------- | --------------------------- | ------------ |
 | Present-tense or noun notes (`Order`, `Send mail`) | Removes the timeline; turns into a data model | Enforce past tense, one event per note |
 | One person writing while others talk | The loudest voice becomes the model | Everyone writes, silence during writing |
 | Debating a term for ten minutes | Burns the room's energy on 1% of the wall | Red hotspot, move on, resolve after |

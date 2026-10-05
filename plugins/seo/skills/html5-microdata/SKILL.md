@@ -15,7 +15,7 @@ This skill covers when to choose Microdata, the full attribute set, how property
 Both are valid; both are accepted by Google. The default for new projects is **JSON-LD**, but Microdata has real strengths and the choice should be deliberate.
 
 | Criterion | Microdata | JSON-LD |
-|-----------|-----------|---------|
+| ----------- | ----------- | --------- |
 | Google support | ✅ Supported | ✅ Preferred |
 | Source of truth | Single — same DOM as rendered content | Separate `<script>` block |
 | Drift risk | Low — facts are wired to visible elements | High — JSON can lag behind UI changes |
@@ -49,7 +49,7 @@ Both formats together is allowed and sometimes useful (Microdata for the visible
 All five can be applied to any HTML element.
 
 | Attribute | Purpose | Notes |
-|-----------|---------|-------|
+| ----------- | --------- | ------- |
 | `itemscope` | Marks the element as describing one item | Boundary of an item; descendant `itemprop`s belong to it |
 | `itemtype` | Vocabulary URL for the item (Schema.org) | Required to be paired with `itemscope`. Use `https://` |
 | `itemprop` | Names a property of the enclosing item | One element can carry multiple props: `itemprop="name url"` |
@@ -72,7 +72,7 @@ All five can be applied to any HTML element.
 Microdata reads the value from the element it sits on, not from a separate attribute you choose. The element type drives what's read.
 
 | Element | Value source |
-|---------|--------------|
+| --------- | -------------- |
 | Most elements (`span`, `div`, `p`, `h1`, …) | Inner text content |
 | `<a>`, `<area>`, `<link>` | `href` attribute (resolved to absolute URL) |
 | `<img>`, `<audio>`, `<source>`, `<track>`, `<video>`, `<embed>`, `<iframe>` | `src` (resolved) |

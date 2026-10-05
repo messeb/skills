@@ -15,7 +15,7 @@ For the Microdata equivalent see `html5-microdata`. For the markup-level meta ta
 ## 1. Why JSON-LD won
 
 | Criterion | JSON-LD | Microdata | RDFa |
-|-----------|---------|-----------|------|
+| ----------- | --------- | ----------- | ------ |
 | Google preferred | ✅ | ✅ supported | ✅ supported |
 | DOM-coupled | No — in `<script>` | Yes — inline attributes | Yes — inline attributes |
 | Refactor-safe | ✅ | Brittle | Brittle |

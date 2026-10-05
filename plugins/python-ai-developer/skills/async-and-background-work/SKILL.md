@@ -13,7 +13,7 @@ Use this skill when a request can exceed a few seconds, when work must survive a
 ## 1. Choose the execution model
 
 | Duration / property | Approach |
-|---------------------|----------|
+| --------------------- | ---------- |
 | < ~2 s, cheap, idempotent | Inline in the request |
 | 2–30 s, user is waiting, output is incremental | Inline **streaming** (SSE — see `fastapi`) |
 | 30 s – minutes | **Job**: accept, return `202` + job id, process out of band, poll or stream status |
@@ -28,7 +28,7 @@ Use this skill when a request can exceed a few seconds, when work must survive a
 ## 2. Concurrency primitives
 
 | Work | Primitive |
-|------|-----------|
+| ------ | ----------- |
 | Many concurrent network calls | `asyncio` + async SDK clients |
 | Blocking C extension or sync SDK | `anyio.to_thread.run_sync` (bounded by the thread limiter) |
 | CPU-bound Python | `ProcessPoolExecutor`, or a separate worker process |
@@ -101,7 +101,7 @@ async def call_with_deadline(coro, seconds: float):
 ```
 
 | Concern | Practice |
-|---------|----------|
+| --------- | ---------- |
 | Per-attempt timeout | Always set one on the provider client; the SDK default is often minutes |
 | Total deadline | Budget across retries — three attempts at 60 s is a 3-minute worst case |
 | Client disconnect | Check `request.is_disconnected()` in streams; cancel the task |
@@ -118,7 +118,7 @@ Bare `except Exception` around an `await` is the classic bug: on Python 3.8+ `Ca
 ## 6. Retries that do not double-charge
 
 | Failure | Retry? |
-|---------|--------|
+| --------- | -------- |
 | Connection error, 5xx, 429 | Yes — exponential backoff with jitter, honour `Retry-After` |
 | Timeout on a **streaming** call | Risky — output may have been generated and billed; prefer resuming or failing the job |
 | 400 / schema validation failure | No — retrying an invalid request wastes money; fix the request |
@@ -132,7 +132,7 @@ Record attempts on the job (`attempt`, `provider`, `model`, `cost_usd`) so a bil
 ## 7. Choosing a queue
 
 | Option | Fits |
-|--------|------|
+| -------- | ------ |
 | **Redis + ARQ / RQ / Dramatiq** | Redis already present; simple async jobs; light operational load |
 | **Celery + Redis/RabbitMQ** | Mature ecosystem, scheduling, complex routing; heavier |
 | **Postgres-backed queue** (`SELECT … FOR UPDATE SKIP LOCKED`) | You already run Postgres and want jobs transactional with your data — usually the simplest correct choice |
@@ -146,7 +146,7 @@ Run workers as a **separate container from the API** with the same image and a d
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | `BackgroundTasks` for paid model calls | Work lost on restart, invisible, unbounded concurrency |
 | Unbounded `asyncio.gather` fan-out | Rate-limit storm; the provider becomes the outage |
 | No idempotency key on expensive endpoints | Client retries double the bill |

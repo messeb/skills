@@ -17,7 +17,7 @@ Do **not** use it to model the domain (`context-mapping`, `event-storming`), to 
 Zoom in one level at a time. Each level has a different audience and a hard rule about what may appear.
 
 | Level | Question | Audience | Boxes are | Rule |
-|-------|----------|----------|-----------|------|
+| ------- | ---------- | ---------- | ----------- | ------ |
 | **1 — System Context** | What is this system, who uses it, what does it talk to? | Everyone, including non-technical | People and software systems | **No technology names.** One box for your system |
 | **2 — Container** | What are the deployable/runnable parts? | Developers, ops, architects | Applications, services, databases, file stores, message brokers | Each container is separately deployable or runnable. Technology named per container |
 | **3 — Component** | What are the major building blocks inside one container? | Developers of that container | Groupings of code with a clear responsibility | Draw only for containers where it earns its keep |
@@ -26,7 +26,7 @@ Zoom in one level at a time. Each level has a different audience and a hard rule
 Supplementary views:
 
 | View | Purpose |
-|------|---------|
+| ------ | --------- |
 | **System landscape** | Several systems in an enterprise, above level 1 |
 | **Dynamic** | How elements collaborate for one scenario — numbered interactions |
 | **Deployment** | Which containers run on which infrastructure, per environment |
@@ -204,7 +204,7 @@ sequenceDiagram
 ## 5. Keeping diagrams alive
 
 | Practice | Effect |
-|----------|--------|
+| ---------- | -------- |
 | Diagram source in the repo, next to the code | Changes and reviews happen together |
 | Rendered in the README or docs site from source | No stale exported PNGs |
 | Update required in the definition of done for architectural changes | Drift is caught at the source |
@@ -217,7 +217,7 @@ sequenceDiagram
 ## 6. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Mixing levels in one diagram | Unreadable; discussion derails into "what is that box?" | One level per diagram |
 | Technology names at level 1 | Business audience disengages | Level 1 is technology-free |
 | Unlabelled arrows | Readers invent the semantics | Intent plus protocol on every arrow |

@@ -88,7 +88,7 @@ VOs are validated individually first (step 1) to collect **per-field errors** fo
 ## One Use Case Per User Action
 
 | User action | Use case |
-|-------------|----------|
+| ------------- | ---------- |
 | Register user | `RegisterUserUseCase` |
 | Place order | `PlaceOrderUseCase` |
 | Cancel order | `CancelOrderUseCase` |

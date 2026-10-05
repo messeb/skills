@@ -20,7 +20,7 @@ Guides developers through the full release lifecycle:
 ## Workflow Files
 
 | File | Trigger | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | `ci-pull-request.yml` | PR opened/updated against any branch | Validate — lint, test, build check |
 | `release-branch-create.yml` | Push to `release/**` | Confirm branch exists, notify team |
 | `release-candidate.yml` | Tag push matching `v*-rc.*` | Build Docker image, deploy to QA |
@@ -88,7 +88,7 @@ Guides developers through the full release lifecycle:
 Ask the developer which action they want to perform (or infer from context):
 
 | Action | Trigger phrase examples |
-|---|---|
+| --- | --- |
 | **A. Start a new release** | "create release branch", "start 1.3.0", "cut a release" |
 | **B. Tag a new RC** | "tag RC", "bump RC", "create rc.2", "new release candidate" |
 | **C. Promote RC → Production** | "release to prod", "promote", "go live", "final release" |
@@ -298,7 +298,7 @@ gh pr create --base develop --head hotfix/$VERSION \
 ## Branch & Tag Reference
 
 | Branch / Tag | Purpose | Docker image built? |
-|---|---|---|
+| --- | --- | --- |
 | `develop` | Continuous integration | ✅ `myapp:develop`, `myapp:develop-<sha>` |
 | `release/x.y.z` | Stabilisation, QA fixes only | ❌ (RC tags trigger builds) |
 | `vx.y.z-rc.N` | Release candidate | ✅ `myapp:x.y.z-rc.N` |

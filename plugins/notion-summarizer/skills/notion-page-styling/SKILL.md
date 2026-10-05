@@ -48,7 +48,7 @@ Use this skill whenever you create or restyle a page through the Notion MCP. Bef
 ```
 
 | Purpose | Icon | Color |
-|---------|------|-------|
+| --------- | ------ | ------- |
 | Section intro / context | `icons/info-alternate_<part color>` | `<part color>_bg` |
 | Key takeaways | `icons/light-bulb_yellow` | `yellow_bg` |
 | Tip, do this | `icons/checkmark_green` | `green_bg` |
@@ -190,7 +190,7 @@ Restyle one page first, verify it, then apply the pattern to the rest.
 ## 5. Anti-patterns
 
 | Anti-pattern | Symptom | Fix |
-|--------------|---------|-----|
+| -------------- | --------- | ----- |
 | Pipe tables | Narrow table, no full width | XML table with `fit-page-width="true"` |
 | Spaces for nesting | Children appear below the callout, not inside | One tab per level |
 | Lists inside table cells | Raw Markdown in the cell | Split into rows or use a toggle below |

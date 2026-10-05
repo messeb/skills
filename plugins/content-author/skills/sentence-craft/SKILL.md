@@ -31,7 +31,7 @@ The test: read the sentence and count the assertions. More than one, and it is a
 Passive voice hides who does what. In instructions and legal text, that ambiguity is the actual problem.
 
 | Passive | Active |
-|---------|--------|
+| --------- | -------- |
 | The application will be reviewed. | We review your application. |
 | It has been decided that … | The committee decided that … |
 | Der Antrag wird geprüft. | Wir prüfen Ihren Antrag. |
@@ -48,7 +48,7 @@ The diagnostic question for any passive sentence: **can the reader tell who is r
 Turning a verb into a noun (`prüfen` → `die Prüfung`, `decide` → `make a determination`) adds length and removes the actor. This is the single highest-yield edit in bureaucratic and corporate text.
 
 | Nominal | Verbal |
-|---------|--------|
+| --------- | -------- |
 | perform an evaluation of | evaluate |
 | provide assistance to | help |
 | make a decision about | decide |
@@ -66,7 +66,7 @@ Spot them by their endings — `-ung`, `-heit`, `-keit`, `-tion`, `-ment`, `-anc
 Abstract words are processed more slowly and remembered less well.
 
 | Abstract | Concrete |
-|----------|----------|
+| ---------- | ---------- |
 | resources | people, money, time — say which |
 | the solution | the export function |
 | Maßnahmen ergreifen | die Frist verlängern |
@@ -79,7 +79,7 @@ The same applies to quantities: `significantly faster` is unverifiable; `1.2 sec
 ## 5. Cut what carries nothing
 
 | Category | Examples |
-|----------|----------|
+| ---------- | ---------- |
 | Empty openers | `It should be noted that`, `Es sei darauf hingewiesen, dass`, `Basically`, `Grundsätzlich gilt` |
 | Redundant pairs | `each and every`, `null und nichtig`, `first and foremost` |
 | Filler intensifiers | `very`, `really`, `quite`, `sehr`, `durchaus`, `letztendlich` |
@@ -126,7 +126,7 @@ Maintain a short term list per product: the term, its definition, and what not t
 ## 9. Words: familiar over impressive
 
 | Instead of | Use |
-|-----------|-----|
+| ----------- | ----- |
 | utilise, commence, terminate, endeavour | use, start, end, try |
 | in the event that, prior to, subsequent to | if, before, after |
 | beinhalten, gewährleisten, seitens | enthalten, sichern, von |
@@ -142,7 +142,7 @@ Loanwords and anglicisms in German deserve a deliberate decision: `downloaden` i
 ## 10. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Splitting sentences mechanically at commas | Fragments; relations lost |
 | Deleting connectives to shorten sentences | Score rises, comprehension falls |
 | Passive by default | Nobody knows who acts; responsibility hidden |

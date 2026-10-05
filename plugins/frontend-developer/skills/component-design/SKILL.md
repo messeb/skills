@@ -188,7 +188,7 @@ function List<T>({ items, keyExtractor, renderItem, renderEmpty }: Props<T>) {
 ### When to use each solution
 
 | Depth | Solution |
-|-------|----------|
+| ------- | ---------- |
 | 1-2 levels | Pass props directly |
 | 2-3 levels, rarely changes | Slot/render prop to skip intermediate |
 | 3+ levels, shared across subtree | `provide/inject` (Vue) or Context (React) |

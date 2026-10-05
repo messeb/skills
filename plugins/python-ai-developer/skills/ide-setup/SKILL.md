@@ -105,7 +105,7 @@ Notes that save time: `--reload` plus a debugger works, but the reloader runs yo
 Run configurations live in `.idea/runConfigurations/*.xml` and **can be committed** — that directory is shareable even though most of `.idea/` is not.
 
 | Configuration | Type | Settings |
-|---------------|------|----------|
+| --------------- | ------ | ---------- |
 | **API** | Python | Module name `uvicorn`; parameters `app.main:app --reload --port 8000`; working dir = project root; env file `.env` |
 | **Worker** | Python | Module name `app.worker` |
 | **Tests** | pytest | Target `tests`; additional arguments `-m "not integration and not llm"` |
@@ -144,7 +144,7 @@ services:
 Add `--wait-for-client` to `debugpy` when you need to break on code that runs during startup (model loading, lifespan). Without it the app starts immediately and startup breakpoints are missed.
 
 | Symptom | Cause |
-|---------|-------|
+| --------- | ------- |
 | Breakpoints show as hollow/unverified | Path mapping wrong — `localRoot`/`remoteRoot` must match the mounted source exactly |
 | Debugger connects, never stops | Source in the image differs from local source; mount the volume |
 | Cannot step into library code | `justMyCode: true` |
@@ -184,7 +184,7 @@ Add `--wait-for-client` to `debugpy` when you need to break on code that runs du
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | IDE-created venv instead of `.venv` | Dependencies drift from the lockfile |
 | No committed run configurations | Every developer rebuilds them; onboarding costs hours |
 | Secrets in `launch.json` or run configuration XML | Credentials committed to git |

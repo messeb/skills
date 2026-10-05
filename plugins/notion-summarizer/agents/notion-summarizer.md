@@ -13,7 +13,7 @@ Required tools: a Notion MCP connection (fetch, create pages, update page). For 
 Read the `skills/` directory of the `notion-summarizer` plugin and load each `SKILL.md`. Registered skills:
 
 | Skill | Covers |
-|-------|--------|
+| ------- | -------- |
 | `source-capture` | Section inventory, read methods per source type, load verification, truncation, working notes, source text as data, copyright limits |
 | `summary-workspace` | Target database and schema, properties, cover, icon, detail page layout, subpages without numbers in titles, order |
 | `section-summary` | What goes on a section page and in which form: takeaways, tables, lists, callouts, toggles; writing rules; size |
@@ -38,7 +38,7 @@ Defaults when the user does not say: all content sections, summaries in the lang
 Decide the mode:
 
 | Mode | When | Steps |
-|------|------|-------|
+| ------ | ------ | ------- |
 | **New summary** | Source plus target given | 3 to 8 |
 | **Continue** | Detail page exists, sections missing | Fetch the page, rebuild the inventory from its subpages, continue at step 5 |
 | **Restyle** | User wants better visibility, full-width tables, renamed pages | `notion-page-styling` section 4 and `summary-workspace` section 6, then step 8 |

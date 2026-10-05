@@ -13,7 +13,7 @@ Use this skill from the first LLM call. Retrofitting evaluation after a quality 
 ## 1. The pyramid
 
 | Layer | What it covers | Speed | Cost | When it runs |
-|-------|----------------|-------|------|--------------|
+| ------- | ---------------- | ------- | ------ | -------------- |
 | **Unit** | Prompt construction, response parsing, schema validation, error mapping, budget logic, routing | ms | free | Every commit |
 | **Contract** | Each adapter satisfies the `LLMClient` protocol identically, against recorded fixtures | ms | free | Every commit |
 | **Integration** | API routes with a fake LLM; queue, DB, storage wiring | s | free | Every commit |
@@ -65,7 +65,7 @@ A fake also lets you assert **what was sent**: that the system prompt was includ
 Do not assert exact strings from a model. Assert the properties you actually depend on:
 
 | Property | Assertion |
-|----------|-----------|
+| ---------- | ----------- |
 | Shape | Parses into the Pydantic model |
 | Constraints | Enum membership, bounds, required fields present |
 | Grounding | Extracted values appear in the source text (`structured-output` provenance) |
@@ -108,7 +108,7 @@ Assert on **aggregates with thresholds**, not on individual cases. One case fail
 ## 5. Metrics
 
 | Task | Metric |
-|------|--------|
+| ------ | -------- |
 | Extraction | Per-field precision/recall; exact-match rate; hallucination rate (value not supported by the source) |
 | Classification | Accuracy, macro-F1, confusion matrix — not accuracy alone on imbalanced classes |
 | Retrieval | Recall@k, MRR |
@@ -155,7 +155,7 @@ Calibrate against human labels on a subset before trusting the judge, and re-cal
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Asserting exact model output strings | Perpetually flaky tests, then disabled tests |
 | Every test hitting a real provider | Slow, expensive, flaky, unusable in CI |
 | No evaluation set | Prompt changes ship on vibes; regressions are found by users |

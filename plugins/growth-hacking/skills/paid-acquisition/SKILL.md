@@ -15,7 +15,7 @@ Use this skill when scaling a paid channel, when CPA is rising, or when platform
 Effort is routinely spent in the reverse of the order that matters:
 
 | Rank | Lever | Typical effect |
-|------|-------|----------------|
+| ------ | ------- | ---------------- |
 | 1 | **Offer** — what is promised and at what price | Largest; changes who responds at all |
 | 2 | **Audience / targeting** | Large; the wrong audience cannot be rescued by creative |
 | 3 | **Landing experience** — message match and conversion | Large; determines whether the click is wasted |
@@ -57,7 +57,7 @@ On social platforms, creative is the highest-volume test you will run.
 ## 4. Channel differences
 
 | Channel | Intent | Best for | Watch |
-|---------|--------|----------|-------|
+| --------- | -------- | ---------- | ------- |
 | **Paid search — non-brand** | High, explicit | Capturing existing demand | Expensive in competitive categories; limited by search volume |
 | **Paid search — brand** | Highest | Defending the brand term | Largely non-incremental — test with a holdout before assuming value |
 | **Shopping / product listings** | High, transactional | E-commerce | Feed quality is the main lever |
@@ -89,7 +89,7 @@ Retargeting deserves the strongest caution: it targets people who were already g
 The core discipline: **do not accept the platform's report of its own performance.**
 
 | Problem | Practice |
-|---------|----------|
+| --------- | ---------- |
 | Platforms claim overlapping conversions | Reconcile against your own analytics and billing; expect platform figures to be higher |
 | View-through conversions inflate credit | Judge on click-through primarily; treat view-through separately |
 | Last-click over-credits closing channels | Use assisted views and self-reported attribution (`acquisition`) |
@@ -120,7 +120,7 @@ Non-compliant tracking is not only a legal problem; it is a data problem, becaus
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Testing headlines before testing the offer | Optimising the smallest lever |
 | Over-fragmented account structure | No unit gets enough signal to optimise |
 | Judging a campaign inside the learning period | Measuring the warm-up |

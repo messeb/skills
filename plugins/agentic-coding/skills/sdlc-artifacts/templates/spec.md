@@ -21,7 +21,7 @@ Ticket: <ref>. From: intent.md <sha>. Status: draft. Risk class: routine | highe
 ## Flagged concerns
 
 | Concern | Policy or open question | Owner | Resolution |
-|---------|-------------------------|-------|------------|
+| --------- | ------------------------- | ------- | ------------ |
 
 ## Guidance applied
 

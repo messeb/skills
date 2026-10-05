@@ -11,7 +11,7 @@ A skill is advisory: it makes the agent likely to follow a policy. A hook is det
 Team hooks live in `.claude/settings.json` in git. Non-negotiable ones go into managed settings owned by the platform team, where individual sessions cannot switch them off.
 
 | Hook | Event | Rule |
-|------|-------|------|
+| ------ | ------- | ------ |
 | `protect-default-branch.sh` | PreToolUse Bash | block `git push` to `DEFAULT_BRANCH`, any `--force`, and `git commit` while on `DEFAULT_BRANCH` |
 | `freeze-tests-during-fix.sh` | PreToolUse Edit/Write | when the current branch is `fix/*` and a marker file `.claude/fix-mode` exists (the coder creates it after committing the failing test), block edits to test paths |
 | `protected-paths.sh` | PreToolUse Edit/Write | block edits to generated code, frozen packages, migrations and infra dirs without a matching ticket label |
@@ -62,7 +62,7 @@ For a regulated repo, the platform team deploys these as managed settings (`allo
 ## Anti-patterns
 
 | Anti-pattern | Why it fails | Instead |
-|--------------|--------------|---------|
+| -------------- | -------------- | --------- |
 | Policy only in a skill | A session can ignore it | Skill plus hook |
 | Full test suite in a PreToolUse hook | Every edit takes minutes | Tests at commit or PR |
 | Approval prompt in the build loop | Blocks every parallel session | Approval hooks at release gates only |

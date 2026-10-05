@@ -15,7 +15,7 @@ Do **not** apply change control to un-baselined backlog items. Re-prioritising a
 ## 1. When change control is justified
 
 | Situation | Mechanism |
-|-----------|-----------|
+| ----------- | ----------- |
 | Item still in the backlog, no commitment made | Re-prioritise (`prioritization`) — no change request |
 | Item committed for the current iteration | Team decides; swap out something of equal size, record it |
 | Baselined requirement, internal product | Lightweight change request: impact, decision, log entry |
@@ -57,7 +57,7 @@ Each stage has an owner and a service-level expectation (for example: triage wit
 ## 3. What a change request must contain
 
 | Field | Why |
-|-------|-----|
+| ------- | ----- |
 | Id, date, requester, and requester's role | Accountability |
 | Description of the change | What exactly changes |
 | **Reason / driver** | Regulatory, market, defect, new understanding, cost — the driver decides urgency |
@@ -77,7 +77,7 @@ Each stage has an owner and a service-level expectation (for example: triage wit
 ## 4. The change control board
 
 | Aspect | Recommendation |
-|--------|----------------|
+| -------- | ---------------- |
 | Members | Product owner, engineering lead, QA, operations; plus legal and security when relevant; a customer representative in contractual work |
 | Authority | Explicit thresholds — below a size/cost limit the product owner decides alone; above it, the board; above a second threshold, the sponsor |
 | Cadence | Fixed and frequent enough that people wait rather than bypass — weekly is typical |
@@ -92,7 +92,7 @@ Delegate aggressively. A board that must approve a copy change will be bypassed 
 ## 5. Versioning
 
 | Artifact | Scheme | Rules |
-|----------|--------|-------|
+| ---------- | -------- | ------- |
 | **Specification document** | `MAJOR.MINOR` plus a baseline id | MINOR for clarifications, MAJOR for scope changes; every version records the CRs it contains |
 | **Individual requirement** | Version per requirement | Impact analysis needs to know which version a test verified |
 | **API / event contract** | Semantic versioning | Breaking changes require a major version, a deprecation window, and consumer sign-off |
@@ -108,7 +108,7 @@ Keep specifications in version control alongside the code where possible: pull r
 A change is not done when it is implemented; it is done when everyone who relied on the old behaviour knows.
 
 | Affected party | Owes them |
-|----------------|-----------|
+| ---------------- | ----------- |
 | API consumers | Version notice, migration guide, deprecation window with a sunset date |
 | Partners under contract | Formal notice within the contractual notice period |
 | Support and operations | Updated runbooks, expected customer questions, rollback plan |
@@ -226,7 +226,7 @@ The free-cancellation window changes from 24 hours to 48 hours before departure.
 ## 9. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Change control on un-baselined backlog items | Bureaucracy; teams route around the process | Control commitments, not candidates |
 | Approving changes without impact analysis | Contract breaches and regressions found late | Traverse the traceability links every time |
 | No recorded reason for changes | No learning about why requirements keep changing | Driver field, analysed periodically |

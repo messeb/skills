@@ -15,7 +15,7 @@ Use this skill when the backlog is full and nothing ships, when a growth program
 Growth work has properties that make it unusually easy to postpone:
 
 | Property | Why it invites delay |
-|----------|----------------------|
+| ---------- | ---------------------- |
 | **Most experiments fail** | Starting means volunteering for a likely negative result |
 | **Results are public** | The whole team sees the number; a losing test feels like a personal verdict |
 | **Work is optional in the short term** | Nothing breaks today if this week's experiment does not launch |
@@ -77,7 +77,7 @@ Perfectionism prevents starting because the imagined finished thing is far bette
 The prompt that works: *"How would someone with no talent for this solve it?"* Then produce that — the obvious, clumsy, embarrassing version — on purpose.
 
 | Growth application | The deliberately bad first version |
-|--------------------|-----------------------------------|
+| -------------------- | ----------------------------------- |
 | Landing page | One headline, one paragraph, one button, no design |
 | Ad creative | A plain screenshot with text on it |
 | Hypothesis | One ugly sentence naming the change and the metric |
@@ -95,7 +95,7 @@ This is the same instinct behind the riskiest-assumption test and the smoke test
 When the main task is blocked by its own difficulty, begin with an **approachable, non-creative task in the same territory**. You are not avoiding the work; you are entering it through a side door.
 
 | Instead of | Start with |
-|------------|-----------|
+| ------------ | ----------- |
 | "Write the experiment hypothesis" | Read last week's funnel numbers and note the biggest drop |
 | "Design the landing page" | List the three objections sales hears most |
 | "Write the article" | Collect the five sources and paste the quotes |
@@ -127,7 +127,7 @@ Pair either with a visible timer, a single task, and no notifications. Both fail
 For anything long-horizon — content, community, SEO, learning a channel — the winning pattern is a **small daily quantity that is impossible to refuse**, sustained.
 
 | Instead of | Do |
-|------------|-----|
+| ------------ | ----- |
 | "Write two articles a month" | 20 minutes of writing every working day |
 | "Learn paid social" | One campaign review daily, 15 minutes |
 | "Build a community" | Answer one question a day in a relevant forum |
@@ -142,7 +142,7 @@ The connection to growth practice is direct. The compounding channels — conten
 ## 8. Mapping onto the experiment cycle
 
 | Cycle stage | Where it stalls | Technique |
-|-------------|-----------------|-----------|
+| ------------- | ----------------- | ----------- |
 | **Analyse** | Blank-page paralysis about what to look at | Alternative start — open the funnel report and note the biggest drop |
 | **Ideate** | Nobody wants to propose a bad idea | Weak start; silent brainwriting removes exposure (`idea-generation`) |
 | **Prioritise** | Endless debate to avoid committing | Timebox the scoring; Impact-Effort triage in ten minutes |
@@ -160,7 +160,7 @@ The last row is the sharpest one. Book the analysis slot **when you launch the t
 Do not use motivation techniques to paper over a structural problem. Stalling is a symptom; check the cause first:
 
 | Symptom | Real cause |
-|---------|-----------|
+| --------- | ----------- |
 | Nobody starts the experiment | It requires approval nobody will give (`growth-team`) |
 | The team avoids the work | They do not believe it will change anything — no decisions have followed past results |
 | The task never begins | The next action is genuinely undefined, not merely unpleasant |
@@ -175,7 +175,7 @@ The distinction that matters: these techniques address **resistance to starting*
 ## 10. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Planning in place of starting | The plan becomes the procrastination |
 | Aspirational schedules with no slack | Abandoned on day two, with the whole plan discredited |
 | Tasks too large to picture the first move | Resistance stays exactly where it was |

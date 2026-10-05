@@ -15,7 +15,7 @@ Use this skill before defining a target group, when conversion is unexplained, w
 The most common blocker is "we have no users yet". Ways through it:
 
 | Situation | Approach |
-|-----------|----------|
+| ----------- | ---------- |
 | No product, no users | Find people with the problem in waterholes (`idea-generation`) — communities, forums, events |
 | Some users | Talk to the most recent signups (memory is fresh) and the most engaged |
 | Churned users | The highest-value and least-contacted group; offer a small incentive |
@@ -32,7 +32,7 @@ Aim for **8–12 conversations per segment**. Patterns stabilise around eight; b
 The failure mode is friendly, useless data: people are polite, they predict their behaviour badly, and they will validate almost any idea if asked directly.
 
 | Ask | Not |
-|-----|-----|
+| ----- | ----- |
 | "Tell me about the last time you had to do X." | "Would you use a product that does X?" |
 | "What did you do about it?" | "Do you think this is a good idea?" |
 | "What did that cost you — time, money, stress?" | "How much would you pay?" |
@@ -55,7 +55,7 @@ For anyone who recently adopted or abandoned something, reconstruct the timeline
 Demographics are the least predictive way to segment a software audience. Segment by something that changes what people do:
 
 | Basis | Example | Useful for |
-|-------|---------|-----------|
+| ------- | --------- | ----------- |
 | **Situation / trigger** | "Just hired their first employee" | Timing, targeting, messaging |
 | **Job to be done** | "Needs to prove compliance to an auditor" | Positioning, feature priority |
 | **Behaviour** | "Uses the export feature weekly" | Activation and expansion |
@@ -83,7 +83,7 @@ Cap at three to five, name the primary one, date them, and re-validate on a sche
 Discovery methods overlap heavily with product discovery. Rather than duplicating them, use the dedicated skills where the work goes deeper:
 
 | Need | Skill |
-|------|-------|
+| ------ | ------- |
 | Full design-thinking empathize/define process, personas, empathy maps, journey maps, POV and How Might We framing | `product-discovery:design-thinking` |
 | Jobs-to-be-done interviews, the four forces, job maps, opportunity scoring | `product-discovery:jobs-to-be-done` |
 | Field observation of how work is actually done | `product-discovery:contextual-inquiry` |
@@ -111,7 +111,7 @@ Keep the whole exercise proportionate: these are synthesis formats for research 
 Research that does not change what you test was expensive entertainment. Convert systematically:
 
 | Finding | Growth hypothesis |
-|---------|-------------------|
+| --------- | ------------------- |
 | "I searched for a comparison with X and only found their page" | Publish a comparison page; expect branded-comparison traffic to convert above baseline |
 | "I did not trust it with our client data" | Add security proof above the fold; expect signup rate to rise for enterprise-domain visitors |
 | "I only understood the value after my colleague showed me" | Multiplayer onboarding: prompt to invite a colleague at activation; expect week-4 retention to rise |
@@ -125,7 +125,7 @@ Two things to carry forward verbatim: the **words customers use** become your ad
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Asking whether people would use it | Polite yes, no purchase |
 | Pitching during the interview | Everything afterwards is contaminated |
 | Talking only to happy current users | Survivorship bias; churn stays unexplained |

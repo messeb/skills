@@ -21,14 +21,14 @@ This skill describes the **flow**. The companion [`cicd`](../cicd/SKILL.md) skil
 
 ## Branch Strategy
 
-| Branch              | Purpose                                                       | Long-lived? |
-|---------------------|---------------------------------------------------------------|-------------|
-| `develop`           | Mainline integration — every feature lands here first         | Yes         |
-| `feature/PROJ-NNN-*`| Feature, bugfix, or doc branches; PR target is `develop`      | No          |
-| `release/X.Y.Z`     | Release candidate — stabilization, QA fixes only              | Short       |
-| `hotfix/PROJ-NNN-*` | Emergency patch off the last production tag                   | No          |
-| `main`              | Optional — production-tracking pointer; tags live here        | Yes (opt.)  |
-| `config`            | Optional — GitOps manifests written by deploy jobs only       | Yes (opt.)  |
+| Branch | Purpose | Long-lived? |
+| --------------------- | --------------------------------------------------------------- | ------------- |
+| `develop` | Mainline integration — every feature lands here first | Yes |
+| `feature/PROJ-NNN-*` | Feature, bugfix, or doc branches; PR target is `develop` | No |
+| `release/X.Y.Z` | Release candidate — stabilization, QA fixes only | Short |
+| `hotfix/PROJ-NNN-*` | Emergency patch off the last production tag | No |
+| `main` | Optional — production-tracking pointer; tags live here | Yes (opt.) |
+| `config` | Optional — GitOps manifests written by deploy jobs only | Yes (opt.) |
 
 **Rules:**
 
@@ -113,16 +113,16 @@ Title prefix → label routing (`feat:` → `enhancement`, `fix:` → `bug`, etc
 
 ## Development → TEST
 
-| Action                                                                                    | Type      |
-|-------------------------------------------------------------------------------------------|-----------|
-| Create feature branch from `develop` (`feature/PROJ-NNN-slug`)                            | Manual    |
-| Open PR to `develop`                                                                      | Manual    |
-| PR triggers lint + test + build check + SAST + SCA (no deploy, no artifact publish)       | Automatic |
-| Review + merge PR into `develop` (squash merge — keeps history flat)                      | Manual    |
-| Push to `develop` triggers build + deploy to **TEST**                                     | Automatic |
+| Action | Type |
+| ------------------------------------------------------------------------------------------- | ----------- |
+| Create feature branch from `develop` (`feature/PROJ-NNN-slug`) | Manual |
+| Open PR to `develop` | Manual |
+| PR triggers lint + test + build check + SAST + SCA (no deploy, no artifact publish) | Automatic |
+| Review + merge PR into `develop` (squash merge — keeps history flat) | Manual |
+| Push to `develop` triggers build + deploy to **TEST** | Automatic |
 | Artifact tagged `{appName}:{MAJ}.{MIN}.{run_number}-{sha}` and pushed to NonProd registry | Automatic |
-| Deploy to TEST via Terraform / Helm / Pulumi / framework-specific deploy                  | Automatic |
-| Update env manifests on `config` branch (if GitOps)                                       | Automatic |
+| Deploy to TEST via Terraform / Helm / Pulumi / framework-specific deploy | Automatic |
+| Update env manifests on `config` branch (if GitOps) | Automatic |
 
 **TEST is the integration environment.** It runs trunk content; expect frequent breakage. Add smoke tests here, not regression tests.
 
@@ -132,32 +132,32 @@ Title prefix → label routing (`feat:` → `enhancement`, `fix:` → `bug`, etc
 
 The "Prepare Release" workflow is a manually dispatched job that owns version bumping, branch cutting, and the first QA deploy. It removes the temptation to do these by hand.
 
-| Action                                                                                           | Type      |
-|--------------------------------------------------------------------------------------------------|-----------|
-| Dispatch **"Prepare Release"** workflow → input `version` (e.g. `1.2.0`)                         | Manual    |
-| Cut branch `release/1.2.0` from `develop`                                                        | Automatic |
+| Action | Type |
+| -------------------------------------------------------------------------------------------------- | ----------- |
+| Dispatch **"Prepare Release"** workflow → input `version` (e.g. `1.2.0`) | Manual |
+| Cut branch `release/1.2.0` from `develop` | Automatic |
 | Bump version in manifest (`pom.xml`, `package.json`, `pyproject.toml`, `Cargo.toml`, `*.csproj`) | Automatic |
-| Commit + push version bump to `release/1.2.0`                                                    | Automatic |
-| Build artifact tagged `1.2.0`                                                                    | Automatic |
-| SAST + SCA scan                                                                                  | Automatic |
-| Push artifact to NonProd registry                                                                | Automatic |
-| Deploy → **QA** via Terraform / Helm / etc.                                                      | Automatic |
-| Update QA manifests on `config` branch                                                           | Automatic |
-| Open PR to bump `develop` to next snapshot (e.g. `1.3.0-SNAPSHOT`)                               | Automatic |
-| Review + merge the snapshot bump PR into `develop`                                               | Manual    |
+| Commit + push version bump to `release/1.2.0` | Automatic |
+| Build artifact tagged `1.2.0` | Automatic |
+| SAST + SCA scan | Automatic |
+| Push artifact to NonProd registry | Automatic |
+| Deploy → **QA** via Terraform / Helm / etc. | Automatic |
+| Update QA manifests on `config` branch | Automatic |
+| Open PR to bump `develop` to next snapshot (e.g. `1.3.0-SNAPSHOT`) | Automatic |
+| Review + merge the snapshot bump PR into `develop` | Manual |
 
 ### Bugfix during release
 
 When QA finds a bug on a release candidate:
 
-| Action                                                       | Type      |
-|--------------------------------------------------------------|-----------|
-| Create `bugfix/PROJ-NNN-...` branch off `release/1.2.0`      | Manual    |
-| Open PR back into `release/1.2.0`                            | Manual    |
-| Review + merge PR into `release/1.2.0`                       | Manual    |
+| Action | Type |
+| -------------------------------------------------------------- | ----------- |
+| Create `bugfix/PROJ-NNN-...` branch off `release/1.2.0` | Manual |
+| Open PR back into `release/1.2.0` | Manual |
+| Review + merge PR into `release/1.2.0` | Manual |
 | Push to `release/**` rebuilds artifact `1.2.0`, redeploys QA | Automatic |
-| Auto-open PR to back-merge `release/1.2.0` → `develop`       | Automatic |
-| Review + merge back-merge PR                                 | Manual    |
+| Auto-open PR to back-merge `release/1.2.0` → `develop` | Automatic |
+| Review + merge back-merge PR | Manual |
 
 Repeat until QA signs off.
 
@@ -167,18 +167,18 @@ Repeat until QA signs off.
 
 A separate dispatched workflow handles promotion. It never rebuilds — it **promotes** the QA-tested artifact.
 
-| Action                                                                  | Type                                  |
-|-------------------------------------------------------------------------|---------------------------------------|
-| Dispatch **"Deploy to Staging and Production"** → input `version=1.2.0` | Manual                                |
-| Promote artifact NonProd registry → Prod registry                       | Automatic                             |
-| Deploy → **Staging** via Terraform / Helm / etc. (no approval)          | Automatic                             |
-| Update Staging manifests on `config` branch                             | Automatic                             |
-| Business validation on Staging                                          | Manual                                |
-| **Production** deploy gated by GitHub Environment review                | **Manual approval** (1–2 reviewers)   |
-| Deploy → Production                                                     | Automatic (after approval)            |
-| Update Production manifests on `config` branch                          | Automatic                             |
-| Create annotated tag `v1.2.0` on `release/1.2.0`, push                  | Automatic                             |
-| Create GitHub Release with auto-generated notes, mark as `latest`       | Automatic                             |
+| Action | Type |
+| ------------------------------------------------------------------------- | --------------------------------------- |
+| Dispatch **"Deploy to Staging and Production"** → input `version=1.2.0` | Manual |
+| Promote artifact NonProd registry → Prod registry | Automatic |
+| Deploy → **Staging** via Terraform / Helm / etc. (no approval) | Automatic |
+| Update Staging manifests on `config` branch | Automatic |
+| Business validation on Staging | Manual |
+| **Production** deploy gated by GitHub Environment review | **Manual approval** (1–2 reviewers) |
+| Deploy → Production | Automatic (after approval) |
+| Update Production manifests on `config` branch | Automatic |
+| Create annotated tag `v1.2.0` on `release/1.2.0`, push | Automatic |
+| Create GitHub Release with auto-generated notes, mark as `latest` | Automatic |
 
 **Golden rule:** never rebuild for production. The artifact that QA approved is the artifact that goes to PROD — by digest, not by tag-name.
 
@@ -245,13 +245,13 @@ crane tag  prod.azurecr.io/app:1.2.0 latest
 
 ## Versioning
 
-| Scheme               | When                                                                       |
-|----------------------|----------------------------------------------------------------------------|
-| SemVer `1.2.3`       | Default — libraries, services, public APIs                                 |
-| SemVer + pre-release | RCs and pre-releases: `1.2.0-rc.1`, `1.2.0-beta.1`                         |
-| Build metadata       | Snapshot artifacts: `1.2.0+sha.a1b2c3d`, `1.2.0+build.42`                  |
-| CalVer `2026.05.0`   | Apps with no public API contract (e.g. desktop, IDE)                       |
-| Snapshot/dev         | `1.2.0-SNAPSHOT` (Maven), `1.2.0-dev` (npm), `0.0.0-pr.1234` (PR previews) |
+| Scheme | When |
+| ---------------------- | ---------------------------------------------------------------------------- |
+| SemVer `1.2.3` | Default — libraries, services, public APIs |
+| SemVer + pre-release | RCs and pre-releases: `1.2.0-rc.1`, `1.2.0-beta.1` |
+| Build metadata | Snapshot artifacts: `1.2.0+sha.a1b2c3d`, `1.2.0+build.42` |
+| CalVer `2026.05.0` | Apps with no public API contract (e.g. desktop, IDE) |
+| Snapshot/dev | `1.2.0-SNAPSHOT` (Maven), `1.2.0-dev` (npm), `0.0.0-pr.1234` (PR previews) |
 
 **SemVer rules:**
 
@@ -276,14 +276,14 @@ crane tag  prod.azurecr.io/app:1.2.0 latest
 
 Use a dedicated **"Deploy Existing Artifact"** workflow — never rollback by force-pushing or by deleting/recreating tags.
 
-| Action                                                                                   | Type      |
-|------------------------------------------------------------------------------------------|-----------|
-| Dispatch **"Deploy Existing Artifact"**                                                  | Manual    |
-| Input artifact version (e.g. `1.1.0` or `1.2.0.42-a1b2c3d`)                              | Manual    |
-| Select target environment (`test` / `qa` / `uat` / `prod`)                               | Manual    |
-| Optional: enable dry-run / plan flag (e.g. `terraform plan` only, `helm diff`)           | Manual    |
-| Deploy via Terraform / Helm / framework-specific                                         | Automatic |
-| Update env manifests on `config` branch                                                  | Automatic |
+| Action | Type |
+| ------------------------------------------------------------------------------------------ | ----------- |
+| Dispatch **"Deploy Existing Artifact"** | Manual |
+| Input artifact version (e.g. `1.1.0` or `1.2.0.42-a1b2c3d`) | Manual |
+| Select target environment (`test` / `qa` / `uat` / `prod`) | Manual |
+| Optional: enable dry-run / plan flag (e.g. `terraform plan` only, `helm diff`) | Manual |
+| Deploy via Terraform / Helm / framework-specific | Automatic |
+| Update env manifests on `config` branch | Automatic |
 
 **Prerequisites:**
 
@@ -316,15 +316,15 @@ Optional pattern for ArgoCD / Flux / Internal Developer Platforms (Backstage, Po
 
 ## Quality Gates Summary
 
-| Environment   | Trigger                                              | Approval needed?                      |
-|---------------|------------------------------------------------------|---------------------------------------|
-| **PR check**  | PR opened/updated                                    | No (required status checks must pass) |
-| **TEST**      | Auto on merge to `develop`                           | No                                    |
-| **QA**        | Auto via "Prepare Release" or push to `release/**`   | No                                    |
-| **UAT**       | Manual dispatch of "Deploy to UAT and Prod"          | No                                    |
-| **PROD**      | Continues from UAT workflow                          | **Yes** — GitHub Environment review   |
-| **Tag + Release** | Auto after PROD succeeds                         | No (inherits PROD approval)           |
-| **Rollback**  | Manual dispatch of "Deploy Existing Artifact"        | PROD: yes; other envs: no             |
+| Environment | Trigger | Approval needed? |
+| --------------- | ------------------------------------------------------ | --------------------------------------- |
+| **PR check** | PR opened/updated | No (required status checks must pass) |
+| **TEST** | Auto on merge to `develop` | No |
+| **QA** | Auto via "Prepare Release" or push to `release/**` | No |
+| **UAT** | Manual dispatch of "Deploy to UAT and Prod" | No |
+| **PROD** | Continues from UAT workflow | **Yes** — GitHub Environment review |
+| **Tag + Release** | Auto after PROD succeeds | No (inherits PROD approval) |
+| **Rollback** | Manual dispatch of "Deploy Existing Artifact" | PROD: yes; other envs: no |
 
 Required checks on PRs to `develop`: lint, test, build, SAST, SCA. Required checks on PRs to `release/**`: same, plus integration tests.
 
@@ -332,19 +332,19 @@ Required checks on PRs to `develop`: lint, test, build, SAST, SCA. Required chec
 
 ## Anti-Patterns
 
-| Anti-pattern                                            | Why it hurts                                                                                 |
-|---------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| Long-lived `release/*` branch (weeks)                   | Drift from `develop` grows; back-merges become merge nightmares                              |
-| Multiple concurrent `release/*` branches                | Back-merge order ambiguous; hotfixes land in some but not others                             |
-| Rebuilding artifact for PROD instead of promoting       | PROD ships untested bytes; defeats the purpose of QA sign-off                                |
-| Skipping back-merge after a hotfix                      | The next release silently regresses the fix                                                  |
-| Tagging before deploy success                           | Failed deploys leave a tag that doesn't correspond to anything live; tooling lies            |
-| Same registry path for snapshot + release artifacts     | Disk fills with churn; SBOM/signing tooling can't distinguish them                           |
-| `latest` tag pointing at a pre-release                  | Consumers running `:latest` get untested code                                                |
-| Version = git SHA only                                  | No ordering, no human-readable contract; consumers can't pin or upgrade safely               |
-| Humans pushing to `config` branch                       | Breaks GitOps reconciliation; deploy state diverges from manifest state                      |
-| Branch names without ticket prefix                      | Loses traceability; release notes can't link to tracker; auditors can't follow the trail     |
-| Force-push to `develop` / `main` / `release/*`          | Rewrites shared history; CI caches and downstream clones break                               |
+| Anti-pattern | Why it hurts |
+| --------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Long-lived `release/*` branch (weeks) | Drift from `develop` grows; back-merges become merge nightmares |
+| Multiple concurrent `release/*` branches | Back-merge order ambiguous; hotfixes land in some but not others |
+| Rebuilding artifact for PROD instead of promoting | PROD ships untested bytes; defeats the purpose of QA sign-off |
+| Skipping back-merge after a hotfix | The next release silently regresses the fix |
+| Tagging before deploy success | Failed deploys leave a tag that doesn't correspond to anything live; tooling lies |
+| Same registry path for snapshot + release artifacts | Disk fills with churn; SBOM/signing tooling can't distinguish them |
+| `latest` tag pointing at a pre-release | Consumers running `:latest` get untested code |
+| Version = git SHA only | No ordering, no human-readable contract; consumers can't pin or upgrade safely |
+| Humans pushing to `config` branch | Breaks GitOps reconciliation; deploy state diverges from manifest state |
+| Branch names without ticket prefix | Loses traceability; release notes can't link to tracker; auditors can't follow the trail |
+| Force-push to `develop` / `main` / `release/*` | Rewrites shared history; CI caches and downstream clones break |
 
 ---
 

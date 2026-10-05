@@ -196,7 +196,7 @@ def estimate_quote(amount):    return amount + apply_tax(amount)
 Before extracting, ask:
 
 | Question | Extract if… | Leave if… |
-|----------|------------|-----------|
+| ---------- | ------------ | ----------- |
 | Is this the same knowledge? | Yes — same rule, same reason to change | No — similar code, different concepts |
 | Third occurrence? | Yes | No — wait |
 | Can I name the abstraction clearly? | Yes | No — not ready |

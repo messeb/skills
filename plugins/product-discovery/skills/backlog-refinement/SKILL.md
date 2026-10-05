@@ -17,7 +17,7 @@ Do **not** use it to write the requirements themselves — refinement is where `
 Refinement is progressive: detail is added as an item approaches implementation, and no earlier.
 
 | Horizon | Item size | Detail level | Effort spent |
-|---------|-----------|--------------|--------------|
+| --------- | ----------- | -------------- | -------------- |
 | **Now** (this iteration) | Small stories | Acceptance criteria agreed, tests defined, sized, unblocked | High |
 | **Next** (1–2 iterations out) | Stories | Rules known, examples drafted, open questions being answered | Medium |
 | **Later** (a quarter out) | Epics / features | Outcome and rough shape known, coarse size | Low |
@@ -32,7 +32,7 @@ The most common failure is uniform detail: either everything is a one-liner (pla
 ## 2. Cadence and format
 
 | Practice | Recommendation |
-|----------|----------------|
+| ---------- | ---------------- |
 | Frequency | Short and frequent — 30–60 minutes, twice a week — beats a single long session |
 | Time budget | Roughly 5–10 % of the team's capacity |
 | Attendance | Whole team, or a rotating subset plus the three amigos for the items being refined |
@@ -47,7 +47,7 @@ The most common failure is uniform detail: either everything is a one-liner (pla
 ## 3. Sizing
 
 | Approach | Use when |
-|----------|----------|
+| ---------- | ---------- |
 | **Relative points (planning poker)** | The team wants a shared complexity conversation; keep the discussion, not the number |
 | **T-shirt sizes** | Coarse sizing of epics on the *Later* horizon |
 | **Right-sizing / "fits in a few days?"** | Flow-based teams — the only question that matters is whether it is small enough |
@@ -63,7 +63,7 @@ The value of sizing is the disagreement it surfaces: when two people give wildly
 Keep it short enough to be applied honestly, and treat it as a *pull* criterion rather than a bureaucratic gate that blocks learning.
 
 | Criterion | Test |
-|-----------|------|
+| ----------- | ------ |
 | Value is clear | The team can state who benefits and what changes for them |
 | Traces to an outcome | Linked to a goal, impact, or obligation |
 | Acceptance criteria written | Objective, boundary cases covered |
@@ -84,7 +84,7 @@ Caution: a DoR that requires perfect information reproduces waterfall inside the
 One DoD for the team, applied to every item, with any exception recorded explicitly.
 
 | Criterion | Note |
-|-----------|------|
+| ----------- | ------ |
 | Acceptance criteria demonstrably met | Passing agreed tests (`acceptance-test-definition`) |
 | Automated tests written and passing at the agreed layers | Unit, service, contract as applicable |
 | Non-functional criteria checked | Performance, accessibility, security, observability |
@@ -103,7 +103,7 @@ One DoD for the team, applied to every item, with any exception recorded explici
 ## 6. Backlog hygiene
 
 | Practice | Why |
-|----------|-----|
+| ---------- | ----- |
 | Prune ruthlessly — delete items older than a chosen age that nobody has pulled | A 900-item backlog is an archive, not a plan |
 | Keep only the *Now* and *Next* horizons detailed | Detail on unprioritised items is waste |
 | One ordered list, not parallel private lists | Shadow backlogs destroy prioritisation |
@@ -190,7 +190,7 @@ Keep in the team's working agreements, visible in the tooling.
 ## 9. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Refinement only during planning | Planning becomes analysis under time pressure | Continuous refinement ahead of the iteration |
 | Refining everything to the same depth | Waste on items that will change | Progressive detail by horizon |
 | DoR requiring perfect information | Waterfall inside the sprint | Require enough to start with confidence |

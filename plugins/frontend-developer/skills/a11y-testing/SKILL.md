@@ -17,7 +17,7 @@ description: Accessibility testing — WCAG compliance, axe-core, keyboard navig
 ## The Four Principles (POUR)
 
 | Principle | Means |
-|-----------|-------|
+| ----------- | ------- |
 | **Perceivable** | Content can be seen, heard, or sensed |
 | **Operable** | All functionality is accessible via keyboard |
 | **Understandable** | UI is predictable, errors are clear |
@@ -324,7 +324,7 @@ Run through these manually with only a keyboard (no mouse):
 ## Screen Reader Testing
 
 | Platform | Screen Reader | Browser |
-|----------|---------------|---------|
+| ---------- | --------------- | --------- |
 | macOS/iOS | VoiceOver | Safari |
 | Windows | NVDA | Firefox/Chrome |
 | Windows | JAWS | Chrome |

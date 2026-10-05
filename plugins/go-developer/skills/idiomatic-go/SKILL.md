@@ -62,7 +62,7 @@ func (e *ValidationError) Error() string {
 ## Naming
 
 | What | Convention | Example |
-|------|-----------|---------|
+| ------ | ----------- | --------- |
 | Packages | lowercase, single word | `http`, `user`, `auth` |
 | Exported types / funcs | PascalCase | `UserService`, `NewClient` |
 | Unexported | camelCase | `parseHeader`, `retryCount` |

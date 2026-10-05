@@ -39,7 +39,7 @@ A ticket filed by a human, or a mention in an incident channel, is triaged the s
 ## Anti-patterns
 
 | Anti-pattern | Why it fails | Instead |
-|--------------|--------------|---------|
+| -------------- | -------------- | --------- |
 | Model decides when to alert | Non-deterministic, unauditable | Script detects, model diagnoses |
 | Agent deploys the rollback in production on its own | Passes the production gate | Runbook pre-approved, hook-gated |
 | Findings posted to chat only | Lost by the next fire | intent.md plus ticket |

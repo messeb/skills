@@ -67,7 +67,7 @@ A healthy cluster has 5–15 spokes per pillar. Fewer than 5 → the topic is th
 ## 3. The link types you control
 
 | Type | Purpose | Authority weight |
-|------|---------|------------------|
+| ------ | --------- | ------------------ |
 | **Primary navigation** | Discoverability, structure | Low per link (every page has it) — but crawl-friendly |
 | **Breadcrumbs** | Hierarchy, context | Low — but engines extract them as `BreadcrumbList` |
 | **Body / contextual** | Topical relevance, ranking signal | **Highest** — most important type |

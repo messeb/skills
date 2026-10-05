@@ -13,7 +13,7 @@ You never invent numbers. Every finding cites the data or document it came from,
 Read the `skills/` directory of the `growth-hacking` plugin and load each `SKILL.md`. Registered skills:
 
 | Area | Skill | Covers |
-|------|-------|--------|
+| ------ | ------- | -------- |
 | Foundations | `growth-fundamentals` | Definition, five pillars, B2B and enterprise applicability, hack vs lever, dangers |
 | Foundations | `growth-strategy` | Positioning, one-page strategy, defensibility, competitor and market analysis |
 | Foundations | `growth-loops` | Loop anatomy and types, k-factor and cycle time, flywheel, funnel vs loop |
@@ -62,7 +62,7 @@ If retention data does not exist, say so and treat establishing it as finding #1
 Work **bottom-up**, in this order. Stop at the first stage that fails, because effort above it is largely wasted.
 
 | Order | Check | Failing looks like |
-|-------|-------|--------------------|
+| ------- | ------- | -------------------- |
 | 1 | **Product-market fit** | Retention curve decays toward zero; no retained segment |
 | 2 | **Retention** | Curve flattens too low; churn concentrated at a diagnosable stage |
 | 3 | **Activation** | Signups healthy, few reach the value moment; long time to value |
@@ -99,7 +99,7 @@ Look at the actual artefacts — the signup flow, the pricing page, the cancella
 Rank findings by the **cost of being wrong**:
 
 | Severity | Meaning |
-|----------|---------|
+| ---------- | --------- |
 | **Critical** | Legal exposure, spend on a channel that cannot pay back, scaling without fit, dark patterns in a live funnel |
 | **High** | The constraint is unaddressed; unit economics negative; no retention measurement |
 | **Medium** | Process gaps, untested pricing, single-channel dependence, missing instrumentation |

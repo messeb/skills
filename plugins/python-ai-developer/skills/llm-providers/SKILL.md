@@ -135,7 +135,7 @@ Mistral's SDK uses `complete_async` for the async path and returns an OpenAI-sha
 Verify these against current provider docs before relying on them; capabilities move faster than any document.
 
 | Capability | OpenAI | Anthropic | Gemini | Grok | Mistral |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | Streaming | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Tool / function calling | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Parallel tool calls | ✅ | ✅ (default) | ✅ | ✅ | ✅ |
@@ -156,7 +156,7 @@ Two capability gaps drive most architecture decisions: **Anthropic has no embedd
 ## 4. Where the differences actually bite
 
 | Concern | Reality |
-|---------|---------|
+| --------- | --------- |
 | **System prompt** | Anthropic: top-level `system`. OpenAI/Grok/Mistral: a message with `role: "system"` (or `instructions` on Responses). Gemini: `system_instruction` in the config |
 | **`max_tokens`** | Required on Anthropic; optional elsewhere; named `max_output_tokens` on OpenAI Responses and Gemini |
 | **Response shape** | Anthropic returns a *list of typed blocks*; the others return a message with a string (plus tool calls) |
@@ -198,7 +198,7 @@ Rules: normalise every provider's usage into one shape at the adapter; keep pric
 Each SDK raises its own exception types. Translate them into your own taxonomy in the adapter (`provider-abstraction`) so callers never catch a vendor class:
 
 | Vendor surface | Map to |
-|---|---|
+| --- | --- |
 | 401 / invalid key | `ProviderAuthError` — not retriable, alert |
 | 429 / quota | `ProviderRateLimited` — retriable, honour `Retry-After` |
 | 5xx / overloaded | `ProviderUnavailable` — retriable with backoff |
@@ -211,7 +211,7 @@ Each SDK raises its own exception types. Translate them into your own taxonomy i
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Model IDs hardcoded from memory | Wrong or deprecated IDs; an emergency release to fix a string |
 | One global model for every task | Paying frontier prices for classification |
 | Assuming OpenAI-compatible means behaviour-identical | Tool calling or structured output silently differs |

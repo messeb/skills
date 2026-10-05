@@ -11,7 +11,7 @@ Read the `skills/` directory of the `general-developer` plugin. Each subdirector
 Currently registered skills:
 
 | Skill | Area |
-|-------|------|
+| ------- | ------ |
 | `dry` | Code quality — Don't Repeat Yourself |
 | `kiss` | Code quality — Keep It Simple |
 | `yagni` | Code quality — You Aren't Gonna Need It |

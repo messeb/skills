@@ -15,7 +15,7 @@ Do **not** use a heavyweight inspection on a backlog item that three people will
 ## 1. The formality ladder
 
 | Technique | Effort | Who | Finds | Use when |
-|-----------|--------|-----|-------|----------|
+| ----------- | -------- | ----- | ------- | ---------- |
 | **Desk check / buddy review** | 15–30 min | 1 reviewer | Obvious ambiguity and omissions | Routine changes |
 | **Peer review (asynchronous)** | 30–60 min | 2–3 reviewers, comments in the document or PR | Wording, testability, missing cases | Default for most specs |
 | **Walkthrough** | 60–90 min | Author leads, peers follow | Misunderstandings, missing scenarios, shared understanding | Handover, onboarding, complex flows |
@@ -31,7 +31,7 @@ Key distinction: in a **walkthrough** the author drives and explains; in an **in
 Classify every finding — the distribution tells you what to fix in the process, not just in the document.
 
 | Class | Definition | Example |
-|-------|------------|---------|
+| ------- | ------------ | --------- |
 | **Ambiguity** | Readable in more than one way | "recent orders", "the system should respond quickly" |
 | **Incompleteness** | A case is not covered | No behaviour specified when the provider times out |
 | **Inconsistency** | Two statements conflict | §3.1 says 30 days, §5.4 says one month from invoice |
@@ -54,7 +54,7 @@ Handing people a document and asking them to "review it" produces cosmetic comme
 **Perspective-based reading** — each reviewer reads as one role and asks that role's questions:
 
 | Perspective | Questions |
-|-------------|-----------|
+| ------------- | ----------- |
 | **Tester** | How would I prove this? What is the pass/fail? Where are the boundaries? |
 | **Developer** | Can I implement this without asking a question? What is undefined? |
 | **User / domain expert** | Is this what actually happens? What case is missing? |
@@ -82,7 +82,7 @@ Handing people a document and asking them to "review it" produces cosmetic comme
 **Roles**: moderator (runs it, not the author) · author (answers only when asked) · reader (paraphrases the document aloud) · inspectors (find defects, each with a perspective) · scribe (logs defects).
 
 | Phase | Purpose | Rule |
-|-------|---------|------|
+| ------- | --------- | ------ |
 | **Entry check** | Does the document meet entry criteria — complete, spell-checked, version-tagged, prior defects closed? | Reject early; inspecting a draft wastes everyone's time |
 | **Planning** | Moderator selects inspectors, assigns perspectives, sets the chunk size | 10–20 pages max per session; more than that and detection collapses |
 | **Kickoff** (optional) | Context and objectives | Short |
@@ -167,7 +167,7 @@ Ask only what is missing; batch into one message, five or fewer.
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | "Please review" with no technique assigned | Cosmetic comments only | Assign perspectives or a checklist |
 | Discussing solutions in the meeting | Two hours, four defects | Log defects; solve in rework |
 | Author defending the text | Reviewers go quiet | Author answers only direct questions; the reader paraphrases |

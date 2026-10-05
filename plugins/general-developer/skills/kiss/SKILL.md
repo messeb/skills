@@ -154,7 +154,7 @@ class Order:
 Before adding an abstraction, pattern, or layer, it must answer yes to at least one:
 
 | Justification | Acceptable if… |
-|--------------|----------------|
+| -------------- | ---------------- |
 | Removes duplication | Three or more real occurrences exist (Rule of Three) |
 | Enables testing | The simpler form is genuinely untestable |
 | Enforces a constraint | The constraint cannot be expressed more directly |

@@ -329,7 +329,7 @@ test.beforeEach(async ({ request }) => {
     TEST_USER_PASSWORD: ${{ secrets.TEST_USER_PASSWORD }}
 
 - name: Upload Report
-  uses: actions/upload-artifact@v4
+  uses: actions/upload-artifact@v7
   if: always()
   with:
     name: playwright-report

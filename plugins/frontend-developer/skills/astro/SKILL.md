@@ -22,7 +22,7 @@ Astro ships **zero JavaScript by default**. Every component renders to static HT
 ### Hydration Directives — Choose the Right One
 
 | Directive | When it hydrates | Use for |
-|-----------|-----------------|---------|
+| ----------- | ----------------- | --------- |
 | `client:load` | Immediately on page load | Above-the-fold interactive UI |
 | `client:idle` | When browser is idle | Secondary UI, non-critical widgets |
 | `client:visible` | When component enters viewport | Below-the-fold, carousels, accordions |

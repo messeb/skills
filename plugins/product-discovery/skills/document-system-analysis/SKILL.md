@@ -15,7 +15,7 @@ Do **not** treat it as a substitute for talking to people. Documents describe th
 ## 1. Source types and how far to trust them
 
 | Source | Yields | Trust | Caveat |
-|--------|--------|-------|--------|
+| -------- | -------- | ------- | -------- |
 | **Law / regulation** (e.g. EU 261/2004, GDPR, PSD2, MDR) | Hard, non-negotiable rules | Highest for *what* is required | Needs interpretation; check consolidated versions, amendments, and national implementations |
 | **Regulatory guidance / case law** | How the rule is applied in practice | High | Changes over time; date every citation |
 | **Contracts and SLAs** | Obligations, penalties, deadlines | High | Often contradicts the product's actual behaviour |
@@ -63,7 +63,7 @@ Never read passively. Enter with the open questions from interviews and workshop
 One requirement per row, traceable to its source. Classify each as:
 
 | Class | Meaning | Handling |
-|-------|---------|----------|
+| ------- | --------- | ---------- |
 | **Mandatory (legal)** | Non-negotiable, externally enforced | Must trace to a test |
 | **Contractual** | Owed to a specific counterparty | Must trace to a test; check penalties |
 | **Business rule** | Company decision, changeable | Confirm ownership; candidate for simplification |
@@ -89,7 +89,7 @@ Vocabulary → glossary; processes → `domain-storytelling`; contradictions →
 When the documentation is gone, the code is the specification.
 
 | Technique | What it reveals |
-|-----------|-----------------|
+| ----------- | ----------------- |
 | Follow one real transaction end to end | The true flow, including the surprises |
 | Read the tests first | Intended behaviour and known edge cases, cheaper than reading implementation |
 | `git log` on the rule-heavy files | Why a rule exists, and which ticket forced it |
@@ -198,7 +198,7 @@ Document each finding with the query that produced it, so it can be re-run.
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Trusting a specification without checking the code | You reimplement a document, not the system | Cross-check document, code, data, people |
 | Reading everything before asking anything | Weeks spent, wrong focus | Enter with a question list; read against it |
 | Requirements without citations | Unverifiable, unmaintainable | Clause, file:line, ticket id, query for every row |

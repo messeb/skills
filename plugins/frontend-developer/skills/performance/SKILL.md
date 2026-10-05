@@ -9,7 +9,7 @@ description: Frontend performance — Core Web Vitals, bundle analysis, lazy loa
 Google's user experience metrics that affect search ranking and real user perception:
 
 | Metric | Good | Needs Work | Poor | What it measures |
-|--------|------|------------|------|-----------------|
+| -------- | ------ | ------------ | ------ | ----------------- |
 | **LCP** Largest Contentful Paint | ≤2.5s | ≤4s | >4s | Loading speed |
 | **INP** Interaction to Next Paint | ≤200ms | ≤500ms | >500ms | Responsiveness |
 | **CLS** Cumulative Layout Shift | ≤0.1 | ≤0.25 | >0.25 | Visual stability |

@@ -9,6 +9,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 ### Fixed
 
 - `general-developer:github-repo` and `general-developer:security` — the `dependabot.yml` templates now enforce exactly three grouped PR types instead of one PR per dependency: all minor+patch updates in one PR, all major updates in one PR, all GitHub Actions updates in one PR (plus grouped security updates). Every group uses wildcard `patterns: ["*"]` so no dependency can fall back to an individual PR, the audit checklist verifies the groups block, and an anti-pattern table lists the configurations that silently reintroduce per-dependency PRs
+- `general-developer:github-repo` — new always-latest rule: version pins are never copied from templates or memory; the current version is resolved at generation time (`gh api .../releases/latest` for actions, registry lookups for tools), Mode B flags outdated workflow pins and offers a project dependency upgrade, Mode C re-resolves pins on touched files
+- All GitHub Actions pins in skill templates bumped to the current majors (checkout v7, setup-node v7, cache v6, upload-artifact v7, download-artifact v8, pnpm/action-setup v6, codecov v7, setup-uv v10) across `general-developer`, `frontend-developer`, `python-ai-developer` and `agentic-coding`
+
+### Changed
+
+- Dev dependencies upgraded (`markdownlint-cli2` 0.17 → 0.23); all Markdown tables reformatted to satisfy the now-active `MD060` compact table style the lint config already declared
 
 ## 2026-09-29
 

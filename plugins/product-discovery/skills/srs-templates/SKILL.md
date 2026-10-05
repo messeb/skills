@@ -15,7 +15,7 @@ Do **not** produce an SRS for ordinary agile product work. A 120-page document t
 ## 1. Choosing a template
 
 | Template | Status | Strength | Weakness | Choose when |
-|----------|--------|----------|----------|-------------|
+| ---------- | -------- | ---------- | ---------- | ------------- |
 | **IEEE 830-1998** | Withdrawn, superseded by 29148 — still widely referenced | Familiar structure, simple | Superseded; weak on process and traceability | A client explicitly asks for "an IEEE 830 SRS" |
 | **ISO/IEC/IEEE 29148:2018** | Current standard | Covers stakeholder needs (StRS), system (SyRS), and software (SRS); defines quality characteristics and process | Heavier; needs tailoring | Regulated, contractual, or certification work — the default formal choice |
 | **Volere** (Robertson) | Method + template, widely used commercially | The requirement **shell** with a **fit criterion**; strong on non-functional coverage; practical | Not a standard body's document | You want rigour without full standards conformance |
@@ -29,7 +29,7 @@ They compose: use the **29148 document structure** with **Volere shells** for in
 **Three document types:**
 
 | Document | Scope | Audience |
-|----------|-------|----------|
+| ---------- | ------- | ---------- |
 | **StRS** — Stakeholder Requirements Specification | What stakeholders need, in their terms | Business, users |
 | **SyRS** — System Requirements Specification | What the whole system (hardware, software, people, process) must do | Systems engineering |
 | **SRS** — Software Requirements Specification | What the software must do | Development, test, suppliers |
@@ -49,7 +49,7 @@ They compose: use the **29148 document structure** with **Volere shells** for in
 Volere's most valuable idea is that every single requirement is a small record with a **fit criterion** — the quantification that makes it testable.
 
 | Field | Content |
-|-------|---------|
+| ------- | --------- |
 | Requirement # | Unique, stable identifier |
 | Requirement type | Functional / look and feel / usability / performance / operational / maintainability / security / cultural / legal |
 | Event / use case # | What it belongs to |
@@ -209,7 +209,7 @@ Models, prototypes, regulatory citations, decision records.
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Writing an SRS because "the process says so" | Expensive document nobody reads | Formalise only what someone is bound by |
 | Requirements without fit criteria | Unverifiable; disputes at acceptance | Fit criterion on every requirement |
 | Redrawing models inside the SRS | Divergence between document and model | Reference the model files |

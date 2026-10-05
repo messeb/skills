@@ -13,7 +13,7 @@ Use this skill when standing up a growth practice, when experiments are constant
 ## 1. Two models
 
 | | **Independent growth team** | **Embedded growth roles** |
-|---|---|---|
+| --- | --- | --- |
 | Shape | A standalone cross-functional team with its own backlog | Growth responsibility inside product teams |
 | Strength | Speed, focus, clear ownership of growth metrics | Deep product knowledge, no hand-offs, no boundary disputes |
 | Weakness | Boundary friction with product teams; can be seen as outsiders | Growth work loses to feature work under pressure |
@@ -28,7 +28,7 @@ The single best predictor of whether a growth practice succeeds is whether it ca
 ## 2. Roles
 
 | Role | Contributes | Can be shared |
-|------|-------------|---------------|
+| ------ | ------------- | --------------- |
 | **Growth lead** | Strategy, constraint identification, prioritisation, decisions | No — needs a clear owner |
 | **Engineer(s)** | Ships experiments, builds instrumentation, feature flags | No — this is the bottleneck if missing |
 | **Analyst / data** | Instrumentation, analysis, validity checks | Sometimes |
@@ -47,7 +47,7 @@ Skills worth hiring for over credentials: comfort with data and its limits, abil
 Agree these once, in writing, and revisit them quarterly:
 
 | Agreement | Typical answer |
-|-----------|----------------|
+| ----------- | ---------------- |
 | Which metrics does the team own? | The constraint stage plus the north star contribution |
 | What can the team change without approval? | Copy, layout, onboarding flow, ad spend below a threshold, non-breaking product changes behind flags |
 | What always needs approval? | Pricing, brand identity, legal/regulatory surfaces, anything touching payment or personal data |
@@ -65,7 +65,7 @@ The "can change without approval" line is the one that determines throughput. Ev
 The rhythm is covered in `growth-process`; what the team owns is the artefact set that makes it cumulative:
 
 | Artefact | Purpose | Kept where |
-|----------|---------|-----------|
+| ---------- | --------- | ----------- |
 | Strategy page | Where growth is supposed to come from | One page, linked everywhere |
 | KPI tree with owners | Where the constraint is | Dashboard |
 | Idea backlog with scores | What could be run | Shared tracker |
@@ -96,7 +96,7 @@ Report from week one on **cycle time, experiments completed, decisions taken, an
 The most common reasons growth practice fails have nothing to do with tactics:
 
 | Blocker | Symptom | Remedy |
-|---------|---------|--------|
+| --------- | --------- | -------- |
 | No engineering access | Only campaigns run | Dedicated engineering capacity, or accept a marketing-only scope honestly |
 | Untrusted or absent analytics | Every result is disputed | Fix instrumentation first; nothing else matters until numbers are trusted |
 | Approval chains | Two-week lead time on a copy change | Pre-approved sandbox and a fast lane |
@@ -114,7 +114,7 @@ Most of these are leadership decisions, not team decisions. If several are prese
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Growth team with no engineer | Campaigns only; the product levers stay untouched |
 | Hiring a "growth hacker" to fix growth alone | One person cannot change product, data, and channels |
 | Team owns metrics it cannot influence | Accountability without agency |

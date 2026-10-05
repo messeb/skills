@@ -215,7 +215,7 @@ This keeps provider-specific *strengths* (native schema enforcement, prompt cach
 ## 5. Build your own, or use a gateway?
 
 | | Own thin layer | Gateway (LiteLLM, an internal proxy, a cloud router) |
-|---|---|---|
+| --- | --- | --- |
 | Control over types and errors | Full | Constrained to the gateway's model |
 | Effort | ~200 lines per adapter | Configuration |
 | New provider | You write an adapter | Often already supported |
@@ -240,7 +240,7 @@ Reasonable default: **own thin adapters** for two to five providers inside one s
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Abstraction built for one provider "just in case" | Indirection with no payoff |
 | Vendor request/response objects crossing the boundary | The abstraction exists on paper only |
 | Business logic reading `completion.raw` | Provider swap breaks callers |

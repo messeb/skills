@@ -17,7 +17,7 @@ Do **not** use it to verify code — a model checker verifies the *model*. Closi
 Given a model (states + transitions) and a property, it explores reachable states and either exhausts the space without violating the property, or returns a **counterexample trace** — the exact sequence of steps that breaks it.
 
 | Tool | Kind | Strength | Limit |
-|------|------|----------|-------|
+| ------ | ------ | ---------- | ------- |
 | **TLC** (TLA+) | Explicit-state | Exhaustive within bounds; readable traces; good for protocols and concurrency | State explosion; needs small bounds |
 | **Apalache** (TLA+) | Symbolic (SMT) | Handles larger data domains; type-checked | Different modelling constraints; less mature ecosystem |
 | **TLAPS** | Proof assistant | Unbounded proofs | High effort; use for the properties that truly need it |
@@ -33,7 +33,7 @@ Rule: **use exhaustive checking for correctness questions ("can this ever happen
 ## 2. Properties
 
 | Kind | Meaning | Examples | Notes |
-|------|---------|----------|-------|
+| ------ | --------- | ---------- | ------- |
 | **Type invariant** | Variables stay in their declared domains | `state ∈ States` | Cheap; catches modelling errors first |
 | **Safety** | Nothing bad ever happens | no double payout; no lost seat; at most one leader; sum of balances constant | The workhorse |
 | **Liveness** | Something good eventually happens | every request is eventually answered; the system eventually settles | Meaningless without fairness assumptions |
@@ -47,7 +47,7 @@ Rule: **use exhaustive checking for correctness questions ("can this ever happen
 ## 3. Fighting state explosion
 
 | Technique | Effect |
-|-----------|--------|
+| ----------- | -------- |
 | Start tiny (2 nodes, 2 messages, 1 retry) | Most real bugs appear at the smallest interesting size |
 | Constrain the state space (`CONSTRAINT`, bounded queues and counters) | Keeps the search finite |
 | Abstract away irrelevant data (ids as a small symmetric set) | Removes combinatorial noise |
@@ -70,7 +70,7 @@ A counterexample is a story, and it deserves the same rigour as a production inc
 3. **Classify it**:
 
    | Verdict | Meaning | Action |
-   |---------|---------|--------|
+   | --------- | --------- | -------- |
    | **Real design defect** | The design genuinely permits this | Fix the design; record the fix and re-check |
    | **Missing assumption** | Reality prevents it, but the model does not know | Add the assumption explicitly — and check the assumption is really guaranteed in production |
    | **Modelling error** | The model is wrong, the design is fine | Fix the model; note it, since it usually means the spec was misread |
@@ -84,7 +84,7 @@ A counterexample is a story, and it deserves the same rigour as a production inc
 ## 5. Simulation, when exhaustive checking is the wrong tool
 
 | Question | Approach |
-|----------|----------|
+| ---------- | ---------- |
 | How long is the queue at peak, how many staff are needed? | Discrete-event simulation with measured arrival and service distributions |
 | What is the end-to-end lead time distribution of this process? | Simulate the `process-modeling` model with real process and wait times |
 | How does the system behave under a plausible-but-rare mix of failures? | Randomised or statistical model checking |
@@ -99,7 +99,7 @@ Simulation rules: drive it with **measured** distributions, not guesses; state t
 The checker verifies the model. Bridge the gap explicitly:
 
 | Bridge | How |
-|--------|-----|
+| -------- | ----- |
 | **Trace validation** | Log the implementation's state transitions and replay them against the spec; a divergence proves the code does something the model forbids |
 | **Property-based tests** | Turn each invariant into a property test with generated inputs, using the same property name |
 | **Runtime assertions and alarms** | Assert the critical invariants in production; alert when one is violated |
@@ -195,7 +195,7 @@ Write to `docs/specs/verification-<name>.md`.
 ## 9. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Checking a model that assumes a reliable network | The interesting bugs are excluded by construction | Model loss, duplication, reordering, crashes |
 | Only safety properties | Designs that deadlock or starve pass cleanly | Add liveness with explicit fairness |
 | Liveness without stated fairness | Passes or fails for reasons nobody understands | State weak/strong fairness deliberately |

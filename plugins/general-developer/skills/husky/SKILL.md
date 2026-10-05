@@ -158,7 +158,7 @@ Only add `tsc --noEmit` if it completes in under ~10 seconds on your machine. Mo
 ### Keep hooks fast
 
 | Hook | Target time | What belongs here |
-|------|------------|-------------------|
+| ------ | ------------ | ------------------- |
 | `pre-commit` | < 10 s | Linting, formatting staged files |
 | `commit-msg` | < 1 s | Message format validation |
 | `pre-push` | < 60 s | Unit tests, type-check |
@@ -188,8 +188,8 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with: { node-version: 20, cache: npm }
       - run: npm ci
       - run: npx eslint .
@@ -198,8 +198,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with: { node-version: 20, cache: npm }
       - run: npm ci
       - run: npm test

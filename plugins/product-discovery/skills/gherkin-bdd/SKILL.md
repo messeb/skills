@@ -27,7 +27,7 @@ Teams that start at step 3 get slow, brittle UI tests and call BDD a failure. Th
 ## 2. Structure
 
 | Keyword | Purpose | Rule |
-|---------|---------|------|
+| --------- | --------- | ------ |
 | `Feature` | The capability under specification | One per file; add a short narrative of the value |
 | `Rule` | A business rule that groups examples | Optional but valuable — mirrors the blue cards from `example-mapping` |
 | `Background` | Steps common to every scenario in the file | Max 3–4 steps; if it is longer, the scenarios are over-contextualised |
@@ -82,7 +82,7 @@ Feature: Booking cancellation
 The single biggest quality lever.
 
 | Imperative (avoid) | Declarative (write this) |
-|--------------------|--------------------------|
+| -------------------- | -------------------------- |
 | `Given I open "/login"` | `Given the customer is signed in` |
 | `When I type "ada@example.com" into "#email"` | `When the customer cancels the booking` |
 | `And I click the button with id "submit"` | |
@@ -93,7 +93,7 @@ Imperative scenarios break on every redesign, read as scripts rather than rules,
 ### Three levels of abstraction
 
 | Level | Belongs in | Example |
-|-------|-----------|---------|
+| ------- | ----------- | --------- |
 | **Business rule** | The `Feature` / `Rule` line | Free cancellation more than 24 h before departure |
 | **Domain interaction** | The `Given/When/Then` steps | "the customer cancels the booking" |
 | **Technical detail** | The step definitions / page objects | HTTP call, selectors, fixtures |
@@ -119,7 +119,7 @@ A step that leaks a level down is a defect in the specification, not a style pre
 ## 5. Step definitions
 
 | Rule | Why |
-|------|-----|
+| ------ | ----- |
 | Steps are thin; they call domain-level helpers or a driver layer | Keeps automation cost bounded when the UI changes |
 | One step phrase, one definition — no near-duplicate phrasings | Prevents an unmaintainable step library |
 | Parameterise with type-safe expressions, not fragile regexes | Readable and refactorable |
@@ -173,7 +173,7 @@ Store feature files next to the code (`features/` or `src/test/resources/feature
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Writing Gherkin without the conversation | Syntax overhead with no shared understanding | Discovery, then formulation |
 | Imperative UI scripting in steps | Brittle suite, unreadable specification | Declarative steps; details in step definitions |
 | Several `When`s in one scenario | Unclear what failed | One action per scenario |

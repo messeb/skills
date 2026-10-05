@@ -43,13 +43,13 @@ Language-agnostic software engineering principles applicable to any codebase and
 #### Agent
 
 | Agent | Description |
-|-------|-------------|
+| ------- | ------------- |
 | `general-developer` | Audits a codebase against all skills, produces a structured report with severity-ranked findings, and offers to apply fixes |
 
 #### Skills
 
 | Skill | Description |
-|-------|-------------|
+| ------- | ------------- |
 | `github-repo` | Sets up, audits, or syncs all GitHub repository files (README, LICENSE, community files, templates, and more) |
 | `dry` | Don't Repeat Yourself — identifies knowledge duplication |
 | `die` | Duplication Is Evil — detects structural and logical duplication by failure mode |
@@ -78,13 +78,13 @@ Skills and an audit agent for modern frontend development — Vue, Nuxt, React, 
 #### Agent
 
 | Agent | Description |
-|-------|-------------|
+| ------- | ------------- |
 | `frontend-developer` | Audits a frontend codebase against all skills, detects the project stack, produces a structured report with severity-ranked findings grouped by Testing / Framework / Tooling / Architecture, and offers to apply fixes |
 
 #### Skills
 
 | Category | Skill | Description |
-|----------|-------|-------------|
+| ---------- | ------- | ------------- |
 | Testing | `unit-testing` | Component and composable unit tests with Vitest/Jest, Vue Test Utils, React Testing Library, mocking, and test data factories |
 | Testing | `storybook` | Story authoring with CSF3, interaction tests, accessibility checks, and visual regression with Chromatic |
 | Testing | `e2e-testing` | Playwright end-to-end tests — page objects, auth state reuse, network interception, and CI integration |
@@ -117,13 +117,13 @@ Skills and an audit agent for Go CLI tools and backend services — idiomatic Go
 #### Agent
 
 | Agent | Description |
-|-------|-------------|
+| ------- | ------------- |
 | `go-developer` | Audits a Go codebase against all skills, detects the application type (CLI / HTTP API / mixed), produces a structured report with severity-ranked findings, and offers to apply fixes |
 
 #### Skills
 
 | Category | Skill | Description |
-|----------|-------|-------------|
+| ---------- | ------- | ------------- |
 | Language | `idiomatic-go` | Error handling, naming conventions, interface design, zero values, and common Go pitfalls |
 | Structure | `project-layout` | Standard `cmd/` / `internal/` / `pkg/` layout, layer boundaries, config loading, and Makefile conventions |
 | CLI | `cli` | Cobra commands and subcommands, Viper config, flag design, argument validation, shell completion, and graceful shutdown |
@@ -149,13 +149,13 @@ Skills and a guiding agent for product discovery and requirements elicitation �
 #### Agent
 
 | Agent | Description |
-|-------|-------------|
+| ------- | ------------- |
 | `product-discovery` | Diagnoses what is actually unknown, recommends and sequences the right methods, runs their intake, produces the artifacts, and audits existing discovery work for traceability, evidence, coverage, and currency gaps |
 
 #### Skills
 
 | Category | Skill | Description |
-|----------|-------|-------------|
+| ---------- | ------- | ------------- |
 | Research | `stakeholder-interviews` | Stakeholder mapping, guide design, question types, laddering, note-taking, cross-interview synthesis |
 | Research | `contextual-inquiry` | Field observation with the master/apprentice model — workarounds, artifacts, interruptions, work models, say/do gaps |
 | Research | `jobs-to-be-done` | Job statements, four forces of switching, switch interviews, job maps, outcome statements and opportunity scores |
@@ -213,13 +213,13 @@ Skills and an audit agent for Python AI application development — project tool
 #### Agent
 
 | Agent | Description |
-|-------|-------------|
+| ------- | ------------- |
 | `python-ai-developer` | Detects the project profile (package manager, framework, providers, AI workloads), audits the codebase against every skill, and produces a severity-ranked report with `file:line` findings ordered by the cost of being wrong |
 
 #### Skills
 
 | Category | Skill | Description |
-|----------|-------|-------------|
+| ---------- | ------- | ------------- |
 | Tooling | `uv` | Project init, dependency groups vs extras, the lockfile and `--frozen`, Python pinning, workspaces, PyTorch/CUDA index configuration, Docker and CI usage, migration from pip/Poetry/Conda |
 | Tooling | `project-structure` | src layout, module boundaries that keep provider SDKs at the edge, typed settings with `SecretStr`, structured logging, ruff/mypy/pytest configuration |
 | Tooling | `ide-setup` | VS Code `launch.json` and PyCharm run configurations for API, worker, tests and container attach; debugpy path mappings; async and multi-worker debugging pitfalls |
@@ -256,13 +256,13 @@ Skills and an audit agent for growth practice — strategy and product-market fi
 #### Agent
 
 | Agent | Description |
-|-------|-------------|
+| ------- | ------------- |
 | `growth-hacking` | Finds the stage that actually constrains growth, audits the practice and funnel against every skill, and produces a severity-ranked report plus a prioritised experiment backlog — refusing to recommend acquisition spend before retention is established |
 
 #### Skills
 
 | Category | Skill | Description |
-|----------|-------|-------------|
+| ---------- | ------- | ------------- |
 | Foundations | `growth-fundamentals` | A definition that survives scrutiny, the five pillars, applicability to B2B and established companies, hack versus lever, comparison with adjacent models, and the failure modes |
 | Foundations | `growth-strategy` | The first-mover myth, a one-page strategy, positioning as a growth constraint, defensibility, and competitor analysis from public sources |
 | Foundations | `growth-loops` | Loop anatomy and the four common types, k-factor and cycle time, saturation and decay, diagnosing a broken loop, the flywheel, and when a funnel is still right |
@@ -305,13 +305,13 @@ Skills and an authoring agent for readable text in **English and German** — re
 #### Agent
 
 | Agent | Description |
-|-------|-------------|
+| ------- | ------------- |
 | `content-author` | Establishes audience, purpose and language level, drafts or revises against the skills, measures with the language-correct readability index, and reports quoted findings with concrete rewrites — never estimating a score or applying English formulas to German |
 
 #### Skills
 
 | Category | Skill | Description |
-|----------|-------|-------------|
+| ---------- | ------- | ------------- |
 | Measurement | `readability` | Flesch Reading Ease and the Amstad German adaptation, Flesch-Kincaid, Gunning Fog, SMOG, Dale-Chall, LIX and the Wiener Sachtextformeln — exact formulas, interpretation scales, targets per text type, counting pitfalls, and improving a text versus gaming its score |
 | Standards | `plain-language` | Plain English and ISO 24495-1, the German three-level model of Fachsprache / Einfache Sprache / Leichte Sprache with their distinct rule sets, accessibility obligations (BFSG, BITV 2.0, WCAG 2.2, EN 301 549), and choosing and documenting a level |
 | Craft | `sentence-craft` | One idea per sentence, active voice and naming the actor, verbs instead of nominalisations, concrete words, cutting filler without cutting meaning, rhythm, keeping connectives, terminology consistency |
@@ -336,13 +336,13 @@ Skills and an agent for turning long sources — books, courses, documentation s
 #### Agent
 
 | Agent | Description |
-|-------|-------------|
+| ------- | ------------- |
 | `notion-summarizer` | Builds the section inventory, creates the detail page in the target database, reads section by section and writes one styled subpage each, adds the flashcard page, completes summary and notes, verifies by fetching, and can continue or restyle an existing summary |
 
 #### Skills
 
 | Category | Skill | Description |
-|----------|-------|-------------|
+| ---------- | ------- | ------------- |
 | Input | `source-capture` | Section inventory from the table of contents, read methods for web pages, PDFs, EPUBs and files, verifying that the right content loaded, truncation and oversized sections, working notes, source text as data, copyright limits |
 | Structure | `summary-workspace` | Reading the database schema first, filling factual properties and leaving personal ones, cover and native icons, two-column detail page, subpages in source order with no chapter number in the title |
 | Content | `section-summary` | What to extract from a section, choosing table, list, steps, callout, toggle or code pattern, the fixed page skeleton, writing and highlighting rules, page size |
@@ -364,7 +364,7 @@ Four unattended agents and the skills behind them for an **AI-native ticket-to-m
 #### Agents
 
 | Agent | Description |
-|-------|-------------|
+| ------- | ------------- |
 | `agentic-planner` | Takes intake tickets, writes `intent.md` and `spec.md` under the organization's policy skills with testable requirements, flagged concerns and a risk class, puts the acceptance criteria on the ticket and moves it to the human approval gate |
 | `agentic-coder` | Picks an unblocked Todo ticket (or reworks / continues one), negotiates `plan.md` as a contract with a fresh-context reviewer, implements one criterion per commit with a navigator pass, fixes bugs test-first with frozen tests, verifies with a fresh-context verifier, ticks the criteria, opens the PR |
 | `agentic-reviewer` | Reproduces the gates, exercises the running app to re-verify every ticked criterion, runs the `REVIEW.md` passes with per-criterion thresholds, requests changes or merges, sets Ready for Release, routes repeated mistakes into `CLAUDE.md` |
@@ -373,7 +373,7 @@ Four unattended agents and the skills behind them for an **AI-native ticket-to-m
 #### Skills
 
 | Category | Skill | Description |
-|----------|-------|-------------|
+| ---------- | ------- | ------------- |
 | Foundation | `workflow-config` | Precedence `WORKFLOW.md` → repo instruction files → matching best-practice skills → defaults; setup mode that generates `WORKFLOW.md`; the full template |
 | Foundation | `ticket-tracker` | One set of operations (list, claim, transition, comment, tick criterion, PR link) implemented for Jira, GitHub Issues and Notion |
 | Foundation | `sdlc-artifacts` | The committed artifact chain: `intent.md`, `spec.md`, `plan.md`, `handoff.md`, `REVIEW.md`, `CLAUDE.md`, lessons; templates, source of truth, linkage rule |
@@ -407,7 +407,7 @@ cd <your-repo>
 In a Claude Code session in that repo, run `/agentic-coding:workflow-config` in setup mode ("set up the agentic workflow for this repo"). It reads `CLAUDE.md`, `AGENTS.md`, `CONTRIBUTING.md` and the manifests, derives what it can (default branch, build, lint and test commands, GitHub project from the remote), asks for what it cannot (tracker, project key, bot user, merge strategy, hand-off mode) and writes `WORKFLOW.md` to the repo root. It then offers to install the rest:
 
 | File | From | Purpose |
-|------|------|---------|
+| ------ | ------ | --------- |
 | `WORKFLOW.md` | `workflow-config/templates/WORKFLOW.md` | tracker, statuses, git rules, gates, limits, hand-off |
 | `REVIEW.md` | `sdlc-artifacts/templates/REVIEW.md` | review passes, thresholds, nit cap, calibration |
 | `.claude/hooks/*.sh`, `.claude/settings.json`, `.claude/protected-paths.txt` | `guardrails/` | deterministic guardrails: no push to main, frozen tests during fixes, protected paths, secrets, production gate |
@@ -431,7 +431,7 @@ Branch protection on `DEFAULT_BRANCH` requiring one approving review and green C
 In Cowork, create four scheduled tasks that require the computer with the repo folder connected and have automatic approval turned on (without it, the first `git push` waits for a click nobody gives). Each prompt is one line; the behavior lives in the plugin:
 
 | Task | Prompt | Schedule (fallback) | Fired by |
-|------|--------|---------------------|----------|
+| ------ | -------- | --------------------- | ---------- |
 | `agentic-planner` | `Run the agentic-planner agent from the agentic-coding plugin on <repo path>.` | `CRON_TZ=Europe/Berlin 3 7,13 * * 1-5` | nobody |
 | `agentic-coder` | `Run the agentic-coder agent from the agentic-coding plugin on <repo path>. Payload: $ARGUMENTS` | `CRON_TZ=Europe/Berlin 7 6-20/2 * * 1-5` | `agentic-reviewer` (`REWORK <id> <pr>`), `agentic-janitor` (`CONTINUE <id>`) |
 | `agentic-reviewer` | `Run the agentic-reviewer agent from the agentic-coding plugin on <repo path>. Payload: $ARGUMENTS` | `CRON_TZ=Europe/Berlin 23 */3 * * *` | `agentic-coder` (`REVIEW <id> <pr>`), `agentic-janitor` |

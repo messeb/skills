@@ -17,7 +17,7 @@ Do **not** use it for small increments of well-understood behaviour (`user-stori
 Mixing levels is the most common failure in use case work. Tag every use case explicitly.
 
 | Level | Symbol | Question | Example | Typical length |
-|-------|--------|----------|---------|----------------|
+| ------- | -------- | ---------- | --------- | ---------------- |
 | **Summary** | ☁️ kite / cloud | What is the wider business flow this sits in? | *Fulfil a customer order* | Few steps, references user-goal cases |
 | **User goal** | 🌊 sea level | What can one actor accomplish in one sitting? | *Cancel a booking* | **The useful level** — 3–9 main steps |
 | **Subfunction** | 🐟 fish / clam | What sub-step is reused by several use cases? | *Authenticate user* | Only when genuinely reused |
@@ -29,7 +29,7 @@ Rule of thumb: **write at sea level.** Summary cases give context; subfunction c
 ## 2. Actors
 
 | Actor type | Definition | Examples |
-|------------|------------|----------|
+| ------------ | ------------ | ---------- |
 | **Primary actor** | Has the goal; initiates the use case | Customer, Dispatcher, Claims Handler |
 | **Supporting actor** | Provides a service to the system during the flow | Payment provider, Address validation API, SMS gateway |
 | **Offstage / stakeholder** | Has an interest in the outcome but does not participate | Regulator, Finance, Data protection officer |
@@ -55,7 +55,7 @@ If the answer to (1) arrives as a screen or a feature ("the cancellation page"),
 ## 4. Structure of a use case
 
 | Field | Content | Rule |
-|-------|---------|------|
+| ------- | --------- | ------ |
 | **Name** | Active verb phrase: *Cancel a booking* | Never a noun ("Booking management") |
 | **Scope** | The system under design | Name it — "the booking platform", not "the system" |
 | **Level** | summary / user goal / subfunction | Always stated |
@@ -85,7 +85,7 @@ If the answer to (1) arrives as a screen or a feature ("the cancellation page"),
 ## 5. Use case vs user story
 
 | | Use case | User story |
-|---|---------|------------|
+| --- | --------- | ------------ |
 | Unit | A complete goal, all paths | A slice of value, one conversation |
 | Strength | Completeness, exception coverage, testability | Small, negotiable, fast to plan |
 | Weakness | Heavier to write and maintain | Edge cases scatter or vanish |
@@ -215,7 +215,7 @@ sequenceDiagram
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | UI steps in the scenario ("clicks Save") | The specification dies at the next redesign | Write intent, not widgets |
 | `if` inside a step | Branch logic hidden in prose | Move it to an extension |
 | Twenty-step main scenario | Wrong goal level, unreadable | Split; write at sea level |

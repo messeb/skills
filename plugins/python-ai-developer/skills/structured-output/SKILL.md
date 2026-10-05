@@ -15,7 +15,7 @@ Use this skill for extraction, classification, routing, form filling, and any pl
 Ranked by reliability:
 
 | Approach | Reliability | Notes |
-|----------|-------------|-------|
+| ---------- | ------------- | ------- |
 | **Native schema-constrained output** | Highest | The provider constrains decoding to your JSON Schema |
 | **Strict tool/function calling** | High | The model must produce arguments matching the schema |
 | **"Reply in JSON" prompt + validation** | Medium | Needs a repair loop; the only option on providers without native support |
@@ -94,7 +94,7 @@ Across all providers, `additionalProperties: false` and a complete `required` li
 The schema is part of the prompt. Most extraction failures are schema design failures.
 
 | Rule | Why |
-|------|-----|
+| ------ | ----- |
 | Describe every field | The `description` is instruction, not documentation — this is the highest-leverage change you can make |
 | Prefer flat over deeply nested | Nesting increases both error rate and token count |
 | Use enums for closed sets | `Literal["paid","unpaid","partial"]` beats a free string every time |
@@ -131,7 +131,7 @@ Bound every list (`max_length`). An unbounded list is an unbounded bill.
 Schema enforcement guarantees the *shape*, never the *truth*. Handle these explicitly:
 
 | Failure | Detection | Response |
-|---------|-----------|----------|
+| --------- | ----------- | ---------- |
 | Truncation | `finish_reason == "length"` | Raise; do not parse a partial object. Increase `max_output_tokens` or chunk the input |
 | Refusal / safety block | Provider stop reason or safety field | Surface as `ProviderRefused`; do not retry blindly |
 | Schema-valid but wrong | Business validation (totals, cross-field consistency) | Reject or flag for review |
@@ -191,7 +191,7 @@ Treat model-reported confidence scores with suspicion: they are poorly calibrate
 ## 6. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Regex or `json.loads` on prose | Brittle; breaks on the first markdown fence |
 | Prompting for JSON when native enforcement exists | Avoidable parse failures and repair costs |
 | Schema without field descriptions | Much higher error rate for zero token savings |

@@ -17,7 +17,7 @@ Do **not** treat a prototype as a complete specification on its own. It shows th
 Fidelity is a cost decision, not a quality ladder. Match it to the question.
 
 | Artifact | Cost | Answers | Fails at |
-|----------|------|---------|----------|
+| ---------- | ------ | --------- | ---------- |
 | **Sketch / paper** | minutes | Is the flow right? Which concept do people prefer? | Visual credibility, fine interaction |
 | **Wireframe** | hours | What information and controls belong on this screen, in what hierarchy? | Aesthetics, micro-interaction |
 | **Clickable low-fi prototype** | hours–days | Can people find and complete the task? | Perceived polish |
@@ -53,7 +53,7 @@ If the answer to (1) is "we need designs", push back once: a prototype with no q
 The happy path is the easy 20 %. Specify these explicitly, per screen:
 
 | State | Question |
-|-------|----------|
+| ------- | ---------- |
 | **Empty** | First use, no data yet — what does the user see and do? |
 | **Loading** | Skeleton, spinner, optimistic? What if it takes 10 s? |
 | **Partial** | Some data arrived, some failed |
@@ -74,7 +74,7 @@ Also specify: keyboard order and focus behaviour, screen-reader labels for non-t
 A prototype handed to developers needs annotation that the pixels cannot carry:
 
 | Annotate | Example |
-|----------|---------|
+| ---------- | --------- |
 | Data source and field | "shows `booking.refundAmount`, minor units, formatted in the user's locale" |
 | Validation rules | "date must be ≥ today; error text as specified in the error table" |
 | Behaviour on action | "POST cancellation; optimistic state change; roll back and show error on 4xx" |
@@ -147,7 +147,7 @@ STORY-201, UC-12 (main flow + extensions 2a, 7a), QA-9 (WCAG 2.2 AA)
 ## 6. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Prototype with no question | Endless taste debates | One question per prototype, written down |
 | High fidelity too early | Polite feedback; sunk-cost attachment to a wrong idea | Low fidelity while the concept is still open |
 | Lorem ipsum and perfect fake data | Layout breaks on real names, long strings, and empty states | Realistic and worst-case content |

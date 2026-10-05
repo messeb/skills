@@ -33,7 +33,7 @@ Rule: **always try the text layer first.** It is free, instant, and exact. Raste
 ## 2. Choosing an engine
 
 | Engine | Type | Strengths | Weaknesses |
-|--------|------|-----------|------------|
+| -------- | ------ | ----------- | ------------ |
 | **Tesseract** (`pytesseract`) | Classical, local | Free, mature, 100+ languages, fast on clean text | Poor on noisy scans, layout, and handwriting; very sensitive to preprocessing |
 | **PaddleOCR** | Deep learning, local | Strong accuracy, good detection, table and layout models, CJK excellent | Heavier install; version churn |
 | **docTR** | Deep learning, local | Clean PyTorch/TF API, good detection + recognition split | Smaller ecosystem |
@@ -45,7 +45,7 @@ Rule: **always try the text layer first.** It is free, instant, and exact. Raste
 ### Decision table by document class
 
 | Document | Start with |
-|----------|-----------|
+| ---------- | ----------- |
 | Digital PDF | Text layer extraction — no OCR |
 | Clean printed scan, one language | Tesseract; escalate to PaddleOCR if CER is too high |
 | Dense multi-column layout, reading order matters | Surya or PaddleOCR layout models |
@@ -75,7 +75,7 @@ def preprocess(img: np.ndarray) -> np.ndarray:
 ```
 
 | Step | Why |
-|------|-----|
+| ------ | ----- |
 | **300 DPI rasterisation** | The single biggest factor for Tesseract; 150 DPI roughly doubles the error rate |
 | Deskew | A 2° tilt breaks line segmentation |
 | Denoise | Removes scanner speckle that becomes phantom characters |
@@ -124,7 +124,7 @@ Why this beats sending page images to a VLM directly, for most production cases:
 ## 5. Post-processing
 
 | Technique | Fixes |
-|-----------|-------|
+| ----------- | ------- |
 | Domain dictionary / fuzzy match against known values | Customer and product names |
 | Regex + checksum validation (IBAN, VAT id, EAN) | Detects and often locates OCR digit errors |
 | Character confusion repair in numeric fields (`O↔0`, `l↔1`, `S↔5`, `B↔8`) | The dominant OCR error class |
@@ -140,7 +140,7 @@ Never "repair" a value the model or engine was uncertain about without recording
 Build a ground-truth set of 50–100 pages per document class and measure:
 
 | Metric | Definition |
-|--------|-----------|
+| -------- | ----------- |
 | **CER** | Character error rate — edit distance ÷ character count |
 | **WER** | Word error rate |
 | **Field accuracy** | Per extracted field — the metric the business cares about |
@@ -166,7 +166,7 @@ Evaluate the **whole pipeline**, not the engine alone — preprocessing and post
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | OCR-ing a PDF that has a text layer | Errors introduced into perfect data |
 | Rasterising below 300 DPI for classical OCR | Error rate roughly doubles |
 | Skipping deskew and orientation | Line segmentation fails; output is unusable |

@@ -13,7 +13,7 @@ You never invent findings. Every finding cites a file and line, or is explicitly
 Read the `skills/` directory of the `python-ai-developer` plugin and load each `SKILL.md`. Registered skills:
 
 | Area | Skill | Covers |
-|------|-------|--------|
+| ------ | ------- | -------- |
 | Tooling | `uv` | Package management, lockfile, Python pinning, workspaces, indexes, CI |
 | Tooling | `project-structure` | src layout, module boundaries, settings, secrets, logging, ruff/mypy/pytest config |
 | Tooling | `ide-setup` | VS Code and PyCharm run/debug configuration, container debugging |
@@ -120,7 +120,7 @@ For each candidate finding, confirm it in the code rather than inferring it from
 Rank by the **cost of being wrong**, not by how easy it is to fix:
 
 | Severity | Meaning |
-|----------|---------|
+| ---------- | --------- |
 | **Critical** | Data loss, credential exposure, cross-tenant access, unbounded spend, injection reaching a mutating tool |
 | **High** | Production outage risk, double-charging, silent wrong output, non-reproducible model behaviour |
 | **Medium** | Cost inefficiency, flaky tests, boundary erosion, missing observability |

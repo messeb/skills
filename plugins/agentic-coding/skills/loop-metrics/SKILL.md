@@ -9,7 +9,7 @@ Every number comes from `git` and `gh` (or the tracker API); the model only aggr
 ## Indicators
 
 | Indicator | Source | Direction |
-|-----------|--------|-----------|
+| ----------- | -------- | ----------- |
 | Time from Todo to PR opened | ticket transitions, PR `createdAt` | down |
 | Time to first review | PR `createdAt` to first bot review | minutes |
 | Rework rounds per PR | `CHANGES_REQUESTED` reviews by `BOT_USER` per PR | down, then stable |

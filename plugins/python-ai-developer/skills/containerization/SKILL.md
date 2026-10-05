@@ -66,7 +66,7 @@ The two-step `uv sync` is the whole trick: dependencies (slow, rarely changing) 
 ## 2. What actually matters
 
 | Rule | Reason |
-|------|--------|
+| ------ | -------- |
 | Multi-stage: build tooling never reaches the runtime image | Smaller image, smaller attack surface |
 | `--frozen` everywhere | The image matches the lockfile or the build fails |
 | Non-root user with a fixed UID | Required by hardened clusters; predictable file ownership |
@@ -99,7 +99,7 @@ models/
 Python wheels for AI libraries link against system libraries that are absent from slim images. Missing them fails at import — or worse, silently, as with a missing OCR language pack.
 
 | Package | Needs |
-|---------|-------|
+| --------- | ------- |
 | `pytesseract` | `tesseract-ocr` plus a language pack per language (`tesseract-ocr-deu`, …) |
 | `pdf2image` | `poppler-utils` |
 | `opencv-python` | `libgl1`, `libglib2.0-0` (or use `opencv-python-headless` and skip them) |
@@ -141,7 +141,7 @@ if settings.require_gpu and not torch.cuda.is_available():
 ## 5. Model weights
 
 | Strategy | Trade-off |
-|----------|-----------|
+| ---------- | ----------- |
 | Bake into the image | Fast, deterministic start; huge images; a new image per model version |
 | Download at startup from object storage | Small image; slower cold start; needs a cache and a checksum |
 | Mount a shared volume / PVC | Small image, fast start; requires orchestrator support |
@@ -209,7 +209,7 @@ volumes: { pgdata: }
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Single-stage build with compilers in the runtime image | Gigabytes of unnecessary attack surface |
 | `COPY . .` before installing dependencies | Every source edit reinstalls PyTorch |
 | `pip install` inside a uv project | The image no longer matches the lockfile |

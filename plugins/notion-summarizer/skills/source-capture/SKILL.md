@@ -15,7 +15,7 @@ Use this skill when the source is a book, course, documentation set, report or a
 Before reading any content, produce a numbered inventory of the sections.
 
 | Field | Example |
-|-------|---------|
+| ------- | --------- |
 | Order number | `07` |
 | Title exactly as in the source | `Custom Modules, Types, and Adapters` |
 | Locator | URL, file path, or page range |
@@ -33,7 +33,7 @@ Rules:
 ## 2. Pick the read method by source type
 
 | Source | Method |
-|--------|--------|
+| -------- | -------- |
 | Web page behind a login | Browser tool in the user's logged-in session. Never ask for or type credentials |
 | Public web page | Web fetch tool; fall back to the browser tool if the page is rendered by JavaScript |
 | PDF | Read by page range, 10 to 20 pages per call; use the outline for section boundaries |
@@ -115,7 +115,7 @@ The summary must be a new text, not a copy.
 ## 8. Anti-patterns
 
 | Anti-pattern | Why it fails | Do instead |
-|--------------|--------------|-----------|
+| -------------- | -------------- | ----------- |
 | Reading all sections first, writing later | Context overflows, details are lost | Read one, write one |
 | Trusting a page load without verification | You summarize the previous section under a new title | Check heading and length first |
 | Ignoring a truncation notice | The last third of the chapter is missing | Fetch the rest before writing |

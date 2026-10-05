@@ -19,7 +19,7 @@ You are the apprentice; the worker is the master. Apprentices watch, ask about w
 Four principles (Beyer & Holtzblatt):
 
 | Principle | Meaning | In practice |
-|-----------|---------|-------------|
+| ----------- | --------- | ------------- |
 | **Context** | Go where the work happens, watch the real thing | Their desk, their shift, their live system — not a meeting room, not a demo |
 | **Partnership** | Shared inquiry, not interrogation and not a test | "Show me. What just happened there?" |
 | **Interpretation** | Turn observations into shared meaning **with** the user | "So you copy it to the spreadsheet because the export drops the notes — right?" |
@@ -56,7 +56,7 @@ Observe **3–6 people** per role, across shifts and experience levels. Include 
 ## 4. What to record
 
 | Look for | Why it matters | Note it as |
-|----------|----------------|------------|
+| ---------- | ---------------- | ------------ |
 | **Workarounds** | The system's real gaps, priced in effort | tool, reason, frequency, cost |
 | **Artifacts** | Spreadsheets, sticky notes, printed checklists, WhatsApp groups | photograph or copy (with permission) |
 | **Interruptions** | Real workflow is not linear; design must survive them | trigger, what got lost, recovery cost |
@@ -203,7 +203,7 @@ Within 48 hours, the observers meet (1–2 h per field session):
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Watching a demo instead of live work | You see the process document acted out | Observe real work, unannounced order |
 | Interviewing while they try to work | You destroy the very thing you came to see | Save questions for gaps and the wrap-up |
 | Teaching or fixing their tool usage | They perform for you from then on | Apprentice, never instructor |

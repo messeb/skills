@@ -9,7 +9,7 @@ The agents speak in operations; this skill maps each operation to the tracker co
 ## Operations
 
 | Operation | Input | Output |
-|-----------|-------|--------|
+| ----------- | ------- | -------- |
 | `list_candidates` | status, excluded labels | tickets sorted by priority desc, created asc |
 | `get_ticket` | id | title, description, acceptance criteria, labels, assignee, status, comments, links |
 | `resolve_dependencies` | id | list of (dependency id, status) |
@@ -28,7 +28,7 @@ Acceptance criteria are recognized in this order: a section titled "Acceptance C
 Use the Atlassian MCP tools when available (`searchJiraIssuesUsingJql`, `getJiraIssue`, `getTransitionsForJiraIssue`, `transitionJiraIssue`, `editJiraIssue`, `addCommentToJiraIssue`, `getJiraIssueRemoteIssueLinks`); otherwise the Jira REST API with the token from the environment.
 
 | Operation | Implementation |
-|-----------|----------------|
+| ----------- | ---------------- |
 | `list_candidates` | JQL `project = PROJECT AND status = "Todo" AND labels not in (needs-human, no-bot) ORDER BY priority DESC, created ASC` |
 | `resolve_dependencies` | `issuelinks` where `inwardIssue` exists and link type is "Blocks" (the ticket "is blocked by"); plus `parent` if its status is Todo |
 | `claim` | `transition` to In Progress, `editJiraIssue` assignee = `BOT_USER` |
@@ -41,7 +41,7 @@ Use the Atlassian MCP tools when available (`searchJiraIssuesUsingJql`, `getJira
 Use `gh` (`gh issue list`, `gh issue view --json`, `gh issue edit`, `gh issue comment`, `gh api`). Status lives either in a Projects v2 field named `Status` or in labels `status:<name>`; `WORKFLOW.md` says which. Prefer the Projects field when both exist.
 
 | Operation | Implementation |
-|-----------|----------------|
+| ----------- | ---------------- |
 | `list_candidates` | `gh issue list --state open --json number,title,labels,createdAt,body` filtered by status; priority from labels `priority:high/medium/low`, default medium |
 | `resolve_dependencies` | body lines matching `Blocked by #N`, `Depends on #N`, `Blocked by owner/repo#N`, and task-list items `- [ ] #N`; each referenced issue's status via the same status source |
 | `claim` | transition + `gh issue edit --add-assignee BOT_USER` |
@@ -55,7 +55,7 @@ Use `gh` (`gh issue list`, `gh issue view --json`, `gh issue edit`, `gh issue co
 Use the Notion MCP tools (`notion-query-data-sources`, `notion-fetch`, `notion-update-page`, `notion-create-comment`, `notion-get-comments`). `PROJECT` is the database (data source) id.
 
 | Operation | Implementation |
-|-----------|----------------|
+| ----------- | ---------------- |
 | `list_candidates` | query the data source with filter `Status = Todo` and `Labels` not containing the excluded values; sort by `Priority` desc, `Created time` asc |
 | `resolve_dependencies` | relation property `Blocked by`; fetch each related page's `Status` |
 | `claim` | update `Status` to In Progress and `Assignee` (people property) to `BOT_USER` |
@@ -75,7 +75,7 @@ Every agent comment starts with a header line so humans can filter them:
 ## Anti-patterns
 
 | Anti-pattern | Why it fails | Instead |
-|--------------|--------------|---------|
+| -------------- | -------------- | --------- |
 | Transition without re-reading | Race with a human or another run goes unnoticed | Verify every write |
 | Creating a missing status option | Tracker schema drifts per bot run | Missing status is a stop condition |
 | Rewriting the whole description to tick one box | Destroys human edits | Change only the matching line or block |

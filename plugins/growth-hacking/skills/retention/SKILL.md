@@ -21,7 +21,7 @@ The reverse is equally true: acquisition spend on a product with poor retention 
 ## 2. Measure it properly
 
 | Decision | Guidance |
-|----------|----------|
+| ---------- | ---------- |
 | **Definition of "active"** | The action that represents value, not a login. Write it down once, company-wide |
 | **Frequency** | Match the product's natural rhythm — daily, weekly, monthly, quarterly. A mismatch invents or hides a crisis |
 | **Cohorts** | Always by signup period; aggregates hide everything |
@@ -40,7 +40,7 @@ Also separate **voluntary churn** (they chose to leave) from **involuntary churn
 Churn is not one problem. Locate it in time and cause.
 
 | When they leave | Likely cause | Where to work |
-|-----------------|--------------|---------------|
+| ----------------- | -------------- | --------------- |
 | Days 0–7 | Never reached value | Activation, onboarding, time to value (`activation`) |
 | Weeks 2–8 | Value experienced once, no habit formed | Triggers, reminders, workflow integration |
 | Months 3–12 | Needs changed, competitor, or unrealised value | Expansion, education, relationship |
@@ -58,7 +58,7 @@ Build a **churn-risk signal** from the leading indicators you find — declining
 Retention is largely decided in the first week. Beyond activation, the goal is a **habit**: a trigger, an easy action, and a reward that makes the next occasion likely.
 
 | Lever | Practice |
-|-------|----------|
+| ------- | ---------- |
 | **Trigger** | Something outside the product brings people back — a notification, an email tied to their work rhythm, a calendar event, a colleague's action |
 | **Frequency fit** | Align prompts to the natural frequency of the underlying problem; do not manufacture daily engagement for a monthly need |
 | **Accumulated value** | Data, history, integrations, and configuration that make the product more useful over time and costlier to leave |
@@ -122,7 +122,7 @@ Offboarding well also creates a resurrection opportunity: people who leave on go
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | "Active" defined as login | Measuring presence, not value |
 | Retention window mismatched to product frequency | Invented crisis or hidden churn |
 | Aggregate retention without cohorts | Churn masked by acquisition |

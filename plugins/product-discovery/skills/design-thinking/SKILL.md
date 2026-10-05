@@ -17,7 +17,7 @@ Do **not** use it as a substitute for research. Every artifact here is a *synthe
 ## 1. Which artifact, when
 
 | Artifact | Answers | Needs as input | Costs | Skip it when |
-|----------|---------|----------------|-------|--------------|
+| ---------- | --------- | ---------------- | ------- | -------------- |
 | **Proto-persona** | Who do we *think* we serve? | Team knowledge, 1–2 h | Low | You already have research — build a real persona |
 | **Persona** | Who do we serve, evidenced? | 5–12 interviews or solid analytics | Medium | You serve one obvious internal role |
 | **Empathy map** | What is in this user's head right now? | Interview quotes / observation notes | Low | You have no user data at all |
@@ -68,7 +68,7 @@ Cap at 3–5 personas, and name the **primary** persona — the one whose failur
 Six areas around a user in one **specific situation** (not a whole life):
 
 | Area | Prompt | Source |
-|------|--------|--------|
+| ------ | -------- | -------- |
 | **Says** | Verbatim quotes | interviews |
 | **Thinks** | What they believe but do not say | inference, marked as such |
 | **Does** | Observable actions and workarounds | observation |
@@ -87,7 +87,7 @@ Build it from research, across the whole experience — including the parts you 
 Columns are **stages**; rows are the lenses:
 
 | Row | Content |
-|-----|---------|
+| ----- | --------- |
 | **Stage** | Awareness → Consideration → Onboarding → Use → Support → Renewal/Exit (adapt to your domain) |
 | **Goal** | What the user wants at this stage |
 | **Actions** | What they actually do, including outside your product |
@@ -120,7 +120,7 @@ Rules:
 **Reframe into How Might We questions.** Test the altitude:
 
 | Too narrow | Right altitude | Too broad |
-|------------|----------------|-----------|
+| ------------ | ---------------- | ----------- |
 | HMW add an ETA badge to the order page? | HMW keep customers confident about arrival time without them having to check? | HMW delight our customers? |
 
 Generate 5–10 HMWs per POV, then dot-vote to pick the 2–3 to ideate on. Vary the angle deliberately: amplify the good, remove the bad, explore the opposite, question the assumption, change the actor, borrow from another domain.
@@ -238,7 +238,7 @@ Generate 5–10 HMWs per POV, then dot-vote to pick the 2–3 to ideate on. Vary
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Personas invented in a meeting and used as fact | Confident decisions on fiction | Label proto-personas; validate before relying on them |
 | Demographic personas ("Sarah, 34, likes yoga") | No design decision follows from it | Behaviour, goals, context, constraints |
 | Ten personas | Nobody remembers any of them | 3–5 max, one primary |

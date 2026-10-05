@@ -7,7 +7,7 @@ description: Go dependency injection — Wire (compile-time, Google) and Fx (run
 ## Choosing the Right Tool
 
 | Tool | Approach | Best for |
-|------|----------|---------|
+| ------ | ---------- | --------- |
 | **Wire** | Compile-time code generation | Smaller services, explicit wiring, zero runtime overhead |
 | **Fx** | Runtime reflection | Larger services, modular teams, lifecycle management |
 

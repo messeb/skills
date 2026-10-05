@@ -7,7 +7,7 @@ description: Nuxt.js best practices — rendering modes, data fetching, routing 
 ## Rendering Modes — Choose the Right One
 
 | Mode | When to use |
-|------|-------------|
+| ------ | ------------- |
 | **SSR** (Server-Side Rendering) | SEO-critical pages, authenticated dashboards, personalized content |
 | **SSG** (Static Site Generation) | Marketing pages, docs, content that rarely changes |
 | **ISR** (Incremental Static Regeneration) | SSG pages that need periodic revalidation |

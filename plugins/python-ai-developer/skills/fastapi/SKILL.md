@@ -135,7 +135,7 @@ Rules: `extra="forbid"` on inbound models; explicit bounds on anything that maps
 FastAPI runs `async def` handlers on the event loop and `def` handlers in a thread pool. Getting this wrong is the dominant performance bug in Python AI services.
 
 | Situation | Write |
-|-----------|-------|
+| ----------- | ------- |
 | Awaiting an async SDK or `httpx.AsyncClient` | `async def` |
 | Calling a **sync** SDK, `pytesseract`, scikit-learn, a solver | `def` (FastAPI threads it) **or** `await anyio.to_thread.run_sync(fn)` inside `async def` |
 | CPU-heavy work (inference, PDF rasterisation, solving) | Offload to a process pool or a task queue — see `async-and-background-work` |
@@ -257,7 +257,7 @@ async def chat_stream(body: ChatRequest, llm: LLMDep, request: Request) -> Strea
 ```
 
 | Rule | Why |
-|------|-----|
+| ------ | ----- |
 | Check `request.is_disconnected()` | The user closed the tab; stop generating and stop billing |
 | Emit a terminal `done` **and** an `error` event | HTTP status is already sent; failure must be in-band |
 | `X-Accel-Buffering: no` | Otherwise nginx buffers the whole stream and the UX benefit disappears |
@@ -280,7 +280,7 @@ async def chat_stream(body: ChatRequest, llm: LLMDep, request: Request) -> Strea
 ## 9. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Client constructed inside the handler | No connection reuse; latency and FD churn |
 | Blocking call inside `async def` | Every concurrent request on that worker stalls |
 | Long LLM/OCR work inline in a request | Gateway timeouts, retries that duplicate paid work |

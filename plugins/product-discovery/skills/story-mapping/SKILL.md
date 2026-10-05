@@ -15,14 +15,14 @@ Do **not** use it to specify a single story (`user-stories`, `example-mapping`) 
 ## 1. The two axes
 
 | Axis | Content | Ordering principle |
-|------|---------|--------------------|
+| ------ | --------- | -------------------- |
 | **Horizontal — narrative flow** | The user's activities and steps, left to right in the order they happen | Time / sequence, not priority |
 | **Vertical — detail and necessity** | Stories that implement each step, most essential at the top | Necessity, not effort |
 
 Three levels of granularity:
 
 | Level | Name | Example | Count |
-|-------|------|---------|-------|
+| ------- | ------ | --------- | ------- |
 | Top row | **Activities** (the backbone) | Search · Book · Manage booking · Travel | 4–10 |
 | Second row | **Steps** (the walking skeleton) | Enter route and date · Choose fare · Pay · Confirm | 3–8 per activity |
 | Below | **Stories / details** | Pay by card · Pay by invoice · Save card | as many as needed |
@@ -64,7 +64,7 @@ If more than one user type has a materially different journey, map the primary o
 ## 4. Slicing strategies
 
 | Strategy | Slice by | When |
-|----------|----------|------|
+| ---------- | ---------- | ------ |
 | **Walking skeleton first** | One crude path end to end | Always the first slice |
 | **By outcome** | What the user can now achieve | Default |
 | **By user segment** | One persona at a time | Distinct journeys |
@@ -80,7 +80,7 @@ Rules: every slice is releasable; every slice teaches you something; sophisticat
 ## 5. Using the map after the workshop
 
 | Use | How |
-|-----|-----|
+| ----- | ----- |
 | **Scope negotiation** | Point at what falls below the line. Cutting becomes visible instead of abstract |
 | **Progress** | Colour cards by state; the map shows coverage, not just a burn-down number |
 | **Onboarding** | The backbone explains the product in five minutes |
@@ -178,7 +178,7 @@ flowchart TB
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Backbone ordered by priority | The narrative is destroyed; the map stops being a story | Left to right is time, top to bottom is necessity |
 | Vertical slices (one activity fully, then the next) | Nothing usable until the end | Horizontal slices across the whole backbone |
 | No walking skeleton | Integration risk discovered late | Thinnest end-to-end path first |

@@ -9,7 +9,7 @@ You manage GitHub repository files across three modes. Detect the mode first, th
 **Detect the mode** from context or ask the user:
 
 | Mode | Trigger |
-|------|---------|
+| ------ | --------- |
 | **A — Fresh setup** | Empty or brand-new repository with no files yet |
 | **B — Update existing repo** | Repo exists; community/config files may be missing or outdated |
 | **C — Sync with source changes** | Source code changed; keep repo files consistent with the new state |
@@ -22,6 +22,16 @@ You manage GitHub repository files across three modes. Detect the mode first, th
 - Author name / GitHub handle
 
 **File placement**: GitHub recognises community files (`README`, `CONTRIBUTING`, `CODE_OF_CONDUCT`, `SECURITY`, `SUPPORT`, `CODEOWNERS`) in three locations — root, `.github/`, or `docs/`. Default to root unless the project already uses one of the other locations consistently.
+
+**Always-latest rule**: never copy a version pin from a template or from memory — versions in this skill show the shape, not the value, and are stale the day after they are written. Before writing any file that pins a version, resolve the current one:
+
+| What | How to resolve the latest version |
+| ------ | ----------------------------------- |
+| GitHub Actions in workflows (`uses:`) | `gh api repos/<owner>/<repo>/releases/latest --jq .tag_name` per action; pin the latest **major** (`@v7`), not a full tag |
+| npm / pip / cargo tools pinned in configs | `npm view <pkg> version`, `pip index versions <pkg>`, `cargo search <crate>` |
+| Project dependencies (Mode B/C) | Offer an upgrade to current versions: `pnpm up --latest` / `npm-check-updates` / `uv lock --upgrade` etc., run the project's tests, and report what changed instead of silently bumping majors |
+
+This applies to every mode: Mode A resolves latest before creating, Mode B flags outdated pins as staleness findings, Mode C re-resolves when touching a file that carries pins. The grouped `dependabot.yml` (File Templates section) then keeps actions and dependencies current after setup.
 
 ---
 
@@ -48,7 +58,7 @@ Then proceed to **Step 3 — Verify and summarize**.
 **Audit** the repository against the full file list in Step 3. For each file:
 
 | State | Action |
-|-------|--------|
+| ------- | -------- |
 | **Missing** | Create from template |
 | **Present, outdated** | Show a diff of what would change, ask before overwriting |
 | **Present, customized** | Skip — do not overwrite custom content without explicit user approval |
@@ -65,6 +75,7 @@ Then proceed to **Step 3 — Verify and summarize**.
 - `.github/copilot-instructions.md` — does the tech stack section reflect the current stack?
 - `.github/ISSUE_TEMPLATE/*.md` — are templates using the legacy `.md` format? Offer to upgrade to `.yml`.
 - `.github/dependabot.yml` — does the `package-ecosystem` list cover all ecosystems in the repo? Does **every** entry have the three-PR `groups` block (wildcard `minor-and-patch`, `major`, `security`; wildcard `actions` group for `github-actions`)? An entry without groups, or a group not matching `"*"`, produces per-dependency PRs and must be fixed.
+- `.github/workflows/*.yml` — is every `uses:` pinned to the action's current major (resolve per the always-latest rule in Step 1)? Are the project's own dependencies current, or should an upgrade be offered?
 
 After auditing, present a summary of what will be created or updated, confirm with the user, then apply changes. Proceed to **Step 3 — Verify and summarize**.
 
@@ -77,7 +88,7 @@ Inspect what changed in the source code, then update only the affected repo file
 **Change → affected files mapping:**
 
 | Source change | Files to update |
-|---------------|----------------|
+| --------------- | ---------------- |
 | New language or framework added | `.gitignore` (add patterns), `.gitattributes` (add file types + export-ignore), `.github/copilot-instructions.md` (update Tech Stack), `.github/dependabot.yml` (add ecosystem) |
 | New significant dependency added | `.github/copilot-instructions.md` (update Key dependencies), `.github/dependabot.yml` (verify ecosystem covered) |
 | New binary file types introduced | `.gitattributes` (add binary markers) |
@@ -746,7 +757,7 @@ Add one `updates` entry per package ecosystem present in the repo — **always w
 **Grouping rules that keep it at three PRs — violating any of them reintroduces per-dependency PRs:**
 
 | Anti-pattern | Why it fails | Instead |
-|--------------|--------------|---------|
+| -------------- | -------------- | --------- |
 | `updates` entry without a `groups` block | Default behavior: one PR per dependency | Copy the full `groups` block into every entry |
 | Groups matched by name patterns (`eslint*`, `react*`) | Every dependency outside the patterns gets its own PR, and PR count grows with each pattern group | One wildcard group per update type: `patterns: ["*"]` |
 | Only a `minor-and-patch` group, no `major` group | Majors match no group and fall back to individual PRs | Keep both groups so `update-types` partitions everything |

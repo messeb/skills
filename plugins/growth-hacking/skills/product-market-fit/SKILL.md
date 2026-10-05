@@ -25,7 +25,7 @@ The sequencing rule: **retention → activation → acquisition**. Fix the leak,
 Plot the share of each signup cohort still active in each subsequent period, using the frequency natural to the product.
 
 | Shape | Reading | Action |
-|-------|---------|--------|
+| ------- | --------- | -------- |
 | Decays toward zero | No fit. The product does not solve a recurring problem, or does not solve it well | Do not scale. Return to the problem |
 | Flattens at a low level | Fit exists for a **subset** | Identify that subset; consider narrowing the product and the targeting |
 | Flattens at a healthy level | Fit | Scale acquisition |
@@ -38,7 +38,7 @@ Segment the curve before concluding anything. It is common to have no fit in agg
 ### Supporting signals
 
 | Signal | What it indicates |
-|--------|-------------------|
+| -------- | ------------------- |
 | Organic and word-of-mouth share of new signups | People recommend things that work |
 | Usage frequency approaching the natural frequency of the problem | The product is in the workflow |
 | Repeat purchase or renewal without prompting | Value is felt, not sold |
@@ -82,7 +82,7 @@ Users building workarounds to keep using it, resisting a migration away, asking 
 An MVP is often built too large because "minimum" is negotiated upward. The sharper tool is to ask what would have to be true for this to work, and test **only the assumption most likely to kill it**.
 
 | | MVP | Riskiest-assumption test |
-|---|-----|--------------------------|
+| --- | ----- | -------------------------- |
 | Question | "Will people use a small version of this?" | "Is the one thing that would kill this actually true?" |
 | Cost | Weeks to months | Hours to days |
 | Output | A working product slice | Evidence about one assumption |
@@ -123,7 +123,7 @@ The organisational difficulty is that this decision is unpopular and usually cor
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Scaling acquisition before retention flattens | Money spent filling a leaking bucket |
 | Judging fit on aggregate totals | Churn hidden behind new signups |
 | Retention window mismatched to product frequency | Invented crisis or hidden one |

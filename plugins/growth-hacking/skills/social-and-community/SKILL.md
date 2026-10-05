@@ -15,7 +15,7 @@ Use this skill when choosing organic channels, when social output is high and re
 Two questions decide it: **is the audience there in meaningful numbers**, and **can we sustainably produce what performs there**? A platform that fits the first and not the second is a slow failure.
 
 | Platform type | Fits | Format that works |
-|---------------|------|-------------------|
+| --------------- | ------ | ------------------- |
 | Professional network | B2B, recruiting, expertise-led | Text posts with a strong opening line, first-hand experience, documents |
 | Short-form video | Broad consumer reach, demonstrable products | Hook in the first two seconds, native editing, unpolished |
 | Image-led | Visual products, lifestyle, community | Consistent visual identity, saves and shares over likes |
@@ -35,7 +35,7 @@ The honest constraint on all of it: **organic reach on major platforms is limite
 Rather than a taxonomy of tricks, these are the motivations that reliably produce engagement. Each is legitimate when the underlying thing is real:
 
 | Trigger | What it does | Fails when |
-|---------|--------------|-----------|
+| --------- | -------------- | ----------- |
 | **Usefulness** | Teach something immediately applicable | It is thinly disguised promotion |
 | **Identity** | Let people signal who they are by sharing it | It is generic |
 | **Novelty** | Something genuinely new or counter-intuitive | Manufactured for the sake of it |
@@ -64,7 +64,7 @@ Format rules that hold everywhere: create **natively** for each platform rather 
 ## 4. Community: owned versus rented
 
 | | Participating in existing communities | Building your own |
-|---|---|---|
+| --- | --- | --- |
 | Cost to start | Low | High |
 | Time to value | Weeks | Many months |
 | Control | None | Full |
@@ -98,7 +98,7 @@ Set up monitoring for your brand, your competitors, and two or three problem phr
 ## 6. Measurement
 
 | Level | Metric | Note |
-|-------|--------|------|
+| ------- | -------- | ------ |
 | Vanity | Followers, likes, impressions | Report only as context; never as the goal |
 | Engagement | Comments, saves, shares, replies | Saves and shares indicate value better than likes |
 | Traffic | Clicks to owned properties | Platforms suppress outbound links; expect low rates |
@@ -113,7 +113,7 @@ Social attribution is genuinely poor — it is a discovery touch that last-click
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Being on six platforms because competitors are | Thin, abandoned accounts on all of them |
 | Cross-posting one asset everywhere | Underperforms on every platform |
 | Broadcasting without responding | Algorithms suppress it; the audience disengages |

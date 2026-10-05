@@ -15,7 +15,7 @@ Read the `skills/` directory of the `product-discovery` plugin and load each `SK
 **Elicitation and framing — what is the problem, whose is it, and why does it matter?**
 
 | Skill | Method | Answers |
-|-------|--------|---------|
+| ------- | -------- | --------- |
 | `stakeholder-interviews` | Structured / semi-structured 1:1s | What do individuals know, want, fear, and veto? |
 | `contextual-inquiry` | Field observation | What do people actually do, as opposed to what they say? |
 | `jobs-to-be-done` | JTBD / switch interviews | What progress is the customer hiring us for, and what do they fire? |
@@ -29,7 +29,7 @@ Read the `skills/` directory of the `product-discovery` plugin and load each `SK
 **Domain and system modeling — what is the shape of the thing?**
 
 | Skill | Method | Answers |
-|-------|--------|---------|
+| ------- | -------- | --------- |
 | `event-storming` | Event Storming (Brandolini) | What happens in this domain, and where are the bounded contexts? |
 | `domain-storytelling` | Domain Storytelling | How does this specific process really run, and in whose words? |
 | `context-mapping` | DDD context mapping | What are the bounded contexts, and what is the integration pattern on each boundary? |
@@ -41,7 +41,7 @@ Read the `skills/` directory of the `product-discovery` plugin and load each `SK
 **Specification and documentation — what exactly are we building?**
 
 | Skill | Method | Answers |
-|-------|--------|---------|
+| ------- | -------- | --------- |
 | `use-case-modeling` | Use cases (Cockburn) | How does an actor reach a goal, including every alternative and exception? |
 | `user-stories` | Stories + acceptance criteria | What is the next small, valuable, verifiable slice? |
 | `story-mapping` | Story Mapping (Patton) | What is the whole product, and how does it slice into releases? |
@@ -58,7 +58,7 @@ Read the `skills/` directory of the `product-discovery` plugin and load each `SK
 **Validation and verification — is it right, and can we prove it?**
 
 | Skill | Method | Answers |
-|-------|--------|---------|
+| ------- | -------- | --------- |
 | `requirements-reviews` | Reviews, walkthroughs, inspections | Where is the document ambiguous, incomplete, or contradictory? |
 | `three-amigos` | Business + dev + test per story | What did the three perspectives each see that the others missed? |
 | `acceptance-test-definition` | ATDD | What set of checks proves this requirement, agreed before building? |
@@ -70,7 +70,7 @@ Read the `skills/` directory of the `product-discovery` plugin and load each `SK
 **Management — how do requirements stay alive and actionable?**
 
 | Skill | Method | Answers |
-|-------|--------|---------|
+| ------- | -------- | --------- |
 | `prioritization` | MoSCoW, WSJF, Kano, RICE, Buy a Feature | What do we build first, and on what stated assumptions? |
 | `backlog-refinement` | Refinement cadence, DoR / DoD | Are items ready when they are needed, and is "done" a fact? |
 | `change-management` | Change requests, impact analysis, versioning | How does a committed requirement change without surprising anyone? |
@@ -93,7 +93,7 @@ Never open with a method. Establish, in as few questions as possible (batch them
 Classify the unknown before choosing a method:
 
 | Type of unknown | Signal | Start with |
-|-----------------|--------|------------|
+| ----------------- | -------- | ------------ |
 | **Goal unknown** | Nobody can state a measurable outcome; scope creeps | `impact-mapping` |
 | **Domain unknown** | No one can draw the end-to-end flow; vocabulary clashes | `event-storming` (Big Picture) |
 | **Process unknown** | The flow exists but nobody narrates it concretely | `domain-storytelling` |

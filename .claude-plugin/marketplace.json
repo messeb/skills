@@ -8,13 +8,13 @@
       "name": "general-developer",
       "description": "Language-agnostic software development principles applicable to all developers",
       "source": "./plugins/general-developer",
-      "version": "1.2.1"
+      "version": "1.2.2"
     },
     {
       "name": "frontend-developer",
       "description": "Adds skills for frontend software development.",
       "source": "./plugins/frontend-developer",
-      "version": "1.3.0"
+      "version": "1.3.1"
     },
     {
       "name": "go-developer",
@@ -38,7 +38,7 @@
       "name": "python-ai-developer",
       "description": "Adds skills for Python AI application development \u2014 uv, FastAPI, multi-provider LLM clients, orchestration frameworks, OCR, ML, operations research, containerization, IDE setup, and notebooks.",
       "source": "./plugins/python-ai-developer",
-      "version": "1.0.0"
+      "version": "1.0.1"
     },
     {
       "name": "growth-hacking",
@@ -68,7 +68,7 @@
       "name": "agentic-coding",
       "description": "Adds four unattended agents (planner, coder, reviewer, janitor) and 16 skills for an AI-native ticket-to-merge loop on Jira, GitHub Issues or Notion \u2014 intent and spec artifacts, contract-first implementation, skeptical review, guardrails, evals, closing-the-loop monitoring, metrics and harness tuning.",
       "source": "./plugins/agentic-coding",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   ]
 }

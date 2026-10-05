@@ -15,7 +15,7 @@ Use this skill for scheduling, shift rostering, vehicle routing, assignment and 
 Signals: you must **choose** among a combinatorial number of options; there are **hard constraints** that cannot be violated; there is an **objective** to minimise or maximise; and a human currently does it in a spreadsheet with rules of thumb.
 
 | Not an OR problem | Is an OR problem |
-|---|---|
+| --- | --- |
 | "Predict tomorrow's demand" | "Given predicted demand, choose the production plan that minimises cost" |
 | "Summarise these shifts" | "Assign 40 staff to 120 shifts satisfying skills, rest rules, and fairness" |
 | "Which customer will churn" | "Which retention offers to send within a fixed budget" |
@@ -29,7 +29,7 @@ Forecasting and optimization compose: an ML model produces the parameters, the s
 ## 2. Choosing a solver
 
 | Tool | Kind | Best for | Limits |
-|------|------|----------|--------|
+| ------ | ------ | ---------- | -------- |
 | **OR-Tools CP-SAT** | Constraint programming + SAT | Scheduling, rostering, assignment, sequencing; integer and boolean decisions; excellent with logical constraints | Integers only — no continuous variables |
 | **OR-Tools routing** | Specialised metaheuristics | Vehicle routing with capacities, time windows, pickup/delivery | A specialised API; not a general modelling language |
 | **PuLP** | MILP modelling layer | Straightforward linear/integer programs; free solvers (CBC, HiGHS) | Weaker at complex logical constraints |
@@ -90,7 +90,7 @@ status = solver.Solve(m)
 ```
 
 | Pattern | Construct |
-|---------|-----------|
+| --------- | ----------- |
 | "Exactly one" / "at most one" | `AddExactlyOne`, `AddAtMostOne` |
 | Non-overlapping tasks on a resource | `AddNoOverlap` with interval variables |
 | Cumulative capacity over time | `AddCumulative` |
@@ -129,7 +129,7 @@ An infeasible model is the normal state during development. Diagnose it systemat
 ## 5. Running solvers in a service
 
 | Concern | Practice |
-|---------|----------|
+| --------- | ---------- |
 | **Always set a time limit** | Without one, a solve can run for hours and hold a worker |
 | Accept the best feasible solution | Optimality is usually not required; log the gap and whether it was proven optimal |
 | Run in a worker process | Solvers are CPU-bound and release the GIL unpredictably; never on the event loop |
@@ -158,7 +158,7 @@ if status in (cp_model.OPTIMAL, cp_model.FEASIBLE):
 ## 6. Scaling
 
 | Technique | When |
-|-----------|------|
+| ----------- | ------ |
 | Tighten variable domains | Always — a smaller search space is the cheapest win |
 | Symmetry breaking | Interchangeable workers or machines cause enormous redundant search |
 | Decompose by time or region | Solve a week at a time instead of a year |
@@ -174,7 +174,7 @@ If the model is still intractable, reconsider the formulation before buying a co
 ## 7. Combining with an LLM
 
 | Use a model for | Do not use a model for |
-|-----------------|------------------------|
+| ----------------- | ------------------------ |
 | Turning a natural-language policy into candidate constraints, for human review | Producing the assignment |
 | Explaining a solution to an end user | Judging feasibility |
 | Explaining *why* a request is infeasible, from the conflict set | Inventing which constraint to relax without approval |
@@ -187,7 +187,7 @@ The safe pattern: model proposes constraints in a **structured schema** (`struct
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Asking an LLM to solve the assignment | Fluent, infeasible plans presented as optimal |
 | No time limit | Requests hang; workers exhausted |
 | Every preference as a hard constraint | Permanently infeasible model |

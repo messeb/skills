@@ -86,7 +86,7 @@ Every page should have exactly one of each top-level landmark, in this source or
 Use HTML5 elements first; add ARIA only to fill gaps.
 
 | Element | Implicit role | Add `role=` only if… |
-|---------|---------------|----------------------|
+| --------- | --------------- | ---------------------- |
 | `<header>` (top-level) | `banner` | the element is a custom component |
 | `<nav>` | `navigation` | never — already implicit |
 | `<main>` | `main` | never |
@@ -391,7 +391,7 @@ This section covers the **markup-level** link rules — anchor element, `rel` at
 ### `rel` attributes
 
 | `rel` | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `noopener` | Required on `target="_blank"` (security) |
 | `nofollow` | Untrusted links |
 | `ugc` | User-generated content |

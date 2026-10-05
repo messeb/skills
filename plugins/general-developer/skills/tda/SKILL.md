@@ -461,7 +461,7 @@ When reviewing a codebase for TDA violations:
 ## Decision Framework
 
 | Question | If yes… |
-|----------|---------|
+| ---------- | --------- |
 | Am I reading another object's state to make a decision? | Move the decision inside that object |
 | Is this method more interested in another object's data? | Move the behaviour to that object |
 | Am I exposing internal state through a getter? | Provide a command method instead |

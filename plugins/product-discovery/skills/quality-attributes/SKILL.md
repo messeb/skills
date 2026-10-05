@@ -17,7 +17,7 @@ Do **not** use it to gather functional requirements (`use-case-modeling`, `user-
 An unmeasurable quality requirement is a wish. Every quality attribute requirement is written as a scenario with six parts:
 
 | Part | Question | Example |
-|------|----------|---------|
+| ------ | ---------- | --------- |
 | **Source** | Who or what triggers it? | 5,000 concurrent customers |
 | **Stimulus** | What arrives? | Submit a booking search |
 | **Artifact** | Which part of the system? | Search API and inventory cache |
@@ -34,7 +34,7 @@ If you cannot write the response measure, you do not yet have a requirement — 
 Walk the characteristics; ask for a scenario per relevant sub-characteristic. The value of the standard here is coverage — it stops the workshop from producing only performance and security.
 
 | Characteristic | Sub-characteristics | Typical scenario prompt |
-|----------------|--------------------|-------------------------|
+| ---------------- | -------------------- | ------------------------- |
 | **Functional suitability** | completeness, correctness, appropriateness | Where would a partially correct result be dangerous? |
 | **Performance efficiency** | time behaviour, resource utilisation, capacity | What is the peak load, and what latency is unacceptable? |
 | **Compatibility** | co-existence, interoperability | Which systems and formats must it work with? |
@@ -54,7 +54,7 @@ Note the 2023 revision: *usability* became **interaction capability**, *portabil
 **Participants**: architects, developers, operations, security, business owner, and — critically — a user representative and someone who supports the system in production. 8–15 people, half a day.
 
 | Step | Time | Activity |
-|------|------|----------|
+| ------ | ------ | ---------- |
 | 1 | 15 min | Business drivers presented by the sponsor — goals, constraints, what failure would cost |
 | 2 | 15 min | Architecture plan presented (as it stands, even if rough) |
 | 3 | 20 min | Quality attribute walk-through using the ISO 25010 checklist |
@@ -79,7 +79,7 @@ Organise scenarios into a tree: quality attribute → sub-characteristic → con
 For each high-priority scenario, walk the architecture and record:
 
 | Concept | Meaning | Why it matters |
-|---------|---------|----------------|
+| --------- | --------- | ---------------- |
 | **Architectural approach / tactic** | What in the design addresses this scenario | Caching, replication, bulkheads, rate limiting, CQRS, circuit breaker |
 | **Sensitivity point** | A decision that strongly affects one attribute | Cache TTL determines both latency and staleness |
 | **Trade-off point** | A decision that affects two or more attributes in opposite directions | Synchronous validation: integrity up, latency up |
@@ -229,7 +229,7 @@ Tags are `(business importance, technical difficulty)`. Highlighted leaves are t
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | "The system shall be fast / secure / user-friendly" | Untestable; argued about forever | Six-part scenario with a response measure |
 | Averages only (`avg 200 ms`) | Hides the tail that users actually feel | Percentiles: p50, p95, p99 |
 | "100 % availability" | Unbudgeted, unachievable | Ask what an hour of downtime costs; pick a tier |

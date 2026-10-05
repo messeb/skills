@@ -13,7 +13,7 @@ Use this skill when authoring `<head>` templates, building an SEO component, or 
 ## 1. Who reads `<head>` and why it matters
 
 | Consumer | Reads |
-|----------|-------|
+| ---------- | ------- |
 | Google / Bing / DuckDuckGo | `title`, `meta description`, `canonical`, `robots`, hreflang, structured data |
 | Google Discover / News | `og:image`, `max-image-preview`, publication metadata |
 | Facebook / LinkedIn / Slack / iMessage / Discord | Open Graph |
@@ -160,7 +160,7 @@ Controls indexing, link following, and snippet behaviour. The default for any in
 ### The directives
 
 | Directive | Effect |
-|-----------|--------|
+| ----------- | -------- |
 | `index` / `noindex` | Allow / disallow indexing |
 | `follow` / `nofollow` | Follow / don't follow links on the page |
 | `noarchive` | Don't show cached copy |
@@ -279,7 +279,7 @@ X uses its own tags but falls back to Open Graph for missing fields. Set both fo
 ### Card types
 
 | Type | When to use |
-|------|-------------|
+| ------ | ------------- |
 | `summary` | Short preview with small thumbnail. Default for category/index pages. |
 | `summary_large_image` | Large hero image. Default for articles, products, landing pages. |
 | `app` | Mobile app card. Specific iOS/Android tags. |
@@ -357,7 +357,7 @@ The bare minimum that survives modern browsers, iOS, Android, Windows tiles, and
 ### Required files
 
 | File | Size | Notes |
-|------|------|-------|
+| ------ | ------ | ------- |
 | `/favicon.ico` | 32×32 (multi-res) | Legacy browsers, IE, fallback |
 | `/favicon.svg` | scalable | Modern browsers; supports dark mode via `<style>` inside SVG |
 | `/apple-touch-icon.png` | 180×180 | iOS home screen |

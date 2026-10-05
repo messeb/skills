@@ -17,7 +17,7 @@ Do **not** use it to explore an unknown domain (`event-storming` first), to mode
 Full BPMN has over 100 symbols. Almost every useful model needs about a dozen. Agree the subset with your audience and put a legend on the diagram.
 
 | Element | Meaning | Use |
-|---------|---------|-----|
+| --------- | --------- | ----- |
 | **Start event** (thin circle) | What triggers the process | Exactly one per pool, named after the trigger |
 | **End event** (thick circle) | An outcome | Several are normal — name each outcome |
 | **Task** (rounded box) | A unit of work | Verb + object: *Check eligibility* |
@@ -70,7 +70,7 @@ If the answer to (4) is "nothing much goes wrong", ask again with examples — t
 Mermaid has no BPMN notation. It is excellent for reviewable, version-controlled process documentation in a repository; it is not a substitute for an executable BPMN 2.0 model.
 
 | Need | Use |
-|------|-----|
+| ------ | ----- |
 | Process documentation in Git, reviewed in pull requests | **Mermaid flowchart** with subgraph lanes (below) |
 | Cross-organisation message exchange | **Mermaid sequenceDiagram** (pools as participants) |
 | Executable process on a BPMN engine (Camunda, Flowable, Zeebe) | **BPMN 2.0 XML** authored in bpmn.io / Camunda Modeler, stored next to the Markdown |
@@ -214,7 +214,7 @@ sequenceDiagram
 ## 6. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Happy path only | The model describes 20 % of the real work | Model the exceptions that matter; list the rest |
 | Sequence flow crossing pool boundaries | Implies control you do not have over another party | Only messages between pools |
 | Unlabelled gateway paths | Readers guess the branch conditions | Question on the diamond, answer on every arrow |

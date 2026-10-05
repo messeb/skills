@@ -130,7 +130,7 @@ def get_settings() -> Settings:
 ```
 
 | Rule | Reason |
-|------|--------|
+| ------ | -------- |
 | `SecretStr` for every credential | Keeps keys out of tracebacks, logs, and `/debug` endpoints |
 | `extra="forbid"` | A typo'd env var fails at startup instead of being silently ignored |
 | Validate cross-field consistency at startup | Fail fast, before the first request |
@@ -215,7 +215,7 @@ Default the test run to unit tests only — `pytest -m "not integration and not 
 ## 5. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Flat layout without `src/` | Tests import the working directory, not the installed package |
 | `os.environ[...]` scattered through modules | Configuration is undiscoverable and untestable |
 | Provider SDK imported in routers or domain code | Swapping providers becomes a refactor |

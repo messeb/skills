@@ -17,7 +17,7 @@ Instrumentation comes **before** experimentation. A test launched on untrusted t
 They answer different questions; most teams need two or three, not one of each.
 
 | Category | Answers | Examples of the type |
-|----------|---------|----------------------|
+| ---------- | --------- | ---------------------- |
 | **Product analytics** | What do users *do*? Funnels, cohorts, retention, paths | Event-based tools such as Mixpanel, Amplitude, PostHog |
 | **Web analytics** | Where does traffic come from, what do sessions look like? | GA4, Plausible, Matomo, Fathom |
 | **Experimentation** | Which variant won, with what confidence? | Dedicated A/B platforms, or feature-flag tools with metrics |
@@ -62,7 +62,7 @@ Version the plan, review it when the product changes, and make updating it part 
 Getting this wrong quietly corrupts every cohort and every funnel.
 
 | Concept | Meaning |
-|---------|---------|
+| --------- | --------- |
 | **Anonymous id** | Device or browser identifier before signup |
 | **User id** | Your stable internal id after signup — never an email address |
 | **Alias / identify** | The stitch that links pre-signup activity to the account |
@@ -77,7 +77,7 @@ State those limits wherever the numbers are reported. Analytics that silently un
 ## 4. Client-side, server-side, and consent
 
 | Collection | Strengths | Weaknesses |
-|------------|-----------|------------|
+| ------------ | ----------- | ------------ |
 | **Client-side** | Captures UI interactions, easy to add | Blocked by ad blockers and consent rejection; loses a meaningful share of events |
 | **Server-side** | Reliable, complete, tamper-resistant; ideal for revenue and lifecycle events | Cannot see pure UI behaviour; more work to build |
 
@@ -98,7 +98,7 @@ Consent in the EU is not an afterthought here:
 Assume instrumentation is broken until proven otherwise; it usually is.
 
 | Check | How |
-|-------|-----|
+| ------- | ----- |
 | Events fire when expected | Walk the funnel manually in a debug view before release |
 | Events fire **only** when expected | Duplicate firing is common and silently doubles conversion rates |
 | Properties populated and correctly typed | Look for nulls, empty strings, and `"undefined"` as a value |
@@ -129,7 +129,7 @@ Reconcile against billing on a schedule, not only when something looks wrong.
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Running experiments before instrumentation is verified | Uninterpretable results; arguments instead of decisions |
 | Tracking added after launch | No baseline; the first result cannot be compared |
 | 400 events, no tracking plan | Nobody knows which is correct; none are trusted |

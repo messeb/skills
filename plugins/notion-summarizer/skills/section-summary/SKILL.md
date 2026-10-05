@@ -15,7 +15,7 @@ Use this skill for every section you summarize. Do not use it for the flashcard 
 While reading, collect these items:
 
 | Collect | Question to ask |
-|---------|-----------------|
+| --------- | ----------------- |
 | Thesis | What is the one claim of this section? |
 | Concepts | Which terms are defined? |
 | Enumerations | Which lists does the author give (N steps, N types, N principles)? |
@@ -33,7 +33,7 @@ If the author gives a list of N items, the summary shows all N. Never silently d
 ## 2. Choose the form
 
 | Content | Form |
-|---------|------|
+| --------- | ------ |
 | Items with two or more attributes | **Table** |
 | Comparison of options | Table with one column per dimension, or two columns side by side for exactly two options |
 | Ordered procedure | Numbered list |
@@ -83,7 +83,7 @@ Every section page has the same order so the reader can navigate all of them the
 ## 5. Size
 
 | Source section | Target page |
-|----------------|-------------|
+| ---------------- | ------------- |
 | Short (under 3,000 words) | 250 to 400 words, 1 to 2 tables |
 | Medium (3,000 to 8,000 words) | 500 to 900 words, 3 to 5 tables |
 | Long (over 8,000 words) | 900 to 1,400 words, 5 to 8 tables, use toggles |
@@ -95,7 +95,7 @@ A page that needs more than this usually contains copied detail. Move detail int
 ## 6. Anti-patterns
 
 | Anti-pattern | Why it fails | Do instead |
-|--------------|--------------|-----------|
+| -------------- | -------------- | ----------- |
 | Retelling the section as prose | Not scannable, close to the original wording | Lists and tables |
 | Headings copied one to one with a sentence each | Shallow, misses the content | Extract the enumerations and comparisons |
 | Dropping items from an author's list | Reader cannot trust the summary | Show all items |

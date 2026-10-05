@@ -42,7 +42,7 @@ Default is RemNote:
 Variants on request:
 
 | Tool | Format |
-|------|--------|
+| ------ | -------- |
 | Anki import | `Front<TAB>Back`, one per line, no parent line; or `Front;Back` with a stated separator |
 | Plain Q and A | `Q: ...` and `A: ...` on two lines, blank line between cards |
 | Cloze | `The {{c1::term}} does X` for Anki; use sparingly |
@@ -63,7 +63,7 @@ Ask which tool only if the user has not said and no earlier page shows it.
 Card types worth writing:
 
 | Type | Front pattern |
-|------|---------------|
+| ------ | --------------- |
 | Definition | `Term` |
 | Contrast | `A vs B` |
 | Enumeration | `Five core abstractions of X` |
@@ -78,7 +78,7 @@ Card types worth writing:
 ## 4. How many
 
 | Section size | Cards |
-|--------------|-------|
+| -------------- | ------- |
 | Short | 8 to 12 |
 | Medium | 12 to 20 |
 | Long or reference-heavy | 20 to 40 |
@@ -98,7 +98,7 @@ Cover every key takeaway and every table of the section page with at least one c
 ## 6. Anti-patterns
 
 | Anti-pattern | Why it fails | Do instead |
-|--------------|--------------|-----------|
+| -------------- | -------------- | ----------- |
 | Copying sentences from the source as backs | Copyright, poor recall | Rephrase, shorten |
 | "What does the author say about X?" | Front gives no cue | Name the concept |
 | Ten-item lists on one back | Cannot be recalled | Split or group |

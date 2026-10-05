@@ -7,7 +7,7 @@ description: Go database access — GORM, sqlc, sqlx, pgx, connection pooling, t
 ## Choosing the Right Tool
 
 | Tool | Best for | Trade-off |
-|------|----------|-----------|
+| ------ | ---------- | ----------- |
 | **GORM** | Rapid development, CRUD-heavy apps | Magic behaviour, harder to debug generated SQL |
 | **sqlc** | Performance-critical, SQL-first teams | Requires SQL schema + queries upfront; code generation step |
 | **sqlx** | Full SQL control with less boilerplate than `database/sql` | Still manual query writing; no code generation |

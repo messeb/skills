@@ -31,7 +31,7 @@ A ticked checkbox is a claim the reviewer will test. This skill makes the claim 
 ## Anti-patterns
 
 | Anti-pattern | Why it fails | Instead |
-|--------------|--------------|---------|
+| -------------- | -------------- | --------- |
 | Ticking because "the test suite is green" | The suite may not cover the criterion | One named verification per criterion |
 | Ticking a criterion verified earlier, before the last commit | Later commits can regress it | Verify the final branch |
 | Opening the PR with unticked criteria and a note | Shifts the ticket's work to the reviewer | Fix or stop |

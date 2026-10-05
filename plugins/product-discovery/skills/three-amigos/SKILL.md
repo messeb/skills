@@ -15,7 +15,7 @@ Do **not** use it as a status meeting, a sign-off ceremony, or a substitute for 
 ## 1. The three perspectives
 
 | Amigo | Typically | Brings | Signature question |
-|-------|-----------|--------|--------------------|
+| ------- | ----------- | -------- | -------------------- |
 | **Business** | Product owner, analyst, domain expert | Intent, rules, priority, what the user is really trying to do | *Why do we want this, and what happens if we do not?* |
 | **Development** | Developer, architect | Feasibility, cost, hidden complexity, existing behaviour | *What is undefined here? What will this cost?* |
 | **Testing** | Tester, QA engineer | Edge cases, failure modes, how it will be proven | *How do we know it works? What about when …?* |
@@ -29,7 +29,7 @@ Roles are perspectives, not job titles. A single person can hold two — but not
 ## 2. When and how often
 
 | Timing | Purpose |
-|--------|---------|
+| -------- | --------- |
 | **During refinement, ahead of the iteration** | Default — leaves time to answer the open questions |
 | **Immediately before development starts** | Refresh, confirm nothing has changed |
 | **When a story stalls mid-development** | Resolve the ambiguity that was missed |
@@ -44,7 +44,7 @@ Cadence that works: short and frequent — 25–30 minutes per story, several st
 Run it as an `example-mapping` session; the four card colours give the conversation its structure.
 
 | Step | Time | Content |
-|------|------|---------|
+| ------ | ------ | --------- |
 | 1 | 2 min | Read the story aloud. If the room cannot restate it in one sentence, fix the story first |
 | 2 | 3 min | Business states the intent and who it is for |
 | 3 | 10 min | Rules — what must be true for this to be done (blue cards) |
@@ -149,7 +149,7 @@ Attach to the ticket; keep a copy in `docs/discovery/three-amigos-<story>.md` if
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Only two amigos | One whole class of defect goes undetected | All three perspectives, every time |
 | Business presents, others listen | It becomes a briefing; no collision, no discovery | Everyone asks; testing goes first on edge cases |
 | Answering red cards in the session | 25 minutes becomes 90; energy gone | Park with an owner and a date |

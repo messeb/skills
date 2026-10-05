@@ -24,7 +24,7 @@ Lowercase, ASCII, words joined by `-`, max 40 characters, from the ticket title 
 ## Anti-patterns
 
 | Anti-pattern | Why it fails | Instead |
-|--------------|--------------|---------|
+| -------------- | -------------- | --------- |
 | Claiming two tickets "to be efficient" | Second one blocks a human for hours | One per run, always |
 | Picking a blocked ticket because the blocker "looks done" | Merged is not released; the dependency rule exists for a reason | Only Ready for Release or Done counts |
 | Commenting on every skipped ticket | Notification noise | Comment only when adding `needs-human` |

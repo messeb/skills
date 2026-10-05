@@ -13,7 +13,7 @@ Use this skill for classification, regression, ranking, forecasting, anomaly det
 ## 1. ML or LLM?
 
 | Signal | Choose |
-|--------|--------|
+| -------- | -------- |
 | Thousands of labelled examples exist | **ML** — cheaper, faster, more accurate on a narrow task |
 | Millions of predictions per day | **ML** — per-call LLM cost dominates |
 | Latency budget under ~50 ms | **ML** |
@@ -32,7 +32,7 @@ The last row is often the best answer: a language model labels ten thousand exam
 Every training run must be re-creatable from what is committed.
 
 | Element | Practice |
-|---------|----------|
+| --------- | ---------- |
 | Code | Git commit recorded in the run metadata |
 | Dependencies | `uv.lock` — the exact resolved environment |
 | Data | Versioned snapshot or a query pinned by timestamp and a content hash; never "the current table" |
@@ -106,7 +106,7 @@ Promote through explicit stages (`staging → production`), keep the artifact im
 ## 5. Serialization
 
 | Format | Use | Caution |
-|--------|-----|---------|
+| -------- | ----- | --------- |
 | `joblib` / pickle | scikit-learn | **Executes arbitrary code on load** — never load an untrusted artifact; version-lock scikit-learn, since unpickling across versions is unsupported |
 | ONNX | Cross-runtime, fast CPU inference | Not every estimator converts; validate numerically after conversion |
 | `torch.save(state_dict)` | PyTorch | Save the state dict plus the class definition, not the whole module object |
@@ -120,7 +120,7 @@ Always store the artifact with a metadata sidecar: training data version, featur
 ## 6. Serving
 
 | Approach | Fits |
-|----------|------|
+| ---------- | ------ |
 | In-process in FastAPI | Small models (trees, linear, small encoders), low latency, simple ops |
 | Dedicated worker | CPU-heavy inference that would block the API |
 | Model server (TorchServe, Triton, BentoML) | GPU models, batching, multi-model, independent scaling |
@@ -151,7 +151,7 @@ Return the model version in the response and log it with every prediction.
 ## 7. Monitoring and retraining
 
 | Monitor | Signal |
-|---------|--------|
+| --------- | -------- |
 | Input drift (PSI, KS test per feature) | The world changed; features moved |
 | Prediction drift | Output distribution shifted |
 | Performance on delayed labels | The real metric, once outcomes arrive |
@@ -166,7 +166,7 @@ Retrain on a trigger, not only on a calendar: performance below a threshold, dri
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Random split on temporal data | Future leaks into training; production accuracy collapses |
 | Scaling or encoding before the split | Optimistic, unreproducible scores |
 | Separate feature code for training and serving | Train/serve skew; silent accuracy loss |

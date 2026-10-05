@@ -15,7 +15,7 @@ For LCP timing rules see `core-web-vitals`. For image-specific `fetchpriority` s
 ## 1. The hint catalog
 
 | Hint | Saves | Costs | Use for |
-|------|-------|-------|---------|
+| ------ | ------- | ------- | --------- |
 | `dns-prefetch` | DNS lookup (~20–120 ms) | DNS query | Older fallback for third-party origins |
 | `preconnect` | DNS + TCP + TLS (~100–500 ms) | One open connection | Critical third-party origins discovered late |
 | `preload` | Late-discovery fetch latency | Bytes — fetched eagerly | Late-discovered LCP image, critical font, hero CSS |

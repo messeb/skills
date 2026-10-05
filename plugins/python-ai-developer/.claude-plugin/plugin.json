@@ -1,6 +1,8 @@
 {
   "name": "python-ai-developer",
-  "description": "Adds skills for Python AI application development — uv, FastAPI, multi-provider LLM clients, OCR, ML, operations research, containerization, IDE setup, and notebooks.",
-  "version": "1.0.0",
-  "agents": ["./agents/python-ai-developer.md"]
+  "description": "Adds skills for Python AI application development \u2014 uv, FastAPI, multi-provider LLM clients, OCR, ML, operations research, containerization, IDE setup, and notebooks.",
+  "version": "1.0.1",
+  "agents": [
+    "./agents/python-ai-developer.md"
+  ]
 }

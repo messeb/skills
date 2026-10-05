@@ -87,7 +87,7 @@ export class DatabaseUserRepository implements UserRepository {
 ## Where Each Repository Is Used
 
 | Context | Repository | Created By |
-|---------|-----------|-----------|
+| --------- | ----------- | ----------- |
 | Browser composable | `HttpUserRepository` | `useRegistrationForm()` |
 | Nitro server route | `DatabaseUserRepository` | `server/api/users.post.ts` |
 

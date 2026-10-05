@@ -29,7 +29,7 @@ Verification (test, review, analysis, demonstration) → Evidence (run, report)
 ```
 
 | Direction | Question | Detects |
-|-----------|----------|---------|
+| ----------- | ---------- | --------- |
 | **Forward** (need → test) | Is everything we promised built and verified? | Gaps: unimplemented or untested requirements |
 | **Backward** (test → need) | Why does this exist? | Orphans: gold-plating, dead requirements, obsolete tests |
 | **Bidirectional** | Both | Required by most standards, including ISO/IEC/IEEE 29148 and safety regimes |
@@ -41,7 +41,7 @@ Useful additional link types: **depends-on** (requirement to requirement), **con
 ## 2. Identifier discipline — the precondition for all of it
 
 | Rule | Why |
-|------|-----|
+| ------ | ----- |
 | Stable, unique, meaningless-but-typed ids (`REQ-014`, `QA-3`, `UC-12`, `STORY-201`) | Renaming or renumbering destroys history |
 | Never reuse an id, even for a deleted item | An id in an old test report must still resolve |
 | Mark deleted items as deleted, with the date and the reason | Deletion is a fact, not an absence |
@@ -67,7 +67,7 @@ Without identifier discipline, a traceability matrix is a snapshot that is wrong
 ## 4. The traceability checks
 
 | Check | Finds | Action |
-|-------|-------|--------|
+| ------- | ------- | -------- |
 | **Orphan requirements** | Requirements with no source goal or stakeholder need | Justify or delete |
 | **Unimplemented requirements** | Requirement with no design or code link | Schedule or descope |
 | **Unverified requirements** | Requirement with no test or verification method | Add verification — mandatory in regulated work |
@@ -195,7 +195,7 @@ flowchart LR
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Building the matrix at the end for an audit | Fiction assembled under time pressure | Populate links as artifacts are created |
 | Reusing requirement ids | History and old reports become unresolvable | Never reuse; mark deleted |
 | Tracing paragraphs instead of requirements | Links break on every edit | One id per requirement |

@@ -17,7 +17,7 @@ Use this skill at the start of a growth programme, when planning a year or a qua
 What actually creates defensibility:
 
 | Advantage | Why it holds |
-|-----------|--------------|
+| ----------- | -------------- |
 | **Compounding loops** | Each cohort makes acquisition cheaper for the next (`growth-loops`) |
 | **Network effects** | Value rises with participants; leaving costs the user something |
 | **Switching costs** | Data, integrations, workflow, and habit |
@@ -73,7 +73,7 @@ Brand and growth are not opposites. Brand is the mechanism by which acquisition 
 The goal is not imitation. It is **finding where demand already exists and what it currently costs to reach it**, so you know which channels are proven, which are saturated, and where a gap sits.
 
 | Question | How to answer it |
-|----------|------------------|
+| ---------- | ------------------ |
 | Which channels do they actually rely on? | Traffic-mix estimates from a market intelligence tool; check whether paid, organic, or referral dominates |
 | What are they spending on ads, and where? | Ad transparency libraries (Meta, TikTok, LinkedIn, Google) show live creatives; paid-keyword tools estimate spend |
 | Which creatives and offers do they keep running? | Ads running unchanged for months are ads that work — longevity is the signal, not cleverness |
@@ -97,7 +97,7 @@ Note the limit of tool-based estimates: third-party traffic and spend figures ar
 ## 5. Choosing where to compete
 
 | Situation | Strategic move |
-|-----------|----------------|
+| ----------- | ---------------- |
 | Large incumbent, saturated head terms | Win a specific segment or use case completely before broadening |
 | Demand exists, no one owns the category language | Content and category positioning; own the search demand |
 | Channel is expensive for everyone | Find a channel with a structural advantage for your product, or build a loop that lowers CAC |
@@ -111,7 +111,7 @@ The last row is the one teams skip. If retention and word of mouth are both weak
 ## 6. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Experiments with no strategic thesis | Motion without cumulative learning |
 | Racing to be first without a defensibility plan | Educating a market for a competitor |
 | Strategy that excludes nothing | Resources spread across everything, nothing wins |

@@ -29,7 +29,7 @@ server/api/            ← Nitro routes: parse body → wire DI → execute → 
 ## Section Guide
 
 | Section | File | Consult When |
-|---------|------|-------------|
+| --------- | ------ | ------------- |
 | **Value Objects** | [patterns/value-objects.md](patterns/value-objects.md) | Creating/modifying types that wrap a primitive with validation (email, username, amount, slug, etc.) |
 | **Entities & Aggregates** | [patterns/entities-aggregates.md](patterns/entities-aggregates.md) | Designing objects with identity, grouping related value objects, managing aggregate invariants, or loading/mutating/saving over time |
 | **Domain Events** | [patterns/domain-events.md](patterns/domain-events.md) | Raising events after state changes, wiring event handlers, or implementing audit trails |

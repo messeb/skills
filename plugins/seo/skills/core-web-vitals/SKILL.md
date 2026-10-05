@@ -19,7 +19,7 @@ For deeper engineering fixes (bundle splitting, virtualized lists, hydration arc
 ## 1. The three Core Web Vitals
 
 | Metric | Measures | Good (75th %ile) | Needs improvement | Poor |
-|--------|----------|------------------|-------------------|------|
+| -------- | ---------- | ------------------ | ------------------- | ------ |
 | **LCP** — Largest Contentful Paint | Time to render the largest visible element | ≤ 2.5 s | 2.5 – 4.0 s | > 4.0 s |
 | **INP** — Interaction to Next Paint | Page's responsiveness to user input across the visit | ≤ 200 ms | 200 – 500 ms | > 500 ms |
 | **CLS** — Cumulative Layout Shift | Sum of unexpected layout shifts during the visit | ≤ 0.1 | 0.1 – 0.25 | > 0.25 |
@@ -40,7 +40,7 @@ Google's CWV ranking signal evaluates mobile separately from desktop. **Optimize
 Run Lighthouse against production builds, not dev. Three runs, take the median.
 
 | Category | Minimum | Target |
-|----------|---------|--------|
+| ---------- | --------- | -------- |
 | Performance | 90 | 95+ |
 | Accessibility | 95 | 100 |
 | Best Practices | 95 | 100 |
@@ -57,7 +57,7 @@ Budgets are project guardrails, not Google rules. They keep field metrics from c
 ### Page-weight budgets (per page, gzipped/brotli)
 
 | Asset | Content site | App / commerce |
-|-------|--------------|-----------------|
+| ------- | -------------- | ----------------- |
 | Initial JS | ≤ 120 KB | ≤ 200 KB |
 | Initial CSS | ≤ 80 KB | ≤ 120 KB |
 | HTML document | ≤ 70 KB | ≤ 100 KB |
@@ -68,7 +68,7 @@ Budgets are project guardrails, not Google rules. They keep field metrics from c
 ### Lab metric budgets
 
 | Metric | Budget |
-|--------|--------|
+| -------- | -------- |
 | LCP (mobile, 4G) | ≤ 2.5 s |
 | TBT (Total Blocking Time) | ≤ 150 ms |
 | CLS | ≤ 0.1 |
@@ -79,7 +79,7 @@ Budgets are project guardrails, not Google rules. They keep field metrics from c
 Different page types have different reasonable weights. Document budgets per route:
 
 | Route | JS | CSS | Image (above fold) |
-|-------|----|----|-------------------|
+| ------- | ---- | ---- | ------------------- |
 | Home | 120 KB | 80 KB | 300 KB |
 | Article / blog post | 100 KB | 60 KB | 250 KB |
 | Category / archive | 120 KB | 80 KB | 200 KB |

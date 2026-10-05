@@ -23,7 +23,7 @@ Practical separation: **draft badly on purpose** and fix it later; put time betw
 Fixing commas before fixing structure wastes the comma work, because the sentence will be deleted. Work top-down.
 
 | # | Pass | Question | Typical fix |
-|---|------|----------|-------------|
+| --- | ------ | ---------- | ------------- |
 | 1 | **Purpose** | What must the reader be able to do after reading? Does the text do that? | Cut whole sections; sometimes rewrite from scratch |
 | 2 | **Audience** | Right level, right assumptions, right vocabulary? | Change level, add or remove background (`plain-language`) |
 | 3 | **Structure** | Is the answer first? Do the headings form a summary? | Reorder, re-head, split, merge (`text-structure`) |
@@ -44,7 +44,7 @@ For a short text, passes 1–3 can take two minutes. Skipping them is what costs
 ## 3. Self-editing techniques that actually work
 
 | Technique | Catches |
-|-----------|---------|
+| ----------- | --------- |
 | **Read it aloud** | Long sentences, missing rhythm, unnatural phrasing, verb brackets in German — the single most effective technique available |
 | **Read headings only** | Broken structure |
 | **Read first sentences only** | Whether paragraphs are front-loaded |
@@ -95,7 +95,7 @@ Terminology deserves a real list rather than a habit. One term per concept, one 
 Useful as a net beneath the human passes, never as a replacement:
 
 | Check | Tooling |
-|-------|---------|
+| ------- | --------- |
 | Spelling and grammar | Language tooling with a project dictionary |
 | Style rules — passive, nominalisations, filler, long sentences | A prose linter with a configured rule set |
 | Readability score per file | A script computing the agreed index, excluding code and tables |
@@ -114,7 +114,7 @@ Report the **worst paragraph**, not the file average — that is the actionable 
 Different reviewers catch different defects; asking one person for "feedback" gets you whatever they happen to notice.
 
 | Reviewer | Reviews for |
-|----------|-------------|
+| ---------- | ------------- |
 | **Subject expert** | Factual correctness, completeness, dangerous omissions |
 | **Editor** | Structure, clarity, consistency, style guide compliance |
 | **Target reader** | Comprehensibility and findability — the only one who can judge this |
@@ -144,7 +144,7 @@ If the text will be localised, decisions made now determine cost and quality lat
 ## 9. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Editing while drafting | Slow, blocked, no draft |
 | Proofreading before restructuring | Careful work on text that gets deleted |
 | Editing only on screen, in the same layout | The eye skips what it has memorised |

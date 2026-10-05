@@ -13,7 +13,7 @@ Use this skill when starting a Python AI project, when adding or upgrading depen
 ## 1. Why uv for AI projects specifically
 
 | Problem | What uv does |
-|---------|--------------|
+| --------- | -------------- |
 | Resolving `torch`, `transformers`, CUDA wheels takes minutes | Resolution and install are typically 10–100× faster than pip |
 | The dev box has Python 3.12, the image has 3.11 | `uv python install` manages interpreters; `.python-version` pins one |
 | `pip freeze` output differs per platform | `uv.lock` is cross-platform and resolves for all declared targets |
@@ -81,7 +81,7 @@ Pin `requires-python` to a narrow range. `>=3.10` forces the resolver to find de
 ## 3. Everyday commands
 
 | Task | Command |
-|------|---------|
+| ------ | --------- |
 | Install exactly what the lockfile says | `uv sync --frozen` |
 | Install including a group | `uv sync --group notebook` |
 | Install only production deps | `uv sync --no-dev --frozen` |
@@ -106,7 +106,7 @@ Pin `requires-python` to a narrow range. `>=3.10` forces the resolver to find de
 `uv.lock` is committed. It is cross-platform: one lockfile resolves for every platform in `environments`, so Linux CI and a macOS laptop install the same versions.
 
 | Rule | Why |
-|------|-----|
+| ------ | ----- |
 | Commit `uv.lock`; never commit `.venv/` | Reproducibility without binaries in git |
 | CI and Docker use `--frozen` | Fails loudly if the lock is stale instead of silently re-resolving |
 | Re-lock deliberately, in its own commit | A dependency bump is a reviewable change, not a side effect |
@@ -194,7 +194,7 @@ The two-stage sync (`--no-install-project`, then the project) is what keeps the 
 
 ```yaml
 # GitHub Actions
-- uses: astral-sh/setup-uv@v5
+- uses: astral-sh/setup-uv@v10
   with:
     enable-cache: true
 - run: uv sync --frozen
@@ -209,7 +209,7 @@ The two-stage sync (`--no-install-project`, then the project) is what keeps the 
 ## 8. Migration
 
 | From | Path |
-|------|------|
+| ------ | ------ |
 | `requirements.txt` | `uv init`, then `uv add -r requirements.txt`, then delete it (or keep it generated via `uv export`) |
 | Poetry | `uvx migrate-to-uv` converts `[tool.poetry]` to PEP 621 `[project]`; verify `requires-python`, groups, and sources afterwards |
 | Pipenv | `uv add -r <(pipenv requirements)` |
@@ -223,7 +223,7 @@ After any migration: delete the old lockfile, run `uv sync --frozen` in a clean 
 ## 9. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | `pip install` into a uv-managed `.venv` | The lockfile no longer describes the environment |
 | `.venv/` committed | Huge repo, broken on other platforms |
 | `uv.lock` not committed | No reproducibility; the point of the tool is lost |

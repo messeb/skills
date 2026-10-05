@@ -17,7 +17,7 @@ Do **not** build one enterprise-wide glossary that tries to give every term a si
 The language is only ubiquitous if it appears everywhere:
 
 | Place | Test |
-|-------|------|
+| ------- | ------ |
 | Conversation | The domain expert and the developer use the same word for the same thing |
 | Requirements and stories | No term appears that is not in the glossary |
 | Class, function, and table names | The code reads like the domain, not like a translation of it |
@@ -32,7 +32,7 @@ A glossary that documents a vocabulary nobody uses in code is a dictionary of a 
 ## 2. What belongs in the glossary
 
 | Include | Exclude |
-|---------|---------|
+| --------- | --------- |
 | Domain nouns that carry rules (`Booking`, `Fare`, `Claim`) | General English (`user`, `list`, `report`) unless it has a special meaning here |
 | Domain verbs and events (`confirm`, `settle`, `Booking Cancelled`) | Technology terms (`cache`, `queue`) unless they are domain concepts |
 | Statuses and lifecycle states | Internal implementation names |
@@ -64,7 +64,7 @@ The rejected-synonyms column is what stops the same argument from recurring ever
 **Harvest from:**
 
 | Source | Method |
-|--------|--------|
+| -------- | -------- |
 | Workshops | `event-storming` naming disputes, `domain-storytelling` verbs and work objects |
 | Interviews | Terms the expert uses that the team does not, and vice versa |
 | Documents and regulation | `document-system-analysis` — legal terms are non-negotiable definitions |
@@ -74,7 +74,7 @@ The rejected-synonyms column is what stops the same argument from recurring ever
 **Enforce by:**
 
 | Practice | Effect |
-|----------|--------|
+| ---------- | -------- |
 | Renaming in code when the language changes | The glossary and the code stay one artifact |
 | Reviewing new terms in refinement | Prevents synonym drift at the source |
 | Linting or spell-check dictionaries built from the glossary | Cheap automated nudge in docs and PRs |
@@ -154,7 +154,7 @@ Write to `docs/discovery/glossary-<context>.md`.
 ## 6. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | One enterprise glossary for everything | Endless negotiation; nobody's meaning fits | One per bounded context + translation table |
 | Glossary written by one analyst alone | It reflects one person's model | Harvest from workshops with domain experts |
 | Terms defined but not used in code | Two vocabularies to maintain, drift guaranteed | Rename in code when the language changes |

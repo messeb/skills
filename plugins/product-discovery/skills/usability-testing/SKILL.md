@@ -15,7 +15,7 @@ Do **not** use it to decide *what* to build (`jobs-to-be-done`, `contextual-inqu
 ## 1. Choosing the study type
 
 | Type | Answers | Participants | Cost | Caveat |
-|------|---------|--------------|------|--------|
+| ------ | --------- | -------------- | ------ | -------- |
 | **Moderated, in person or remote** | *Why* does it break? | 5–8 per role | medium | Moderator skill decides the data quality |
 | **Unmoderated remote** | *How many* people struggle, on which step | 20–50 | low per participant | No follow-up questions; task wording must be perfect |
 | **Guerrilla** | Quick read on obvious confusion | 5–8 | very low | Wrong population; use only for coarse checks |
@@ -44,7 +44,7 @@ If the artifact is a stakeholder demo rather than something a user can attempt, 
 ## 3. Task design — where most studies are won or lost
 
 | Rule | Bad | Good |
-|------|-----|------|
+| ------ | ----- | ------ |
 | Give a goal and a context, not instructions | "Click Cancel, then confirm" | "You can't travel on Friday any more. Sort it out." |
 | Never use interface words from the design | "Use the Manage Booking section" | "Find your trip and change it" |
 | Make it realistic and consequential | "Imagine you might book something" | "You need to be in Munich by 09:00 Tuesday; book it" |
@@ -70,7 +70,7 @@ Give participants their own data where possible (their real trip, their real cla
 **Moderator discipline** — the difference between data and noise:
 
 | Do | Do not |
-|----|--------|
+| ---- | -------- |
 | Wait. Silence is the most productive tool you have | Rescue at the first hesitation |
 | Bounce questions back: "what would you expect to happen?" | Answer "where is X?" |
 | Ask about what you saw: "you paused there — what were you thinking?" | Ask "would you use this?" |
@@ -87,7 +87,7 @@ Give participants their own data where possible (their real trip, their real cla
 3. **Rate severity** on frequency × impact × persistence:
 
    | Severity | Definition | Response |
-   |----------|------------|----------|
+   | ---------- | ------------ | ---------- |
    | **Critical** | Task cannot be completed, data is lost, or the user is misled about a consequence | Fix before release |
    | **Serious** | Significant delay or frustration; a workaround exists | Fix in this release |
    | **Minor** | Noticeable friction, task still completed | Backlog |
@@ -187,7 +187,7 @@ Task success (unaided / assisted / failed) · time on task · errors · SEQ per 
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Testing with colleagues | They know the domain and the design; nothing breaks | Recruit real users from the target group |
 | Instructional tasks naming the UI | You test reading comprehension, not the design | Goal-based tasks in the user's words |
 | Moderator rescuing on the first hesitation | The finding disappears | Wait; let them fail; note the assist |

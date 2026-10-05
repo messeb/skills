@@ -30,7 +30,7 @@ The rule that makes it work: **the contract is the source of truth, not the impl
 ## 2. Choosing the shape
 
 | Interaction | Use | Notes |
-|-------------|-----|-------|
+| ------------- | ----- | ------- |
 | Request/response, client needs an answer now | **OpenAPI** (REST/HTTP) | Default for queries and commands with a result |
 | Fire-and-forget notification of something that happened | **AsyncAPI** (events) | Past-tense event names; the publisher owns the schema |
 | Streaming or high-volume ingest | AsyncAPI (Kafka, MQTT, WebSocket bindings) | Specify partitioning and ordering guarantees |
@@ -72,7 +72,7 @@ The rule that makes it work: **the contract is the source of truth, not the impl
 Use a single, consistent error model — RFC 9457 `application/problem+json`:
 
 | Field | Content |
-|-------|---------|
+| ------- | --------- |
 | `type` | Stable URI identifying the error class |
 | `title` | Short human-readable summary |
 | `status` | HTTP status |
@@ -91,7 +91,7 @@ Declare the security schemes in the contract (OAuth2 scopes, mTLS, API keys), st
 ## 4. Versioning and compatibility
 
 | Change | Compatible? | Handling |
-|--------|-------------|----------|
+| -------- | ------------- | ---------- |
 | Add an optional field | yes | Ship it; consumers ignore unknown fields |
 | Add a new endpoint or event type | yes | Ship it |
 | Add a value to an open enumeration | consumer-dependent | Document the consumer contract for unknown values |
@@ -108,7 +108,7 @@ Rules: semantic versioning on the contract; a documented deprecation window with
 ## 5. Verification
 
 | Mechanism | Catches |
-|-----------|---------|
+| ----------- | --------- |
 | **Contract linting** in CI (Spectral or equivalent) | Style, naming, missing descriptions, missing error responses |
 | **Breaking-change detection** against the previous version in CI | Accidental incompatibility before merge |
 | **Provider contract tests** | Implementation drifting from the contract |
@@ -215,7 +215,7 @@ RFC 9457 `application/problem+json`. Error types under `https://api.example.com/
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Contract generated from the implementation | Accidents become the specification | Contract first, code generated from it |
 | Internal model exposed verbatim | Consumers couple to your internals; you cannot refactor | Publish a deliberate published language |
 | Events named as commands (`UpdateCustomer`) | Consumers become remote controllers of your state | Past-tense facts |

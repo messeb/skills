@@ -11,7 +11,7 @@ Read the `skills/` directory of the `go-developer` plugin. For each skill, read 
 Currently registered skills:
 
 | Skill | Area |
-|-------|------|
+| ------- | ------ |
 | `idiomatic-go` | Language — error handling, naming, interfaces, zero values |
 | `project-layout` | Structure — directory layout, `internal/`, `cmd/`, config loading |
 | `cli` | Application — Cobra, Viper, flags, subcommands, graceful shutdown |

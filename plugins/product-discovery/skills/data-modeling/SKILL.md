@@ -15,7 +15,7 @@ Do **not** use it to discover the domain (`event-storming`), to model behaviour 
 ## 1. The three levels — do not mix them
 
 | Level | Audience | Contains | Excludes |
-|-------|----------|----------|----------|
+| ------- | ---------- | ---------- | ---------- |
 | **Conceptual** | Business and domain experts | Entities, relationships, business identifiers, cardinality | Types, keys, nullability, tables |
 | **Logical** | Analysts, developers | Attributes, primary and foreign keys, normalisation, constraints | Vendor types, indexes, partitioning |
 | **Physical** | Developers, DBAs | Tables, columns, types, indexes, partitions, storage | — |
@@ -69,7 +69,7 @@ Normalise to 3NF as the default: no repeating groups, no partial dependencies on
 ### Time
 
 | Need | Pattern |
-|------|---------|
+| ------ | --------- |
 | Current value only | Plain attribute |
 | Past values reconstructable | Validity interval (`validFrom`, `validTo`) — SCD type 2 |
 | When we *knew* it, not only when it *held* | Bitemporal: valid time + transaction time |
@@ -211,7 +211,7 @@ erDiagram
 ## 5. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | One enterprise-wide data model | Endless negotiation; a model nobody's domain matches | One model per bounded context, translated at boundaries |
 | Data model drawn before the language is agreed | Wrong nouns baked into the schema | Run `event-storming` / `domain-storytelling` first |
 | Mixing conceptual, logical and physical | Business readers drown; developers get no detail | Label the level and stick to it |

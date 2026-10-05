@@ -15,7 +15,7 @@ Use this skill when growth is linear and entirely bought, when planning where to
 A funnel is a one-way pipeline: attention in at the top, customers out at the bottom, and everything must be refilled from outside. A loop is closed: the output feeds the input.
 
 | | Funnel | Loop |
-|---|---|---|
+| --- | --- | --- |
 | Shape | Linear, terminates | Circular, re-enters |
 | Growth | Proportional to spend | Compounds while the loop holds |
 | Cost per customer | Flat or rising | Falls as the loop strengthens |
@@ -47,7 +47,7 @@ The loop is only real if you can name each arrow and measure it. "Users love it 
 ## 3. The four common types
 
 | Type | Mechanism | Works when | Cycle time |
-|------|-----------|------------|------------|
+| ------ | ----------- | ------------ | ------------ |
 | **Viral / referral** | Users invite or share, invitees become users | Product has multiplayer value or a natural sharing moment | Hours to days |
 | **Content** | User or product activity creates indexable pages; search brings new users | Content is genuinely useful and unique at scale | Weeks to months |
 | **Paid** | Revenue from customers funds acquisition of more customers | Payback period is shorter than the cash cycle | Bounded by payback period |
@@ -87,7 +87,7 @@ Never let a `k` below 1 be reported as "viral". Sub-1 loops are valuable — the
 Instrument every arrow, then find the weakest one:
 
 | Step | Metric | Typical failure |
-|------|--------|-----------------|
+| ------ | -------- | ----------------- |
 | New users arrive | Cohort size by source | — |
 | Reach the action | % of new users who perform the loop action | Onboarding never surfaces it (`activation`) |
 | Action produces the asset | Assets created per acting user | Sharing is possible but effortful |
@@ -140,7 +140,7 @@ In these cases the compounding comes from brand and from unit economics, not fro
 ## 9. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Calling a funnel a loop | No compounding, but the plan assumes it |
 | Reporting `k < 1` as "viral" | Forecasts that never materialise |
 | Ignoring cycle time | A "strong" loop that turns twice a year |

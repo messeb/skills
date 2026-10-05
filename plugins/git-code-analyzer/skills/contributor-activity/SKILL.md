@@ -13,7 +13,7 @@ Measure commits and line changes (added / deleted / net) per contributor, bucket
 Ask nothing if the user already gave these; otherwise use the defaults:
 
 | Parameter | Default | Notes |
-|---|---|---|
+| --- | --- | --- |
 | `PERIOD` | `month` | One of: `sprint` (requires `SPRINT_WEEKS` and `SPRINT_START`), `month`, `quarter`, `year` |
 | `SPRINT_WEEKS` | `2` | Only for `sprint` |
 | `SPRINT_START` | first commit date | ISO date `YYYY-MM-DD`, only for `sprint` |

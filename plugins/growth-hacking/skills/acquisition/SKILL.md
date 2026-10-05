@@ -32,7 +32,7 @@ Step 6 matters as much as the rest: the time to test the next channel is **while
 ## 2. The channel test protocol
 
 | Stage | Budget / effort | Question | Decision |
-|-------|-----------------|----------|----------|
+| ------- | ----------------- | ---------- | ---------- |
 | **Probe** | Smallest amount that produces signal — often €200–1,000 or 2 days of effort | Is there any signal at all? | Kill or continue |
 | **Iterate** | 3–5× the probe | Can the big levers (offer, audience, landing page) make it work? | Kill or validate |
 | **Validate** | Enough volume for reliable CPA and early retention | Does it pay back within our window? | Kill or scale |
@@ -50,7 +50,7 @@ Rules that make this honest:
 ## 3. Metrics
 
 | Metric | Definition | Watch for |
-|--------|-----------|-----------|
+| -------- | ----------- | ----------- |
 | **CPC / CPM** | Cost per click / per thousand impressions | Useful for diagnosis, never a goal |
 | **CTR** | Click-through rate | Creative and relevance signal |
 | **CPA / CAC** | Cost per acquisition — fully loaded | Must include people, tools, agency, and creative production |
@@ -71,7 +71,7 @@ Channel benchmarks are worth exactly one thing: detecting order-of-magnitude pro
 Attribution is a model, not a measurement, and every model is wrong in a known way:
 
 | Model | Bias |
-|-------|------|
+| ------- | ------ |
 | Last click | Over-credits closing channels (branded search, retargeting), invisible to demand creation |
 | First click | Over-credits discovery, ignores what closed |
 | Linear / time decay | Spreads credit arbitrarily |
@@ -98,7 +98,7 @@ Owned channels (email list, community, direct traffic, brand search) are the onl
 ## 6. Sequencing by stage
 
 | Stage | Focus |
-|-------|-------|
+| ------- | ------- |
 | Pre-fit | Do not scale anything. Use manual, unscalable acquisition to reach users to learn from |
 | Early fit | Probe 3–4 channels cheaply; find one that works |
 | Scaling | Concentrate on the winner; build owned channels in parallel; probe the next candidate |
@@ -111,7 +111,7 @@ The pre-fit row is regularly ignored. Manual outreach and hand-recruited users d
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Scaling acquisition before retention flattens | Money spent filling a leaking bucket |
 | Optimising for the lowest CPA | Systematically buying users who never stay |
 | Killing a channel after one creative and one audience | Discarding a channel that needed a better offer |

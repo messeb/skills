@@ -9,7 +9,7 @@ Agents grade their own work generously, and an evaluator that is a separate agen
 ## Where it applies
 
 | Evaluator | Judges | Fresh context |
-|-----------|--------|---------------|
+| ----------- | -------- | --------------- |
 | Reviewer agent | the PR (`agentic-coding:review-pr`) | yes, separate run |
 | Verifier subagent | the running app at the end of a coder run | yes, spawned with only the ticket, `plan.md` and the run command |
 | Contract reviewer subagent | the coder's proposed `plan.md` before code | yes |
@@ -31,7 +31,7 @@ Reading a diff finds bugs in logic; it does not find features that are display-o
 Grade each criterion below independently, 1 to 5, and treat every threshold as a gate: one criterion under its threshold fails the work regardless of the others.
 
 | Criterion | Question | Threshold |
-|-----------|----------|-----------|
+| ----------- | ---------- | ----------- |
 | Completeness | Is every acceptance criterion and contract item implemented with interactive depth, not stubbed or display-only? | 4 |
 | Correctness | Do the exercised flows behave as specified, including edge cases? | 4 |
 | Code quality | Does the change follow the repo's conventions and the selected skills, with tests that can fail? | 3 |
@@ -64,7 +64,7 @@ Evaluator prompts drift from the tech lead's judgment. Monthly, or after an inci
 ## Anti-patterns
 
 | Anti-pattern | Why it fails | Instead |
-|--------------|--------------|---------|
+| -------------- | -------------- | --------- |
 | Evaluator shares context with the generator | Inherits its assumptions | Fresh context, artifacts only |
 | Screenshot instead of interaction | Misses everything behind the first click | Drive the app |
 | Averaging scores | One broken core feature hides behind polish | Per-criterion thresholds |

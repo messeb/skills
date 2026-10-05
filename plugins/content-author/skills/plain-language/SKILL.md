@@ -25,7 +25,7 @@ Plain language is not: shorter at any cost, childish, imprecise, or free of tech
 German makes a distinction English often blurs, and the levels are genuinely different products:
 
 | Level | Audience | Character |
-|-------|----------|-----------|
+| ------- | ---------- | ----------- |
 | **Fachsprache** | Specialists | Precise, dense, assumes shared vocabulary |
 | **Standardsprache** | General adult readers | Ordinary careful writing |
 | **Einfache Sprache** | Readers with limited reading practice, non-native speakers, anyone under time pressure | Simplified but still normal-looking German; roughly CEFR B1–A2 |
@@ -38,7 +38,7 @@ The gap between the last two is the one that gets confused. **Einfache Sprache**
 ## 3. Einfache Sprache — the working rules
 
 | Rule | Detail |
-|------|--------|
+| ------ | -------- |
 | Sentence length | One main idea per sentence; aim for roughly 15 words or fewer |
 | Sentence structure | Main clauses; avoid nested subordinate clauses (`german-writing`) |
 | Voice | Active; name who does what |
@@ -60,7 +60,7 @@ Target roughly a German Flesch (Amstad) of 60–70 or a WSTF grade around 6–9 
 Stricter, and visibly different. The established conventions include:
 
 | Rule | Detail |
-|------|--------|
+| ------ | -------- |
 | One sentence per line | Line breaks follow sense units, not the page width |
 | Very short sentences | One statement per sentence |
 | No subordinate clauses | Split into separate sentences instead |
@@ -103,7 +103,7 @@ Regulatory context: public-sector plain-language requirements exist in several j
 Plain language sits inside a broader legal accessibility picture, particularly in the EU and Germany:
 
 | Instrument | Relevance |
-|-----------|-----------|
+| ----------- | ----------- |
 | **European Accessibility Act**, in Germany the **BFSG** (in force since June 2025) | Extends accessibility duties to many private-sector products and services, including e-commerce and consumer-facing digital services |
 | **BITV 2.0** | German federal public-sector web accessibility; requires information about the site in **Leichte Sprache** and German Sign Language |
 | **WCAG 2.2** | The technical baseline; readability sits under the *Understandable* principle |
@@ -133,7 +133,7 @@ Record this in the style guide so that "make it simpler" becomes a specification
 ## 8. What plain language does not mean
 
 | Misconception | Reality |
-|---------------|---------|
+| --------------- | --------- |
 | "No technical terms" | Keep the correct term; introduce it once in plain words |
 | "Short sentences everywhere" | Uniformly short sentences read as staccato; vary length around a shorter average |
 | "Dumbing down" | Experts read plain language faster too; nobody prefers difficulty |
@@ -148,7 +148,7 @@ The precision point deserves emphasis: an impenetrable clause is frequently impe
 ## 9. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | "Leichte Sprache" label on text never validated by the target group | Misleading claim; the readers it names still cannot use it |
 | Einfache and Leichte Sprache treated as the same thing | Wrong rule set applied; effort wasted |
 | Removing the technical term instead of explaining it | Ambiguity, and readers cannot connect the text to the form they are filling in |

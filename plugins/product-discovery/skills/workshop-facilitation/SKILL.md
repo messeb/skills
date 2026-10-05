@@ -17,7 +17,7 @@ Do **not** use it as a substitute for individual depth (`stakeholder-interviews`
 Joint Application Design puts business and IT in one room with a neutral facilitator and a documented outcome. The role split is what makes it work.
 
 | Role | Responsibility | Rule |
-|------|----------------|------|
+| ------ | ---------------- | ------ |
 | **Facilitator** | Runs the process, owns the agenda, stays neutral on content | Never argues for an outcome; never also the product owner |
 | **Sponsor / executive** | Opens the session, states the mandate and the constraints, leaves the room | Presence for the whole session suppresses honesty |
 | **Business participants** | Own the requirements and the decisions | Must have authority to decide, not just to report back |
@@ -59,7 +59,7 @@ If the answer to (1) is a topic rather than an outcome, stop and reframe it befo
 Every effective workshop alternates between opening up and narrowing down. Never mix the two in one step, and always say which mode you are in.
 
 | Phase | Purpose | Techniques |
-|-------|---------|------------|
+| ------- | --------- | ------------ |
 | **Check-in** (5–10 min) | Get every voice in the room once | One sentence per person: expectation for today |
 | **Frame** (10 min) | Purpose, outcome, agenda, decision protocol, working agreements | Facilitator; sponsor states the mandate and leaves |
 | **Diverge** (20–40 min) | Surface everything | Silent writing (1-2-4-All), brainwriting, "how might we", pre-mortem |
@@ -78,7 +78,7 @@ Every effective workshop alternates between opening up and narrowing down. Never
 Announce which one applies **before** the discussion starts.
 
 | Protocol | How | Best for | Watch out |
-|----------|-----|----------|-----------|
+| ---------- | ----- | ---------- | ----------- |
 | **Dot voting** | n dots per person, place on options, count | Narrowing many options fast | Herding — vote silently and simultaneously |
 | **Fist of five** | 0 fingers = block, 5 = enthusiastic; anything ≤2 must be voiced | Testing agreement level quickly | Ask the 1s and 2s first, always |
 | **Roman voting** | Thumb up / down / sideways | Binary go/no-go | Too coarse for nuanced options |
@@ -94,7 +94,7 @@ Announce which one applies **before** the discussion starts.
 ## 6. Handling conflict and dominance
 
 | Situation | Move |
-|-----------|------|
+| ----------- | ------ |
 | One person dominates | "Let's hear from someone who hasn't spoken yet." Switch to silent writing or 1-2-4-All. |
 | Hierarchy silences the room | Sponsor states the mandate then leaves; use anonymous input |
 | Two entrenched positions | Have each side state the *other* side's position until it is accepted as fair, then look for the shared criterion |
@@ -164,7 +164,7 @@ Send the outcome record within 24 hours, and put decisions before narrative.
 ## 9. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Workshop with a topic instead of an outcome | Long discussion, no decision | Write the deliverable sentence first |
 | Participants without decision authority | "I need to check with my boss" — six-week loop | Require delegated authority in writing |
 | Sponsor sits through the whole session | People say what they think the boss wants | Sponsor opens, states the mandate, leaves |

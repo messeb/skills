@@ -26,7 +26,7 @@ export class ValidationError extends DomainError {
 Error codes are string constants in `SCREAMING_SNAKE_CASE`. They identify the failure reason independently of the message text (which may be localised or change).
 
 | Code | Meaning |
-|------|---------|
+| ------ | --------- |
 | `VALIDATION_ERROR` | A value object or aggregate rejected an input value |
 | `POLICY_VIOLATION` | A business policy blocked the operation |
 | `HTTP_ERROR` | Infrastructure: network or server error from client repo |

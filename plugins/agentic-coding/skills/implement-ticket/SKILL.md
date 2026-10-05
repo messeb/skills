@@ -74,7 +74,7 @@ When all criteria are committed, spawn the verifier subagent (`agentic-coding:ev
 ## Anti-patterns
 
 | Anti-pattern | Why it fails | Instead |
-|--------------|--------------|---------|
+| -------------- | -------------- | --------- |
 | Code before the plan is agreed | Rework discovered in review instead of in a document | Contract first, one commit |
 | One big commit at the end | Reviewer cannot map commits to criteria | One commit per criterion |
 | Tests written after the code to match it | They cannot fail, so they prove nothing | Test first, watch it fail once |

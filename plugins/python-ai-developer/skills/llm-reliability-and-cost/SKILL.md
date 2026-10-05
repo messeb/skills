@@ -35,7 +35,7 @@ async def with_retry(fn, *, attempts: int = 3, base: float = 0.5, cap: float = 8
 ```
 
 | Rule | Reason |
-|------|--------|
+| ------ | -------- |
 | Jitter always | Synchronised retries from many workers create a thundering herd |
 | Honour `Retry-After` | The provider is telling you when it will work |
 | Never retry 400s, refusals, auth errors | The same request fails identically and still costs |
@@ -60,7 +60,7 @@ Providers limit both requests and tokens per minute, usually with headers report
 ## 3. Timeouts and latency
 
 | Control | Guidance |
-|---------|----------|
+| --------- | ---------- |
 | Connect timeout | A few seconds |
 | Per-attempt timeout | Set explicitly; SDK defaults are minutes |
 | Total deadline | Budgeted across retries, enforced with `anyio.fail_after` |
@@ -101,7 +101,7 @@ Non-urgent bulk work (backfills, nightly enrichment, evaluation runs) through a 
 ### Response caching
 
 | Layer | Use |
-|-------|-----|
+| ------- | ----- |
 | Exact-match cache on a hash of `(model, prompt, params)` | Repeated identical requests — cheap, safe, surprisingly effective |
 | Semantic cache on embedding similarity | Higher hit rate, but a wrong hit returns a wrong answer — set a conservative threshold and log hits for review |
 | Cache the *derived artifact*, not the generation | An OCR result or an extracted record is reusable long after the model call |
@@ -157,7 +157,7 @@ Reconcile your computed spend against the provider's invoice monthly. A persiste
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | SDK retries plus application retries | Attempts and cost multiply silently |
 | Retrying without jitter | Synchronised herd; the provider stays overloaded |
 | Retrying 400s and refusals | Money spent for the identical failure |

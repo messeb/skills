@@ -17,7 +17,7 @@ A north star is the single measure that best represents **value delivered to cus
 A good one is:
 
 | Property | Test |
-|----------|------|
+| ---------- | ------ |
 | Reflects customer value | If it goes up, are customers better off? |
 | Predicts revenue | Does it lead revenue rather than restate it? |
 | Actionable by teams | Can product, marketing, and support each move it? |
@@ -61,7 +61,7 @@ Keep it to two or three levels. A tree with sixty leaves is a reporting exercise
 A diagnostic frame, not a plan. Each stage answers one question:
 
 | Stage | Question | Typical metrics |
-|-------|----------|-----------------|
+| ------- | ---------- | ----------------- |
 | **Acquisition** | How do people find us? | Visitors by channel, CPC, CPA, signup rate |
 | **Activation** | Do they reach value quickly? | Rate reaching the activation event, time to value, onboarding completion |
 | **Retention** | Do they come back? | D1/D7/D30 or W1/W4 retention, churn, DAU/MAU, resurrection |
@@ -79,7 +79,7 @@ Aggregate metrics hide everything that matters. A flat total user count can conc
 A retention curve by signup cohort answers the only question that matters early: **does the curve flatten?**
 
 | Shape | Meaning |
-|-------|---------|
+| ------- | --------- |
 | Decays to zero | No product-market fit; do not scale acquisition |
 | Flattens above zero | A retained core exists — the height of the plateau is your business |
 | Flattens then rises ("smile") | Expansion within accounts; strong signal |
@@ -93,7 +93,7 @@ Choose the retention definition that matches the product's natural frequency: da
 ## 5. Unit economics
 
 | Metric | Definition | Trap |
-|--------|-----------|------|
+| -------- | ----------- | ------ |
 | **CAC** | Fully loaded acquisition spend ÷ new customers | Excluding salaries, tooling, and agency fees understates it badly |
 | **Blended vs paid CAC** | All customers vs only paid-channel customers | Blended CAC hides a failing paid channel behind organic |
 | **LTV** | Contribution margin per customer × expected lifetime | Using revenue instead of margin overstates it by the cost of goods |
@@ -114,7 +114,7 @@ Lagging metrics (revenue, churn, LTV) confirm outcomes but arrive too late to st
 For each lagging metric, find a leading one and **validate the correlation before trusting it**:
 
 | Lagging | Candidate leading |
-|---------|-------------------|
+| --------- | ------------------- |
 | Monthly churn | Week-2 usage frequency; support tickets per account |
 | Revenue | Qualified pipeline; activation rate |
 | LTV | Feature adoption breadth in month one |
@@ -147,7 +147,7 @@ Use them to detect **order-of-magnitude** problems: a 0.2% email open rate or a 
 ## 9. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Revenue as the north star | Lags too far; encourages discounting |
 | Registrations as the north star | Trivially gamed; unrelated to value |
 | A north star that passes the gaming test badly | Teams hit the target and the business does not improve |

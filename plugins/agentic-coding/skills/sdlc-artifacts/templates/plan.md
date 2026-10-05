@@ -15,5 +15,5 @@ Ticket: <ref>. From: spec.md <sha>. Contract agreed with reviewer subagent: yes,
 ## Proof
 
 | Criterion | Verification | Can it fail? |
-|-----------|--------------|--------------|
+| ----------- | -------------- | -------------- |
 | <acceptance criterion> | test: <name> \| cmd: <command> \| check: <observable> | yes |

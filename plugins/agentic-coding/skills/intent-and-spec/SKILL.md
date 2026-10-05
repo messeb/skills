@@ -39,7 +39,7 @@ Prompt yourself with the playbook's design instruction, adapted: read `intent.md
 ## Anti-patterns
 
 | Anti-pattern | Why it fails | Instead |
-|--------------|--------------|---------|
+| -------------- | -------------- | --------- |
 | Solution in intent.md | Locks the design before the problem is understood | Problem, outcome, constraints only |
 | Requirements that are not testable | Coder cannot verify, reviewer cannot check | Every requirement names its check |
 | Resolving a policy conflict yourself | The policy owner was never asked | Flag it, name the owner |

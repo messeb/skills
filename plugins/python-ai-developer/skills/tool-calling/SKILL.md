@@ -15,7 +15,7 @@ Use this skill when the model needs live data, must trigger actions, or must cha
 The most common cause of poor tool use is too many, too vague tools.
 
 | Rule | Why |
-|------|-----|
+| ------ | ----- |
 | Under ~10 tools per request | Accuracy degrades as the surface grows; split by agent or by task |
 | One clear purpose per tool | Overloaded tools with a `mode` parameter confuse selection |
 | Description states **when to use it and when not to** | This is the actual selection signal, not the name |
@@ -120,7 +120,7 @@ Rules: **every** `tool_use` gets a matching `tool_result` (a missing one is a pr
 The loop shape is the same everywhere; the vocabulary is not.
 
 | Concept | OpenAI / Grok / Mistral | Anthropic | Gemini |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Declare | `tools=[{"type":"function","function":{...}}]` | `tools=[{name, description, input_schema}]` | `tools=[Tool(function_declarations=[...])]` |
 | Model wants a call | `finish_reason == "tool_calls"` | `stop_reason == "tool_use"` | a `function_call` part |
 | Result role | `role: "tool"`, `tool_call_id` | user message with `tool_result` blocks | a `function_response` part |
@@ -136,7 +136,7 @@ Normalise all of this in the adapter (`provider-abstraction`) and keep one loop.
 A tool-using model is a **confused deputy**: it acts with your service's authority on instructions that may come from untrusted content it read.
 
 | Threat | Control |
-|--------|---------|
+| -------- | --------- |
 | **Prompt injection** in fetched pages, PDFs, emails, or tool output | Treat all tool output as untrusted data, never as instructions. Never let retrieved text change what tools are permitted |
 | Model requesting data across tenants | Authorise **server-side** on the caller's identity; never accept a `tenant_id` or `user_id` argument from the model |
 | Destructive actions | Human approval gate for writes, deletes, payments, and sends |
@@ -170,7 +170,7 @@ Watch these signals: average turns per request (rising means tool descriptions a
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | 30 tools in one request | Wrong tool selected; accuracy collapses |
 | Vague descriptions ("query the database") | Misuse and hallucinated arguments |
 | Loop with no turn, time, or cost limit | Runaway spend; hung requests |

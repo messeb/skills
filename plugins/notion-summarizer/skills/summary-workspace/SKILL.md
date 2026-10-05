@@ -41,7 +41,7 @@ Never invent property names or select options. If a needed option does not exist
 Map the metadata from `source-capture` to the schema. Typical mapping for a book database:
 
 | Property type | Fill with | Notes |
-|---------------|-----------|-------|
+| --------------- | ----------- | ------- |
 | Title | Source title without subtitle noise | Exactly as published |
 | Author / creator | Names, separated as existing entries do it | |
 | Year | Publication year as a number | |
@@ -113,7 +113,7 @@ Renaming existing pages: update only the `title` property. Do not recreate pages
 ## 7. Anti-patterns
 
 | Anti-pattern | Why it fails | Do instead |
-|--------------|--------------|-----------|
+| -------------- | -------------- | ----------- |
 | Creating the page under the database id | Fails with several data sources | Use the data source id |
 | Guessing property names | Write is rejected or lands nowhere | Fetch the schema first |
 | Setting rating, status or progress for the user | Overwrites personal data | Leave them, mention it |

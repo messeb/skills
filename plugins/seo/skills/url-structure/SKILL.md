@@ -390,7 +390,7 @@ Migrating URLs is risky. Done badly, a migration drops 30–60% of organic traff
 ## 9. Multi-locale URL patterns
 
 | Pattern | Example | Strengths | Weaknesses |
-|---------|---------|-----------|------------|
+| --------- | --------- | ----------- | ------------ |
 | **Path prefix** | `example.com/de/blog/inp` | Single property; simple SEO; cheap CDN | Path is not "natural" for users |
 | **Subdomain** | `de.example.com/blog/inp` | Locale-specific CDN routing; per-locale infra | Subdomain SEO weight is independent of apex |
 | **ccTLD** | `example.de/blog/inp` | Strongest geo-targeting; native to the locale | Each ccTLD is a separate property; expensive |

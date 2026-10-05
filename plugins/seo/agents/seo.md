@@ -11,7 +11,7 @@ Read the `skills/` directory of the `seo` plugin. For each skill, read its `SKIL
 Currently registered skills:
 
 | Skill | Area |
-|-------|------|
+| ------- | ------ |
 | `geo-content` | Article shape for generative engines — direct-answer paragraphs, question-headings, citable facts, E-E-A-T signals, FAQ + Article schema, validation checklist |
 | `meta-tags` | Complete `<head>` for SEO/social/AI — title, description, canonical, robots, Open Graph, Twitter Card, hreflang, viewport, theme-color, favicons, AI-bot controls, per-page-type templates |
 | `seo-page-structure` | Semantic HTML body — landmarks, heading hierarchy, source order, lists, tables, figures, breadcrumbs, links, time/address, per-page-type skeletons, anti-patterns, validation checklist |

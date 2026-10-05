@@ -300,7 +300,7 @@ turbo link
 ```yaml
 # .github/workflows/ci.yml
 - name: Cache Turbo
-  uses: actions/cache@v4
+  uses: actions/cache@v6
   with:
     path: .turbo
     key: ${{ runner.os }}-turbo-${{ github.sha }}

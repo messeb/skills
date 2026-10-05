@@ -148,7 +148,7 @@ Tickets labeled needs-human or no-bot are never picked up.
 Used only when neither `WORKFLOW.md` nor the repo files provide a value.
 
 | Key | Default |
-|-----|---------|
+| ----- | --------- |
 | Statuses | Inbox, Needs Approval, Todo, In Progress, Ready for Review, In Review, Changes Requested, Ready for Release |
 | `PLANNER_ENABLED` | `true` |
 | `SDLC_DIR` | `docs/sdlc` |
@@ -181,7 +181,7 @@ The plugin defines behavior. These are configured once per environment and canno
 ## Anti-patterns
 
 | Anti-pattern | Why it fails | Instead |
-|--------------|--------------|---------|
+| -------------- | -------------- | --------- |
 | Hard-coding statuses or commands in an agent prompt | Breaks on the next repo | Everything through this skill |
 | Guessing `TEST_CMD` from the language alone | Runs the wrong tests, green by accident | Derive from manifests, otherwise stop |
 | Loading every installed skill | Contradictory guidance, wasted context | Only stack-matching and cross-cutting skills |

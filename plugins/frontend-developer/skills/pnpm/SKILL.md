@@ -290,7 +290,7 @@ optional=false
 
 ```bash
 # CI: restore pnpm store from cache
-- uses: pnpm/action-setup@v4
+- uses: pnpm/action-setup@v6
   with:
     version: 9
     run_install: false
@@ -299,7 +299,7 @@ optional=false
   id: pnpm-cache
   run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-- uses: actions/cache@v4
+- uses: actions/cache@v6
   with:
     path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
     key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}

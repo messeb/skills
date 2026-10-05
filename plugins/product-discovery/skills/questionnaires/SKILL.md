@@ -15,7 +15,7 @@ Do **not** use it to discover unknown problems (you can only ask about what you 
 ## 1. Survey or not?
 
 | Question you have | Survey? | Better method |
-|-------------------|---------|---------------|
+| ------------------- | --------- | --------------- |
 | "What problems do users have?" | No | `stakeholder-interviews`, `contextual-inquiry` |
 | "How many users have problem X?" | **Yes** | — |
 | "Why does X happen?" | No | interviews |
@@ -46,7 +46,7 @@ If no decision threshold can be named, the survey is not yet worth running.
 ## 3. Sampling and bias
 
 | Bias | Cause | Mitigation |
-|------|-------|------------|
+| ------ | ------- | ------------ |
 | **Selection bias** | Only reachable or willing people respond | Define the population explicitly; report the frame you actually reached |
 | **Non-response bias** | Unhappy or disengaged users never answer | Compare respondents vs population on known attributes; report response rate |
 | **Survivorship bias** | Churned users are not in your mailing list | Recruit churned users separately |
@@ -61,7 +61,7 @@ Report the response rate and the sampling frame in every result document. A perc
 **Rough sample sizes** (for a proportion, 95 % confidence):
 
 | Margin of error | Responses needed |
-|-----------------|------------------|
+| ----------------- | ------------------ |
 | ±10 pp | ~100 |
 | ±5 pp | ~380 |
 | ±3 pp | ~1,070 |
@@ -73,7 +73,7 @@ For segment-level conclusions, each segment needs its own sample — a 400-respo
 ## 4. Question wording rules
 
 | Rule | Bad | Good |
-|------|-----|------|
+| ------ | ----- | ------ |
 | One thing per question | "How satisfied are you with the speed and reliability?" | Two separate items |
 | No leading | "How much did our new fast checkout improve your experience?" | "How would you rate the checkout experience?" |
 | Behaviour, not prediction | "Would you use a mobile app?" | "How did you place your last order?" |
@@ -88,7 +88,7 @@ For segment-level conclusions, each segment needs its own sample — a 400-respo
 **Scales:**
 
 | Scale | Use for | Notes |
-|-------|---------|-------|
+| ------- | --------- | ------- |
 | 5-point Likert | Agreement, satisfaction | Label every point, not just the ends |
 | 7-point | More granularity for tracking | Harder on mobile |
 | 0–10 | NPS, importance, satisfaction (for opportunity scores) | Familiar; needed for Ulwick-style scoring |
@@ -103,7 +103,7 @@ Avoid: unlabelled midpoints, "N/A" mixed into a scale (put it outside), and matr
 ## 5. Standard instruments — use them instead of inventing
 
 | Instrument | Measures | Items | Notes |
-|------------|----------|-------|-------|
+| ------------ | ---------- | ------- | ------- |
 | **SUS** | Perceived usability | 10 | Score 0–100; ≥68 is average. Do not change the wording if you want comparability |
 | **UMUX-Lite** | Usability, short form | 2 | Good when survey length is tight |
 | **NPS** | Word-of-mouth intent | 1 + open follow-up | Weak as a product metric; the open follow-up is where the value is |
@@ -240,7 +240,7 @@ E1. Role · E2. Team size · E3. Tenure
 ## 9. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Survey before any qualitative research | You measure your own assumptions | Interviews first, survey second |
 | Asking about future behaviour | Confident, wrong roadmap | Ask about the last real occurrence |
 | No decision threshold defined up front | Results get reinterpreted to fit the plan | Write the threshold before sending |

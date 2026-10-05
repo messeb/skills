@@ -23,7 +23,7 @@ A story is one **concrete** run through the process — with real names, real do
 Decide all four before recording. Say them out loud at the start of the session.
 
 | Axis | Options | How to choose |
-|------|---------|---------------|
+| ------ | --------- | --------------- |
 | **Time** | AS-IS (how it works today) / TO-BE (how it should work) | Model AS-IS first unless the process does not exist yet |
 | **Domain purity** | Pure (business only) / Digitalised (systems named as actors) | Pure for understanding; digitalised for integration and system design |
 | **Granularity** | Coarse-grained (overview) / Fine-grained (every step) | Coarse to map the landscape, fine for the flow you will build |
@@ -52,7 +52,7 @@ If the user offers an abstract process description instead of a case, push once:
 Three shapes and numbered arrows. That is the whole language.
 
 | Element | Drawn as | Example |
-|---------|----------|---------|
+| --------- | ---------- | --------- |
 | **Actor** | pictogram of a person, group, or system | `Dispatcher`, `Customer`, `ERP` |
 | **Work object** | pictogram of a document, message, or thing | `delivery note`, `invoice`, `email` |
 | **Activity** | numbered, labelled arrow between them | `1. sends` |
@@ -89,7 +89,7 @@ Record 3–5 stories per process: one happy path, the two most frequent variants
 ## 6. From story to requirements
 
 | In the picture | Yields |
-|----------------|--------|
+| ---------------- | -------- |
 | Actor | role, permission, persona candidate |
 | Work object | entity, document, aggregate candidate |
 | Activity | use case, command, user story |
@@ -180,7 +180,7 @@ Write to `docs/discovery/domain-story-<slug>.md`.
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Abstract narration ("normally the system processes…") | Nobody can spot errors | Insist on one concrete, recent case with names |
 | Branches and loops in one picture | Turns into a flowchart nobody reads | One story per path |
 | Modeller "improving" the words | Language stops being the domain's | Write exactly what the narrator said |

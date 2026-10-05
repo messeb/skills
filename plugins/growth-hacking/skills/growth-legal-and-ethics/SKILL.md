@@ -25,7 +25,7 @@ This changes the calculus: tactics that are merely risky elsewhere are actively 
 Every growth activity that touches personal data needs a **lawful basis** — and personal data includes IP addresses, cookie ids, device identifiers, and email addresses.
 
 | Basis | Growth use | Caution |
-|-------|-----------|---------|
+| ------- | ----------- | --------- |
 | **Consent** | Marketing email, non-essential cookies, tracking, profiling | Must be freely given, specific, informed, unambiguous, opt-in, and as easy to withdraw as to give |
 | **Contract** | Transactional email, service delivery | Does not cover marketing |
 | **Legitimate interest** | Some analytics, B2B contact in narrow cases, fraud prevention | Requires a documented balancing test; does not override the ePrivacy consent requirement for device access |
@@ -41,7 +41,7 @@ Three growth-specific traps: **A/B testing and analytics tools set identifiers**
 The strictest area in practice, and where growth teams most often assume US rules apply.
 
 | Situation | Germany / EU |
-|-----------|--------------|
+| ----------- | -------------- |
 | Marketing email to a consumer | **Opt-in consent required**, with double opt-in as the practical evidentiary standard |
 | Marketing email to a business contact | Also requires consent in Germany — B2B is **not** a general exemption |
 | Existing-customer exception (§7 UWG) | Narrow: own similar products, address obtained during a sale, objection possible at collection and in every message, clear notice given |
@@ -105,7 +105,7 @@ Scraping specifically: publicly accessible does not mean freely usable. Personal
 Legal review kills growth velocity when it is applied uniformly. Tier it:
 
 | Tier | Examples | Review |
-|------|----------|--------|
+| ------ | ---------- | -------- |
 | **Green — no review** | Copy and layout changes, internal onboarding flow, subject-line tests, CTA wording | None; ship inside the pre-approved sandbox |
 | **Amber — checklist, self-served** | New landing page, new ad creative, referral incentive tweak, lifecycle email in an existing programme | Team applies the checklist below; documented |
 | **Red — named reviewer** | New tracking or tool, consent flow, price or discount display, cancellation flow, sweepstakes, cold outreach, influencer contract, claims about results, anything involving special-category or children's data | Named reviewer, agreed turnaround, fast lane |
@@ -119,7 +119,7 @@ Make the green tier as wide as defensible — that is what preserves experiment 
 ## 9. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | "Everyone does it" as justification | Widespread practice is not a defence, particularly under the UWG |
 | Applying US email rules (opt-out) in the EU | Unlawful sending; Abmahnung risk |
 | Assuming B2B is exempt from consent in Germany | It is not |

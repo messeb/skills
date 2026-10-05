@@ -21,7 +21,7 @@ Analyse ──► Ideate ──► Prioritise ──► Design ──► Run ─
 ```
 
 | Stage | Output | Owner |
-|-------|--------|-------|
+| ------- | -------- | ------- |
 | **Analyse** | Where is the constraint? What does the data say? | Analyst / growth lead |
 | **Ideate** | Ideas addressing that constraint (`idea-generation`) | Whole team |
 | **Prioritise** | A ranked shortlist with a scoring rationale (`experiment-prioritization`) | Growth lead |
@@ -38,7 +38,7 @@ The stage teams skip is **Analyse**, which is why they generate ideas for proble
 A weekly rhythm works for most teams. It is fast enough to build momentum and slow enough that experiments reach meaningful sample sizes.
 
 | When | Meeting | Duration | Output |
-|------|---------|----------|--------|
+| ------ | --------- | ---------- | -------- |
 | Monday | **Growth meeting** | 45–60 min | Results reviewed, decisions taken, next experiments launched |
 | Daily | **Stand-up** | 10 min | Blockers only — not status theatre |
 | Monthly | **Retrospective on the process** | 45 min | How the practice itself improves |
@@ -65,7 +65,7 @@ Two failure modes sit at opposite ends. Teams that only run small tests (button 
 Balance the portfolio deliberately — a rough split that works:
 
 | Share | Type | Example |
-|-------|------|---------|
+| ------- | ------ | --------- |
 | ~70% | Optimisation of the known constraint | Onboarding step order, pricing page layout, ad creative |
 | ~20% | New tactics inside proven channels | A new content format, a different audience segment |
 | ~10% | Structural bets | A new channel, a referral loop, a pricing model change |
@@ -107,7 +107,7 @@ Only then decide to pivot away. Record the decision and the evidence, so the cha
 Every meaningful change ships behind a measurement:
 
 | Change | Minimum |
-|--------|---------|
+| -------- | --------- |
 | Copy, layout, pricing page | A/B test |
 | New feature | Feature flag, staged rollout, activation and retention monitored |
 | Onboarding change | Cohort comparison against the previous flow |
@@ -137,7 +137,7 @@ The trough is where growth programmes are cancelled. What gets a team through it
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Starting from the idea backlog instead of the constraint | Solving problems you do not have |
 | Growth meeting as a status update | No decisions; the process becomes theatre |
 | Experiments with no pre-declared success criterion | Results reinterpreted until positive |

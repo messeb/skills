@@ -15,7 +15,7 @@ Use this skill when optimising conversion, writing copy, designing defaults, or 
 The distinction that governs everything in this skill:
 
 | | **Persuasion** | **Manipulation** |
-|---|---|---|
+| --- | --- | --- |
 | Information | True | False, hidden, or distorted |
 | The user's interest | Served or neutral | Harmed |
 | If the user understood the technique | They would not object | They would feel deceived |
@@ -87,7 +87,7 @@ People judge experiences by their **peak** and their **end** — so the stronges
 These are named in EU regulation and consumer-protection enforcement, not merely disapproved of:
 
 | Pattern | What it is |
-|---------|-----------|
+| --------- | ----------- |
 | **Confirmshaming** | Guilt-loaded decline options |
 | **Roach motel** | Easy to subscribe, hard to cancel |
 | **Sneak into basket** | Items or add-ons added without action |
@@ -121,7 +121,7 @@ The Digital Services Act prohibits interfaces that deceive or manipulate users o
 ## 5. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Fake countdowns, fake stock, fake viewer counts | Unlawful in the EU; erodes trust when noticed |
 | Fabricated or incentivised undisclosed reviews | Explicitly prohibited; platform and legal consequences |
 | Pre-ticked consent boxes | Consent invalid under the GDPR |

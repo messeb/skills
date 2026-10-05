@@ -28,7 +28,7 @@ Consequences worth internalising:
 ## 2. Job statement formats
 
 | Format | Template | Use for |
-|--------|----------|---------|
+| -------- | ---------- | --------- |
 | **Situational (Klement)** | When `<situation>`, I want to `<motivation>`, so I can `<expected outcome>` | Discovery, positioning, interview synthesis |
 | **Functional job (Ulwick)** | `<verb>` + `<object of the verb>` + `<contextual clarifier>` — e.g. "minimise the time it takes to diagnose a failing test" | Outcome-driven innovation, measurable requirements |
 | **Job story (Intercom)** | When `<situation>`, I want to `<motivation>`, so I can `<expected outcome>` — written per feature | Replacing user stories where the persona adds nothing |
@@ -40,7 +40,7 @@ Rules:
 - Distinguish three layers: the **functional** job (the task), the **emotional** job (how they want to feel), and the **social** job (how they want to be perceived). All three drive purchases; only the functional one usually gets written down.
 
 | Layer | Example |
-|-------|---------|
+| ------- | --------- |
 | Functional | Reconcile the month's transactions without manual re-entry |
 | Emotional | Feel confident the numbers are right before the board meeting |
 | Social | Be seen by the CFO as someone who never delivers a late report |
@@ -52,7 +52,7 @@ Rules:
 Every switch is a tug of war. Ask about all four in every interview.
 
 | Force | Direction | Question that surfaces it |
-|-------|-----------|---------------------------|
+| ------- | ----------- | --------------------------- |
 | **Push** of the situation | towards change | "What was going wrong before you started looking?" |
 | **Pull** of the new solution | towards change | "What made you think this could work?" |
 | **Anxiety** about the new | against change | "What worried you? What almost stopped you?" |
@@ -73,7 +73,7 @@ Recruit four types: new customers, customers who considered you and chose anothe
 Do not ask "why did you buy". Rebuild the story backwards from the purchase, moment by moment.
 
 | Milestone | Ask about |
-|-----------|-----------|
+| ----------- | ----------- |
 | **First thought** | "When did you first realise the old way wasn't working?" What happened that day? |
 | **Passive looking** | What did you notice? Who did you talk to? What did you not do? |
 | **Event that triggered active search** | "What happened that made you actually start looking?" — there is always a specific event |
@@ -107,7 +107,7 @@ Example: *"Minimise the time it takes to confirm that every transaction has been
 `Opportunity = Importance + max(0, Importance − Satisfaction)`
 
 | Score | Meaning |
-|-------|---------|
+| ------- | --------- |
 | > 15 | Underserved — high opportunity |
 | 10–15 | Appropriately served |
 | < 10 | Overserved — candidate for simplification or a cheaper offer |
@@ -217,7 +217,7 @@ Ask only what is missing; batch into one message, five or fewer.
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Job statement containing the solution | You have written a feature request | Strip all product words; check it would hold ten years ago |
 | Asking "why did you buy?" directly | Rationalised, tidy, false answers | Rebuild the timeline with dates and physical detail |
 | Interviewing only happy current customers | Survivorship bias; churn stays unexplained | Include churned users, competitor-choosers, and non-consumers |

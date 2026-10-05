@@ -37,7 +37,7 @@ Exception worth knowing: for genuinely persuasive or bad-news writing, some cont
 Headings are the table of contents, the navigation, and the scanning surface — and for screen-reader users they are the primary means of moving through a page.
 
 | Rule | Why |
-|------|-----|
+| ------ | ----- |
 | **Descriptive, not clever** | `Cancel a subscription`, not `The end of the road` |
 | **Answer or task oriented** | Write the heading a reader would search for |
 | **One `h1` per page** | The page's subject |
@@ -66,7 +66,7 @@ Test: read only the headings top to bottom. They should form a usable summary. I
 Prose is the wrong container for parallel information. Convert when you see these signals:
 
 | Signal in the prose | Convert to |
-|---------------------|------------|
+| --------------------- | ------------ |
 | A sequence of steps | Numbered list |
 | Several conditions joined by `and`/`or` | Bulleted list, with the logic stated |
 | Options being compared on the same attributes | Table |
@@ -85,7 +85,7 @@ The most valuable conversion is conditional logic. A sentence carrying three con
 Different text types have different correct orders:
 
 | Type | Order |
-|------|-------|
+| ------ | ------- |
 | **Instruction** | Goal → prerequisites → numbered steps → result → what to do if it fails |
 | **Reference** | Alphabetical or logical, with a stable, predictable per-entry shape |
 | **Explanation** | Conclusion → context → detail → implications |
@@ -116,7 +116,7 @@ The constraint: each layer must stand alone. A summary that cannot be acted on w
 Text structure includes how it is set:
 
 | Property | Guidance |
-|----------|----------|
+| ---------- | ---------- |
 | **Line length** | Roughly 45–75 characters; long lines lose the return sweep |
 | **Line spacing** | Around 1.5 for body text |
 | **Alignment** | Left-aligned; justified text creates uneven word spacing, which is harder for many readers |
@@ -133,7 +133,7 @@ Emphasis has a budget: if a third of the paragraph is bold, nothing is emphasise
 ## 9. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Conclusion at the end | Readers leave before reaching it |
 | Clever or vague headings | Unscannable; unsearchable |
 | Skipped heading levels | Screen-reader navigation breaks |

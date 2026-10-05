@@ -15,7 +15,7 @@ Prerequisite: people must actually like the product. A referral programme on a m
 ## 1. Three different mechanisms
 
 | Mechanism | Motivation | Where it lives |
-|-----------|-----------|----------------|
+| ----------- | ----------- | ---------------- |
 | **Word of mouth** | The product is worth talking about | Outside your control; earned |
 | **Sharing** | Sharing is part of using the product — a document, an invitation, a result | Built into the product |
 | **Referral programme** | An incentive rewards bringing someone | A programme you design and run |
@@ -37,7 +37,7 @@ The honest check before building: ask thirty recent customers whether they have 
 ## 3. Designing the incentive
 
 | Choice | Guidance |
-|--------|----------|
+| -------- | ---------- |
 | **One-sided or double-sided** | Double-sided (both parties benefit) usually converts better and feels less transactional; it also gives the referrer a reason to talk that is not about themselves |
 | **Reward type** | Product credit and upgrades usually beat cash: cheaper for you, more relevant, and less attractive to fraud |
 | **Reward size** | Anchored to CAC in the same channel — if paid acquisition costs €40, a €15 double-sided reward is defensible |
@@ -67,7 +67,7 @@ Then close the loop: tell the referrer what happened ("Ana signed up"), because 
 ## 5. Measuring
 
 | Metric | Meaning |
-|--------|---------|
+| -------- | --------- |
 | **Participation rate** | Share of eligible users who send at least one invite |
 | **Invites per participant** | Depth of sharing |
 | **Invite conversion rate** | Share of invitees who become users |
@@ -88,7 +88,7 @@ Report k honestly against 1 (`growth-loops`): a k of 0.3 is valuable as a multip
 Stronger than any programme, because they require no incentive and no memory:
 
 | Mechanic | Example shape |
-|----------|---------------|
+| ---------- | --------------- |
 | **Collaboration** | The product is more useful with others, so users invite colleagues to get value |
 | **Shared artefact** | Output is naturally shared and carries an attribution or a route back |
 | **Embed** | Content placed on other sites brings visitors back |
@@ -103,7 +103,7 @@ Design principles: the sharing must **help the user**, not only the company; kee
 ## 7. Influencers, creators, and advocates
 
 | Type | Use |
-|------|-----|
+| ------ | ----- |
 | **Customer advocates** | Case studies, reviews, testimonials — cheapest and most credible |
 | **Niche creators** | Small, engaged, relevant audiences; usually better return than large reach |
 | **Large influencers** | Awareness at scale, hard to attribute, expensive |
@@ -121,7 +121,7 @@ The genuine risk: an influencer's reputation becomes attached to yours. Vet, and
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Referral programme on a product with poor retention | Paying to accelerate churn; amplifying negative word of mouth |
 | Rewarding signups rather than qualified events | Fraud within days |
 | Cash rewards without fraud controls | Organised abuse; budget converted into fake accounts |

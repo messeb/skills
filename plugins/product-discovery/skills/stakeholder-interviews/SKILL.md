@@ -19,14 +19,14 @@ Interview deliberately, not opportunistically.
 **Power / interest grid** — place every stakeholder:
 
 | | Low interest | High interest |
-|---|---|---|
+| --- | --- | --- |
 | **High power** | Keep satisfied — brief, short interview, watch for veto risk | **Manage closely — interview first and longest** |
 | **Low power** | Monitor — survey instead (`questionnaires`) | Keep informed — interview if they hold operational knowledge |
 
 Also identify by role:
 
 | Role | Why interview them | Typical blind spot |
-|------|--------------------|--------------------|
+| ------ | -------------------- | -------------------- |
 | Sponsor / budget holder | Success criteria, constraints, what would make them cancel it | Detail of daily work |
 | Domain expert | Rules, edge cases, history | Assumes context you lack |
 | End user | Real workflow, workarounds | Cannot see the wider system |
@@ -54,7 +54,7 @@ Ask only what is missing; batch into one message, five or fewer.
 ## 3. Choose the format
 
 | Format | Use when | Trade-off |
-|--------|----------|-----------|
+| -------- | ---------- | ----------- |
 | **Structured** (fixed questions, same order) | Comparing many stakeholders on the same points; regulated settings | Comparable, but shallow — misses the unexpected |
 | **Semi-structured** (guide + follow the thread) | Default for discovery | Rich, needs a skilled interviewer, harder to compare |
 | **Unstructured** (topic only) | Very early exploration, or a highly senior stakeholder | Can drift; only with clear goals |
@@ -68,7 +68,7 @@ Default to **semi-structured**: a guide of themes with must-ask questions, and t
 Structure every guide in five blocks, 45–60 minutes total:
 
 | Block | Time | Purpose | Example openers |
-|-------|------|---------|-----------------|
+| ------- | ------ | --------- | ----------------- |
 | **Frame** | 3 min | Purpose, duration, confidentiality, recording consent, what happens with the notes | "I want to understand how X works from your side. Nothing here is attributed without asking you first." |
 | **Context** | 7 min | Their role, their day, their team's place in the flow | "Walk me through a typical Tuesday." |
 | **Core** | 25–30 min | The learning goals | see question types below |
@@ -91,7 +91,7 @@ Structure every guide in five blocks, 45–60 minutes total:
 **Question types to avoid:**
 
 | Avoid | Why | Ask instead |
-|-------|-----|-------------|
+| ------- | ----- | ------------- |
 | "Would you use a feature that…?" | People predict their own behaviour badly | "When did you last need something like that? What did you do?" |
 | "Do you want X or Y?" | Forces your frame | "How do you handle this today?" |
 | "You'd agree that…?" | Leading; you get your own answer back | "How do you see it?" |
@@ -243,7 +243,7 @@ Structure every guide in five blocks, 45–60 minutes total:
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Interviewing only supporters | The objection arrives at go-live | Interview the sceptic early |
 | Asking about the future ("would you use…") | Fiction recorded as data | Ask about the last real occurrence |
 | Presenting your solution mid-interview | They evaluate your idea instead of describing their world | Understand first, validate later |

@@ -11,7 +11,7 @@ Read the `skills/` directory of the `frontend-developer` plugin. For each skill,
 Currently registered skills:
 
 | Skill | Area |
-|-------|------|
+| ------- | ------ |
 | `unit-testing` | Testing — component and composable unit tests |
 | `storybook` | Testing — story authoring, interaction tests, visual regression |
 | `e2e-testing` | Testing — Playwright end-to-end tests |

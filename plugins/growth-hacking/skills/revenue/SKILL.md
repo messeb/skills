@@ -15,7 +15,7 @@ Pricing is the most under-tested lever in most companies. It requires no traffic
 ## 1. Choosing a model
 
 | Model | Fits | Main risk |
-|-------|------|-----------|
+| ------- | ------ | ----------- |
 | **Subscription** | Recurring value, predictable use | Churn compounds against you |
 | **Freemium** | Low marginal cost, viral or network potential, large market | Free tier cannibalises paid; support cost without revenue |
 | **Free trial** | Value is obvious quickly | Trial length mismatched to time to value |
@@ -36,7 +36,7 @@ Two structural questions decide most of it: **how often does the customer get va
 Pricing is a research question, not a debate:
 
 | Method | Produces |
-|--------|----------|
+| -------- | ---------- |
 | **Van Westendorp** | The acceptable price range from four questions |
 | **Willingness-to-pay interviews** | The reference price and the alternative being compared |
 | **Conjoint analysis** | The relative value of features and their price sensitivity |
@@ -59,7 +59,7 @@ Freemium fails in a specific way: the free tier is generous enough that nobody n
 The design question is **what creates the upgrade need**, and it should be a natural consequence of success with the product:
 
 | Limit type | Works when |
-|------------|-----------|
+| ------------ | ----------- |
 | **Volume** (records, projects, messages) | Usage grows naturally with value |
 | **Seats** | Value is collaborative |
 | **Capability** (advanced or admin features) | Serious users need them; casual users do not |
@@ -77,7 +77,7 @@ Free is justified when it produces something of value: a loop, a network, conten
 **Expansion revenue** from existing customers is cheaper than new acquisition and is the strongest retention signal there is (`retention`).
 
 | Mechanic | Practice |
-|----------|----------|
+| ---------- | ---------- |
 | **Contextual upgrade prompts** | At the moment the limit is reached or the capability is needed — not on a schedule |
 | **Usage-based expansion** | Growth in seats or volume raises revenue automatically |
 | **Cross-sell** | Offer the complementary product after success with the first, not during onboarding |
@@ -120,7 +120,7 @@ The final steps are where funded, motivated demand is lost:
 ## 7. Copywriting that sells honestly
 
 | Principle | Application |
-|-----------|-------------|
+| ----------- | ------------- |
 | **Benefit before feature** | State the outcome, then how it is achieved |
 | **Specificity over superlatives** | "Cuts month-end close from 5 days to 1" beats "revolutionary" |
 | **Customer's language** | Use the words from research and support logs, not internal vocabulary |
@@ -136,7 +136,7 @@ The honesty constraint is also a commercial one: claims must be substantiated. I
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Pricing set once and never tested | The highest-leverage lever left untouched |
 | Value metric that penalises usage | Suppresses the behaviour that drives retention |
 | Price tested on existing customers | Trust damage and support load |

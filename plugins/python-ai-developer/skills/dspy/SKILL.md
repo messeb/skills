@@ -17,7 +17,7 @@ Do **not** use it for one-off generation with no measurable success criterion, f
 Three layers:
 
 | Layer | What it is |
-|-------|------------|
+| ------- | ------------ |
 | **Signature** | A typed declaration of the transformation — inputs, outputs, and a docstring stating the task. Not a prompt |
 | **Module** | A strategy for executing a signature (`Predict`, `ChainOfThought`, `ReAct`, …), composable into a `dspy.Module` |
 | **Optimizer** | A compiler that searches instructions and few-shot demonstrations to maximise your metric on a training set |
@@ -70,7 +70,7 @@ def invoice_metric(example, pred, trace=None) -> float:
 ```
 
 | Rule | Reason |
-|------|--------|
+| ------ | -------- |
 | Weight fields by business impact | A wrong total costs more than a wrong date |
 | Penalise hallucination explicitly | Otherwise confident invention scores like a correct guess |
 | Prefer programmatic checks over a judge | Cheaper, deterministic, and not gameable |
@@ -101,7 +101,7 @@ compiled.save("artifacts/invoice_pipeline.v4.json")        # versioned artifact
 Optimizer families, roughly in order of cost:
 
 | Optimizer | What it does | Data needed |
-|-----------|--------------|-------------|
+| ----------- | -------------- | ------------- |
 | `LabeledFewShot` | Uses your labelled examples directly as demonstrations | Small |
 | `BootstrapFewShot` | Generates demonstrations by running the program and keeping the ones that pass the metric | ~20–50 |
 | `BootstrapFewShotWithRandomSearch` | Searches over candidate demonstration sets | ~50+ |
@@ -148,7 +148,7 @@ class InvoiceExtractor:
 ```
 
 | Rule | Reason |
-|------|--------|
+| ------ | -------- |
 | Compiled artifact is versioned and committed (or stored as a build artifact) | Reproducible deploys; the prompt is not regenerated per environment |
 | Record the artifact version on every extraction result | Quality regressions become traceable |
 | Recompile in CI on a schedule or on data change, gated by the test-set score | Prevents silent drift |
@@ -161,7 +161,7 @@ class InvoiceExtractor:
 ## 6. When DSPy is the wrong tool
 
 | Situation | Better |
-|-----------|--------|
+| ----------- | -------- |
 | No labelled data and no programmatic metric | Build the eval set first (`llm-testing-and-evals`) |
 | One prompt, already good enough | Plain SDK call |
 | Open-ended creative generation | No meaningful metric to optimize |
@@ -174,7 +174,7 @@ class InvoiceExtractor:
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Optimizing without a metric that reflects business value | A program excellent at the wrong objective |
 | Metric that ignores hallucination | Invention scores the same as knowledge |
 | Reporting the dev or train score | Overstated accuracy; regressions in production |

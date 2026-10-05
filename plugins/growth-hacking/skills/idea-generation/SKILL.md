@@ -15,7 +15,7 @@ Use this skill when the backlog is thin, when every idea is a variation of the l
 Most companies use two or three channels and have never seriously evaluated the rest. The traction-channel checklist exists to force breadth before depth:
 
 | # | Channel | # | Channel |
-|---|---------|---|---------|
+| --- | --------- | --- | --------- |
 | 1 | Search engine optimisation | 11 | Trade shows |
 | 2 | Search engine marketing (paid search) | 12 | Offline events |
 | 3 | Social and display advertising | 13 | Speaking engagements |
@@ -38,7 +38,7 @@ Two observations that repeatedly hold. **The channel that works is often not the
 Before running a workshop, extract the ideas already sitting in your systems. This is the highest-yield and least-used source.
 
 | Source | What to look for |
-|--------|------------------|
+| -------- | ------------------ |
 | Funnel analytics | The biggest drop-off — every step above 30% loss is an idea generator |
 | Site search | What people look for and do not find; zero-result queries are a product roadmap |
 | Support tickets and chat logs | The exact words customers use for their problems; recurring confusion |
@@ -83,7 +83,7 @@ The value is the separation. Critique that arrives during ideation kills ideas b
 Apply systematic transformations to something that already works — an existing page, offer, channel, or feature:
 
 | Prompt | Applied to growth |
-|--------|-------------------|
+| -------- | ------------------- |
 | **Substitute** | Different channel, offer, audience, format |
 | **Combine** | Bundle two features; co-market with a partner |
 | **Adapt** | Copy a mechanic from another industry |
@@ -123,7 +123,7 @@ Practical technique: ask ten of your best customers where they learned about too
 Most ideas arrive unusable. Convert each before it enters the backlog:
 
 | Raw idea | Testable candidate |
-|----------|--------------------|
+| ---------- | -------------------- |
 | "We should do TikTok" | "Post 12 short videos in 4 weeks answering the top 3 support questions; measure profile→site clicks and signups against a €0 baseline" |
 | "Improve onboarding" | "Add a 3-step checklist with progress; measure signup→activation over 2 weeks" |
 | "Do a referral programme" | "Offer a double-sided credit to the 500 most active users; measure invites sent per user and invite conversion over 30 days" |
@@ -137,7 +137,7 @@ Cluster the pool before ranking: near-duplicates merge, and clusters reveal them
 ## 6. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Only ever using the channels the team already knows | The best channel is never discovered |
 | Open group brainstorming with no structure | Anchoring; few ideas; the senior view wins |
 | Critiquing during ideation | Bold ideas die before they are understood |

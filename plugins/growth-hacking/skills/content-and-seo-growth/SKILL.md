@@ -33,7 +33,7 @@ The corollary: judge content on the cohort of articles published, not on monthly
 The most common failure is writing about what the company finds interesting.
 
 | Selection criterion | Test |
-|---------------------|------|
+| --------------------- | ------ |
 | **Search demand exists** | People actually search this; there is a query with volume |
 | **Business relevance** | Someone searching this could plausibly become a customer |
 | **Winnable** | You can produce something better than what currently ranks, given your authority |
@@ -59,7 +59,7 @@ Note the shift worth planning for: a growing share of search-like traffic now ar
 "Better content" is not a strategy. Concretely, content that outperforms usually has at least one of:
 
 | Property | Why it works |
-|----------|--------------|
+| ---------- | -------------- |
 | **Original data** | Nobody can copy a survey you ran; it earns citations for years |
 | **First-hand experience** | Actual results, screenshots, numbers from doing the thing |
 | **Genuine depth on a narrow question** | Beats broad shallow coverage of a big one |
@@ -86,7 +86,7 @@ Volume without differentiation is now actively counterproductive: cheap generate
 The common allocation error is spending 90% of effort on production and 10% on distribution. Invert it toward 50/50 at minimum.
 
 | Channel | Practice |
-|---------|----------|
+| --------- | ---------- |
 | **Owned email list** | The most reliable distribution you have; every piece goes to it |
 | **Communities and waterholes** | Only where you are a genuine participant (`idea-generation`) |
 | **Direct outreach** | Tell the people cited, quoted, or referenced — high response rate, and the basis for links |
@@ -105,7 +105,7 @@ Two practices with unusually good returns: **updating existing content** — ref
 Traffic is not the goal. Measure the chain:
 
 | Level | Metric |
-|-------|--------|
+| ------- | -------- |
 | Reach | Impressions, sessions, rankings for target queries |
 | Engagement | Scroll depth, time, return visits |
 | Capture | Email signups, tool usage, trial starts per piece |
@@ -122,7 +122,7 @@ Set the review horizon in advance: judge a piece at 6 and 12 months, not at 6 we
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Topics chosen by internal interest | Traffic that never converts |
 | Volume as the ranking criterion for topic choice | High-traffic pages with no business relevance |
 | Publishing without any distribution plan | Excellent content nobody reads |

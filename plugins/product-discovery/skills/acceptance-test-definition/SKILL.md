@@ -30,7 +30,7 @@ The value sits in step 2: writing the expected result forces every ambiguity to 
 Do not improvise the cases. Apply the techniques in order and record which you used.
 
 | Technique | Use for | Produces |
-|-----------|---------|----------|
+| ----------- | --------- | ---------- |
 | **Equivalence partitioning** | Any input with ranges or classes | One case per class — valid and invalid |
 | **Boundary value analysis** | Every threshold | Below, exactly at, above — the highest defect yield per test written |
 | **Decision table** | Several conditions combining into different outcomes | One case per rule column; exposes undefined combinations |
@@ -48,7 +48,7 @@ Rules: every threshold gets three cases; every external dependency gets a failur
 Functional acceptance is the easy half. A story is not done if it is correct and unusably slow.
 
 | Type | Acceptance form | Where it runs |
-|------|-----------------|---------------|
+| ------ | ----------------- | --------------- |
 | **Performance** | p95/p99 threshold at a stated load and measurement point | load test in CI or a staged run |
 | **Accessibility** | Automated scan with zero serious violations, plus a keyboard-only walkthrough of the flow | CI + manual check |
 | **Security** | Authorisation matrix per role; negative tests for each denied case; no sensitive data in logs | automated tests + review |
@@ -63,7 +63,7 @@ Attach the relevant ones to each story rather than deferring them to a later "ha
 ## 4. Choosing the automation layer
 
 | Layer | Use for | Cost | Rule |
-|-------|---------|------|------|
+| ------- | --------- | ------ | ------ |
 | **Unit** | Calculations, rules, edge-case explosion | lowest | Push case volume down here |
 | **Integration / service** | Business rules across components, contracts, persistence | medium | **Default layer for acceptance tests** |
 | **Contract** | Interface expectations between teams (`api-contracts`) | low | One per consumer expectation |
@@ -79,7 +79,7 @@ Cover a rule **once at the cheapest layer that proves it**, then let higher laye
 Decide this consciously; it is the most common cause of flaky acceptance suites.
 
 | Question | Good answer |
-|----------|-------------|
+| ---------- | ------------- |
 | Where does the data come from? | Created by the test through the API or a factory — not a shared seeded database |
 | Is it isolated? | Each test creates and cleans up its own; tests run in any order and in parallel |
 | Is it realistic? | Real formats, real lengths, real character sets, worst-case values |
@@ -167,7 +167,7 @@ Attach to the story; keep formal ones in `docs/specs/acceptance-<requirement>.md
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Tests written after the implementation | They test what was built, not what was wanted | Define before development starts |
 | Only happy-path acceptance | Errors and edge cases become production defects | Systematic derivation with boundaries and failures |
 | No boundary cases | Off-by-one defects ship reliably | Below / at / above every threshold |

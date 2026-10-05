@@ -15,7 +15,7 @@ Do **not** prioritise before the items trace to an outcome (`impact-mapping`) �
 ## 1. Choosing the method
 
 | Method | Optimises for | Inputs needed | Best for | Weakness |
-|--------|---------------|---------------|----------|----------|
+| -------- | --------------- | --------------- | ---------- | ---------- |
 | **MoSCoW** | A scope commitment for a fixed date | Team judgement, a deadline | Release scoping, contracts | Everything drifts to "must" without discipline |
 | **WSJF** | Economic sequencing under a capacity constraint | Cost of delay components, job size | Ordering a queue of comparable items | Fake precision if the inputs are guesses |
 | **Kano** | Deciding which features create satisfaction | Customer survey (functional/dysfunctional pairs) | Feature mix, differentiation | Needs real customer data; categories shift over time |
@@ -33,7 +33,7 @@ Practical combination: triage with a value/effort grid → sequence the top band
 ## 2. MoSCoW, done properly
 
 | Category | Meaning | Discipline |
-|----------|---------|------------|
+| ---------- | --------- | ------------ |
 | **Must** | Without it the release is not viable — legally, contractually, or functionally | Test: what happens if it ships without this? If the answer is "it is worse", it is a Should |
 | **Should** | Important, painful to omit, but there is a workaround | |
 | **Could** | Desirable if capacity allows | The buffer that makes the date achievable |
@@ -48,7 +48,7 @@ Rules: cap Musts at roughly 60 % of capacity, or the date is fiction; every Must
 `WSJF = Cost of Delay ÷ Job Size`, where `Cost of Delay = User/business value + Time criticality + Risk reduction / opportunity enablement`.
 
 | Component | Ask |
-|-----------|-----|
+| ----------- | ----- |
 | **User/business value** | What do we gain or lose per unit time without it? |
 | **Time criticality** | Does the value decay? Is there a fixed date, a market window, a regulatory deadline? |
 | **Risk reduction / opportunity enablement** | Does it remove uncertainty or unlock other work? |
@@ -67,7 +67,7 @@ Honesty rule: **WSJF is a conversation structure, not a formula that decides for
 Ask customers two questions per feature — functional ("how do you feel if it is present?") and dysfunctional ("how do you feel if it is absent?") — with the standard five answers, and classify:
 
 | Category | Present | Absent | Investment rule |
-|----------|---------|--------|-----------------|
+| ---------- | --------- | -------- | ----------------- |
 | **Must-be (basic)** | Neutral | Very dissatisfied | Meet the standard; excellence here buys nothing |
 | **Performance (one-dimensional)** | Satisfied in proportion | Dissatisfied in proportion | Invest where the slope is steepest |
 | **Attractive (delighter)** | Delighted | Neutral | A small number differentiate; do not build a product only of these |
@@ -174,7 +174,7 @@ quadrantChart
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Everything is a Must | The date is fiction; the team decides scope by exhaustion | Cap Musts; state the consequence of omission for each |
 | Scoring theatre — precise numbers from guesses | False confidence, unarguable output | Estimate relatively, anchor the scales, record confidence |
 | Prioritising an unjustified list | Precisely ordered wrong work | Trace items to outcomes first |

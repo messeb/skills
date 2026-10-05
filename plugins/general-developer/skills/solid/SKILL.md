@@ -303,7 +303,7 @@ When reviewing a codebase for SOLID violations:
 ## Decision Framework
 
 | Principle | Ask |
-|-----------|-----|
+| ----------- | ----- |
 | SRP | Does this class have more than one reason to change? |
 | OCP | Can I add new behaviour without editing existing code? |
 | LSP | Can I substitute any subtype for the base type without surprises? |

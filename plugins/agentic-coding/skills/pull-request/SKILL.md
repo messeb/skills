@@ -57,7 +57,7 @@ Then end the run with the five-line summary.
 ## Anti-patterns
 
 | Anti-pattern | Why it fails | Instead |
-|--------------|--------------|---------|
+| -------------- | -------------- | --------- |
 | Draft PR "to be safe" | Reviewer skips drafts, ticket stalls | Open it ready; verification already happened |
 | Squashing rework commits into the original | Reviewer cannot see what changed since last round | Append commits |
 | Replying "done" without the commit | Reviewer has to diff manually | Name the commit per comment |

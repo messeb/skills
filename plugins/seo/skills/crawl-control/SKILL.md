@@ -13,7 +13,7 @@ This skill is for authoring both files from scratch, integrating them with a bui
 ## 1. The mental model
 
 | File | Purpose | Audience |
-|------|---------|----------|
+| ------ | --------- | ---------- |
 | `robots.txt` | **Crawl** control — which URLs a bot may fetch | All well-behaved crawlers (search bots, AI bots, archivers) |
 | `sitemap.xml` | **Discovery** — which URLs the site wants found and crawled | Search engines and AI crawlers that respect sitemaps |
 
@@ -238,7 +238,7 @@ Sitemap: https://example.com/sitemap.xml
 #### Bot reference
 
 | User-agent | Operator | Purpose |
-|------------|----------|---------|
+| ------------ | ---------- | --------- |
 | `Googlebot` | Google | Search index |
 | `Googlebot-Image` | Google | Image search |
 | `Googlebot-News` | Google | News |
@@ -308,7 +308,7 @@ Link-preview bots (`FacebookExternalHit`, `Twitterbot`, etc.) should **always** 
 ### 3.2 Element rules
 
 | Element | Required | Notes |
-|---------|----------|-------|
+| --------- | ---------- | ------- |
 | `<loc>` | Yes | Absolute URL. Must match canonical exactly. URL-encoded. ≤ 2048 chars. |
 | `<lastmod>` | Recommended | Last meaningful update of the page. ISO 8601 (`YYYY-MM-DD` or full timestamp). |
 | `<changefreq>` | No | `always`, `hourly`, `daily`, `weekly`, `monthly`, `yearly`, `never`. **Ignored by Google.** Skip it. |
@@ -324,7 +324,7 @@ What Google actually uses:
 ### 3.3 Hard limits
 
 | Limit | Value |
-|-------|-------|
+| ------- | ------- |
 | URLs per sitemap | 50,000 |
 | Uncompressed file size | 50 MB |
 | Compressed file (`.xml.gz`) size | 50 MB (decompressed) |

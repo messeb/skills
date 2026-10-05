@@ -29,7 +29,7 @@ A baseline is not: the current state of a wiki page, the latest version of a doc
 ## 2. What goes into a baseline
 
 | Artifact | Include when |
-|----------|--------------|
+| ---------- | -------------- |
 | Requirement set with versions and ids | Always |
 | Constraints and assumptions | Always — assumptions are half the contract |
 | Quality attribute scenarios | Always (`quality-attributes`) |
@@ -66,7 +66,7 @@ Do not baseline a draft. Before approval:
 ## 4. Naming and immutability
 
 | Rule | Detail |
-|------|--------|
+| ------ | -------- |
 | Stable identifier | `BL-<scope>-<YYYY-MM>` or a release name — never "final", "final2", "final_approved" |
 | Immutable storage | Git tag, signed release, or a document management system with version control |
 | Content hash or commit id recorded | So the snapshot can be proven unchanged |
@@ -83,7 +83,7 @@ The cheapest robust implementation: keep the specification in version control an
 Baselining and iterative delivery are compatible if you baseline the right things at the right granularity.
 
 | Approach | How | Use when |
-|----------|-----|----------|
+| ---------- | ----- | ---------- |
 | **Release baseline** | Baseline the scope committed for one release; the backlog beyond it stays fluid | Most product teams with external commitments |
 | **Rolling baseline** | Re-baseline each increment; each is a snapshot of what that increment delivered | Continuous delivery with periodic audit needs |
 | **Partial baseline** | Baseline only the regulated, safety, or contractual subset; leave the rest agile | Mixed products — the most common practical answer |
@@ -205,7 +205,7 @@ All changes to this baseline require a change request (`change-management`). Thr
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Baselining a draft to hit a milestone date | Immediate change requests; the baseline means nothing | Entry criteria before approval |
 | Editing an approved baseline | Nobody knows what was agreed | Immutable; corrections create a new baseline |
 | "final_v3_approved_REALLY.docx" | Version chaos, unprovable history | Stable ids in version control with tags |

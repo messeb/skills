@@ -30,7 +30,7 @@ Bug fixes: confirm a failing test was committed before the fix (git history), an
 Read the full diff (`git diff DEFAULT_BRANCH...HEAD`) file by file, once per pass, tagging each finding with its pass:
 
 | Pass | Looks for |
-|------|-----------|
+| ------ | ----------- |
 | Bugs | logic errors, unhandled error paths, race conditions, off-by-one, null and optional handling, broken edge cases, subtle regressions |
 | Security | injection, secrets in the diff, unsafe deserialization, missing authorization, PII in logs or error messages |
 | Compliance | the change matches `spec.md`, `plan.md`, the acceptance criteria, the repo's conventions in `CLAUDE.md` / `AGENTS.md`, and the selected design-principle skills |
@@ -41,7 +41,7 @@ Skip generated paths, vendored code and anything the linter or CI already enforc
 ## Step 5: Classify
 
 | Class | Meaning |
-|-------|---------|
+| ------- | --------- |
 | BLOCKER | would break behavior, leak data, breach a policy, or the claim it supports is false |
 | SHOULD | fix unless there is a stated reason: missing edge case, weak test, convention deviation |
 | NIT | naming, readability, dead code; optional; at most five per review, the rest as a count |
@@ -71,7 +71,7 @@ A mistake the review catches for the second time in this repo (search previous b
 ## Anti-patterns
 
 | Anti-pattern | Why it fails | Instead |
-|--------------|--------------|---------|
+| -------------- | -------------- | --------- |
 | Trusting the evidence table | It was written by the party being reviewed | Re-run every cited verification |
 | Fixing the one-character typo yourself | Breaks separation of duties and the audit trail | Comment, hand back |
 | Merging on "CI is probably fine" | Red main blocks every other run | Wait or request changes |

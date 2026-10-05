@@ -15,7 +15,7 @@ Do **not** use it to model a process across roles (`process-modeling`), the stru
 ## 1. When a state machine is the right tool
 
 | Signal | Verdict |
-|--------|---------|
+| -------- | --------- |
 | A `status` column with more than four values | Model it |
 | Business rules phrased as "you can only X when it is Y" | Model it |
 | Bugs where an entity is in two statuses at once, or in none | Model it — you probably need parallel regions |
@@ -44,7 +44,7 @@ Ask specifically: *"Which states can it be in a year later?"* Terminal and archi
 ## 3. Elements
 
 | Element | Definition | Rule |
-|---------|------------|------|
+| --------- | ------------ | ------ |
 | **State** | A condition in which the entity waits for events | Adjective or past participle: `Confirmed`, `Awaiting payment` — never a verb |
 | **Initial state** | Where the entity begins | Exactly one; name the creating event |
 | **Terminal state** | Where it stops moving | Name every one; "cancelled" and "completed" are different outcomes |
@@ -209,7 +209,7 @@ Legend: target state, `—` illegal (rejected with an error), `∅` ignored (ide
 ## 6. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Boolean flags instead of states | `2^n` combinations, most of them illegal | One explicit state field |
 | States named as verbs (`Cancelling`) | Ambiguity between the action and the resting condition | Past participle or adjective |
 | Empty cells in the transition matrix | Undefined behaviour becomes "whatever the code does" | Every cell is a target, `—`, or `∅` |

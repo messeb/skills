@@ -9,7 +9,7 @@ Find the simplest loop that works and add complexity only when a measured gap de
 ## Every component is an assumption
 
 | Component | Assumes the model cannot, on its own | Test by |
-|-----------|--------------------------------------|---------|
+| ----------- | -------------------------------------- | --------- |
 | Planner and spec | scope ambitiously and consistently from a short prompt | run the coder from raw tickets for a week; compare completeness scores |
 | Contract before code | bridge user stories to testable behavior without drifting | skip the contract on routine tickets; compare rework rounds |
 | Navigator pass per criterion | catch its own edge cases mid-build | disable it; compare reviewer BLOCKER counts |
@@ -47,7 +47,7 @@ The most reliable tuning signal is reading run logs on realistic tickets: where 
 ## Anti-patterns
 
 | Anti-pattern | Why it fails | Instead |
-|--------------|--------------|---------|
+| -------------- | -------------- | --------- |
 | Radical simplification in one step | Cannot attribute the regression | One component at a time |
 | Keeping the harness frozen across model upgrades | Pays for scaffolding the model no longer needs | Re-run the removal experiment per model |
 | Removing the reviewer for speed | Breaks separation of duties | Governance components stay |

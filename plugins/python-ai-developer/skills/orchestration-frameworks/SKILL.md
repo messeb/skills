@@ -15,7 +15,7 @@ Use this skill before adding a framework dependency, when an existing LangChain 
 Frameworks trade control for velocity. The trade is worth it when you use enough of what they provide.
 
 | Signal | Choice |
-|--------|--------|
+| -------- | -------- |
 | One or two provider calls, structured output, a little retry logic | **Raw SDKs** + `provider-abstraction` — a framework adds more concepts than it removes |
 | Straight-line chains, quick prototypes, wide integration needs (many loaders, stores, tools) | **LangChain** |
 | Cyclic, stateful, multi-step agents; needs pause/resume, human approval, time travel, or durability across restarts | **LangGraph** |
@@ -108,7 +108,7 @@ result = await graph.ainvoke({"document": text, "findings": []},
 What LangGraph gives you that a hand-written loop does not:
 
 | Capability | Why it matters |
-|------------|----------------|
+| ------------ | ---------------- |
 | **Checkpointing** | State persists per thread; a crash or deploy resumes instead of re-paying for completed steps |
 | **Human-in-the-loop** | `interrupt` pauses the graph awaiting approval, then resumes — the correct shape for mutating actions (`tool-calling`) |
 | **Time travel** | Rewind to a prior checkpoint and take a different branch when debugging |
@@ -125,7 +125,7 @@ Use a plain function when the flow is a straight line, and a graph when it genui
 ## 4. Adjacent options worth knowing
 
 | Framework | Shape | Fits when |
-|-----------|-------|-----------|
+| ----------- | ------- | ----------- |
 | **PydanticAI** | Typed agents, Pydantic-native results, dependency injection, model-agnostic | You like the FastAPI/Pydantic idiom and want typed agents without LangChain's surface |
 | **Instructor** | A thin wrapper adding schema-validated output plus retries to existing SDK clients | You only need structured extraction; near-zero lock-in |
 | **LlamaIndex** | Document ingestion, indexing, retrieval, query engines | RAG where ingestion and indexing are the hard part |
@@ -147,7 +147,7 @@ class ReviewAgent:
 ```
 
 | Rule | Reason |
-|------|--------|
+| ------ | -------- |
 | Framework imports confined to one package | Replacing or upgrading it is a contained change |
 | Your types cross the boundary, never the framework's | Domain code stays framework-free |
 | Prompts stay in `prompts/`, versioned | Frameworks bury prompts in templates you cannot diff |
@@ -164,7 +164,7 @@ class ReviewAgent:
 ## 6. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Adopting a framework for a single provider call | More concepts, more dependencies, no benefit |
 | `langchain` metapackage installed | Enormous transitive dependency surface |
 | Framework objects in domain signatures | Domain code welded to a fast-moving dependency |

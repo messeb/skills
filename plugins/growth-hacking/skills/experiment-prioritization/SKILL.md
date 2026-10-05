@@ -17,7 +17,7 @@ Use this skill in the weekly growth cycle, when the backlog is larger than capac
 `Score = (Impact + Confidence + Ease) ÷ 3`, each rated 1–10.
 
 | Component | Question |
-|-----------|----------|
+| ----------- | ---------- |
 | **Impact** | If it works, how much does the target metric move? |
 | **Confidence** | How sure are we it will work, given evidence? |
 | **Ease** | How cheap is it to run — build, design, and analysis? |
@@ -29,7 +29,7 @@ Fast and good enough for most teams. Its weakness is that all three rest on judg
 `Score = (Potential + Importance + Ease) ÷ 3` — designed for conversion optimisation.
 
 | Component | Question |
-|-----------|----------|
+| ----------- | ---------- |
 | **Potential** | How bad is this page or step today? Worse means more room |
 | **Importance** | How much valuable traffic passes through it? |
 | **Ease** | How hard is it to change, technically and politically |
@@ -41,7 +41,7 @@ PIE's advantage over ICE for funnel work: *Potential* and *Importance* can be re
 A five-factor model aimed at channel selection rather than page tests:
 
 | Component | Question |
-|-----------|----------|
+| ----------- | ---------- |
 | **Blink** | Gut reaction — does this fit our product and audience at all? |
 | **Relevance** | How well does the channel reach our actual target group? |
 | **Availability** | How easily can we access it — cost, skills, tools, approvals? |
@@ -68,7 +68,7 @@ The fastest instrument, and the right one for a live workshop: a 2×2 of expecte
 ```
 
 | Quadrant | Action |
-|----------|--------|
+| ---------- | -------- |
 | **High impact / low effort** | Do now — these are the quick wins that build credibility early (`growth-process`) |
 | **High impact / high effort** | Plan deliberately; slice into the cheapest falsifying test first |
 | **Low impact / low effort** | Fill-in work only; never let it crowd out the top-left |
@@ -81,7 +81,7 @@ Use it to **triage a large pool down to a shortlist**, then score the shortlist 
 ### Choosing
 
 | Situation | Model |
-|-----------|-------|
+| ----------- | ------- |
 | Live workshop, large unsorted pool | **Impact-Effort Matrix**, then score the shortlist |
 | Mixed backlog, fast weekly ranking | **ICE** |
 | Funnel and conversion work with analytics available | **PIE** |
@@ -95,7 +95,7 @@ Pick one per backlog and stay with it. Two scoring systems in one backlog produc
 ## 2. A worked example
 
 | # | Idea | Impact | Confidence | Ease | ICE |
-|---|------|-------:|-----------:|-----:|----:|
+| --- | ------ | -------: | -----------: | -----: | ----: |
 | 1 | Inline plan comparison in signup | 8 | 7 | 7 | **7.3** |
 | 2 | Referral programme with double-sided incentive | 9 | 4 | 3 | **5.3** |
 | 3 | Change CTA colour on the homepage | 2 | 6 | 10 | **6.0** |
@@ -113,7 +113,7 @@ Scores only work if a 7 means the same thing to everyone. Write the scale down.
 **Impact** — anchor to the KPI tree, not to feeling:
 
 | Score | Meaning |
-|-------|---------|
+| ------- | --------- |
 | 9–10 | Moves the north star by >10% if it works |
 | 7–8 | Moves a primary funnel metric by >5% |
 | 4–6 | Moves a secondary metric measurably |
@@ -122,7 +122,7 @@ Scores only work if a 7 means the same thing to everyone. Write the scale down.
 **Confidence** — anchor to evidence, which is the component people inflate most:
 
 | Score | Evidence |
-|-------|----------|
+| ------- | ---------- |
 | 9–10 | We have run this before and it worked here |
 | 7–8 | Strong evidence from our own data or user research |
 | 5–6 | It worked for a comparable company in a comparable context |
@@ -160,7 +160,7 @@ Note the honest limitation: the probability and the lift are still estimates. Th
 Pure score ordering produces a backlog of safe, cheap, small tests, because certainty and ease are rewarded and boldness is not. Reserve capacity instead of relying on the ranking (`growth-process`):
 
 | Share | Type |
-|-------|------|
+| ------- | ------ |
 | ~70% | Highest-scoring optimisation work on the current constraint |
 | ~20% | New tactics in proven channels |
 | ~10% | Structural bets — low confidence, high potential |
@@ -180,7 +180,7 @@ Two rules: if instrumentation does not exist yet, that is part of the effort and
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Uncalibrated scores | Numbers are opinions with decimal points |
 | Scoring aloud as a group | Anchoring; the first voice sets everyone's number |
 | Ease dominating the ranking | A backlog of trivial tests, no step change |

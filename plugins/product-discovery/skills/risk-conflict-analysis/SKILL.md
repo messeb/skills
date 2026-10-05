@@ -17,7 +17,7 @@ Do **not** use it as a replacement for the elicitation itself — you can only a
 ### Types of conflict
 
 | Type | Example | Usually resolved by |
-|------|---------|--------------------|
+| ------ | --------- | -------------------- |
 | **Goal conflict** | Fast settlement vs thorough fraud checking | An explicit trade-off decision with a rule |
 | **Quality trade-off** | Strong consistency vs low latency | Quantify both, decide per use case (`quality-attributes`) |
 | **Resource conflict** | Two teams need the same specialist in the same quarter | Sequencing or reprioritisation |
@@ -40,7 +40,7 @@ The dangerous class is the last one: requirements that look compatible on paper 
 ### Resolution strategies
 
 | Strategy | Meaning | When |
-|----------|---------|------|
+| ---------- | --------- | ------ |
 | **Prioritise** | One requirement wins outright | Clear business ranking exists |
 | **Scope-separate** | Both hold, in different contexts or segments | Different customer tiers, different markets |
 | **Sequence** | Both hold, at different times | One now, one after a milestone |
@@ -59,7 +59,7 @@ Every resolution is recorded with the decider, the date, and the losing party's 
 Run a coarse check early and a deeper one before committing. Five dimensions:
 
 | Dimension | Questions | Evidence that settles it |
-|-----------|-----------|--------------------------|
+| ----------- | ----------- | -------------------------- |
 | **Technical** | Can it be built with available technology and skills? What is unproven? | Spike, prototype, load test, vendor proof |
 | **Operational** | Can it be run and supported? Who carries the pager? Does the process fit how people work? | Ops review, runbook draft, `contextual-inquiry` findings |
 | **Economic** | Does the value exceed build plus run cost? What is the ongoing cost? | Cost model, licence quotes, cloud estimate |
@@ -77,7 +77,7 @@ Do this while the requirement can still be changed. Feasibility discovered durin
 ### Surfacing risks
 
 | Technique | How | Best at finding |
-|-----------|-----|-----------------|
+| ----------- | ----- | ----------------- |
 | **Pre-mortem** | "It is a year later and this failed. Write down why." Silent writing first, then cluster | Organisational and political risks people will not raise directly |
 | **Risk storming** | Everyone places risk notes on the architecture diagram individually, then compares | Technical risks, and where perceptions differ |
 | **Assumption mapping** | Plot assumptions on importance × evidence | Unexamined beliefs the plan rests on |
@@ -92,7 +92,7 @@ Individual, silent generation before discussion is what makes these work — gro
 Score **likelihood × impact**, keep the scale explicit and consistent, and record the **detectability** — a risk you would notice immediately is not the same as one you would discover a year later.
 
 | Response | Meaning | Example |
-|----------|---------|---------|
+| ---------- | --------- | --------- |
 | **Avoid** | Change the plan so the risk cannot occur | Drop the dependency |
 | **Reduce** | Lower likelihood or impact | Prototype the unproven part first |
 | **Transfer** | Move it to someone contractually equipped | Insurance, vendor SLA with penalties |
@@ -204,7 +204,7 @@ Scale: likelihood L=1 M=2 H=3 · impact L=1 M=2 H=3 · score = product · treat 
 ## 6. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Resolving a conflict by rewording it | It resurfaces during acceptance | Name the clash situation and decide with a rule |
 | Averaging two stakeholders' positions | Neither need is met | Prioritise, separate, sequence, or escalate |
 | Feasibility checked after the commitment | "Analysis" becomes damage control | Coarse check early, deep check before committing |

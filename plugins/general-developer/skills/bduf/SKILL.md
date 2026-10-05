@@ -19,7 +19,7 @@ BDUF manifests as: designing for hypothetical requirements, deferring feedback t
 Design carefully before building when the **cost of changing later is high**:
 
 | Area | Why design first |
-|------|-----------------|
+| ------ | ----------------- |
 | Database schema | Migrations are expensive; data transformations are risky |
 | Public API contracts | Breaking changes affect external consumers |
 | Security architecture | Retrofitting security is harder and riskier than building it in |
@@ -153,7 +153,7 @@ When entering uncertain territory â€” a new integration, an unfamiliar domain â€
 ### Time-box design effort
 
 | Scope | Time limit |
-|-------|-----------|
+| ------- | ----------- |
 | System architecture | 1 day |
 | Module / service design | 2 hours |
 | Class / component design | 30 minutes |

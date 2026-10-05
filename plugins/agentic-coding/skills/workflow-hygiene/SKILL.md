@@ -9,7 +9,7 @@ An unattended loop drifts: sessions die, triggers get lost, humans move tickets 
 ## Checks, in order
 
 | # | Condition | Evidence required | Action |
-|---|-----------|-------------------|--------|
+| --- | ----------- | ------------------- | -------- |
 | 1 | In Progress, assignee `BOT_USER`, older than `STALE_CLAIM_HOURS` | no ticket comment by the bot and no commit on the ticket branch inside the window | comment "Stale claim released", unassign, `transition` Todo, keep the branch |
 | 2 | Ready for Review or In Review, PR closed without merge | `gh pr view` state CLOSED, `mergedAt` null | comment why, `transition` Todo |
 | 3 | In Review longer than `STALE_REVIEW_HOURS` | no review submitted on the PR inside the window | `transition` Ready for Review, hand off `REVIEW <id> <pr>` per `HANDOFF` |
@@ -27,7 +27,7 @@ On the first run of the week additionally run `agentic-coding:loop-metrics` and 
 ## Anti-patterns
 
 | Anti-pattern | Why it fails | Instead |
-|--------------|--------------|---------|
+| -------------- | -------------- | --------- |
 | Releasing a claim because it "looks old" | The coder may be mid-run on a long test suite | Require both no comment and no commit |
 | Deleting stale branches | Destroys evidence and possibly unpushed work | Report only |
 | Re-firing a hand-off every run | Duplicate sessions on the same PR | Only when the stale window has passed |

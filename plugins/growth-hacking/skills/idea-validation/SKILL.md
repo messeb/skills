@@ -15,7 +15,7 @@ Use this skill before committing engineering time to a new product, feature, or 
 Climb only as far as the risk requires. Each rung costs more and answers a sharper question.
 
 | Method | Cost | Answers | Does not answer |
-|--------|------|---------|-----------------|
+| -------- | ------ | --------- | ----------------- |
 | **Paper prototype / sketch** | Hours | Is the concept understood? | Will anyone want it |
 | **Explainer video** | 1–3 days | Is the value proposition compelling? | Whether the product can be built |
 | **Landing page / smoke test** | 1–3 days | Does the promise generate interest at a given cost? | Whether people would pay or stay |
@@ -106,7 +106,7 @@ Its limit is the same as any stated-preference method: people are spending play 
 ## 7. Reading the results honestly
 
 | Signal | Strength |
-|--------|----------|
+| -------- | ---------- |
 | Paid, with a refund available and not taken | Strongest |
 | Paid | Very strong |
 | Committed time (a scheduled call, a completed onboarding) | Strong |
@@ -124,7 +124,7 @@ Finally, keep a validation log: idea, method, threshold, actual, decision. Witho
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Building an MVP to test a demand assumption | Months spent on a question a week could answer |
 | Smoke test driven by friends and personal social feeds | Politeness measured, not demand |
 | No pre-declared success threshold | Any result reinterpreted as encouraging |

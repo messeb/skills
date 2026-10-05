@@ -11,7 +11,7 @@ Use this skill when building or auditing an Astro, Nuxt, or Vue application whos
 **Scope boundary.** This skill covers the *implementation* in a component framework. The canonical rules for what those artifacts must contain live in the `seo` plugin:
 
 | Topic | Owned by |
-|-------|----------|
+| ------- | ---------- |
 | `<head>` tag content, Open Graph, canonical, hreflang | `seo:meta-tags` |
 | JSON-LD entity shapes and rich-result eligibility | `seo:structured-data-jsonld` |
 | Semantic body structure and heading hierarchy | `seo:seo-page-structure` |
@@ -32,7 +32,7 @@ Within this plugin, `frontend-developer:performance` owns bundle size and render
 The single highest-impact decision. Traditional crawlers execute JavaScript with a delay and a budget; most AI crawlers **do not execute it at all**. Content that exists only after hydration is invisible to them.
 
 | Content | Required rendering | Why |
-|---------|--------------------|-----|
+| --------- | -------------------- | ----- |
 | Article body, headings, lead paragraph | Static HTML (SSG or SSR) | Must be in the initial response for both crawlers and LLM ingestion |
 | Title, meta description, canonical, JSON-LD | Static HTML | Client-injected head tags are unreliable for AI crawlers and social unfurlers |
 | Navigation and internal links | Real `<a href>` in the initial HTML | Router-only navigation is not a discoverable link graph |
@@ -67,7 +67,7 @@ curl -s "$URL" | grep -oE '<a [^>]*href="[^"]+"' | head -20
 Every hydrated component costs bytes, main-thread time, and INP. Decide per component, not per page.
 
 | Component | Hydration |
-|-----------|-----------|
+| ----------- | ----------- |
 | Header, footer, navigation | None — plain HTML and CSS |
 | Article body, breadcrumbs, tag lists, related links | None |
 | FAQ / disclosure | Native `<details>` — no JavaScript |
@@ -118,7 +118,7 @@ The LCP element is normally the hero image or the H1 block. It must be discovera
 ```
 
 | Rule | Reason |
-|------|--------|
+| ------ | -------- |
 | Never lazy-load the LCP image | Delays the metric by a full round trip |
 | Always set intrinsic `width` and `height` | Prevents layout shift |
 | `fetchpriority="high"` on the LCP image only | Priority is zero-sum |
@@ -203,7 +203,7 @@ button.addEventListener('click', () => {
 These artifacts must be **server-rendered**, produced from one source, and validated in CI.
 
 | Framework | Mechanism |
-|-----------|-----------|
+| ----------- | ----------- |
 | Astro | A single `<BaseHead>` component taking typed props; JSON-LD as a `<script type="application/ld+json" set:html={...}>` in the layout |
 | Nuxt | `useSeoMeta()` / `useHead()` in the page or a composable; `useSchemaOrg()` or a rendered JSON-LD script — during SSR, not `onMounted` |
 | Vue SPA | Only viable with SSR or prerendering; otherwise head tags reach neither AI crawlers nor unfurlers |
@@ -290,7 +290,7 @@ Lighthouse CI is the pull-request gate; PageSpeed Insights is the production mon
 ## 9. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Hydrating the whole page when only search or sharing is interactive | Large bundle, poor INP and TBT, no benefit |
 | Article body rendered on the client | Invisible to AI crawlers; delayed indexing |
 | Head tags or JSON-LD set in `onMounted` | Missing for AI crawlers and social unfurlers |

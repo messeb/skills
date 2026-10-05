@@ -13,7 +13,7 @@ Use this skill for data exploration, prompt and model comparison, OCR accuracy a
 ## 1. What notebooks are and are not for
 
 | Good use | Bad use |
-|----------|---------|
+| ---------- | --------- |
 | Exploring a dataset or a new document class | Production data pipelines |
 | Comparing prompts, models, or OCR engines side by side | Scheduled jobs |
 | Rendering an evaluation report with charts | Business logic that the service imports |
@@ -110,7 +110,7 @@ Keep the heavy lifting in `src/` even here — the notebook orchestrates and vis
 ## 6. Notebooks in CI
 
 | Level | Approach |
-|-------|----------|
+| ------- | ---------- |
 | Do they still run? | `pytest --nbmake notebooks/` or `jupyter nbconvert --execute` in CI |
 | Do they still produce the right numbers? | Extract assertions into a test that imports the same functions |
 | Are outputs stripped? | `nbstripout --verify` as a pre-commit hook |
@@ -145,7 +145,7 @@ When a notebook produces something worth keeping:
 ## 9. Anti-patterns
 
 | Anti-pattern | Consequence |
-|--------------|-------------|
+| -------------- | ------------- |
 | Business logic living in notebook cells | Untested code the service cannot use |
 | `sys.path.append("../src")` | Fragile; hides a broken environment setup |
 | Copy-pasting service code into a cell | Two implementations that drift apart |

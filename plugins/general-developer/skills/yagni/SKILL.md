@@ -236,7 +236,7 @@ When reviewing a codebase for YAGNI violations:
 ## Decision Framework
 
 | Question | YAGNI says… |
-|----------|-------------|
+| ---------- | ------------- |
 | Is there a current requirement for this? | If no — don't build it |
 | Is this driven by user feedback or by speculation? | If speculation — defer |
 | What is the cost of adding it later? | Usually lower than the cost of carrying it now |

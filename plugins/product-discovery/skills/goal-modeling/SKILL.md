@@ -15,7 +15,7 @@ Do **not** use it for straightforward feature work (`impact-mapping` is lighter 
 ## 1. KAOS in one page
 
 | Element | Meaning | Notation rule |
-|---------|---------|---------------|
+| --------- | --------- | --------------- |
 | **Goal** | A prescriptive statement of intent the system-and-environment should satisfy | `Achieve[…]`, `Maintain[…]`, `Avoid[…]` |
 | **AND-refinement** | The goal is met if **all** sub-goals are met | Every sub-goal is necessary |
 | **OR-refinement** | The goal is met if **any** alternative is met | Alternatives to be chosen between — the design space |
@@ -29,7 +29,7 @@ Do **not** use it for straightforward feature work (`impact-mapping` is lighter 
 Goal patterns:
 
 | Pattern | Meaning | Example |
-|---------|---------|---------|
+| --------- | --------- | --------- |
 | `Achieve[P]` | Eventually P holds | *Achieve[claim settled within 30 days]* |
 | `Maintain[P]` | P always holds | *Maintain[personal data accessible only to authorised staff]* |
 | `Avoid[P]` | P never holds | *Avoid[double payout for one claim]* |
@@ -49,7 +49,7 @@ For each leaf goal:
 4. **Resolve**, choosing a strategy:
 
 | Strategy | Meaning | Example |
-|----------|---------|---------|
+| ---------- | --------- | --------- |
 | **Substitute goal** | Replace the goal with one not subject to the obstacle | Stop relying on the customer's stated address; verify it |
 | **Prevent** | Make the obstacle impossible | Enforce the constraint at the boundary |
 | **Reduce likelihood** | Make it rarer | Reminders before the deadline |
@@ -66,7 +66,7 @@ Obstacle analysis is where non-obvious requirements come from — it is the syst
 i* (i-star) models **intentional dependencies between actors** — who depends on whom, and how vulnerable that makes them.
 
 | Element | Meaning |
-|---------|---------|
+| --------- | --------- |
 | **Actor** | A stakeholder, role, or system with intentions |
 | **Goal dependency** | A depends on B to achieve a goal; B decides how |
 | **Task dependency** | A depends on B to perform a specific task in a specific way |
@@ -253,7 +253,7 @@ flowchart LR
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Expectations recorded as requirements | You "implement" something you cannot control | Assign an agent to every leaf; environment leaves are expectations |
 | Expectations without obstacle analysis | The dependency fails silently in production | Every expectation gets obstacles and resolutions |
 | Refining until the leaves are already solutions | The design space is closed before it is examined | Refine goals; alternatives belong in OR branches |

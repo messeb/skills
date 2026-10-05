@@ -46,7 +46,7 @@ Skills are discovered automatically from `skills/`; they are not listed in `plug
 Frontmatter fields:
 
 | Field | Description |
-|-------|-------------|
+| ------- | ------------- |
 | `description` | When to use the skill and what it covers; this is what triggers it, so it names the tasks and keywords |
 | `disable-model-invocation` | `true` to run without invoking the AI model |
 
@@ -65,7 +65,7 @@ Plugin, skill and agent names are kebab-case. Cross-references between skills us
 ## Plugins
 
 | Plugin | Agents | Skills | Purpose |
-|--------|--------|--------|---------|
+| -------- | -------- | -------- | --------- |
 | `general-developer` | `general-developer` | 16 | Language-agnostic engineering principles (DRY, KISS, YAGNI, SOLID, security, testing, GitHub repo setup, Husky, Dangerfile) |
 | `frontend-developer` | `frontend-developer` | 18 | Frontend development: Vue, Nuxt (incl. DDD patterns), Astro, Vite, performance, a11y, testing |
 | `go-developer` | `go-developer` | 9 | Go CLI and backend service development |

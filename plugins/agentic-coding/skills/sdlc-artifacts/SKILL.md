@@ -9,7 +9,7 @@ Every stage of the loop ends by committing an artifact the next stage reads, and
 ## The chain
 
 | Stage | Artifact | Written by | Read by | Gate |
-|-------|----------|------------|---------|------|
+| ------- | ---------- | ------------ | --------- | ------ |
 | Plan | `intent.md` | originator with Claude, or the planner agent from a ticket or incident | planner (spec) | product owner accepts |
 | Design | `spec.md` | planner agent, constrained by the organization's skills | coder (plan), reviewer (compliance) | product owner moves the ticket to Todo |
 | Build | `plan.md` | coder before writing code | reviewer (plan match) | coder accepts its own plan for routine work; higher-risk classes need a human |
@@ -120,7 +120,7 @@ Ticket: <ref>. Branch: <name>. Written: <timestamp>.
 ## Anti-patterns
 
 | Anti-pattern | Why it fails | Instead |
-|--------------|--------------|---------|
+| -------------- | -------------- | --------- |
 | Writing plan.md after the code | It documents instead of governs | Plan first, update in the same commit as a deviation |
 | spec.md without flagged concerns | Concerns surface in review, weeks later | Flag every policy conflict and open question |
 | Two sources of truth, no links | Auditors and agents read different stories | Linkage rule, minimum |

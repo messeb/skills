@@ -157,7 +157,7 @@ class Mailer:
 **Prioritise by failure mode severity:**
 
 | Type | When it bites | Priority |
-|------|--------------|----------|
+| ------ | -------------- | ---------- |
 | Knowledge fragmentation | Any time a rule changes | High |
 | Semantic duplication | When a business rule evolves | High |
 | Literal duplication | When one copy is patched | Medium |

@@ -19,7 +19,7 @@ A bounded context is the boundary within which **one model and one vocabulary ar
 Boundary heuristics, in order of strength:
 
 | Heuristic | Signal | Weight |
-|-----------|--------|--------|
+| ----------- | -------- | -------- |
 | **Language change** | The same term means something different on the other side ("order" in sales vs in fulfilment) | Strongest |
 | **Pivotal event** | Responsibility visibly changes hands on the Event Storming timeline | Strong |
 | **Different rate of change** | One part changes weekly, the other yearly | Strong |
@@ -38,7 +38,7 @@ Anti-heuristic: do not derive contexts from the org chart alone, and do not deri
 Every boundary gets exactly one pattern, plus the direction of the dependency.
 
 | Pattern | Notation | Meaning | Use when | Cost |
-|---------|----------|---------|----------|------|
+| --------- | ---------- | --------- | ---------- | ------ |
 | **Partnership** | `P` | Two contexts succeed or fail together; coordinated planning and releases | Two teams with a shared deadline and mutual dependency | High coordination |
 | **Shared Kernel** | `SK` | A shared subset of the model and code, jointly owned | Very small, very stable overlap | High — changes need both teams' consent |
 | **Customer / Supplier** | `C` / `S` | Downstream (customer) needs are planned into the upstream (supplier) backlog | Upstream is willing and able to prioritise downstream needs | Medium |
@@ -198,7 +198,7 @@ Edge label reads `<upstream role> to <downstream role>`: `U` upstream, `D` downs
 ## 6. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Contexts derived from the database schema | You encode the legacy model forever | Derive from language and pivotal events |
 | Contexts named after technology (`OrderService`) | The map stops being about the domain | Name in the domain's own words |
 | One shared "Customer" model everywhere | Every change touches every team | Let each context hold its own view; translate at boundaries |

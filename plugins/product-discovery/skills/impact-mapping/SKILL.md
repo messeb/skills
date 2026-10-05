@@ -15,7 +15,7 @@ Do **not** use it to model a domain (`event-storming`), specify a story (`exampl
 ## 1. The four levels
 
 | Level | Question | Content | Test |
-|-------|----------|---------|------|
+| ------- | ---------- | --------- | ------ |
 | **Why** — Goal | Why are we doing this? | One measurable business goal with a metric, a baseline, a target and a deadline | Could a stakeholder tell in six months whether it was reached, without asking us? |
 | **Who** — Actors | Who can produce or obstruct the effect? | Users, buyers, internal roles, partners, adversaries, regulators | Is it a *specific* group whose behaviour we could observe? |
 | **How** — Impacts | How should their behaviour change? | Behaviour change, in their terms — not features | Is it something the actor *does differently*, that we could measure? |
@@ -46,7 +46,7 @@ If the "goal" arrives as a feature ("we need a mobile app"), ladder up: *"What w
 A usable goal has: **metric · baseline · target · deadline · scope**.
 
 | Weak goal | Why it fails | Rewritten |
-|-----------|--------------|-----------|
+| ----------- | -------------- | ----------- |
 | "Improve customer satisfaction" | No metric, no target | "Raise CSAT for delivery from 3.4 to 4.0 by Q4" |
 | "Launch the mobile app" | It is a deliverable, not a goal | "Increase repeat orders from mobile from 12 % to 25 % within 6 months of launch" |
 | "Reduce costs" | Which cost, by how much? | "Cut cost per processed claim from €14 to €9 by end of year" |
@@ -61,7 +61,7 @@ One goal per map. If there are two goals, draw two maps — otherwise every bran
 The **How** level is where impact maps are usually wrong. An impact is a change in an actor's behaviour, described from the actor's side.
 
 | Not an impact (feature in disguise) | Real impact |
-|-------------------------------------|-------------|
+| ------------------------------------- | ------------- |
 | "Add a saved-basket function" | "Customers return to finish an abandoned order" |
 | "Send push notifications" | "Drivers accept jobs within 2 minutes instead of 15" |
 | "Build an admin dashboard" | "Support resolves a case without asking engineering" |
@@ -160,7 +160,7 @@ GOAL: Repeat mobile orders 12% → 25% by 2027-02-28
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Goal without a metric | Every deliverable is justifiable | Metric, baseline, target, deadline |
 | Impacts that are features | The map becomes a decorated backlog | Actor + active verb, no "we build" |
 | Building every branch | The map's whole purpose is lost | Shortest path: one branch at a time |

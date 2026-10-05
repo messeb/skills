@@ -17,7 +17,7 @@ Do **not** use it to specify a complete flow with many exception paths (`use-cas
 A story is not a document. It is three things, in order:
 
 | C | Meaning | Failure if skipped |
-|---|---------|--------------------|
+| --- | --------- | -------------------- |
 | **Card** | A short written promise of value — deliberately incomplete | Nothing to point at in planning |
 | **Conversation** | The discussion where the detail is actually created (`example-mapping`) | Assumptions diverge; rework in review |
 | **Confirmation** | The acceptance criteria that settle "done" | Endless "is this finished?" debates |
@@ -29,7 +29,7 @@ A perfectly written card with no conversation is worse than a rough card with a 
 ## 2. Formats
 
 | Format | Template | Use for |
-|--------|----------|---------|
+| -------- | ---------- | --------- |
 | **Role–goal–benefit** | As a `<role>`, I want `<goal>`, so that `<benefit>` | Default; forces the "why" |
 | **Job story** | When `<situation>`, I want to `<motivation>`, so I can `<outcome>` | When the situation matters more than the persona (`jobs-to-be-done`) |
 | **Enabler / technical** | In order to `<capability>`, we need `<technical work>` so that `<user-visible consequence>` | Infrastructure work that must still trace to value |
@@ -43,7 +43,7 @@ Rules for the benefit clause: it must state a real consequence. *"…so that I c
 ## 3. INVEST
 
 | Letter | Test | Fails when | Fix |
-|--------|------|-----------|-----|
+| -------- | ------ | ----------- | ----- |
 | **I**ndependent | Can it be built in any order? | "Only after STORY-12" | Reorder scope, or merge the two |
 | **N**egotiable | Is the *how* still open? | The card prescribes the implementation | Move solution detail to the conversation |
 | **V**aluable | Does a user or the business notice? | "Add an index to table X" | Bundle into the story whose value it enables, or state the user-visible consequence |
@@ -60,7 +60,7 @@ Run INVEST as a checklist in refinement, not as a purity contest — "independen
 Use these when a story is too big. Always split **vertically** — every slice must go end to end and be releasable, even if narrow.
 
 | Pattern | Split by | Example |
-|---------|----------|---------|
+| --------- | ---------- | --------- |
 | **Workflow steps** (SPIDR: *Steps*) | Stages of the flow | Checkout: address → payment → confirmation |
 | **Business rule variations** (SPIDR: *Rules*) | One rule per story | Standard refund first; partial refunds later |
 | **Data variations** (SPIDR: *Data*) | Data types or ranges | Domestic addresses first, international later |
@@ -80,7 +80,7 @@ Use these when a story is too big. Always split **vertically** — every slice m
 Choose the style that fits the story; do not force Gherkin onto everything.
 
 | Style | Shape | Best for |
-|-------|-------|----------|
+| ------- | ------- | ---------- |
 | **Scenario (Gherkin)** | Given / When / Then | Behaviour with clear context and outcome; automatable |
 | **Rule-based** | A bullet list of conditions that must hold | Validation rules, calculations, permissions |
 | **Checklist** | Verifiable statements | UI states, content, configuration |
@@ -239,7 +239,7 @@ flowchart TB
 ## 8. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Story as a mini-specification | The conversation never happens | Card + conversation + confirmation |
 | "So that I can use the feature" | The value is unknown, so priority is arbitrary | Trace to an impact or delete the story |
 | Horizontal splits (backend / frontend) | Nothing is releasable; integration risk piles up at the end | Vertical slices, always |

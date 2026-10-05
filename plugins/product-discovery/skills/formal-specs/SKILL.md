@@ -15,7 +15,7 @@ Do **not** use it for ordinary CRUD, for UI behaviour, or as documentation for a
 ## 1. Choosing the language
 
 | Language | Paradigm | Best at | Tooling | Learning cost |
-|----------|----------|---------|---------|---------------|
+| ---------- | ---------- | --------- | --------- | --------------- |
 | **TLA+** (with PlusCal) | State machines over time; temporal logic | Concurrency, distributed protocols, liveness, refinement between abstraction levels | TLC model checker, TLAPS prover, Apalache | High; PlusCal lowers the entry cost |
 | **Alloy** | Relational first-order logic; bounded analysis | Structural and relational models — permissions, ownership, schemas, configuration, security policies | Alloy Analyzer, instant counterexamples and visualisation | Medium; fastest feedback loop |
 | **Z** | Set theory and predicate logic; schema calculus | Precise data and operation specification, especially in regulated documentation | Type checkers, provers; less automated exploration | High; heavy notation |
@@ -29,7 +29,7 @@ Both TLA+ and Alloy are *bounded* by default: they check exhaustively within a f
 ## 2. What formal specification actually buys
 
 | Benefit | Why it matters |
-|---------|----------------|
+| --------- | ---------------- |
 | Counterexample traces | An exact interleaving that violates the property — reproducible, and readable as a sequence of steps |
 | Forced precision | Half the value arrives before the checker runs, while writing down what you *thought* the design was |
 | Cheap design exploration | Change an assumption, re-check in minutes instead of rebuilding a system |
@@ -59,7 +59,7 @@ What it does **not** buy: correctness of the implementation. The spec constrains
 ## 4. Modelling patterns that repeatedly pay off
 
 | Pattern | Model it as |
-|---------|-------------|
+| --------- | ------------- |
 | Unreliable network | Actions that duplicate, drop, and reorder messages; never assume delivery |
 | Crash and restart | An action that resets volatile state while persistent state survives |
 | Retries and idempotency | Let the environment resend any request; assert the outcome is unchanged |
@@ -165,7 +165,7 @@ Store specs in `spec/` beside the code; the record below as `docs/specs/formal-s
 ## 7. Anti-patterns
 
 | Anti-pattern | Consequence | Do instead |
-|--------------|-------------|------------|
+| -------------- | ------------- | ------------ |
 | Specifying the whole system | Unmaintainable, unreadable, never re-run | One question, one narrow spec |
 | Modelling at implementation detail level | State explosion; the checker never finishes | Abstract to the level the question needs |
 | Assuming a reliable network | The interesting bugs are excluded by construction | Model loss, duplication, reordering, crashes |
