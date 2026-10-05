@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## 2026-10-05
+
+### Fixed
+
+- `general-developer:github-repo` and `general-developer:security` — the `dependabot.yml` templates now enforce exactly three grouped PR types instead of one PR per dependency: all minor+patch updates in one PR, all major updates in one PR, all GitHub Actions updates in one PR (plus grouped security updates). Every group uses wildcard `patterns: ["*"]` so no dependency can fall back to an individual PR, the audit checklist verifies the groups block, and an anti-pattern table lists the configurations that silently reintroduce per-dependency PRs
+
 ## 2026-09-29
 
 ### Added

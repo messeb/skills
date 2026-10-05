@@ -1097,19 +1097,36 @@ poetry lock
 
 **✅ Dependabot Configuration (.github/dependabot.yml):**
 
+Always group updates into exactly three PR types — all minor+patch together, all majors together, all GitHub Actions together — never one PR per dependency. Every group must use `patterns: ["*"]`; any dependency not matched by a group falls back to its own PR. The full template and the grouping anti-patterns live in `general-developer:github-repo`; the shape per ecosystem:
+
 ```yaml
 version: 2
 updates:
-  - package-ecosystem: "npm"
+  - package-ecosystem: "npm"        # repeat per ecosystem, always with groups
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 5
+    groups:
+      minor-and-patch:
+        applies-to: version-updates
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+      major:
+        applies-to: version-updates
+        patterns: ["*"]
+        update-types: ["major"]
+      security:
+        applies-to: security-updates
+        patterns: ["*"]
 
-  - package-ecosystem: "pip"
+  - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      actions:
+        patterns: ["*"]
 ```
 
 ---

@@ -64,7 +64,7 @@ Then proceed to **Step 3 — Verify and summarize**.
 - `.github/release.yml` — do the labels match what's actually used in the repo?
 - `.github/copilot-instructions.md` — does the tech stack section reflect the current stack?
 - `.github/ISSUE_TEMPLATE/*.md` — are templates using the legacy `.md` format? Offer to upgrade to `.yml`.
-- `.github/dependabot.yml` — does the `package-ecosystem` list cover all ecosystems in the repo?
+- `.github/dependabot.yml` — does the `package-ecosystem` list cover all ecosystems in the repo? Does **every** entry have the three-PR `groups` block (wildcard `minor-and-patch`, `major`, `security`; wildcard `actions` group for `github-actions`)? An entry without groups, or a group not matching `"*"`, produces per-dependency PRs and must be fixed.
 
 After auditing, present a summary of what will be created or updated, confirm with the user, then apply changes. Proceed to **Step 3 — Verify and summarize**.
 
@@ -685,30 +685,74 @@ Include only platforms the user actually uses. Omit the file if funding is not w
 
 ### `.github/dependabot.yml`
 
+Dependabot must open **exactly three PR types, never one PR per dependency**:
+
+1. one PR with **all minor and patch** dependency updates
+2. one PR with **all major** dependency updates
+3. one PR with **all pipeline (GitHub Actions) version updates**
+
+Dependabot's default is one PR per dependency; only `groups` prevents that, and **any dependency not matched by a group silently falls back to its own PR**. The template below is bulletproof because every group uses `patterns: ["*"]` and the two version-update groups partition all update types (`minor` + `patch` vs `major`) — nothing can escape the groups.
+
 ```yaml
 version: 2
 updates:
-  - package-ecosystem: "npm"        # adjust to project: pip, cargo, maven, gradle, etc.
+  # One entry per package ecosystem in the repo (npm, pip, cargo, maven, ...).
+  # Copy the whole entry INCLUDING the groups block for each ecosystem.
+  - package-ecosystem: "npm"        # adjust to project
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 5
     reviewers:
       - "<github-handle>"
     labels:
       - "dependencies"
       - "automated"
+    groups:
+      minor-and-patch:              # PR 1 — ALL minor + patch updates together
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+      major:                        # PR 2 — ALL major updates together
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - "major"
+      security:                     # security updates are a separate Dependabot
+        applies-to: security-updates   # mechanism — group them too, or they
+        patterns:                      # arrive as per-dependency PRs
+          - "*"
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
     labels:
       - "dependencies"
       - "automated"
+      - "ci"
+    groups:
+      actions:                      # PR 3 — ALL workflow action updates together
+        patterns:
+          - "*"
 ```
 
-Add one `updates` entry per package ecosystem present in the repo. Always include `github-actions`.
+Add one `updates` entry per package ecosystem present in the repo — **always with the full `groups` block copied along**. Always include `github-actions`. Group names become the PR titles (`build(deps): bump the minor-and-patch group …`).
+
+**Grouping rules that keep it at three PRs — violating any of them reintroduces per-dependency PRs:**
+
+| Anti-pattern | Why it fails | Instead |
+|--------------|--------------|---------|
+| `updates` entry without a `groups` block | Default behavior: one PR per dependency | Copy the full `groups` block into every entry |
+| Groups matched by name patterns (`eslint*`, `react*`) | Every dependency outside the patterns gets its own PR, and PR count grows with each pattern group | One wildcard group per update type: `patterns: ["*"]` |
+| Only a `minor-and-patch` group, no `major` group | Majors match no group and fall back to individual PRs | Keep both groups so `update-types` partitions everything |
+| `exclude-patterns` carving dependencies out of a group | Excluded dependencies revert to individual PRs | Use `ignore` to skip updates entirely; never exclude from groups |
+| No `applies-to: security-updates` group | Grouping only covers version updates; security PRs still arrive one per dependency | Keep the wildcard `security` group |
+| Expecting one PR across npm + pip + cargo | Groups are scoped to their `updates` entry; a multi-ecosystem repo gets one minor/patch and one major PR *per ecosystem* | Accept per-ecosystem PRs, or merge entries with `multi-ecosystem-groups` where available |
 
 ---
 
