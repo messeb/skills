@@ -1,0 +1,38 @@
+README.md
+  s_3c40c3416df010::t_8c98ba41d8abce 392
+plugins/agentic-coding/skills/implement-ticket/SKILL.md
+  s_3c40c3416df010::t_b89626359354da 55
+plugins/agentic-coding/skills/workflow-config/SKILL.md
+  s_3c40c3416df010::t_b89626359354da 57
+CLAUDE.md
+  s_3c40c3416df010::t_8c98ba41d8abce 55,79
+plugins/agentic-coding/skills/closing-the-loop/SKILL.md
+  s_3c40c3416df010::t_8d9b10acaf02d3 29
+  s_3c40c3416df010::t_6ef60b4449da20 44
+plugins/agentic-coding/.claude-plugin/plugin.json
+  s_3c40c3416df010::t_6ef60b4449da20 3-4
+plugins/agentic-coding/skills/evaluator-qa/SKILL.md
+  s_3c40c3416df010::t_67755eeb6b142f 62
+plugins/agentic-coding/skills/harness-tuning/SKILL.md
+  s_3c40c3416df010::t_67755eeb6b142f 34
+.claude-plugin/marketplace.json
+  s_3c40c3416df010::t_8c98ba41d8abce 69,71
+CHANGELOG.md
+  s_3c40c3416df010::t_ddc9be16ed27ee 7-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "561a065ad88740eba17a548384af6174f84fd1bf",
+  "prompts": {},
+  "sessions": {
+    "s_3c40c3416df010": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a05a3543-2330-462d-b78f-d35e639cb75b",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  }
+}
