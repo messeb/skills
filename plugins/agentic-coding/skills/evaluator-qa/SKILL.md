@@ -59,7 +59,7 @@ Evaluator prompts drift from the tech lead's judgment. Monthly, or after an inci
 1. Read the evaluator's run logs for the period.
 2. Mark every verdict a human would have graded differently, in either direction.
 3. Turn each divergence into a rule or an example in `REVIEW.md` (or, for repo-independent divergence, in this skill via the plugin's normal change process).
-4. Re-run the evals (`agentic-coding:agent-evals`) to confirm the pass rate did not drop for the wrong reasons.
+4. Re-check recent reviews to confirm the calibration did not drift for the wrong reasons.
 
 ## Anti-patterns
 

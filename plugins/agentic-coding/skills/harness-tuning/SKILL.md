@@ -31,7 +31,7 @@ The evaluator pays for itself when the task sits beyond what the current model d
 ## The removal experiment
 
 1. Change one component at a time. Cutting several at once made it impossible to tell which piece was load-bearing.
-2. Hold the eval suite and the metrics window constant (`agentic-coding:agent-evals`, `agentic-coding:loop-metrics`).
+2. Hold the metrics window constant (`agentic-coding:loop-metrics`).
 3. Run long enough for the metric to settle: rework rounds and first-pass merge share need at least twenty PRs.
 4. Keep the change if the metric held; revert and note the assumption as confirmed if it dropped.
 5. Record the result in `docs/sdlc/harness-log.md`: date, model, component, metric before and after, decision.

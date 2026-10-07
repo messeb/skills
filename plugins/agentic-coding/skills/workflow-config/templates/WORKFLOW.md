@@ -67,7 +67,6 @@ MAX_SHOULD_FINDINGS = 2
 CI_WAIT_MINUTES     = 15
 STALE_CLAIM_HOURS   = 6
 STALE_REVIEW_HOURS  = 4
-EVAL_PASS_RATE      = 0.9
 METRICS_TICKET      = <optional>          # optional ticket that receives the weekly metrics comment
 
 ## Stop conditions

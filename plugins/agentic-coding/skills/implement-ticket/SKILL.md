@@ -52,8 +52,7 @@ On rework the review comments are the criteria: one commit per addressed comment
 ## Bug fixes
 
 1. Reproduce the bug as a failing test. Run it and confirm it fails for the expected reason. Commit the test alone.
-2. Create `.claude/fix-mode` so the test-freeze hook (`agentic-coding:guardrails`) blocks edits to test files from here on.
-3. Make the test pass by changing the code only. Remove `.claude/fix-mode` after the gates are green. A test that existed before the fix and could not be rewritten is the proof the bug is gone; the reviewer checks the commit order.
+2. Make the test pass by changing the code only; do not edit the committed test while fixing. A test that existed before the fix and could not be rewritten is the proof the bug is gone; the reviewer checks the commit order.
 
 ## Long runs: handoff
 

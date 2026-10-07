@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## 2026-10-07
+
+### Removed
+
+- `agentic-coding:guardrails` and `agentic-coding:agent-evals` removed, including their bundled hook scripts, settings and eval workflow; all references scrubbed from the remaining skills, agents, README and plugin manifests. The loop no longer installs blocking hooks or a CI eval gate; bug fixes keep the test-first rule as reviewer-checked convention instead of a file-freeze hook
+
 ## 2026-10-05
 
 ### Fixed

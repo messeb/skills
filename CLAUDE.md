@@ -52,7 +52,7 @@ Frontmatter fields:
 
 The body is the full instruction set. House style, followed by every plugin: when to use it and when not to, the method as numbered steps or tables, an anti-pattern table (anti-pattern, why it fails, instead), and a checklist.
 
-A skill may ship supporting files next to `SKILL.md` (for example `frontend-developer/skills/nuxt-ddd/patterns/*.md`, `agentic-coding/skills/guardrails/hooks/*.sh`, `agentic-coding/skills/sdlc-artifacts/templates/*.md`). The skill references them by relative path; anything a skill tells the user to copy or run must exist in the repo, not only as an inline snippet.
+A skill may ship supporting files next to `SKILL.md` (for example `frontend-developer/skills/nuxt-ddd/patterns/*.md`, `agentic-coding/skills/sdlc-artifacts/templates/*.md`). The skill references them by relative path; anything a skill tells the user to copy or run must exist in the repo, not only as an inline snippet.
 
 ### Agents (`agents/<name>.md`)
 
@@ -76,7 +76,7 @@ Plugin, skill and agent names are kebab-case. Cross-references between skills us
 | `content-author` | `content-author` | 6 | Readable text in English and German: readability indices, plain language, revision |
 | `git-code-analyzer` | `git-code-analyzer` | 4 | Repository analysis from git and gh data: activity, ownership, PR collaboration, impact |
 | `notion-summarizer` | `notion-summarizer` | 5 | Long sources into structured Notion summaries with flashcards |
-| `agentic-coding` | `agentic-planner`, `agentic-coder`, `agentic-reviewer`, `agentic-janitor` | 16 | Unattended AI-native ticket-to-merge loop on Jira, GitHub Issues or Notion; repo-agnostic via `WORKFLOW.md`, `CLAUDE.md`, `AGENTS.md`, `REVIEW.md`; ships hooks, evals, artifact templates |
+| `agentic-coding` | `agentic-planner`, `agentic-coder`, `agentic-reviewer`, `agentic-janitor` | 14 | Unattended AI-native ticket-to-merge loop on Jira, GitHub Issues or Notion; repo-agnostic via `WORKFLOW.md`, `CLAUDE.md`, `AGENTS.md`, `REVIEW.md`; ships artifact templates |
 
 The `general-developer` skills (`testing`, `security`, `solid`, ...) and the stack plugins are also consumed by `agentic-coding` at runtime: its agents detect the repo's stack and load the matching skills as construction rules and review lenses.
 

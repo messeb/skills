@@ -66,9 +66,9 @@
     },
     {
       "name": "agentic-coding",
-      "description": "Adds four unattended agents (planner, coder, reviewer, janitor) and 16 skills for an AI-native ticket-to-merge loop on Jira, GitHub Issues or Notion \u2014 intent and spec artifacts, contract-first implementation, skeptical review, guardrails, evals, closing-the-loop monitoring, metrics and harness tuning.",
+      "description": "Adds four unattended agents (planner, coder, reviewer, janitor) and 14 skills for an AI-native ticket-to-merge loop on Jira, GitHub Issues or Notion \u2014 intent and spec artifacts, contract-first implementation, skeptical review, closing-the-loop monitoring, metrics and harness tuning.",
       "source": "./plugins/agentic-coding",
-      "version": "1.0.1"
+      "version": "1.1.0"
     }
   ]
 }

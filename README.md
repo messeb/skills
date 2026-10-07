@@ -384,14 +384,12 @@ Four unattended agents and the skills behind them for an **AI-native ticket-to-m
 | Deploy | `pull-request` | PR conventions and marker, rework replies per comment, hand-off by poll or trigger |
 | Deploy | `review-pr` | Reproduce, verify claims, `REVIEW.md` passes (bugs, security, compliance, tests), BLOCKER / SHOULD / NIT, decision rule, merge, `CLAUDE.md` feedback |
 | Evaluation | `evaluator-qa` | Generator/evaluator separation, exercising the running app, rubric with hard thresholds, the leniency failure modes, calibration examples, tuning loop |
-| Governance | `guardrails` | Hooks that protect the default branch, freeze tests during fixes, protect paths, block secrets, gate production; permissions and managed settings for unattended runs |
-| Governance | `agent-evals` | Eval suite for `CLAUDE.md`, skills, hooks and `WORKFLOW.md` changes; CI gate on pass rate; incidents become evals |
 | Maintain | `closing-the-loop` | Deterministic control bands with tiered responses, findings that re-enter as `intent.md`, tickets and channel mentions triaged into the loop, lessons files |
 | Maintain | `workflow-hygiene` | The janitor's checks with the evidence each one needs before acting |
 | Maintain | `loop-metrics` | Time to first review, rework rounds, first-pass merge share, plan match rate, lead times, escalations; tuning guidance for the limits |
 | Meta | `harness-tuning` | Every component is an assumption about the model; remove one at a time per model, context resets versus compaction, when the evaluator is worth its cost |
 
-Every skill follows the same shape: when to use it, the method, an anti-pattern table, and a checklist. Skills that describe files ship them: `guardrails/hooks/*.sh` and `settings.json`, `agent-evals/evals/check.sh` and `agent-evals.yml`, `sdlc-artifacts/templates/*.md`, `workflow-config/templates/WORKFLOW.md`, `closing-the-loop/templates/bands.yaml`.
+Every skill follows the same shape: when to use it, the method, an anti-pattern table, and a checklist. Skills that describe files ship them: `sdlc-artifacts/templates/*.md`, `workflow-config/templates/WORKFLOW.md`, `closing-the-loop/templates/bands.yaml`.
 
 #### Setting up the loop for a repository
 
@@ -410,8 +408,6 @@ In a Claude Code session in that repo, run `/agentic-coding:workflow-config` in 
 | ------ | ------ | --------- |
 | `WORKFLOW.md` | `workflow-config/templates/WORKFLOW.md` | tracker, statuses, git rules, gates, limits, hand-off |
 | `REVIEW.md` | `sdlc-artifacts/templates/REVIEW.md` | review passes, thresholds, nit cap, calibration |
-| `.claude/hooks/*.sh`, `.claude/settings.json`, `.claude/protected-paths.txt` | `guardrails/` | deterministic guardrails: no push to main, frozen tests during fixes, protected paths, secrets, production gate |
-| `.github/workflows/agent-evals.yml`, `evals/check.sh` | `agent-evals/` | regression tests for the agent configuration |
 | `docs/sdlc/` | `sdlc-artifacts/templates/` | home of `intent.md`, `spec.md`, `plan.md`, `handoff.md`, `lessons/` |
 
 Commit all of it. `RUN_CMD` in `WORKFLOW.md` must start the app or service, because the verifier and the reviewer exercise the running application rather than only reading the diff.

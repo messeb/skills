@@ -54,7 +54,7 @@ When invoked interactively on a repo without `WORKFLOW.md`:
 1. Run resolve mode steps 1 to 6 and show the user the derived values and the gaps.
 2. Ask for the gaps that cannot be derived: tracker and project, bot user, hand-off mechanism, merge strategy.
 3. Copy `templates/WORKFLOW.md` to the repo root and fill in every value. Keep placeholders only for values the user explicitly deferred.
-4. Offer to install the guardrails (`agentic-coding:guardrails` bundled files), `REVIEW.md` and the eval workflow, and create `SDLC_DIR`.
+4. Offer to install `REVIEW.md` and create `SDLC_DIR`.
 5. Tell the user which statuses and labels must exist in the tracker and which identities and branch protection are still needed (see "Outside the repo").
 
 ## WORKFLOW.md template
@@ -131,7 +131,6 @@ MAX_SHOULD_FINDINGS = 2
 CI_WAIT_MINUTES     = 15
 STALE_CLAIM_HOURS   = 6
 STALE_REVIEW_HOURS  = 4
-EVAL_PASS_RATE      = 0.9
 METRICS_TICKET      = <optional>          # optional ticket that receives the weekly metrics comment
 
 ## Stop conditions
@@ -155,7 +154,6 @@ Used only when neither `WORKFLOW.md` nor the repo files provide a value.
 | `SOURCE_OF_TRUTH` | `linkage` |
 | `CONTEXT_RESET` | `on-long-tickets` |
 | `HANDOFF_AFTER_CRITERIA` | 6 |
-| `EVAL_PASS_RATE` | 0.9 |
 | Labels | `needs-human`, `no-bot` |
 | `BRANCH_PREFIX` | `feat` |
 | `MERGE_STRATEGY` | `squash` |
@@ -174,9 +172,7 @@ The plugin defines behavior. These are configured once per environment and canno
 - Scheduled tasks for planner, coder, reviewer and janitor, with the repo folder connected and automatic approval, otherwise the first `git push` waits for a click that never comes.
 - A tracker user for `BOT_USER` and a GitHub machine user or App token with `contents`, `pull_requests`, `issues`. Preferably a second token for the reviewer, otherwise "1 approving review" branch protection rejects the bot approving its own PR.
 - Branch protection on `DEFAULT_BRANCH`: required review and green CI. That is the real safety net, not the prompts.
-- The hooks from `agentic-coding:guardrails` (bundled in that skill's `hooks/` folder) in `.claude/settings.json`, and managed settings for regulated repos.
 - `REVIEW.md` in the repo root, from `agentic-coding:sdlc-artifacts` `templates/REVIEW.md`.
-- The eval workflow from `agentic-coding:agent-evals`.
 
 ## Anti-patterns
 

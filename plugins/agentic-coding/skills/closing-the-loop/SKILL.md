@@ -26,7 +26,7 @@ The loop closes when a trigger invokes an agent with no person in the invocation
 5. At `diagnose`, the agent writes its finding as `intent.md` (template in `agentic-coding:sdlc-artifacts`): anomaly and evidence, proposed outcome, affected systems, open questions. It creates a ticket in `INTAKE_STATUS` linking the file. The planner agent takes it from there.
 6. At `propose`, the agent may additionally open a PR into the review gate (a quarantined flaky test, a revert) or trigger a pre-approved runbook such as a rehearsed rollback. It never passes the production gate itself.
 7. The service owner triages the intake queue: fix now, schedule, dismiss. Dismissals tune the bands.
-8. Every shipped fix gets an eval (`agentic-coding:agent-evals`) and a lessons file.
+8. Every shipped fix gets a lessons file entry.
 
 ## Work from tickets and channels
 
@@ -41,7 +41,7 @@ A ticket filed by a human, or a mention in an incident channel, is triaged the s
 | Anti-pattern | Why it fails | Instead |
 | -------------- | -------------- | --------- |
 | Model decides when to alert | Non-deterministic, unauditable | Script detects, model diagnoses |
-| Agent deploys the rollback in production on its own | Passes the production gate | Runbook pre-approved, hook-gated |
+| Agent deploys the rollback in production on its own | No human saw it | Runbook pre-approved by a human |
 | Findings posted to chat only | Lost by the next fire | intent.md plus ticket |
 
 ## Checklist
