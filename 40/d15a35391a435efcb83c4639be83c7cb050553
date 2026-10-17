@@ -1,0 +1,298 @@
+plugins/seo/skills/image-optimization/SKILL.md
+  s_fe9d2ceaa19546::t_051a1e216afeba 505
+  s_fe9d2ceaa19546::t_0a97b027f7787a 565
+  s_fe9d2ceaa19546::t_1ecd80e9b1708b 131,368-369
+plugins/growth-hacking/skills/starting-and-momentum/SKILL.md
+  s_fe9d2ceaa19546::t_41b966c8153063 107
+plugins/content-author/agents/content-author.md
+  s_fe9d2ceaa19546::t_118176c3b5b95a 65-66
+  s_fe9d2ceaa19546::t_70d17a6a322aab 113
+plugins/content-author/skills/editing-workflow/SKILL.md
+  s_fe9d2ceaa19546::t_5340ac25ed7f24 154
+  s_fe9d2ceaa19546::t_e51b785b2737ce 54-55
+plugins/product-discovery/skills/quality-attributes/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 95
+plugins/python-ai-developer/skills/llm-testing-and-evals/SKILL.md
+  s_fe9d2ceaa19546::t_36d03fd75114eb 128,136
+plugins/go-developer/skills/project-layout/SKILL.md
+  s_fe9d2ceaa19546::t_2913310915ce28 140-141
+plugins/product-discovery/skills/c4-diagrams/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 40
+plugins/product-discovery/skills/example-mapping/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 30
+plugins/growth-hacking/skills/social-and-community/SKILL.md
+  s_fe9d2ceaa19546::t_52846b3b5d7fc8 31-32
+plugins/seo/skills/internal-linking/SKILL.md
+  s_fe9d2ceaa19546::t_1ecd80e9b1708b 460-461,471-472,490
+  s_fe9d2ceaa19546::t_0a97b027f7787a 528
+plugins/product-discovery/skills/change-management/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 124
+.claude-plugin/marketplace.json
+  s_fe9d2ceaa19546::t_b9c150a50cc0c7 11,17,23,29,35,41,47,53,59,65,71
+plugins/notion-summarizer/skills/notion-page-styling/SKILL.md
+  s_fe9d2ceaa19546::t_6250798c4f3eb1 182
+plugins/content-author/.claude-plugin/plugin.json
+  s_fe9d2ceaa19546::t_b9c150a50cc0c7 4
+plugins/product-discovery/skills/model-checking/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 113
+plugins/agentic-coding/skills/intent-and-spec/SKILL.md
+  s_fe9d2ceaa19546::t_76b5ed943a2885 18
+plugins/growth-hacking/skills/analytics-and-tracking/SKILL.md
+  s_fe9d2ceaa19546::t_106ee849dacf77 36
+plugins/seo/skills/core-web-vitals/SKILL.md
+  s_fe9d2ceaa19546::t_258c46c449b9b7 434-439
+  s_fe9d2ceaa19546::t_0a97b027f7787a 484
+  s_fe9d2ceaa19546::t_051a1e216afeba 100,378,443
+plugins/product-discovery/skills/event-storming/SKILL.md
+  s_fe9d2ceaa19546::t_99ed6e26d375b7 29
+plugins/general-developer/skills/security/SKILL.md
+  s_fe9d2ceaa19546::t_2913310915ce28 1064-1065
+plugins/product-discovery/.claude-plugin/plugin.json
+  s_fe9d2ceaa19546::t_b9c150a50cc0c7 4
+plugins/frontend-developer/skills/astro/SKILL.md
+  s_fe9d2ceaa19546::t_c0b28ba1105f8a 85-86
+plugins/product-discovery/skills/risk-conflict-analysis/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 110
+plugins/growth-hacking/skills/customer-research/SKILL.md
+  s_fe9d2ceaa19546::t_79fc08c6374483 111
+plugins/python-ai-developer/skills/containerization/SKILL.md
+  s_fe9d2ceaa19546::t_b52d3693536280 128
+plugins/go-developer/agents/go-developer.md
+  s_fe9d2ceaa19546::t_6e46f081b8450b 9,43,49-51,129-130,135-137,139-143
+plugins/python-ai-developer/agents/python-ai-developer.md
+  s_fe9d2ceaa19546::t_8264ff46222537 13,62,73-76,87,144-145,157
+plugins/agentic-coding/skills/closing-the-loop/SKILL.md
+  s_fe9d2ceaa19546::t_76b5ed943a2885 26,46
+plugins/seo/skills/crawl-control/SKILL.md
+  s_fe9d2ceaa19546::t_51ebcf74dac78e 240-241
+  s_fe9d2ceaa19546::t_0a97b027f7787a 893
+plugins/product-discovery/skills/baselining/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 98
+plugins/general-developer/agents/general-developer.md
+  s_fe9d2ceaa19546::t_5c3f9c5b338b34 9,46,52,70,164-165,170-172,174-177
+plugins/product-discovery/skills/requirements-reviews/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 102
+plugins/go-developer/skills/modules/SKILL.md
+  s_fe9d2ceaa19546::t_2913310915ce28 13-14
+plugins/notion-summarizer/.claude-plugin/plugin.json
+  s_fe9d2ceaa19546::t_b9c150a50cc0c7 4
+plugins/general-developer/skills/cicd/SKILL.md
+  s_fe9d2ceaa19546::t_2913310915ce28 103,136,311
+plugins/product-discovery/skills/usability-testing/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 32
+plugins/product-discovery/skills/data-modeling/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 31
+plugins/growth-hacking/skills/growth-legal-and-ethics/SKILL.md
+  s_fe9d2ceaa19546::t_49e5071529dbe4 13-14
+  s_fe9d2ceaa19546::t_9f0d6a325855a9 159
+plugins/python-ai-developer/skills/uv/SKILL.md
+  s_fe9d2ceaa19546::t_b52d3693536280 75-76
+plugins/product-discovery/skills/story-mapping/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 36
+plugins/growth-hacking/skills/paid-acquisition/SKILL.md
+  s_fe9d2ceaa19546::t_00fcf8996dc504 11-12
+plugins/product-discovery/skills/design-thinking/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 35
+plugins/python-ai-developer/skills/notebooks/SKILL.md
+  s_fe9d2ceaa19546::t_8c0961c7dbd1ea 93,101
+plugins/product-discovery/skills/formal-specs/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 76
+plugins/git-code-analyzer/.claude-plugin/plugin.json
+  s_fe9d2ceaa19546::t_b9c150a50cc0c7 4
+plugins/python-ai-developer/skills/tool-calling/SKILL.md
+  s_fe9d2ceaa19546::t_1a4962295e7097 87-98,192-195,213-215
+plugins/python-ai-developer/skills/project-structure/SKILL.md
+  s_fe9d2ceaa19546::t_8c0961c7dbd1ea 106
+plugins/agentic-coding/skills/evaluator-qa/SKILL.md
+  s_fe9d2ceaa19546::t_76b5ed943a2885 25,49
+plugins/seo/skills/url-structure/SKILL.md
+  s_fe9d2ceaa19546::t_0a97b027f7787a 605
+  s_fe9d2ceaa19546::t_8c5212f6a64bef 528-529,540-541
+plugins/agentic-coding/agents/agentic-planner.md
+  s_fe9d2ceaa19546::t_4ad89e9f7ef544 25-31
+plugins/agentic-coding/agents/agentic-janitor.md
+  s_fe9d2ceaa19546::t_cdd1a7f5479a17 21-23
+plugins/growth-hacking/skills/growth-strategy/SKILL.md
+  s_fe9d2ceaa19546::t_82c2c1574ed57b 93
+plugins/notion-summarizer/skills/section-summary/SKILL.md
+  s_fe9d2ceaa19546::t_8569582ed22b32 82-92
+  s_fe9d2ceaa19546::t_f8dfbf6bc1e7ce 77
+  s_fe9d2ceaa19546::t_d2614146afa779 115
+plugins/general-developer/.claude-plugin/plugin.json
+  s_fe9d2ceaa19546::t_b9c150a50cc0c7 4
+plugins/seo/skills/seo-page-structure/SKILL.md
+  s_fe9d2ceaa19546::t_8c5212f6a64bef 26,455,691
+  s_fe9d2ceaa19546::t_0a97b027f7787a 869
+plugins/product-discovery/skills/context-mapping/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 58
+plugins/agentic-coding/skills/sdlc-artifacts/SKILL.md
+  s_fe9d2ceaa19546::t_a6a6c64d3f7d17 100-101
+plugins/agentic-coding/skills/verify-acceptance/SKILL.md
+  s_fe9d2ceaa19546::t_76b5ed943a2885 16-17,21
+plugins/product-discovery/skills/workshop-facilitation/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 34
+plugins/seo/skills/structured-data-jsonld/SKILL.md
+  s_fe9d2ceaa19546::t_ab37f312d6543b 55,208,629,995,1017
+  s_fe9d2ceaa19546::t_5f73ccc24ed1a0 1037-1038
+  s_fe9d2ceaa19546::t_0a97b027f7787a 1135
+plugins/growth-hacking/agents/growth-hacking.md
+  s_fe9d2ceaa19546::t_1c82b503d91ebb 48
+  s_fe9d2ceaa19546::t_cac76aad51db0c 99-102
+  s_fe9d2ceaa19546::t_2a3bec8426e73a 13
+  s_fe9d2ceaa19546::t_868c23ad13305e 116-117
+plugins/python-ai-developer/.claude-plugin/plugin.json
+  s_fe9d2ceaa19546::t_b9c150a50cc0c7 4
+plugins/general-developer/skills/dangerfile/SKILL.md
+  s_fe9d2ceaa19546::t_2913310915ce28 27-28,43
+plugins/frontend-developer/skills/css-architecture/SKILL.md
+  s_fe9d2ceaa19546::t_c0b28ba1105f8a 23-32
+plugins/agentic-coding/skills/implement-ticket/SKILL.md
+  s_fe9d2ceaa19546::t_9b1b08bc07b27d 31-32,65,70-73,89-90
+  s_fe9d2ceaa19546::t_0c41bf157f150e 61
+plugins/product-discovery/skills/domain-storytelling/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 38
+plugins/seo/skills/meta-tags/SKILL.md
+  s_fe9d2ceaa19546::t_391d62dcd3dd6a 194,408,778
+  s_fe9d2ceaa19546::t_bc83f20b3e06d9 813-815
+  s_fe9d2ceaa19546::t_68e6e29540fafa 427-428
+  s_fe9d2ceaa19546::t_5311252ce09df9 845-846
+plugins/product-discovery/skills/api-contracts/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 124
+plugins/python-ai-developer/skills/llm-providers/SKILL.md
+  s_fe9d2ceaa19546::t_ec9504a51aa186 238-241,257-259
+  s_fe9d2ceaa19546::t_e5354556baaf29 27,65,74-85
+  s_fe9d2ceaa19546::t_8c0961c7dbd1ea 64
+  s_fe9d2ceaa19546::t_6fbe52c679eae1 86
+plugins/frontend-developer/skills/pnpm/SKILL.md
+  s_fe9d2ceaa19546::t_c0b28ba1105f8a 291-292
+plugins/notion-summarizer/skills/summary-workspace/SKILL.md
+  s_fe9d2ceaa19546::t_cfce0cd5544287 56
+  s_fe9d2ceaa19546::t_8c1e15553e5d2b 32
+plugins/product-discovery/skills/impact-mapping/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 32
+plugins/general-developer/skills/github-repo/SKILL.md
+  s_fe9d2ceaa19546::t_2913310915ce28 63,80,104
+plugins/frontend-developer/.claude-plugin/plugin.json
+  s_fe9d2ceaa19546::t_b9c150a50cc0c7 4
+plugins/product-discovery/skills/use-case-modeling/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 43
+plugins/product-discovery/skills/prioritization/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 93
+plugins/product-discovery/skills/acceptance-test-definition/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 94
+plugins/agentic-coding/skills/workflow-config/SKILL.md
+  s_fe9d2ceaa19546::t_0025c07f5e8ec4 173
+plugins/seo/skills/third-party-scripts/SKILL.md
+  s_fe9d2ceaa19546::t_0a97b027f7787a 468
+  s_fe9d2ceaa19546::t_391d62dcd3dd6a 295-296,301
+plugins/python-ai-developer/skills/structured-output/SKILL.md
+  s_fe9d2ceaa19546::t_8c0961c7dbd1ea 36,48
+plugins/agentic-coding/agents/agentic-coder.md
+  s_fe9d2ceaa19546::t_dedf1180a44c02 5
+  s_fe9d2ceaa19546::t_aaa1aec8a051a0 38-49
+plugins/frontend-developer/skills/build-pipeline/SKILL.md
+  s_fe9d2ceaa19546::t_c0b28ba1105f8a 32-33
+plugins/frontend-developer/skills/storybook/SKILL.md
+  s_fe9d2ceaa19546::t_46a420be8880d9 296-297
+plugins/growth-hacking/skills/growth-process/SKILL.md
+  s_fe9d2ceaa19546::t_79f4c45f7f18c4 98
+plugins/go-developer/.claude-plugin/plugin.json
+  s_fe9d2ceaa19546::t_b9c150a50cc0c7 4
+plugins/product-discovery/skills/srs-templates/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 72
+CHANGELOG.md
+  s_fe9d2ceaa19546::t_73bdd093e008ef 7-19
+plugins/seo/.claude-plugin/plugin.json
+  s_fe9d2ceaa19546::t_b9c150a50cc0c7 4
+plugins/seo/skills/geo-content/SKILL.md
+  s_fe9d2ceaa19546::t_566d66bdd4bc77 11-12
+  s_fe9d2ceaa19546::t_0a97b027f7787a 352
+plugins/frontend-developer/agents/frontend-developer.md
+  s_fe9d2ceaa19546::t_9922aa1d7dc0ae 9,50-51,60-62,223,232-235,237
+plugins/product-discovery/skills/document-system-analysis/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 39
+  s_fe9d2ceaa19546::t_f18e23135f40b7 59
+plugins/agentic-coding/skills/sdlc-artifacts/templates/handoff.md
+  s_fe9d2ceaa19546::t_0c41bf157f150e 9-14
+plugins/python-ai-developer/skills/dspy/SKILL.md
+  s_fe9d2ceaa19546::t_8c0961c7dbd1ea 28
+plugins/agentic-coding/agents/agentic-reviewer.md
+  s_fe9d2ceaa19546::t_1dd7bf9ab5aa65 30-39
+plugins/seo/agents/seo.md
+  s_fe9d2ceaa19546::t_b6d6d2193d0a64 9,34,54-58,219,228,232-234
+plugins/seo/skills/resource-hints/SKILL.md
+  s_fe9d2ceaa19546::t_051a1e216afeba 267
+  s_fe9d2ceaa19546::t_0a97b027f7787a 474
+plugins/python-ai-developer/skills/llm-reliability-and-cost/SKILL.md
+  s_fe9d2ceaa19546::t_35e80281dbd295 46-47,97,177-178,191-192
+  s_fe9d2ceaa19546::t_36d03fd75114eb 85
+  s_fe9d2ceaa19546::t_8c0961c7dbd1ea 145
+plugins/product-discovery/skills/stakeholder-interviews/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 44
+  s_fe9d2ceaa19546::t_f18e23135f40b7 120
+plugins/growth-hacking/.claude-plugin/plugin.json
+  s_fe9d2ceaa19546::t_b9c150a50cc0c7 4
+plugins/python-ai-developer/skills/orchestration-frameworks/SKILL.md
+  s_fe9d2ceaa19546::t_8c0961c7dbd1ea 44
+plugins/content-author/skills/sentence-craft/SKILL.md
+  s_fe9d2ceaa19546::t_bdd58db668ec06 164
+  s_fe9d2ceaa19546::t_fa3ab0e4510139 77-89
+  s_fe9d2ceaa19546::t_fa0d8eea53814c 182
+plugins/product-discovery/skills/process-modeling/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 42
+plugins/product-discovery/skills/state-machines/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 32
+plugins/product-discovery/skills/prototyping/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 39
+plugins/agentic-coding/skills/harness-tuning/SKILL.md
+  s_fe9d2ceaa19546::t_0025c07f5e8ec4 20-22,26-41,74-75,83
+  s_fe9d2ceaa19546::t_0bf204780df47c 2
+plugins/product-discovery/skills/questionnaires/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 34
+plugins/product-discovery/agents/product-discovery.md
+  s_fe9d2ceaa19546::t_f18e23135f40b7 13,79,85,171,173,181-182,260,266
+plugins/product-discovery/skills/contextual-inquiry/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 32
+plugins/seo/skills/html5-microdata/SKILL.md
+  s_fe9d2ceaa19546::t_ab37f312d6543b 553
+  s_fe9d2ceaa19546::t_0a97b027f7787a 840
+  s_fe9d2ceaa19546::t_da278fceb51cd2 775-776
+plugins/agentic-coding/skills/loop-metrics/SKILL.md
+  s_fe9d2ceaa19546::t_76b5ed943a2885 29
+plugins/product-discovery/skills/goal-modeling/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 85
+plugins/product-discovery/skills/jobs-to-be-done/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 121
+plugins/notion-summarizer/agents/notion-summarizer.md
+  s_fe9d2ceaa19546::t_0e73b0219c492e 64
+  s_fe9d2ceaa19546::t_fe269dae86de5c 105
+plugins/product-discovery/skills/backlog-refinement/SKILL.md
+  s_fe9d2ceaa19546::t_d84fe6ead37586 120
+plugins/git-code-analyzer/agents/git-code-analyzer.md
+  s_fe9d2ceaa19546::t_94d76cb42632e7 12
+  s_fe9d2ceaa19546::t_39463a9ff905d6 44
+  s_fe9d2ceaa19546::t_93762c99e65ac9 27-28
+  s_fe9d2ceaa19546::t_cc6f4f699ddf52 52
+plugins/general-developer/skills/husky/SKILL.md
+  s_fe9d2ceaa19546::t_2913310915ce28 183,193,203
+plugins/agentic-coding/.claude-plugin/plugin.json
+  s_fe9d2ceaa19546::t_b9c150a50cc0c7 4
+plugins/notion-summarizer/skills/source-capture/SKILL.md
+  s_fe9d2ceaa19546::t_74d8c9625ffba8 64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "40d15a35391a435efcb83c4639be83c7cb050553",
+  "prompts": {},
+  "sessions": {
+    "s_fe9d2ceaa19546": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a5c0b0d7-0267-4e53-831f-5d32bad368a2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Sebastian Messingfeld <sebastian@messeb.com>"
+    }
+  }
+}
