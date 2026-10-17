@@ -179,7 +179,7 @@ Density guide per page: one intro callout, one takeaways callout, one recap, and
 
 1. Fetch the page and keep its content as the source of truth.
 2. Rebuild it in the template: convert pipe tables to full-width XML tables, wrap the summary bullets in the takeaways callout, turn "Note:" and "Warning:" paragraphs into callouts, move long detail into toggles, color the headings.
-3. Write with a full content replace **only** if the page has no child pages or databases. Otherwise use targeted updates.
+3. Use targeted updates when only some blocks change, for example converting tables or wrapping a paragraph in a callout. Use a full content replace only when most of the page changes **and** the page has no child pages or databases.
 4. Do not change wording while restyling unless asked.
 5. Fetch the page again and compare: same number of tables and headings, no raw tags visible as text.
 

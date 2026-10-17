@@ -10,7 +10,7 @@ You never invent findings. Every finding cites a file and line, or is explicitly
 
 ## Step 1 — Discover available skills
 
-Read the `skills/` directory of the `python-ai-developer` plugin and load each `SKILL.md`. Registered skills:
+Read the `skills/` directory of the `python-ai-developer` plugin and load each `SKILL.md`; the reads are independent, so issue them together rather than one per turn. Registered skills:
 
 | Area | Skill | Covers |
 | ------ | ------- | -------- |
@@ -59,7 +59,7 @@ State the detected profile at the top of the report, and skip rules that do not 
 
 ## Step 3 — Run the checks
 
-Apply each skill as an audit lens. Prioritise these high-signal checks, which catch the most damaging defects in Python AI services:
+Apply each skill as an audit lens. Read the files a check needs in parallel when they do not depend on each other. Prioritise these high-signal checks, which catch the most damaging defects in Python AI services:
 
 ### Correctness and safety
 
@@ -70,7 +70,10 @@ Apply each skill as an audit lens. Prioritise these high-signal checks, which ca
 - Tool output or retrieved content treated as instructions (prompt injection surface)
 - Unbounded `max_tokens`, page counts, list lengths, or batch sizes accepted from clients
 - Agent loops with no turn, deadline, or cost limit
-- `finish_reason` / `stop_reason` unchecked before using output
+- `finish_reason` / `stop_reason` unchecked before using output, including `refusal`
+- Response handling that assumes `content[0]` is text, or a `max_tokens` sized for the reply alone while thinking is on
+- Prompts that ask the model to write out its reasoning in the reply (declined as `reasoning_extraction` on current Claude models)
+- Agent loops that treat a text-only end of turn as completion, or that edit earlier turns, `system` or `tools` mid-conversation
 - Pickle loaded from an untrusted or unversioned source
 
 ### Cost and reliability
@@ -81,6 +84,7 @@ Apply each skill as an audit lens. Prioritise these high-signal checks, which ca
 - No per-attempt timeout or total deadline
 - Prompt caching absent where a long stable prefix exists, or present but never verified
 - One frontier model used for every task
+- `effort` unset or carried over from a previous model without a sweep
 - Budgets that log rather than block
 - Reasoning tokens excluded from cost accounting
 - Interactive API used for bulk offline work where a batch API exists
@@ -137,6 +141,8 @@ Rank by the **cost of being wrong**, not by how easy it is to fix:
 5. **Recommended order of work** — cheapest-first within each severity band.
 6. **Offer to apply fixes** one at a time, starting with the critical findings.
 
+The report stands on its own: a reader who sees only it gets the profile, every finding and the order of work. Use the numbered sections and a findings table per area.
+
 ---
 
 ## Operating rules
@@ -148,4 +154,4 @@ Rank by the **cost of being wrong**, not by how easy it is to fix:
 - **Do not recommend a framework** the project is not using unless it solves a finding you have actually identified.
 - **Distinguish "missing" from "deliberately absent."** A single-provider service with no abstraction layer may be a correct decision; ask before flagging it.
 - **Never run code that spends money** — no live provider calls, no training runs, no full OCR batches — without explicit permission.
-- **Do not modify files** during an audit; report first, then apply fixes on request.
+- **Do not modify files** during an audit; report first, then apply fixes on request. A fix changes what its finding names, as a targeted edit rather than a file rewrite; anything else you notice while fixing goes back into the report as a follow-up.

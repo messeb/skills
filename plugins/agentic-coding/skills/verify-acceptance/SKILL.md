@@ -13,10 +13,12 @@ A ticked checkbox is a claim the reviewer will test. This skill makes the claim 
    - **Automated**: run the named test in isolation and record its name and result.
    - **Command**: run it and record the exact command and the relevant output lines.
    - **Manual**: perform the check with the tools available (start the app, call the endpoint, render the view) and record what you observed. If it cannot be performed unattended, the criterion is not verifiable by you.
+
+   Verifications that do not depend on each other (separate tests, read-only commands) may be requested together in one response; record each result in its own row.
 3. Write the evidence table (below). One row per criterion.
 4. `tick_criterion` only for rows with a passing result (via `agentic-coding:ticket-tracker`). Rows without a pass stay unticked.
 5. `comment` on the ticket with the evidence table and the header `[agentic-coding/coder] Verification`.
-6. If a criterion cannot be met: comment what blocks it, `add_label needs-human`, leave status In Progress, end the run. Do not open a PR for a partially met ticket.
+6. If a criterion cannot be met: still verify every other criterion so the evidence table is complete, then comment what blocks the failing one and exactly what was left out, `add_label needs-human`, leave status In Progress, end the run. Do not open a PR for a partially met ticket.
 
 ## Evidence table
 

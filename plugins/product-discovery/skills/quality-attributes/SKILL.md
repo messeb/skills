@@ -92,7 +92,7 @@ Common trade-off pairs to probe deliberately: latency ↔ consistency, availabil
 
 ## 6. Intake — ask before the workshop
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **What is the system**, and what would failure cost the business — in money, reputation, or legal terms?
 2. **What load and growth** do you expect — current volumes, peaks, and the 2–3 year projection?

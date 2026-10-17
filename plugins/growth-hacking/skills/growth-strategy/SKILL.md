@@ -90,7 +90,7 @@ Two techniques worth naming because they are cheap and disproportionately inform
 
 Handle this properly: use public sources and your own account, respect terms of service, do not scrape what you are not permitted to scrape, do not misrepresent your identity to obtain confidential information, and never use a competitor's customer data. Competitive intelligence is a legitimate discipline; industrial espionage is a crime (`growth-legal-and-ethics`).
 
-Note the limit of tool-based estimates: third-party traffic and spend figures are modelled, often wrong by a large factor, and best used for **relative comparison and trend**, not as absolute numbers in a business case.
+Which ad libraries exist, and what they show per region, changes; check the current coverage before relying on one. Note the limit of tool-based estimates: third-party traffic and spend figures are modelled, often wrong by a large factor, and best used for **relative comparison and trend**, not as absolute numbers in a business case.
 
 ---
 

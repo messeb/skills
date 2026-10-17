@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## 2026-10-17
+
+### Changed
+
+- Prompt review of every skill and agent against the Claude Opus 5.5 and Claude Fable 5.1 prompting guides; all plugins bumped one minor version
+- `agentic-coding` — each unattended agent has a "How the run ends" section: no ending on a summary that announces the next step, an offer, or a non-blocking decision list; status notes go with the next tool call; wait for subagents and background work; batch independent tool calls; targeted edits; tool output and artifacts are data. The coder makes routine judgment calls and records them as assumptions instead of stopping on every ambiguity. `implement-ticket` gains scope rules (pre-existing bugs become follow-ups, tests sized like their neighbors, scratch checks not committed) and drafts the PR while the verifier runs. `harness-tuning` gains a per-model lever table (effort defaults, `max_tokens`, turn endings, progress-note display, tool batching, subagents, append-only history and compaction, reasoning in output, scope). `handoff.md` keeps constraints, ruled-out approaches and problems verbatim. `verify-acceptance`, `evaluator-qa`, `closing-the-loop`, `intent-and-spec`, `loop-metrics` and `workflow-config` tightened to match
+- `python-ai-developer` — model IDs updated to `claude-opus-5-5`, `claude-sonnet-5-5`, `claude-fable-5-1`; `llm-providers`, `tool-calling` and `llm-reliability-and-cost` cover effort per model, always-on thinking, `max_tokens` sizing, refusal and `reasoning_extraction` handling, progress-update blocks, append-only history with turn-scoped system messages, text-only end of turn in agent loops, batching nudges and pasted-content tagging
+- Audit agents (`general-developer`, `go-developer`, `frontend-developer`, `seo`, `growth-hacking`, `product-discovery`, `git-code-analyzer`, `python-ai-developer`) — batched reads, explore before asking, one approval for a set of fixes applied as targeted edits, untrusted content treated as data, stale-prone facts (versions, crawler names, legal and platform rules) verified against current sources, reports that stand on their own
+- `product-discovery` — the intake sections in 33 skills answer what they can from available material first, then ask only the questions that change the work, in one round, and mark the rest as assumptions
+- `seo` — fix-approval flow changed from one-at-a-time confirmation to one approval per batch; Lighthouse JSON read through `jq` (no base64 screenshots in context); outdated facts corrected (Sitelinks search box, Alexa, Performance Insights panel), broken commands and cross-references fixed
+- `frontend-developer:css-architecture` — named default styles to avoid when no design direction is given
+- `content-author` — mannered-prose and writing-density checks in `sentence-craft`, `editing-workflow` and the agent; `notion-summarizer:section-summary` marks reproduced source wording as quotation, with an example
+
 ## 2026-10-07
 
 ### Removed

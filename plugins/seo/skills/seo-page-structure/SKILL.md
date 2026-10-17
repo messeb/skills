@@ -23,7 +23,7 @@ Three implications:
 
 - A `<div>`-only document forces the bot to guess. It will guess badly.
 - Visual order created with CSS Grid / Flex `order` does not change source order. Put the content the bot should read first **first in the markup**.
-- Hidden content (`display:none`, behind tabs/accordions) is downweighted by Google and ignored by some AI retrievers. Critical content must be in the initial DOM.
+- Content that only loads after a click or scroll is never seen by crawlers, and content hidden in the initial DOM (collapsed tabs and accordions) is skipped by some AI retrievers even where Google indexes it. Critical content must be in the initial DOM and visible by default.
 
 ---
 
@@ -452,7 +452,7 @@ Breadcrumbs help engines understand site hierarchy and are surfaced in SERPs.
 
 ## 11. Forms
 
-Forms are not a major SEO surface but they affect a11y scoring (which Google now weights) and AI assistants surfacing form actions.
+Forms are not a major SEO surface, but they drive the Lighthouse accessibility score and decide whether AI assistants and browser agents can recognize and use the form.
 
 ### Rules
 
@@ -688,7 +688,7 @@ The HTTP status must be 404.
 - ❌ `<nav>` without `aria-label` when there are multiple navs.
 - ❌ More than one `<main>` per page.
 - ❌ Putting the H1 below a sidebar in source order.
-- ❌ Critical content hidden in tabs/accordions that require interaction to reveal (Google downweights it; some AI retrievers ignore it).
+- ❌ Critical content that only loads on interaction, or sits collapsed in tabs/accordions by default (crawlers miss the first; some AI retrievers skip the second).
 - ❌ Critical content rendered only client-side. The bot reads SSR'd HTML; CSR-only content may not be indexed.
 - ❌ Lists faked with `<br>`, `•`, or sibling `<div>`s.
 - ❌ Tables for layout.
@@ -866,4 +866,4 @@ When asked to **validate** existing markup, return:
 1. ...
 ```
 
-Then offer to apply each fix. Apply approved fixes one at a time, confirming each.
+Then ask which fixes to apply: all, one severity tier, or single findings. Apply every approved fix with targeted edits, without asking again per fix. Report anything else you notice as a follow-up instead of fixing it. Afterwards re-run the affected checks and update the summary.

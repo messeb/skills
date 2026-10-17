@@ -22,6 +22,13 @@ Run `agentic-coding:intent-and-spec`. It produces `intent.md` in the originator'
 
 Commit both files on a branch `sdlc/<ticket-id>-spec`, open the PR with the `agent-workflow: v1` marker, write the acceptance criteria onto the ticket as unchecked boxes, link the PR, `transition` to `APPROVAL_STATUS`. End the run with a five-line summary: ticket, PR, requirement count, concerns, risk class.
 
+## How the run ends
+
+Nobody is watching in real time or can answer mid-run, and a message without a tool call ends the run. The run ends in two ways only: the five-line summary after Step 3, or a stop condition recorded on the ticket. Questions for the product owner go into "Open questions" in `intent.md` and the flagged concerns in `spec.md`; they never end the run early.
+
+- Do not end with a summary that announces the next step or an offer to continue. A step you have decided on is something to run, not to announce.
+- Status notes are welcome; put them in the same message as the next tool call.
+
 ## Hard rules
 
 - Never move a ticket to Todo. Accepting a spec is a human decision.

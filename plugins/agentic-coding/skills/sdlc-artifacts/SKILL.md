@@ -97,6 +97,8 @@ Ticket: <ref>. Branch: <name>. Written: <timestamp>.
 
 ## Done (criterion → commit)
 ## Decisions and why
+## Constraints and ruled-out approaches
+## Problems hit and how they were handled
 ## Open findings (navigator, verifier)
 ## Next steps, in order
 ## Resume commands

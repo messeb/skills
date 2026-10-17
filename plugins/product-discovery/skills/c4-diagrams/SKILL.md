@@ -37,7 +37,7 @@ A "container" in C4 means a deployable/runnable unit. It is **not** a Docker con
 
 ## 2. Intake — ask before drawing
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **Which system**, and where exactly is its boundary — what is inside, what is outside?
 2. **Which level** does the audience need, and who is the audience?

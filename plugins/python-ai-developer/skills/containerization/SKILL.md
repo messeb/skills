@@ -125,6 +125,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends python3.12 pyth
     && rm -rf /var/lib/apt/lists/*
 ```
 
+- The tags in these examples (Python, CUDA, uv, Dockerfile syntax) date from when the skill was written; look up the current tag in the registry and the CUDA version the pinned torch wheel supports before writing them into a Dockerfile.
 - Use the **runtime** CUDA image, not `devel`, unless you compile kernels — it is several gigabytes smaller.
 - The CUDA version in the image must match what the framework wheel expects; pin the torch index accordingly (`uv`).
 - Run with `--gpus all` (Docker) or the device plugin (Kubernetes); the container does not need a driver, only the toolkit.

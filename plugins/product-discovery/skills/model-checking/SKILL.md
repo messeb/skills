@@ -110,7 +110,7 @@ The checker verifies the model. Bridge the gap explicitly:
 
 ## 7. Intake — ask before checking
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **What property must hold**, and what would its violation cost?
 2. **Which model exists** — a formal spec, a state machine, a process model, or nothing yet?

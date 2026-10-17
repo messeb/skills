@@ -35,7 +35,7 @@ Give each story a name that states the case: *"Anna books a same-day delivery"*,
 
 ## 3. Intake — ask before recording
 
-Ask only what the conversation has not answered; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **Which process**, and which concrete case should we walk through? (a real, recent example — ideally one that happened last week)
 2. **Who tells it?** Which domain expert actually does this work? Who else must be in the room?

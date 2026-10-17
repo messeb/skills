@@ -52,7 +52,7 @@ The trade-off: JSON-LD is a **second source of truth**. The price for refactor s
 - **`@context`** is required. `https://schema.org` covers all standard types.
 - **`@type`** declares the entity's type.
 - **JSON must be valid** — no trailing commas, no comments, no JS-style single quotes.
-- **One `<script type="application/ld+json">` per logical entity**, or one combined `@graph` (section 6).
+- **One `<script type="application/ld+json">` per logical entity**, or one combined `@graph` (sections 4 and 5).
 - **Place in `<head>` or anywhere in `<body>`.** `<head>` is canonical; `<body>` is fine for components that own their own structured data.
 - **Server-render it.** Don't inject JSON-LD only after JS hydration — Googlebot may see the page before hydration runs.
 
@@ -205,7 +205,7 @@ Place once site-wide (e.g. in the layout's `<head>`) with a stable `@id`. Other 
 
 ### 3.5 WebSite (with SearchAction)
 
-Powers the Google Sitelinks Searchbox.
+Declares the site entity that other entities reference via `publisher` and `isPartOf`. Google retired the Sitelinks search box in late 2024, so the `potentialAction` / `SearchAction` block no longer earns a search-results feature; it is harmless to keep and still describes the site's search for other consumers.
 
 ```html
 <script type="application/ld+json">
@@ -626,7 +626,7 @@ Use the most specific subtype of `LocalBusiness` (`Restaurant`, `MedicalClinic`,
   "@context": "https://schema.org",
   "@type": "Dataset",
   "name": "Core Web Vitals — top 10k sites — Q2 2026",
-  "description": "LCP, INP, and CLS at the 75th percentile for the Alexa top 10k.",
+  "description": "LCP, INP, and CLS at the 75th percentile for the 10,000 most-visited origins in CrUX.",
   "url": "https://example.com/datasets/cwv-q2-2026",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "creator": { "@id": "https://example.com/#organization" },
@@ -992,7 +992,7 @@ If both formats ship on the same page (legacy templates + new JSON-LD):
 - ❌ `@id` collisions — two entities with the same `@id` referring to different things.
 - ❌ Forgetting to `JSON.stringify` and shipping `[object Object]`.
 - ❌ JSX rendering JSON-LD without `dangerouslySetInnerHTML` (HTML entities mangle the JSON).
-- ❌ `astro:set:html` missing — Astro otherwise escapes the JSON content.
+- ❌ `set:html` missing on the Astro script tag — Astro otherwise escapes the JSON content.
 - ❌ JSON-LD that the Rich Results Test passes but contradicts the page anyway.
 - ❌ Adding JSON-LD without testing in Rich Results Test.
 - ❌ Same JSON-LD on every page (e.g. the homepage Article schema cloned to all routes).
@@ -1014,7 +1014,7 @@ If both formats ship on the same page (legacy templates + new JSON-LD):
 - [ ] Article pages: `Article` (or subtype) + `BreadcrumbList` + (optional) `FAQPage`.
 - [ ] Product pages: `Product` with `offers`, `aggregateRating` (if reviews exist), `review` (sample).
 - [ ] Author profiles: `Person` with `sameAs`.
-- [ ] Site-wide: `Organization` + `WebSite` (with `SearchAction` if internal search exists).
+- [ ] Site-wide: `Organization` + `WebSite` (`SearchAction` optional; it no longer triggers a Google feature).
 - [ ] Local business: most-specific `LocalBusiness` subtype with `address`, `geo`, `telephone`, `openingHoursSpecification`, `priceRange`.
 - [ ] Recipes: `Recipe` with `recipeIngredient`, `recipeInstructions`, durations, image array.
 - [ ] Events: `Event` with `startDate`, `location`, `eventStatus`, `eventAttendanceMode`, `offers`.
@@ -1033,6 +1033,8 @@ If both formats ship on the same page (legacy templates + new JSON-LD):
 - [ ] References to other entities use `{ "@id": "…" }` form.
 
 ### Rich-result eligibility
+
+Google adds, restricts and retires rich-result features regularly (the `HowTo` and `FAQPage` changes are examples). Before you promise or report rich-result eligibility, check the feature's current page in Google Search Central's structured data gallery for its status and required properties; the type recipes above stay valid Schema.org either way.
 
 - [ ] Rich Results Test passes for every page type that ships eligible markup.
 - [ ] Image arrays provided in 1:1, 4:3, 16:9 where Google requires.
@@ -1130,4 +1132,4 @@ When asked to **audit** existing JSON-LD, return:
 1. ...
 ```
 
-Then offer to apply each fix. Apply approved fixes one at a time, confirming each.
+Then ask which fixes to apply: all, one severity tier, or single findings. Apply every approved fix with targeted edits, without asking again per fix. Report anything else you notice as a follow-up instead of fixing it. Afterwards re-run the affected checks and update the summary.

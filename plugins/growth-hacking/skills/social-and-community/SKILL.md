@@ -28,6 +28,8 @@ Two or three platforms done well beat six done badly. Sustainable output frequen
 
 The honest constraint on all of it: **organic reach on major platforms is limited and declining**, algorithms change without notice, and the follower relationship belongs to the platform. Treat social as a discovery layer whose purpose is to move people to something you own — an email list, a community, an account.
 
+The formats and ranking behaviour described below (first-hour engagement, suppressed outbound links, which formats a platform favours) are general patterns, not current platform rules. Before recommending a specific tactic for a named platform, check its current creator or business documentation and recent observed performance on the account itself.
+
 ---
 
 ## 2. Engagement triggers that work

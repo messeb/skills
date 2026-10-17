@@ -28,7 +28,7 @@ Most modeling arguments come from two people working at different levels. Label 
 
 ## 2. Intake — ask before modeling
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **Which context and which level** — conceptual, logical, or physical?
 2. **Which entities do you already know**, and what identifies each one in the business (not the surrogate key — the thing a human would quote)?

@@ -457,8 +457,8 @@ Or use Screaming Frog (Internal → Status Code = 404 / 301).
 ## 16. Validation tools and commands
 
 ```bash
-# Crawl and dump link graph
-npx screamingfrog --crawl https://example.com --export-tabs internal,external
+# Crawl and dump link graph (Screaming Frog CLI; the binary name differs per OS, check its docs)
+screamingfrogseospider --headless --crawl https://example.com --export-tabs "Internal:All" --output-folder ./crawl
 
 # Find orphan pages (sitemap URLs minus reachable URLs)
 comm -23 <(curl -s https://example.com/sitemap.xml | grep -oP '(?<=<loc>)[^<]+' | sort) \
@@ -468,9 +468,8 @@ comm -23 <(curl -s https://example.com/sitemap.xml | grep -oP '(?<=<loc>)[^<]+' 
 npx broken-link-checker https://example.com -ro
 
 # Anchor-text audit
-node -e '
-  const cheerio = require("cheerio");
-  const fetch = (await import("node-fetch")).default;
+node --input-type=module -e '
+  import * as cheerio from "cheerio";
   const html = await (await fetch(process.argv[1])).text();
   const $ = cheerio.load(html);
   $("a[href^=\"/\"], a[href^=\"https://example.com\"]").each((i, a) => {
@@ -488,7 +487,7 @@ node -e '
 - **Sitebulb** — visual link graph + auditing.
 - **Ahrefs / Semrush Site Audit** — internal link reports.
 - **Google Search Console → Links → Internal links** — Google's view of your link graph.
-- **PageRankCheck (open-source)** — recompute internal PageRank from your own crawl.
+- **A PageRank pass over your own crawl export** (for example `networkx.pagerank` on the edge list) — shows which pages the internal link graph favours.
 
 ---
 
@@ -526,4 +525,4 @@ When asked to **audit** internal linking, return:
 1. ...
 ```
 
-Then offer to apply each fix. Apply approved fixes one at a time, confirming each.
+Then ask which fixes to apply: all, one severity tier, or single findings. Apply every approved fix with targeted edits, without asking again per fix. Report anything else you notice as a follow-up instead of fixing it. Afterwards re-run the affected checks and update the summary.

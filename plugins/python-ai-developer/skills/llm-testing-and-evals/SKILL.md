@@ -125,6 +125,7 @@ For open-ended output where no exact answer exists, a strong model scoring again
 - **Length bias** — longer answers score higher; cap or normalise length.
 - **Self-preference** — a model favours its own outputs; judge with a different model family than the one under test.
 - **Rubric drift** — a vague rubric produces unstable scores; use a small, concrete scale with explicit anchors.
+- **Reasoning in the reply** — ask the judge for the score and a one-sentence justification, not a written-out chain of reasoning before the score. Current Claude models reason in thinking blocks, and a prompt that pushes the reasoning into the reply can be declined as `reasoning_extraction`; read `display: "summarized"` thinking when you need to audit a verdict.
 
 Calibrate against human labels on a subset before trusting the judge, and re-calibrate when you change the judge model. A judge is a measuring instrument; an uncalibrated instrument is not evidence.
 
@@ -132,7 +133,7 @@ Calibrate against human labels on a subset before trusting the judge, and re-cal
 
 ## 6. CI and production
 
-**CI**: unit, contract, and integration tests on every commit (offline, free). Evaluation runs when `prompts/**`, `schemas/**`, or model configuration changes — as a **gate** with thresholds, publishing a comparison against the previous run. Live smoke tests nightly, alerting on shape drift or credential expiry.
+**CI**: unit, contract, and integration tests on every commit (offline, free). Evaluation runs when `prompts/**`, `schemas/**`, or model configuration (model ID, effort level) changes — as a **gate** with thresholds, publishing a comparison against the previous run. Live smoke tests nightly, alerting on shape drift or credential expiry.
 
 **Production** is where the real evaluation happens:
 

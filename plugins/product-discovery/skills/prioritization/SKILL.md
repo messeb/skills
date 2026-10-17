@@ -90,7 +90,7 @@ Remember the decay: today's delighter is tomorrow's basic. Re-run Kano periodica
 
 ## 6. Intake — ask before prioritising
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **What decision** — release scope, queue order, quarterly investment, or removing things?
 2. **What is the constraint** — a fixed date, a fixed team, a fixed budget?

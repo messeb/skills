@@ -10,6 +10,8 @@ description: Go modules — go.mod setup, dependency management, versioning, Go 
 go mod init github.com/myorg/myapp
 ```
 
+Version numbers in this skill (Go toolchain, module versions) are examples. For a new module, take the `go` directive from the installed toolchain (`go version`) and resolve dependency versions with `go get <module>@latest` or `go list -m -versions <module>`; do not copy them from here or from memory.
+
 ```text
 # go.mod
 module github.com/myorg/myapp

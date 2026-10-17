@@ -41,7 +41,7 @@ from langchain_anthropic import ChatAnthropic
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 
-llm = ChatAnthropic(model="claude-opus-5", max_tokens=4096, timeout=60)
+llm = ChatAnthropic(model="claude-opus-5-5", max_tokens=4096, timeout=60)
 prompt = ChatPromptTemplate.from_messages([
     ("system", "You extract structured invoice data."),
     ("human", "{document}"),

@@ -99,7 +99,7 @@ Handing people a document and asking them to "review it" produces cosmetic comme
 
 ## 5. Intake — ask before scheduling
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **What is being reviewed**, at which version, and how long is it?
 2. **What is the risk** — contractual, regulatory, safety, or ordinary product work? That sets the formality.

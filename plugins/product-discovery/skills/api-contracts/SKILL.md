@@ -121,7 +121,7 @@ Rules: semantic versioning on the contract; a documented deprecation window with
 
 ## 6. Intake — ask before designing
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **Which two parties**, and which is upstream? What is the relationship pattern (`context-mapping`)?
 2. **What does the consumer actually need to do** — the use cases, not the fields they think they want?

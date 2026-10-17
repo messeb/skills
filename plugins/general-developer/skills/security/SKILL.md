@@ -1061,6 +1061,8 @@ app.get('/api/protected', authenticateToken, (req, res) => {
 
 ### Package Auditing
 
+When auditing a codebase, run the ecosystem's audit tool and report its output. Do not judge a version vulnerable or safe from memory; advisories change daily. In an audit, `npm audit fix` and similar commands change the lockfile, so run them only when the user asked for fixes.
+
 **✅ Regular Security Audits:**
 
 ```bash

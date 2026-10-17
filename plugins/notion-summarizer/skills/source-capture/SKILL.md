@@ -61,7 +61,7 @@ Browser specifics:
 
 - Run navigation and page scripts in separate calls, never in the same parallel batch. A script that runs before navigation finishes reads the wrong page or fails.
 - A compact verification script is enough: return the first heading and the text length of the article element.
-- Prefer a text extraction tool over screenshots for reading.
+- Prefer a text extraction tool over screenshots for reading. Do not return images, PDFs or other files into the context as base64 from a script; extract the text, and reference images by URL.
 - Strip navigation, sidebars and footers. Cut everything after the article body.
 - Close every tab you opened when the work is done.
 

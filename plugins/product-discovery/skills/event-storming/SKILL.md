@@ -26,7 +26,7 @@ Run them in order when the domain is new. Jump straight to Process or Design onl
 
 ## 2. Intake — ask before facilitating
 
-Ask only for what the conversation has not already answered. Batch the questions into one message; keep it to five or fewer. If the answer is "you decide", proceed and mark each guess as **⚠️ Assumption** in the output.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest, and on any "you decide", with each guess marked **⚠️ Assumption**.
 
 1. **Domain / scope** — which business area, and where does it start and end? (name the first and last event you care about)
 2. **Level** — Big Picture, Process Level, or Design Level? (if unsure: how well does the team already agree on the end-to-end flow?)

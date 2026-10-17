@@ -43,6 +43,8 @@ async def with_retry(fn, *, attempts: int = 3, base: float = 0.5, cap: float = 8
 | Treat streaming timeouts as non-retriable by default | Output may already have been generated and billed |
 | Add a circuit breaker per provider | Stop hammering a provider that is down; fail over instead |
 
+A classifier refusal (`stop_reason: "refusal"` with a `stop_details` category) is not retried on the same model. It can be retried once on a configured fallback model, except the `reasoning_extraction` category: that one comes from the prompt asking the model to write out its reasoning, so fix the prompt instead (ask for a short explanation, or read summarized thinking blocks).
+
 ---
 
 ## 2. Rate limiting and concurrency
@@ -80,7 +82,7 @@ Long stable prefixes — system prompt, few-shot examples, a document being aske
 
 ```python
 resp = await client.messages.create(
-    model="claude-opus-5", max_tokens=1024,
+    model="claude-opus-5-5", max_tokens=8000,   # leaves room for thinking
     system=[{"type": "text", "text": BIG_STABLE_SYSTEM_PROMPT,
              "cache_control": {"type": "ephemeral"}}],
     messages=[{"role": "user", "content": question}],
@@ -92,7 +94,7 @@ Caching is a **prefix match**: any byte change anywhere before the cache point i
 
 ### Model tiering
 
-Route by task difficulty, not habit: classification and routing to a cheap small model, hard reasoning to a frontier model. Where a provider exposes a reasoning-effort control, lower effort is usually a bigger and safer saving than switching to a weaker model.
+Route by task difficulty, not habit: classification and routing to a cheap small model, hard reasoning to a frontier model. Where a provider exposes a reasoning-effort control, lower effort is usually a bigger and safer saving than switching to a weaker model. Effort level names do not correspond to the same amount of thinking across models (Opus 5.5 at `medium` matches or beats Opus 5 at `high` on coding and knowledge work), so run an effort sweep against your evals on every model upgrade before deciding to downgrade the model, and reserve `xhigh` and `max` for tasks where you measured a gain. Changing the top-level `effort` between requests invalidates the prompt cache; to change it partway through a conversation, use a per-message effort change.
 
 ### Batch APIs
 
@@ -140,7 +142,7 @@ Emit one structured record per model call:
 
 ```json
 {"request_id": "...", "tenant": "...", "feature": "invoice_extract",
- "provider": "anthropic", "model": "claude-opus-5", "prompt_version": "v3",
+ "provider": "anthropic", "model": "claude-opus-5-5", "prompt_version": "v3",
  "attempt": 1, "latency_ms": 1840, "ttft_ms": 320,
  "input_tokens": 5120, "cached_input_tokens": 4096, "output_tokens": 260,
  "reasoning_tokens": 0, "cost_usd": 0.0143, "finish_reason": "stop", "cache_hit": false}
@@ -172,6 +174,8 @@ Reconcile your computed spend against the provider's invoice monthly. A persiste
 | Budgets that log but do not block | Runaway loops discovered on the invoice |
 | Cost per call tracked, cost per task ignored | Retries and failures hide the real unit economics |
 | Reasoning tokens excluded from cost | Systematic under-reporting |
+| Effort value copied from the previous model | Paying for thinking the new model does not need, or losing quality |
+| Refusal fallback applied to `reasoning_extraction` | The fallback hits the same prompt problem |
 
 ---
 
@@ -184,7 +188,8 @@ Reconcile your computed spend against the provider's invoice monthly. A persiste
 - [ ] Shared rate limiter and concurrency cap per provider
 - [ ] Rate-limit headers exported as metrics with a pre-emptive alert
 - [ ] Prompt caching used, with stable content first and cache hits verified
-- [ ] Models tiered per task; effort controls used before downgrading quality
+- [ ] Models tiered per task; effort swept per model before downgrading quality
+- [ ] Refusals routed to a fallback model once, `reasoning_extraction` fixed in the prompt
 - [ ] Batch API used for non-urgent bulk work
 - [ ] Response or artifact caching with model and prompt version in the key; never cross-tenant
 - [ ] Budgets enforced per request, per tenant per day, and globally — blocking, not advisory

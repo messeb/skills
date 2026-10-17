@@ -91,7 +91,7 @@ Decide this consciously; it is the most common cause of flaky acceptance suites.
 
 ## 6. Intake — ask before defining tests
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **Which requirement or story**, and what are its agreed rules and examples?
 2. **What proves it to the business** — what would they want to see demonstrated?

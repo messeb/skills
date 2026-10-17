@@ -118,7 +118,7 @@ Use `questionnaires` to collect importance/satisfaction at scale after the quali
 
 ## 6. Intake — ask before starting
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **What product or situation** are we studying, and what job do you *believe* customers hire it for?
 2. **Who can we talk to** — recent switchers, churned users, non-buyers? How recent is "recent"?

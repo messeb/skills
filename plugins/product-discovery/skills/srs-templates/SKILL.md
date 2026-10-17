@@ -69,7 +69,7 @@ The **fit criterion** is the discipline: *"the system shall be easy to learn"* b
 
 ## 4. Intake — ask before writing
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **Why is a formal SRS needed** — contract, regulator, certification, supplier handover? Who is contractually bound by it?
 2. **Which template is required** by the client, the regulator, or the tender?

@@ -29,7 +29,7 @@ Use this skill at the start of a summary job and again at the end to complete th
 
 1. Fetch the target the user named. If it is a database, the result lists one or more data sources (`collection://...`). Use the data source id as parent, not the database id.
 2. Read the schema: exact property names, types, select options, relation targets.
-3. Query two or three existing entries to learn the conventions: how authors are separated, how editions are written, whether an icon or cover is used, how the page body is laid out.
+3. Fetch two or three existing entries to learn the conventions, all in one response since the fetches are independent: how authors are separated, how editions are written, whether an icon or cover is used, how the page body is laid out.
 4. If the user asked for "the same as" an earlier page, fetch that page and mirror its layout.
 
 Never invent property names or select options. If a needed option does not exist, leave the property empty and tell the user.
@@ -53,7 +53,7 @@ Map the metadata from `source-capture` to the schema. Typical mapping for a book
 
 Leave these to the user unless they ask: status, rating, progress, current page, completed date, file attachments, formats owned. If the database needs a status to show the entry in a view, set the initial one (for example `To Read`) and say so.
 
-Type rules that often break writes:
+Type rules that often break writes (the Notion MCP's tool descriptions and error messages are the authority if they say otherwise):
 
 - Dates are split into `date:<Property>:start` and related keys.
 - Checkboxes use `__YES__` and `__NO__`.

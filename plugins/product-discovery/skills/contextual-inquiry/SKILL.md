@@ -29,7 +29,7 @@ Four principles (Beyer & Holtzblatt):
 
 ## 2. Intake — ask before going into the field
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **Which work, which role, and where** does it physically happen?
 2. **What is the focus** — one or two questions the observation must answer?

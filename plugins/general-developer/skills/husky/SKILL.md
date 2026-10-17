@@ -180,7 +180,7 @@ Never add `--no-verify` to scripts or CI pipelines. If hooks are routinely skipp
 
 ## CI Parity
 
-Hooks are a fast local feedback loop — CI is the authoritative gate. Run the same checks in both places.
+Hooks are a fast local feedback loop — CI is the authoritative gate. Run the same checks in both places. The action majors below show the shape; resolve the current ones before writing the file (`gh api repos/actions/checkout/releases/latest --jq .tag_name`, see `general-developer:github-repo`).
 
 ```yaml
 # .github/workflows/ci.yml
@@ -190,7 +190,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
-        with: { node-version: 20, cache: npm }
+        with: { node-version: lts/*, cache: npm }
       - run: npm ci
       - run: npx eslint .
       - run: npx tsc --noEmit
@@ -200,7 +200,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
-        with: { node-version: 20, cache: npm }
+        with: { node-version: lts/*, cache: npm }
       - run: npm ci
       - run: npm test
 ```

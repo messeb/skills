@@ -82,7 +82,7 @@ Softgoal contribution analysis is what makes trade-offs visible: one design `++`
 
 ## 4. Intake — ask before modeling
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **What is the top goal**, stated so someone could tell whether it holds?
 2. **Which stakeholders** have a stake, and what does each of them want out of it?

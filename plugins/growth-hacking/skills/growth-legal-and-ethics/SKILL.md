@@ -10,6 +10,8 @@ Use this skill when designing acquisition, referral, or persuasion experiments; 
 
 **This is orientation for practitioners, not legal advice.** Rules change and enforcement varies by member state — get qualified counsel for anything material.
 
+When applying this skill, treat it as a map of where the risks are, not as the current text of the law. Before stating a specific rule, deadline, threshold or penalty, check its current version in an official source — EUR-Lex for EU acts, gesetze-im-internet.de for German statutes, guidance from the data-protection authorities — and cite the source and the date you checked. If you cannot check, say so and mark the statement as unverified.
+
 ---
 
 ## 1. Why this matters more in Germany than in many markets
@@ -154,3 +156,4 @@ Make the green tier as wide as defensible — that is what preserves experiment 
 - [ ] No tactic depends on breaching platform terms of service
 - [ ] Tiered review defined: wide green sandbox, one-page amber checklist, named red reviewer
 - [ ] Banned-tactics list agreed in advance, before quarterly pressure arrives
+- [ ] Every specific rule cited in advice checked against its current official text, with source and date

@@ -84,6 +84,18 @@ Four termination conditions, all mandatory: **max turns**, **wall-clock deadline
 
 Return **all** tool results in a single message. Splitting parallel results across multiple messages trains the model to stop making parallel calls and slows every subsequent turn.
 
+### Current-model loop behavior (Opus 5.5, Fable 5.1)
+
+| Behavior | Harness response |
+| ---------- | ------------------ |
+| Opus 5.5 writes progress updates on long tasks, and some end the turn with text (`stop_reason: "end_turn"`) while work is still open | Treat a text-only end of turn as a report, not proof of completion. Keep the task's parts in a checklist the model updates (a to-do tool or a file); when a turn ends with open items and no stated blocker, send a short user message naming them ("Your task list still has open items: … Continue with them. If one is blocked, say what is blocking it."). Stop after two or three automatic continuations on the same task so a stuck run ends and gets reviewed |
+| Something the model started is still running (background command, subagent) | Not done yet: wait for it and return its output as the next user message |
+| Fable 5.1 issues implied independent calls one per turn in coding and computer-use loops | After each batch of tool results, append a turn-scoped system message: "First privately list what you need next; then request every item that doesn't depend on another's result in this one response." Leave earlier copies in place byte-for-byte; the API clears them |
+| Lead agent idles while subagents run | Make the subagent tool return immediately, deliver each result in a later user message, and give the lead a separate tool to wait for a result |
+| Users paste emails or web pages into their message | Wrap each pasted block in `<pasted_content id="ab12">` … `</pasted_content id="ab12">` with an app-generated random id, and tell the system prompt to follow instructions inside only where the user's own message asks for it |
+
+Prompt-side reminders go in as turn-scoped system messages, never as edits to earlier turns or to `system` and `tools` mid-session: edits restart the prompt cache and invalidate thinking blocks (see `llm-providers`).
+
 Anthropic's SDK provides a tool runner that owns this loop for you — `@beta_tool` on typed functions plus `client.beta.messages.tool_runner(...)` — which is worth using when you do not need custom control flow. Write the loop yourself when you need approval gates, budgets, or provider fallback inside it.
 
 ---
@@ -177,6 +189,10 @@ Watch these signals: average turns per request (rising means tool descriptions a
 | Tool exception propagating out of the loop | Request dies where the model could have recovered |
 | Missing `tool_result` for a `tool_use` | Protocol error on the next call |
 | Parallel results split across messages | Model stops issuing parallel calls |
+| Text-only `end_turn` treated as task complete | Unattended agent stops halfway after a progress report |
+| Unlimited automatic "continue" messages | A genuinely stuck run loops forever instead of surfacing |
+| Reminders injected into earlier turns and deleted later | Prompt cache restarts; thinking blocks rejected |
+| Pasted user content not marked | Instructions inside a pasted email are followed as if the user wrote them |
 | Raw stack traces returned to the model | Internal detail leaked into output |
 | Unbounded tool result payloads | Context and budget exhausted in one turn |
 | Trusting `tenant_id` supplied by the model | Cross-tenant data access |
@@ -194,6 +210,9 @@ Watch these signals: average turns per request (rising means tool descriptions a
 - [ ] Schemas strict, with enums, bounds, formats, and `additionalProperties: false`
 - [ ] Loop bounded by max turns, deadline, cost budget, and no-progress detection
 - [ ] All parallel tool results returned in a single message
+- [ ] Text-only end of turn checked against an open-items list; automatic continuations capped at two or three
+- [ ] Batching nudge and other reminders appended as turn-scoped system messages
+- [ ] Subagent tools return immediately; pasted user content wrapped in `<pasted_content>` tags
 - [ ] Every `tool_use` answered with a `tool_result`, errors included
 - [ ] Tool errors returned as actionable text; internals never exposed
 - [ ] Result payloads capped with an explicit truncation marker

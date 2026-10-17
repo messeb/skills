@@ -61,7 +61,7 @@ Show the inventory to the user in one short message and continue without waiting
 
 Follow `summary-workspace` sections 2 to 5.
 
-- Fetch the schema, check conventions on existing entries.
+- Fetch the schema, check conventions on existing entries. Once you have the data source id, fetch the entries and `notion://docs/enhanced-markdown-spec` in one response.
 - Create the page with properties, cover, icon and the two-column body. Leave the summary property and the notes overview for step 7.
 - Fetch `notion://docs/enhanced-markdown-spec` once before the first styled write.
 
@@ -102,7 +102,7 @@ Follow `flashcard-page`. Write the cards from the working notes and the section 
 
 ## Step 8 — Verify and report
 
-Verify by fetching:
+Verify by fetching these three pages in one response:
 
 - the detail page: properties filled, cover and icon set, all subpages present and in order, no numbers in titles;
 - one section page from the middle: template complete, tables full width, no raw tags;

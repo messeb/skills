@@ -40,7 +40,7 @@ Every use case names **one** primary actor and **one** goal. If you need "or", y
 
 ## 3. Intake — ask before writing
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **Which goal**, for **which actor** — stated as a verb phrase from the actor's side?
 2. **Where does it start and stop?** What triggers it and what counts as success?

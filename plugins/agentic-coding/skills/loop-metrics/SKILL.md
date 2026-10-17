@@ -26,6 +26,7 @@ Every number comes from `git` and `gh` (or the tracker API); the model only aggr
 
 1. Window: last 7 days for the weekly report, last 90 for tuning.
 2. Collect bot PRs: `gh pr list --search "agent-workflow: v1 in:body" --state all --json number,createdAt,mergedAt,reviews,commits,body`.
+   Request the PR list and the tracker queries in one response; they do not depend on each other.
 3. Join with ticket transitions from the tracker (`ticket-tracker` `get_ticket` history) by the `Closes <ref>` line.
 4. Compute the table with `jq`; write `metrics.json` and the markdown table.
 5. Interpret: a rising rework rate with stable first-review time points at the coder's guidance (CLAUDE.md, skills); a falling plan match rate points at plans written too early or specs changing after build; escalations by reason say which stop condition dominates.

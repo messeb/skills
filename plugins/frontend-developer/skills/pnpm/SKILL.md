@@ -288,6 +288,8 @@ store-dir=~/.pnpm-store
 optional=false
 ```
 
+Take the pnpm version from `packageManager` in the root `package.json`, and check the current major of each action on its releases page; the versions below are examples.
+
 ```bash
 # CI: restore pnpm store from cache
 - uses: pnpm/action-setup@v6

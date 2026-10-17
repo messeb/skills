@@ -121,7 +121,7 @@ A change is not done when it is implemented; it is done when everyone who relied
 
 ## 7. Intake — ask before designing the process
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **What is under change control** — which baselines, contracts, or published interfaces?
 2. **Who decides**, at which thresholds, and how quickly do they meet?

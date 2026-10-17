@@ -24,6 +24,8 @@ npm install --save-dev danger
 import { danger, warn, fail, message } from 'danger'
 ```
 
+The action majors below show the shape; resolve the current ones before writing the file (`gh api repos/actions/checkout/releases/latest --jq .tag_name`, see `general-developer:github-repo`).
+
 ```yaml
 # .github/workflows/danger.yml
 name: Danger
@@ -38,7 +40,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
-        with: { node-version: 20, cache: npm }
+        with: { node-version: lts/*, cache: npm }
       - run: npm ci
       - run: npx danger ci
         env:

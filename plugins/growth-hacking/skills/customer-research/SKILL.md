@@ -108,7 +108,7 @@ Keep the whole exercise proportionate: these are synthesis formats for research 
 
 ## 7. From research to growth hypotheses
 
-Research that does not change what you test was expensive entertainment. Convert systematically:
+Research that does not change what you test has cost money and produced nothing. Convert systematically:
 
 | Finding | Growth hypothesis |
 | --------- | ------------------- |

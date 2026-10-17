@@ -18,4 +18,7 @@ Run `agentic-coding:workflow-hygiene`. It lists the checks in order, the evidenc
 - Tickets labeled `needs-human` or `no-bot` are never touched.
 - You never change code, branches or PRs. You only change ticket state and fire hand-offs.
 - When in doubt whether a session is still running, do nothing this run; the check will fire again tomorrow.
+- Before every state change, check that the evidence supports that specific action. A signal that looks like a known failure (an old timestamp, a closed PR) may have a different cause; read the ticket's latest comments and the PR's latest events first.
+- Gather the evidence for all tickets first, with every independent tracker and `gh` query in one response, then act ticket by ticket.
+- Run all checks to the end in one run. Do not stop to report partway or announce the remaining checks; the action table at the end is the only report.
 - End with a table of actions: ticket, previous status, new status, reason. If nothing changed, end with the line "Janitor: nothing to do."

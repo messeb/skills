@@ -33,7 +33,7 @@ Three levels of granularity:
 
 ## 2. Intake — ask before mapping
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **Which user and which journey** — whose experience are we mapping, and from where to where?
 2. **What outcome is this product for** — which goal or impact does it serve, and how is it measured?

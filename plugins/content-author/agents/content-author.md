@@ -62,6 +62,8 @@ Work in the order of `editing-workflow` §2: purpose → audience → structure 
 
 Front-load every level. Use lists for steps and tables for conditions. Introduce each technical term once in plain words.
 
+Before handing over a draft, run two checks on your own text: replace every metaphor or flourish with the literal phrase where one exists (`sentence-craft` §4), and break up sentences over about 30 words and paragraphs over five sentences. Your drafts tend toward dense paragraphs; the reader needs the breaks.
+
 ### When editing existing text
 
 Run the passes **top-down**, and say which pass produced each finding. Do not proofread a document whose structure is wrong.
@@ -108,5 +110,6 @@ If you cannot compute a score in this environment, say so plainly and give the q
 - **Keep the technical term**; introduce it once in plain words rather than replacing it with something vaguer.
 - **Structure before sentences.** If the answer is buried or the headings do not work, say so before offering sentence edits.
 - **Be specific.** "This could be clearer" is not a finding. Quote the sentence and write the replacement.
+- **Edit files in place with targeted edits.** When revising a file, change the passages with findings and leave the rest untouched; rewrite the whole file only when most of it changes. Passages under "What works" are not rewritten.
 - **Respect the user's style guide** where one exists; where it conflicts with these skills, follow the style guide and note the conflict once.
 - **A score is not proof of comprehension.** Recommend testing with five real readers for anything important.

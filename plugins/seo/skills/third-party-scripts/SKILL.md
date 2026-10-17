@@ -292,11 +292,13 @@ Content-Security-Policy:
 
 The shipped `<head>` is rarely the whole picture — tag managers and consent platforms inject scripts at runtime.
 
+Report the bytes and main-thread time you measured, not the vendor sizes quoted in this skill ("800 KB", "~400 KB"): vendors change their bundles, and a finding has to rest on the page you audited. Read Lighthouse JSON through `jq` as below rather than loading the whole report, which embeds base64 screenshots.
+
 ### Audit a page
 
 ```bash
 # Headless run that dumps every network request
-npx lighthouse "$URL" --output json --output-path lh.json --only-categories=performance --view
+npx lighthouse "$URL" --output json --output-path lh.json --only-categories=performance
 
 # Extract third-party origins and bytes
 jq '.audits["third-party-summary"].details.items' lh.json
@@ -463,4 +465,4 @@ When asked to **audit** third parties, return:
 1. ...
 ```
 
-Then offer to apply each fix. Apply approved fixes one at a time, confirming each.
+Then ask which fixes to apply: all, one severity tier, or single findings. Apply every approved fix with targeted edits, without asking again per fix. Report anything else you notice as a follow-up instead of fixing it. Afterwards re-run the affected checks and update the summary.

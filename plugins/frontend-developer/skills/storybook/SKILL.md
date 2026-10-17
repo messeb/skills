@@ -293,6 +293,8 @@ export const IconOnlyButton: Story = {
 
 Use [Chromatic](https://www.chromatic.com/) for automated visual diffing.
 
+When you judge a diff or screenshot yourself rather than through the tool, crop and zoom to the changed region and compare it at full resolution; a scaled-down full-page image hides one-pixel shifts and color changes.
+
 ```yaml
 # .github/workflows/chromatic.yml
 - name: Publish to Chromatic

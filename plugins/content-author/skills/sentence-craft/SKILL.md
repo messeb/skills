@@ -74,6 +74,19 @@ Abstract words are processed more slowly and remembered less well.
 
 The same applies to quantities: `significantly faster` is unverifiable; `1.2 seconds instead of 4` is a fact. Replace every evaluative adjective you can with the number that justified it.
 
+### Say it literally: no mannered prose
+
+Mannered prose puts a metaphor or flourish where a direct statement would do. It shows off the writer instead of carrying the idea, it makes the reader decode the image, and it is imprecise, because a metaphor brings connotations the writer did not choose. Drafts written by language models are prone to it.
+
+| Mannered | Literal |
+| ---------- | --------- |
+| a dial worth turning | a parameter worth varying |
+| this point earns its keep | this point still matters |
+| the code does the heavy lifting | the code does most of the work: parsing and validation |
+| ein Hebel, an dem man ansetzen kann | eine Stelle, die sich ändern lässt |
+
+Rule: when a literal phrase is available, use it. Keep a figure of speech only when no literal phrase says the same thing as briefly.
+
 ---
 
 ## 5. Cut what carries nothing
@@ -148,6 +161,7 @@ Loanwords and anglicisms in German deserve a deliberate decision: `downloaden` i
 | Passive by default | Nobody knows who acts; responsibility hidden |
 | Nominal style throughout | Long, actorless, heavy |
 | Abstractions where a concrete noun exists | Reader cannot picture anything |
+| Mannered prose: metaphor or flourish instead of a direct statement | Reader decodes the image; connotations the writer did not choose |
 | Evaluative adjectives instead of numbers | Unverifiable claims |
 | Cutting conditions and exceptions as "filler" | Meaning changed; in regulated text, a defect |
 | Removing every hedge | Statements become false |
@@ -165,6 +179,7 @@ Loanwords and anglicisms in German deserve a deliberate decision: `downloaden` i
 - [ ] Actor named wherever responsibility matters; passive used deliberately
 - [ ] Nominalisations converted to verbs, especially with `erfolgen`, `durchführen`, `provide`, `conduct`
 - [ ] Abstract nouns replaced with concrete ones where possible
+- [ ] Metaphors and flourishes replaced with the literal phrase where one exists
 - [ ] Evaluative adjectives replaced with the numbers behind them
 - [ ] Empty openers, redundant pairs, and stacked hedges cut
 - [ ] Meaning-bearing hedges, conditions, and qualifications kept

@@ -100,7 +100,7 @@ Ask the developer which action they want to perform (or infer from context):
 
 ### 1. Confirm the version number
 
-Ask the developer: *"What version are you releasing? (e.g. 1.3.0)"*
+Derive a proposal first: the latest production tag (`git tag --list 'v*' --sort=-v:refname | grep -v rc | head -1`), the `[Unreleased]` section of `CHANGELOG.md`, and the commits since that tag. Propose the next version with the reason (breaking change → major, feature → minor, fixes only → patch) and ask the developer to confirm or correct it.
 
 ### 2. Check develop is up to date
 
@@ -133,7 +133,7 @@ Read `references/workflows.md` for the expected CI behaviour.
 git branch -r | grep release/   # list remote release branches
 ```
 
-Ask the developer to confirm which branch if multiple exist.
+With a single release branch, use it. Ask the developer which one only if several exist.
 
 ### 2. Find the current RC number
 
@@ -308,7 +308,7 @@ gh pr create --base develop --head hotfix/$VERSION \
 
 ## Safety Checks Before Any Tag Push
 
-Always run these before pushing a tag:
+Run these before pushing a tag; they are independent, so run them together and report any that fails before tagging:
 
 ```bash
 # 1. Confirm you are on the correct branch

@@ -36,7 +36,7 @@ Fidelity is a cost decision, not a quality ladder. Match it to the question.
 
 ## 2. Intake — ask before making anything
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **What question must this answer?** One sentence. ("Will agents understand the two-step approval?" not "design the approval screen".)
 2. **Who will see it** — real users, stakeholders, or a supplier? That decides fidelity and annotation depth.

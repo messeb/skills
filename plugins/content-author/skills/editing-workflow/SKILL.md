@@ -51,6 +51,8 @@ For a short text, passes 1–3 can take two minutes. Skipping them is what costs
 | **Read it backwards, sentence by sentence** | Typos, because the sense no longer carries you past them |
 | **Change the font or print it** | Everything the eye has memorised |
 | **Highlight every verb** | Nominal style and passive clusters |
+| **Underline every metaphor and flourish** | Mannered prose — each one gets the literal phrase unless none exists (`sentence-craft` §4) |
+| **Mark sentences over 30 words and paragraphs over five sentences** | Dense prose: long sentences with few paragraph breaks, a common trait of machine-drafted text |
 | **Search for `-ung`, `erfolgt`, `wird … geprüft`** | German nominal and passive constructions |
 | **Search for `it should be noted`, `grundsätzlich`, `basically`** | Filler openers |
 | **Delete the first paragraph** | Throat-clearing — the text often starts better without it |
@@ -149,6 +151,7 @@ If the text will be localised, decisions made now determine cost and quality lat
 | Proofreading before restructuring | Careful work on text that gets deleted |
 | Editing only on screen, in the same layout | The eye skips what it has memorised |
 | Never reading aloud | Long sentences and awkward phrasing survive |
+| Machine-drafted text published without a density and metaphor pass | Long, dense paragraphs and decorative phrasing survive |
 | Publishing without any reader testing | Comprehension assumed, never checked |
 | Testing with colleagues | They already know the answer |
 | Rescuing the reader during a test | The finding disappears |

@@ -20,6 +20,16 @@ The solution: **predictable scope and a single source of truth for design values
 
 Design tokens encode design decisions (colors, spacing, typography) as named variables. They are the bridge between design tools and code.
 
+Token values come from the brand guide, the design file or the existing tokens in the repo. When there is no design direction, do not fill the gap with a stock look; "avoid a generic look" only swaps one default for another. Name the defaults to avoid instead, check which ones the first result used, and extend the list:
+
+| Default to avoid unless the design asks for it | Instead |
+| ------------------------------------------------ | --------- |
+| Cream or off-white page background | The brand's neutral, or plain white / near-black per theme |
+| Italic accent words inside headlines | Weight or color contrast from the type scale |
+| Numbered "01 / 02 / 03" section labels | Descriptive headings |
+| Monospace labels and eyebrow text on non-code UI | The body or UI font at a smaller size |
+| Pill-shaped buttons everywhere | One radius token per component size |
+
 ```css
 /* tokens.css — the design system foundation */
 :root {

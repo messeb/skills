@@ -29,7 +29,7 @@ Deliverables are **options, not commitments.** That single reframe is what makes
 
 ## 2. Intake — ask before mapping
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **What is the business goal**, and how would you measure it? What is the current baseline and the target by when?
 2. **If a solution has been proposed already** — what would that solution achieve, in business terms?

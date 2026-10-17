@@ -95,7 +95,7 @@ Work through this sequence before declaring something dead:
 1. **Was it implemented properly?** Tracking correct, targeting sane, page actually working on mobile.
 2. **Was it given enough time and volume?** Most channels need several iterations; ad platforms need a learning period.
 3. **Have you tested the big levers?** Offer, audience, and landing experience move results far more than creative details.
-4. **Is the failure upstream?** A channel that "fails" often converts fine and then churns — that is a product problem wearing a channel costume.
+4. **Is the failure upstream?** A channel that "fails" often converts fine and then churns — that is a product problem, not a channel problem.
 5. **Have you tested at least three meaningfully different approaches?** One creative and one audience is not a test of a channel.
 
 Only then decide to pivot away. Record the decision and the evidence, so the channel is not re-proposed in six months without new information.

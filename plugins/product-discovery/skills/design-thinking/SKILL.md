@@ -32,7 +32,7 @@ Rule: **artifacts are outputs of synthesis, not substitutes for it.** Never pres
 
 ## 2. Intake — ask before building anything
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **Who is the user group** and what do they use the product for? Are there several distinct groups?
 2. **What research exists?** Interviews, support tickets, analytics, observation notes, sales calls, prior studies — anything with real user voice?

@@ -8,6 +8,8 @@ Goal of this skill: buy customers profitably and know that you did — which mea
 
 Use this skill when scaling a paid channel, when CPA is rising, or when platform-reported results and actual revenue disagree.
 
+The principles here are stable; platform specifics are not. Conversion thresholds for automated bidding, learning-period rules, campaign types, consent-mode behaviour and ad-policy restrictions change several times a year. Before recommending a specific setting or number, check the platform's current documentation and say which version you relied on.
+
 ---
 
 ## 1. The hierarchy of levers

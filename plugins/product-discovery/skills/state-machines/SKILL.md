@@ -29,7 +29,7 @@ Rule of thumb: **replace flag combinations with explicit states.** Three boolean
 
 ## 2. Intake — ask before modeling
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **Which entity**, and who owns its lifecycle? Which bounded context does it live in?
 2. **What states exist today** — including the ones only the database knows about?

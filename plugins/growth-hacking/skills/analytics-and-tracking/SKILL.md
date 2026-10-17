@@ -33,6 +33,7 @@ Practical guidance for choosing:
 - **A warehouse-first setup** (collect once, model in the warehouse, feed the tools) costs more to build and removes most of the "which tool is right?" arguments permanently. Worth it once there are more than two tools or more than one team asking questions.
 - **Self-hosted or EU-hosted options** are worth real consideration in the EU, since they materially simplify the transfer and consent picture (`growth-legal-and-ethics`).
 - **Every extra tool is a tracking surface to maintain and a consent obligation.** Two well-implemented tools beat five half-implemented ones.
+- **The named tools are examples of the category, not recommendations.** Features, pricing, hosting regions and data-transfer terms change; check the vendor's current documentation before recommending one.
 
 ---
 

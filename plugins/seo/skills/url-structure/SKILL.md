@@ -525,8 +525,8 @@ for url in / /blog /blog/inp-guide; do
 done
 
 # Check host canonicalization
-for host in example.com www.example.com http://example.com http://www.example.com; do
-  curl -sILo /dev/null -w '%{http_code} %{url_effective}\n' "https://$host" 2>/dev/null
+for origin in https://example.com https://www.example.com http://example.com http://www.example.com; do
+  curl -sIo /dev/null -w "$origin → %{http_code} %{redirect_url}\n" "$origin/"
 done
 
 # Check HSTS
@@ -537,7 +537,8 @@ curl -sILo /dev/null -w '%{num_redirects} %{url_effective}\n' \
   -L https://example.com/old-page
 
 # Crawl for 404s and 301s
-npx screamingfrog --crawl https://example.com --report-tab "Internal:Status Code"
+# Screaming Frog CLI (binary name differs per OS, check its docs)
+screamingfrogseospider --headless --crawl https://example.com --export-tabs "Response Codes:All" --output-folder ./crawl
 
 # Check sitemap URLs all return 200
 curl -s https://example.com/sitemap.xml \
@@ -601,4 +602,4 @@ When asked to **plan a migration**, return:
 3. The pre-launch / launch / post-launch checklist.
 4. The expected ranking impact and recovery timeline.
 
-Then offer to apply the fixes / implement the migration. Apply approved changes one at a time, confirming each.
+Then ask which fixes to apply: all, one severity tier, or single findings. Apply approved fixes with targeted edits, without asking again per fix, with one exception: each redirect or URL change that affects live, indexed URLs gets its own explicit go-ahead, because it is hard to reverse. Afterwards re-run the affected checks and update the summary.

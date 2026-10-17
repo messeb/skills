@@ -128,7 +128,7 @@ Use `1x/2x/3x` only when the rendered size is **fixed** (logos, icons). Otherwis
 
 Generate at least 4 widths covering the responsive range. A typical set for a content card:
 
-`400`, `800`, `1200`, `1600` widths in each format (AVIF + WebP + fallback). 12 files per source image. Automate it (section 11).
+`400`, `800`, `1200`, `1600` widths in each format (AVIF + WebP + fallback). 12 files per source image. Automate it (section 10).
 
 ---
 
@@ -365,8 +365,8 @@ cwebp -q 80 source.jpg -o source.webp
 # AVIF
 avifenc --speed 6 -q 55 source.jpg source.avif
 
-# Optimize JPEG
-mozjpeg -quality 82 -outfile source.opt.jpg source.jpg
+# Optimize JPEG (mozjpeg ships its encoder as cjpeg)
+cjpeg -quality 82 -outfile source.opt.jpg source.jpg
 
 # Generate responsive variants with sharp (Node)
 node -e '
@@ -502,7 +502,7 @@ curl -s "$URL" | grep -oP '<img[^>]+>' | grep -vP 'width=' \
 # Find lazy-loaded images that might be the LCP
 curl -s "$URL" | grep -oP '<img[^>]+loading="lazy"[^>]+fetchpriority="high"[^>]*>'
 
-# Identify the LCP element (DevTools Performance Insights, or:)
+# Identify the LCP element (DevTools Performance panel, or:)
 npx lighthouse "$URL" --only-categories=performance --view
 # → Diagnostics → "Largest Contentful Paint element"
 
@@ -562,4 +562,4 @@ When asked to **audit** existing images, return:
 1. ...
 ```
 
-Then offer to apply each fix. Apply approved fixes one at a time, confirming each.
+Then ask which fixes to apply: all, one severity tier, or single findings. Apply every approved fix with targeted edits, without asking again per fix. Report anything else you notice as a follow-up instead of fixing it. Afterwards re-run the affected checks and update the summary.

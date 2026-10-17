@@ -1,6 +1,6 @@
 {
   "name": "go-developer",
   "description": "Adds skills for Go CLI and backend service development.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "agents": ["./agents/go-developer.md"]
 }

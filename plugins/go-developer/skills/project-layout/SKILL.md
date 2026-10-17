@@ -137,6 +137,8 @@ pkg/
 go mod init github.com/myorg/myapp
 ```
 
+The `go` directive and module versions below are examples; take the toolchain version from `go version` and resolve dependency versions with `go get <module>@latest` (see `go-developer:modules`).
+
 ```text
 # go.mod
 module github.com/myorg/myapp

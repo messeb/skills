@@ -29,7 +29,7 @@ Do **not** use it to decide *what* to build (`jobs-to-be-done`, `contextual-inqu
 
 ## 2. Intake — ask before running
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **What decision does this inform**, and what would make you change the design?
 2. **What is being tested** — paper, clickable prototype, staging build, live product? Which flows?

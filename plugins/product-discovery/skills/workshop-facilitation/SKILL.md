@@ -31,7 +31,7 @@ Non-negotiable: every participant either has decision authority or represents so
 
 ## 2. Intake — ask before designing the workshop
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **What decision or outcome must exist when people leave?** Phrase it as a deliverable, not a topic.
 2. **Who must be there** — names, roles, and who holds the authority to decide? Who will block it if absent?

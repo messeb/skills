@@ -29,6 +29,8 @@ Push → Lint+Type-check (parallel, fast)
 
 ## Complete GitHub Actions Workflow
 
+The action versions, `NODE_VERSION` and `PNPM_VERSION` below are examples from the time of writing. Before copying, take Node and pnpm from the repo (`.nvmrc`, `engines`, `packageManager`) and look up the current major of each action on its GitHub releases page.
+
 ### PR validation
 
 ```yaml

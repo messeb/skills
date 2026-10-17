@@ -60,7 +60,7 @@ Then proceed to **Step 3 — Verify and summarize**.
 | State | Action |
 | ------- | -------- |
 | **Missing** | Create from template |
-| **Present, outdated** | Show a diff of what would change, ask before overwriting |
+| **Present, outdated** | Show a diff of what would change, ask before overwriting; apply as a targeted edit that keeps the file's custom parts |
 | **Present, customized** | Skip — do not overwrite custom content without explicit user approval |
 | **Present, current** | Skip |
 
@@ -77,7 +77,7 @@ Then proceed to **Step 3 — Verify and summarize**.
 - `.github/dependabot.yml` — does the `package-ecosystem` list cover all ecosystems in the repo? Does **every** entry have the three-PR `groups` block (wildcard `minor-and-patch`, `major`, `security`; wildcard `actions` group for `github-actions`)? An entry without groups, or a group not matching `"*"`, produces per-dependency PRs and must be fixed.
 - `.github/workflows/*.yml` — is every `uses:` pinned to the action's current major (resolve per the always-latest rule in Step 1)? Are the project's own dependencies current, or should an upgrade be offered?
 
-After auditing, present a summary of what will be created or updated, confirm with the user, then apply changes. Proceed to **Step 3 — Verify and summarize**.
+Read the existing files in one batch before judging them. After auditing, present one summary of what will be created or updated, confirm with the user once, then apply all approved changes without asking again per file. Proceed to **Step 3 — Verify and summarize**.
 
 ---
 
@@ -101,7 +101,7 @@ Inspect what changed in the source code, then update only the affected repo file
 | License changed | `LICENSE`, `NOTICE` (if switching to/from Apache 2.0), `README.md` badge/footer |
 | GitHub Pages enabled | Add `.nojekyll` to root or publish directory |
 
-For each affected file, show the proposed change and confirm before writing. Proceed to **Step 3 — Verify and summarize**.
+Show the proposed changes for all affected files together, confirm once, then apply them as targeted edits. Anything outside the mapping that looks stale goes into the summary as a suggestion, not into the change. Proceed to **Step 3 — Verify and summarize**.
 
 ---
 

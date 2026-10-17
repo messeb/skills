@@ -31,7 +31,7 @@ Rule: **qualitative first, quantitative second.** A survey written before any in
 
 ## 2. Intake — ask before writing questions
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **What decision will the results change?** Name the decision and the threshold ("if more than 40 % report X, we do Y").
 2. **What do you already know qualitatively**, and which specific hypotheses should this survey test?

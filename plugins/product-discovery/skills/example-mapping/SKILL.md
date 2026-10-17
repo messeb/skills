@@ -27,7 +27,7 @@ Layout: story on top; rules in a row below it; examples in a column under their 
 
 ## 2. Intake — ask before the session
 
-Ask only for what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **Which story?** Paste the story text as it stands (`As a … I want … so that …` or the title plus a sentence).
 2. **Who is in the room?** Ideally the Three Amigos — product/business, developer, tester. Which of the three is missing?

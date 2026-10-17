@@ -25,7 +25,7 @@ Three layers:
 ```python
 import dspy
 
-dspy.configure(lm=dspy.LM("anthropic/claude-opus-5", max_tokens=4096))
+dspy.configure(lm=dspy.LM("anthropic/claude-opus-5-5", max_tokens=4096))
 
 
 class ExtractInvoice(dspy.Signature):

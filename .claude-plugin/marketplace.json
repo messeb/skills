@@ -8,67 +8,67 @@
       "name": "general-developer",
       "description": "Language-agnostic software development principles applicable to all developers",
       "source": "./plugins/general-developer",
-      "version": "1.2.2"
+      "version": "1.3.0"
     },
     {
       "name": "frontend-developer",
       "description": "Adds skills for frontend software development.",
       "source": "./plugins/frontend-developer",
-      "version": "1.3.1"
+      "version": "1.4.0"
     },
     {
       "name": "go-developer",
       "description": "Adds skills for Go CLI and backend service development.",
       "source": "./plugins/go-developer",
-      "version": "1.0.0"
+      "version": "1.1.0"
     },
     {
       "name": "seo",
       "description": "Adds skills for SEO, GEO (Generative Engine Optimization), and Lighthouse-driven page quality.",
       "source": "./plugins/seo",
-      "version": "1.0.0"
+      "version": "1.1.0"
     },
     {
       "name": "product-discovery",
       "description": "Adds skills for product discovery, requirements elicitation, and collaborative domain modeling.",
       "source": "./plugins/product-discovery",
-      "version": "1.0.0"
+      "version": "1.3.0"
     },
     {
       "name": "python-ai-developer",
       "description": "Adds skills for Python AI application development \u2014 uv, FastAPI, multi-provider LLM clients, orchestration frameworks, OCR, ML, operations research, containerization, IDE setup, and notebooks.",
       "source": "./plugins/python-ai-developer",
-      "version": "1.0.1"
+      "version": "1.1.0"
     },
     {
       "name": "growth-hacking",
       "description": "Adds skills for growth hacking \u2014 strategy, experiment process, AARRR funnel work across acquisition, activation, retention, referral and revenue, plus the legal and ethical limits.",
       "source": "./plugins/growth-hacking",
-      "version": "1.1.0"
+      "version": "1.2.0"
     },
     {
       "name": "git-code-analyzer",
       "description": "Adds skills for git repository analysis \u2014 contributor activity over custom time periods, code ownership and bus factor per area, PR/review collaboration via the gh API, and contributor impact/churn analysis.",
       "source": "./plugins/git-code-analyzer",
-      "version": "1.0.0"
+      "version": "1.1.0"
     },
     {
       "name": "content-author",
       "description": "Adds skills for writing and editing readable text in English and German \u2014 readability indices, plain language, sentence craft, structure, German-specific pitfalls, and revision workflow.",
       "source": "./plugins/content-author",
-      "version": "1.0.0"
+      "version": "1.1.0"
     },
     {
       "name": "notion-summarizer",
       "description": "Adds skills for turning long sources \u2014 books, courses, documentation, reports, article series \u2014 into a structured Notion summary: a detail page with filled properties and cover, one styled subpage per chapter, and a flashcard page for spaced-repetition tools.",
       "source": "./plugins/notion-summarizer",
-      "version": "1.0.0"
+      "version": "1.1.0"
     },
     {
       "name": "agentic-coding",
       "description": "Adds four unattended agents (planner, coder, reviewer, janitor) and 14 skills for an AI-native ticket-to-merge loop on Jira, GitHub Issues or Notion \u2014 intent and spec artifacts, contract-first implementation, skeptical review, closing-the-loop monitoring, metrics and harness tuning.",
       "source": "./plugins/agentic-coding",
-      "version": "1.1.0"
+      "version": "1.2.0"
     }
   ]
 }

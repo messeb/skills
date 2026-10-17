@@ -28,6 +28,8 @@ Bug tickets use the prefix `fix`. On rework or continue: check out the existing 
 3. Find two existing examples of the kind of change you are about to make and match their structure.
 4. Read the best-practice skills selected in configuration for exactly the files you will touch. Note each rule you will apply; you will cite them in the PR.
 
+The searches and reads in this step are independent of each other: request them together in one response, not one per turn.
+
 ## Step 4: Plan as a contract
 
 Write `SDLC_DIR/<ticket-id>/plan.md` from the template: files that change, order of work, risks (what could break, the riskiest step, options rejected), and proof: one named test, command or observable check per acceptance criterion. The proof section is the contract: it defines what "done" means for this ticket before any code exists.
@@ -56,15 +58,19 @@ On rework the review comments are the criteria: one commit per addressed comment
 
 ## Long runs: handoff
 
-When the ticket has more than `HANDOFF_AFTER_CRITERIA` criteria (default 6), or `CONTEXT_RESET = always`, write `SDLC_DIR/<ticket-id>/handoff.md` after every third committed criterion and before ending a run that could not finish: state (criteria done and their commits), decisions taken and why, open navigator findings, next steps in order, and commands to resume. Commit it, `comment` "Handoff written, resume with CONTINUE <id>", and end the run when `CONTEXT_RESET` says so; a fresh run continues from the file instead of from a compacted memory.
+When the ticket has more than `HANDOFF_AFTER_CRITERIA` criteria (default 6), or `CONTEXT_RESET = always`, write `SDLC_DIR/<ticket-id>/handoff.md` after every third committed criterion and before ending a run that could not finish: state (criteria done and their commits), decisions taken and why, constraints and ruled-out approaches stated exactly, problems hit and how they were handled, open navigator findings, next steps in order, and commands to resume. Keep names, paths, commands and error text verbatim; a fresh run cannot reconstruct them. Commit it, `comment` "Handoff written, resume with CONTINUE <id>", and end the run when `CONTEXT_RESET` says so; a fresh run continues from the file instead of from a compacted memory.
 
 ## Step 6: Verify with fresh eyes
 
-When all criteria are committed, spawn the verifier subagent (`agentic-coding:evaluator-qa`): fresh context, only the ticket, `plan.md` and the run command. It starts the app or service, exercises every behavioral criterion plus the two nearest neighboring flows, and reports findings with location and cause. It fixes nothing. Its BLOCKERs go back into the loop as criteria; then continue with `agentic-coding:verify-acceptance`.
+When all criteria are committed, spawn the verifier subagent (`agentic-coding:evaluator-qa`): fresh context, only the ticket, `plan.md` and the run command. It starts the app or service, exercises every behavioral criterion plus the two nearest neighboring flows, and reports findings with location and cause. It fixes nothing. While it runs, draft the PR body and the evidence table skeleton; tick nothing until its report is back. Its BLOCKERs go back into the loop as criteria; then continue with `agentic-coding:verify-acceptance`.
 
 ## Scope rules
 
 - Only what the ticket asks. A necessary refactor is allowed when it stays in the files you touch anyway and gets its own commit.
+- A pre-existing bug, performance concern or behavior the ticket does not mention is not fixed, optimized or extended in this change unless the requested behavior cannot work without it; it goes under "Notes for reviewer" as a follow-up.
+- Where the ticket is ambiguous, implement the reading its wording and the surrounding code most directly support, record that assumption in `plan.md` and the PR, and do not build for the other readings as well.
+- Tests: commit them where the repo keeps tests for this kind of change, sized like the neighboring test files, roughly one focused test per stated behavior. Scratch scripts and quick checks used while working are not committed.
+- Edit files with targeted edits; rewrite a whole file only when it is short or most of it changes.
 - No dependency upgrades, CI changes, secrets or lockfile edits unless the ticket is about them.
 - No TODOs for skipped work; write the follow-up under "Notes for reviewer" in the PR.
 - No debug output, commented-out code or feature flags the ticket did not ask for.
@@ -80,6 +86,8 @@ When all criteria are committed, spawn the verifier subagent (`agentic-coding:ev
 | Fix and test in the same commit | Nobody can tell the test was not bent to the fix | Test commit, fix mode, fix commit |
 | Verifier that shares the coder's context | Inherits the assumptions that produced the bug | Fresh subagent, artifacts only |
 | Applying a skill rule the repo contradicts | Repo owner loses control | Repo rule wins |
+| Fixing a neighboring bug "while here" | Diff no longer maps to the criteria; reviewer cannot attribute regressions | Follow-up note in the PR |
+| Turning scratch checks into permanent test files | Test suite grows with tests nobody asked for | One focused test per behavior, sized like the neighbors |
 
 ## Checklist
 

@@ -550,7 +550,7 @@ Durations use **ISO 8601 duration format** (`PT30M`, `PT24H`).
   <a itemprop="telephone" href="tel:+1-555-123-4567">+1 (555) 123-4567</a>
 
   <span itemprop="priceRange">$$</span>
-  <link itemprop="servesCuisine" href="https://schema.org/FrenchCuisine">
+  <span itemprop="servesCuisine">French</span>
 
   <meta itemprop="openingHours" content="Tu-Sa 17:00-22:00">
 
@@ -772,6 +772,8 @@ Use when auditing existing markup. Score each item; report findings with severit
 
 ### Rich-result coverage
 
+Google changes which types earn rich results and which properties they require. Check the feature's current page in Google Search Central's structured data gallery before reporting eligibility.
+
 - [ ] Articles include `headline`, `author`, `datePublished`, `dateModified`, `image`, `publisher`.
 - [ ] Products include `name`, `image`, `description`, `offers` (with `price`, `priceCurrency`, `availability`), `aggregateRating` if reviews exist.
 - [ ] Breadcrumbs use `BreadcrumbList` with `position`-numbered `ListItem`s.
@@ -835,4 +837,4 @@ When asked to **validate** existing Microdata, return:
 1. ...
 ```
 
-Then offer to apply each fix. Apply approved fixes one at a time, confirming each.
+Then ask which fixes to apply: all, one severity tier, or single findings. Apply every approved fix with targeted edits, without asking again per fix. Report anything else you notice as a follow-up instead of fixing it. Afterwards re-run the affected checks and update the summary.

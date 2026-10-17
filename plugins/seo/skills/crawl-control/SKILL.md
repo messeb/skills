@@ -237,6 +237,8 @@ Sitemap: https://example.com/sitemap.xml
 
 #### Bot reference
 
+Crawler names change often: operators add, split and retire user agents within months. Treat the table below as a starting list, not as current fact. Before you write or audit an AI-bot policy, check each operator's published crawler documentation for the current user-agent tokens and what each one is used for, and search for any token you do not confidently recognize, spelled as written.
+
 | User-agent | Operator | Purpose |
 | ------------ | ---------- | --------- |
 | `Googlebot` | Google | Search index |
@@ -888,4 +890,4 @@ When asked to **validate** existing files, return:
 1. ...
 ```
 
-Then offer to apply each fix. Apply approved fixes one at a time, confirming each.
+Then ask which fixes to apply: all, one severity tier, or single findings. Apply every approved fix with targeted edits, without asking again per fix. Report anything else you notice as a follow-up instead of fixing it. Afterwards re-run the affected checks and update the summary.

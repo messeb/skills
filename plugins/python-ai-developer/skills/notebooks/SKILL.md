@@ -90,7 +90,7 @@ Papermill executes a notebook with injected parameters, which turns a notebook i
 
 ```python
 # cell tagged "parameters"
-model = "claude-opus-5"
+model = "claude-opus-5-5"
 dataset = "evals/invoices.jsonl"
 sample_size = 100
 ```
@@ -98,7 +98,7 @@ sample_size = 100
 ```bash
 uv run papermill notebooks/eval_report.ipynb \
     out/eval_2026-09-06.ipynb \
-    -p model claude-opus-5 -p sample_size 200
+    -p model claude-opus-5-5 -p sample_size 200
 ```
 
 This is a good fit for evaluation reports (`llm-testing-and-evals`) and OCR accuracy sweeps: the notebook renders charts and tables, the executed copy is archived as the record of that run, and the parameters are explicit rather than edited into cells.

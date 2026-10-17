@@ -103,7 +103,7 @@ class Settings(BaseSettings):
 
     # Model ids are configuration, never literals in code — they change often
     default_provider: Literal["openai", "anthropic", "gemini", "grok", "mistral"] = "anthropic"
-    model_default: str = "claude-opus-5"
+    model_default: str = "claude-opus-5-5"
     model_cheap: str = "claude-haiku-4-5"
 
     request_timeout_s: float = 60.0

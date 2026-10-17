@@ -74,9 +74,21 @@ Every section page has the same order so the reader can navigate all of them the
 - Keep the author's terminology. Do not rename concepts.
 - Attribute opinions ("the author's default", "rule of thumb from the text"); state facts plainly.
 - Do not add knowledge that is not in the source. If you add a clarification, mark it as a note.
+- Reword every sentence. A source phrase kept word for word goes in quotation marks with attribution, at most one short quote per page (`source-capture` section 7). A source sentence with a few words swapped is still a copy: restructure it into a bullet or a table row instead.
 - Table cells hold phrases, not paragraphs. Three to five columns at most.
 - No standalone dashes as sentence punctuation; use colons, commas or a new bullet.
 - Write in the language the user asked for, independent of the source language.
+
+Example of a correct result:
+
+> **Source** — "Teams that adopt the optimizer early tend to over-tune it. In our benchmark, runs with more than 200 evaluations improved accuracy by less than one point over runs with 50, while costing four times as much. We therefore recommend starting at 50 and increasing only when the validation set is large."
+>
+> **Bullets on the page** —
+>
+> - **Evaluation budget**: start at 50 evaluations; raise it only with a large validation set (author's default)
+> - Over 200 evaluations: under 1 point more accuracy than 50, at four times the cost (book's benchmark)
+>
+> **Why it is correct** — the content is restructured into a rule and a scoped number, every phrase is reworded, the recommendation is attributed, and nothing is quoted because no wording mattered.
 
 ---
 
@@ -100,6 +112,7 @@ A page that needs more than this usually contains copied detail. Move detail int
 | Headings copied one to one with a sentence each | Shallow, misses the content | Extract the enumerations and comparisons |
 | Dropping items from an author's list | Reader cannot trust the summary | Show all items |
 | Copying code listings | Copyright, noise | Minimal pattern, describe the rest |
+| Source sentences carried over with light edits, unmarked | Unattributed quotation; copyright | Restructure and reword; mark the one kept phrase as a quote |
 | Bold everywhere | Nothing stands out | One highlight per bullet |
 | Numbers without scope | Misleading | Say where the number comes from |
 | Filling gaps from general knowledge | Summary no longer reflects the source | Only what the section says |

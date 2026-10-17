@@ -191,7 +191,7 @@ Controls indexing, link following, and snippet behaviour. The default for any in
 <meta name="CCBot" content="noindex,nofollow">
 ```
 
-These are advisory. The robust enforcement happens in `robots.txt` (see section 14).
+These are advisory. The robust enforcement happens in `robots.txt` (see **`crawl-control`**).
 
 ---
 
@@ -405,7 +405,7 @@ Place verification meta on the homepage at minimum. Prefer DNS TXT verification 
 LLM and AI-search crawlers are partially out of band from the standard `robots` meta. AI policy lives in two surfaces:
 
 - **Meta tags** (per-bot, page-level) — covered here.
-- **`robots.txt`** (per-bot, site-wide) + **`/.well-known/ai.txt`** + per-bot reference table + decision matrix — see **`crawl-control`** (AI bot recipes section).
+- **`robots.txt`** (per-bot, site-wide), with the per-bot reference table and the three policy levels — see **`crawl-control`** (AI bot recipes section). Proposal files such as `/.well-known/ai.txt` or `llms.txt` are not standards and are not enforced by crawlers; if a site ships one, keep it consistent with `robots.txt`.
 
 Use both layers. Meta tags travel with cached HTML; `robots.txt` enforces at the crawler level.
 
@@ -423,6 +423,8 @@ Use both layers. Meta tags travel with cached HTML; `robots.txt` enforces at the
 <meta name="cohere-ai" content="noindex,nofollow">
 <meta name="Bytespider" content="noindex,nofollow">
 ```
+
+Bot names and whether an operator honours a per-bot meta tag change often. Check the operator's crawler documentation for the current token before you ship or audit these tags; a tag for a retired or misspelled token does nothing.
 
 The **policy decision** (allow all / partial / block all) is documented in `crawl-control`. Apply the same decision in both layers — diverging meta and robots.txt produces ambiguous signals.
 
@@ -773,7 +775,7 @@ Run through every page type. Score each item; report findings with severity.
 
 - [ ] `robots.txt` decision documented (allow / partial / block AI bots).
 - [ ] If blocking: per-bot `User-agent` blocks present in `robots.txt` AND meta tags.
-- [ ] `ai.txt` aligned with `robots.txt`.
+- [ ] Any `ai.txt` / `llms.txt` proposal file agrees with `robots.txt`.
 
 ### Verification
 
@@ -808,8 +810,9 @@ curl -sL https://example.com/page | grep -E -o '<(title|meta|link)[^>]*>' | head
 # Validate Open Graph (debugger)
 # https://developers.facebook.com/tools/debug/?q=https://example.com/page
 
-# Validate Twitter Card
-# https://cards-dev.twitter.com/validator
+# Validate Twitter / X Card
+# The legacy card validator no longer renders previews; check the current X developer docs
+# for a preview tool, or inspect the twitter:* tags with the curl commands above
 
 # Validate LinkedIn unfurl
 # https://www.linkedin.com/post-inspector/
@@ -839,3 +842,5 @@ When asked to generate meta tags for a specific page, return:
 4. **Open questions** for any field that needs the project's input (Twitter handle, OG image, verification IDs).
 
 When asked to validate existing tags, return the validation checklist (section 18) marked up with findings and severity, plus a recommended fix order.
+
+Then ask which fixes to apply: all, one severity tier, or single findings. Apply every approved fix with targeted edits, without asking again per fix. Report anything else you notice as a follow-up instead of fixing it. Afterwards re-run the affected checks and update the summary.

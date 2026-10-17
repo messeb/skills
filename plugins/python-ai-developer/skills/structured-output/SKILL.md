@@ -33,7 +33,7 @@ class Invoice(BaseModel):
     due_date: str | None = None
 
 resp = await client.messages.parse(
-    model="claude-opus-5",
+    model="claude-opus-5-5",
     max_tokens=4096,
     messages=[{"role": "user", "content": text}],
     output_format=Invoice,
@@ -45,7 +45,7 @@ Raw-schema form, when you are not using Pydantic:
 
 ```python
 resp = await client.messages.create(
-    model="claude-opus-5", max_tokens=4096,
+    model="claude-opus-5-5", max_tokens=4096,
     messages=[{"role": "user", "content": text}],
     output_config={"format": {"type": "json_schema", "schema": {
         "type": "object",

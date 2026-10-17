@@ -24,7 +24,7 @@ python -c "import anthropic; print([m.id for m in anthropic.Anthropic().models.l
 python -c "from mistralai import Mistral; import os; print([m.id for m in Mistral(api_key=os.environ['MISTRAL_API_KEY']).models.list().data])"
 ```
 
-For **Anthropic**, the current model IDs at the time of writing are `claude-opus-5`, `claude-sonnet-5`, and `claude-haiku-4-5` (plus `claude-fable-5`); use the exact string with no date suffix, and default to `claude-opus-5` unless you have a reason to downgrade. For the other four providers, resolve IDs from their models endpoint or current docs — do not copy identifiers out of a blog post or a model's own recollection.
+For **Anthropic**, the current model IDs at the time of writing are `claude-opus-5-5` (Opus 5.5), `claude-sonnet-5-5` (Sonnet 5.5), `claude-fable-5-1` (Fable 5.1) and `claude-haiku-4-5` (Haiku 4.5); use the exact string with no date suffix, and default to `claude-opus-5-5` unless you have a reason to downgrade. For the other four providers, resolve IDs from their models endpoint or current docs — do not copy identifiers out of a blog post or a model's own recollection.
 
 Record in your config which model each *task* uses, not one global model: extraction, chat, and cheap classification usually want different tiers.
 
@@ -61,8 +61,8 @@ client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key.get_secret_
                                   timeout=60.0, max_retries=0)
 
 resp = await client.messages.create(
-    model="claude-opus-5",
-    max_tokens=4096,                       # required, unlike other providers
+    model="claude-opus-5-5",
+    max_tokens=16000,                      # required; thinking counts toward it
     system="You extract structured data from contracts.",
     messages=[{"role": "user", "content": "..."}],
 )
@@ -70,6 +70,19 @@ text = next(b.text for b in resp.content if b.type == "text")
 ```
 
 Anthropic specifics worth knowing: `max_tokens` is **required**; the system prompt is a **top-level parameter**, not a message; `resp.content` is a list of typed blocks (`text`, `thinking`, `tool_use`) that you must narrow by `.type`; and current models support adaptive thinking via `thinking={"type": "adaptive"}` with depth controlled by `output_config={"effort": "low"|"medium"|"high"|"xhigh"|"max"}`. For values of `max_tokens` above roughly 16k, stream — non-streaming requests can hit HTTP timeouts.
+
+Behavior of the current generation (Opus 5.5, Fable 5.1) that changes integration code:
+
+| Topic | What to do |
+| ------- | ------------ |
+| Effort | The primary control for intelligence, latency and cost. Opus 5.5 defaults to `medium`, Fable 5.1 to `high`. Level names do not mean the same amount of thinking across models, so set effort explicitly and re-run the sweep per model instead of carrying the old value over. To get less thinking, lower effort before adding "answer directly" prompt lines |
+| Thinking | Always on for Opus 5.5: it rejects `thinking={"type": "disabled"}`. Remove prompt lines that asked for written-out reasoning as a stand-in for thinking |
+| `max_tokens` | Thinking counts toward it even when the thinking text is not returned. Size it for thinking plus reply; long agentic turns work well at 128,000 (with streaming) |
+| Response blocks | A response may start with a `thinking` block whose text is empty under the default `display: "omitted"`. Narrow every block by `.type`; never assume `content[0]` is text |
+| Refusals | Safety classifiers return a normal response with `stop_reason: "refusal"` and a `stop_details` category. Handle it as its own branch (see `llm-reliability-and-cost`) |
+| Reasoning extraction | Prompts that push the model to reproduce its reasoning in the reply can be declined with the `reasoning_extraction` category. Ask for a short explanation or a summary of actions, or read `display: "summarized"` thinking blocks |
+| Progress updates | Notes between tool calls arrive as progress-update `thinking` blocks, empty unless `display: "updates"` (beta header `thinking-display-updates-2026-08-18`). A client that renders only `text` blocks looks silent during long turns |
+| History | Keep the conversation append-only: send each assistant turn back exactly as returned. Fable 5.1 thinking blocks are bound to the exact conversation that produced them; editing an earlier turn, the system prompt or the tool list returns a 400 and restarts the prompt cache. Send per-turn reminders as turn-scoped system messages (`{"role": "system", "content": ..., "clear_at": "next_user_message"}`, beta header `mid-conversation-system-clear-at-2026-08-21`) instead of editing earlier messages |
 
 ### Google Gemini
 
@@ -222,6 +235,10 @@ Each SDK raises its own exception types. Translate them into your own taxonomy i
 | Default SDK timeouts | A hung call holds a worker for minutes |
 | Client constructed per request | No pooling; latency and FD churn |
 | Ignoring `finish_reason` | Truncated output treated as a complete answer |
+| Effort value carried over from the previous model | Longer turns and higher cost, or lost quality; level names are not comparable across models |
+| `max_tokens` sized for the reply only | Thinking consumes the budget and the reply is cut off |
+| `content[0].text` assumed | Breaks when the response starts with a `thinking` block |
+| Editing earlier turns or the system prompt mid-session | Thinking blocks rejected (Fable 5.1) and the prompt cache restarts |
 | Provider keys in code or images | Credential leak |
 
 ---
@@ -237,5 +254,7 @@ Each SDK raises its own exception types. Translate them into your own taxonomy i
 - [ ] Prices in a dated config table keyed by provider and model
 - [ ] Token counting done with the provider's own counter
 - [ ] Vendor exceptions translated into a local taxonomy with a retriable flag
-- [ ] `finish_reason` / `stop_reason` checked before using the output
+- [ ] `finish_reason` / `stop_reason` checked before using the output, including `refusal`
+- [ ] Effort set explicitly per task and swept per model; `max_tokens` leaves room for thinking
+- [ ] Conversation history append-only; per-turn reminders sent as turn-scoped system messages
 - [ ] Keys from the secret store, never in code or images

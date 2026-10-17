@@ -95,7 +95,7 @@ Rule of thumb: **baseline the commitments, not the candidates.** Regulatory obli
 
 ## 6. Intake — ask before baselining
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **Why baseline** — contract, release commitment, audit, certification, supplier handover?
 2. **What is in scope** — which requirements, models, contracts, and criteria?

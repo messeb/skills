@@ -107,7 +107,7 @@ Every risk gets an **owner**, a **review date**, and a **trigger** — the obser
 
 ## 4. Intake — ask before analysing
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **Which requirement set or plan** is being analysed, and where is it?
 2. **What is already known to be contested**, and between whom?

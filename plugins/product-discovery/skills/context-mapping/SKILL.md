@@ -55,7 +55,7 @@ Upstream / downstream is the key axis: **upstream changes force downstream work.
 
 ## 3. Intake — ask before mapping
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **What is the input** — an Event Storming wall, an existing system landscape, or a greenfield idea? Can you share it?
 2. **Which contexts do you already suspect**, and what is each one's core responsibility in one sentence?

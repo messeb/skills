@@ -82,6 +82,8 @@ public/               # Static assets served as-is (images, fonts, robots.txt)
 
 Define a schema for your Markdown/MDX content to get full TypeScript validation and auto-completion.
 
+The content collections API has changed between Astro majors (config file location, `type` versus loaders). Check the project's installed Astro version and that version's docs before writing or auditing a collection config; the example below shows the shape, not the current file path.
+
 ```ts
 // src/content/config.ts
 import { defineCollection, z } from 'astro:content'

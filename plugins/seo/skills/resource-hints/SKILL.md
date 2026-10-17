@@ -264,7 +264,7 @@ A newer Chrome/Edge mechanism that fully prerenders a likely-next navigation. Fa
 
 - **`eagerness`**: `conservative` (on hover/click), `moderate` (on hover after a delay), `eager` (on page load), `immediate` (now).
 - **Prerendered pages cost memory and CPU** on the user's device. Use for high-confidence next-step navigations only.
-- **Only Chromium implements it currently.** Safari and Firefox ignore the script.
+- **Support is Chromium-first.** Browsers without support ignore the script, so it is safe to ship; check current support (caniuse, MDN) before promising a gain for Safari or Firefox users.
 - **Don't prerender pages with side effects** on first paint (analytics that fires before user navigates, etc.). Use the `prerender` API events to gate them.
 
 For most sites, framework-level prefetching is enough. Reach for Speculation Rules when you have measurable wins on a high-traffic flow.
@@ -471,4 +471,4 @@ When asked to **audit** existing hints, return:
 1. ...
 ```
 
-Then offer to apply each fix. Apply approved fixes one at a time, confirming each.
+Then ask which fixes to apply: all, one severity tier, or single findings. Apply every approved fix with targeted edits, without asking again per fix. Report anything else you notice as a follow-up instead of fixing it. Afterwards re-run the affected checks and update the summary.

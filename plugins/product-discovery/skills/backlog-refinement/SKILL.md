@@ -117,7 +117,7 @@ One DoD for the team, applied to every item, with any exception recorded explici
 
 ## 7. Intake — ask before designing the practice
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **What is going wrong today** — planning too long, stories stalling, "done" disputed, or nothing ready?
 2. **What is the delivery rhythm** — iterations or continuous flow, and how long?

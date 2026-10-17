@@ -170,6 +170,7 @@ Used only when neither `WORKFLOW.md` nor the repo files provide a value.
 The plugin defines behavior. These are configured once per environment and cannot be derived:
 
 - Scheduled tasks for planner, coder, reviewer and janitor, with the repo folder connected and automatic approval, otherwise the first `git push` waits for a click that never comes.
+- The model and effort level per scheduled task. Start at the model's default effort (Claude Opus 5.5: `medium`, Claude Fable 5.1: `high`) and tune it with `agentic-coding:harness-tuning`, which also lists the harness settings that matter per model.
 - A tracker user for `BOT_USER` and a GitHub machine user or App token with `contents`, `pull_requests`, `issues`. Preferably a second token for the reviewer, otherwise "1 approving review" branch protection rejects the bot approving its own PR.
 - Branch protection on `DEFAULT_BRANCH`: required review and green CI. That is the real safety net, not the prompts.
 - `REVIEW.md` in the repo root, from `agentic-coding:sdlc-artifacts` `templates/REVIEW.md`.

@@ -72,6 +72,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 ```
 
+The version floors above illustrate the shape, not current releases. When creating a project, add each dependency with `uv add <package>` so uv resolves and records the current version, and look up the current Python release and GitHub Action tags (`setup-uv`) instead of copying numbers from this file.
+
 **Extras vs groups** is the distinction people get wrong: an *extra* is an installable feature of your published package; a *dependency group* is tooling that only ever exists in a developer's or CI's environment. Test runners, linters, and Jupyter belong in groups.
 
 Pin `requires-python` to a narrow range. `>=3.10` forces the resolver to find dependency versions compatible with every version in the range, which silently holds packages back.

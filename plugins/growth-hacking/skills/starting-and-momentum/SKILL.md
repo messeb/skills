@@ -104,7 +104,7 @@ When the main task is blocked by its own difficulty, begin with an **approachabl
 
 Analytical and mechanical tasks have almost no starting resistance because they have an obvious first move. And they drift naturally into the creative work — after twenty minutes with the funnel data you will have started forming the hypothesis without deciding to.
 
-The discipline that keeps this honest: the alternative start must be **adjacent to the real task**, and time-boxed. Tidying the backlog is not an alternative start; it is avoidance with a productive costume.
+The discipline that keeps this honest: the alternative start must be **adjacent to the real task**, and time-boxed. Tidying the backlog is not an alternative start; it is avoidance that looks productive.
 
 ---
 

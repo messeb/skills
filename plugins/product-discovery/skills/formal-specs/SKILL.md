@@ -73,7 +73,7 @@ What it does **not** buy: correctness of the implementation. The spec constrains
 
 ## 5. Intake — ask before specifying
 
-Ask only what is missing; batch into one message, five or fewer.
+First answer these yourself from what is already available: the conversation, provided files, existing artifacts in `docs/discovery/`, tickets, and the repository. Ask only the ones still open whose answer would change the work, together in one message, five or fewer. Proceed on the rest with each guess marked **⚠️ Assumption**.
 
 1. **What exact question or property** must be checked? What would a violation cost?
 2. **What is the design** — components, messages, and persistent state — at the level the question needs?

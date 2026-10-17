@@ -97,7 +97,7 @@ The LCP element is usually the hero image, an H1 block, or a lead text element. 
 
 ### Identify the LCP element
 
-Open DevTools → Performance Insights → record reload → inspect the LCP marker. Or use the Web Vitals extension. Don't optimize blind — fixing the wrong element is wasted work.
+Open DevTools → Performance panel → record reload → inspect the LCP marker and the Insights sidebar. Or use the Web Vitals extension. Don't optimize blind — fixing the wrong element is wasted work.
 
 ### Hero image LCP
 
@@ -375,7 +375,7 @@ Before a page type ships:
 - [ ] Accessibility ≥ 95.
 - [ ] Best Practices ≥ 95.
 - [ ] SEO = 100.
-- [ ] LCP element identified (Performance Insights or Web Vitals extension).
+- [ ] LCP element identified (DevTools Performance panel or Web Vitals extension).
 - [ ] LCP image/text visible in initial server-rendered HTML.
 - [ ] Hero image is **not** `loading="lazy"`.
 - [ ] Hero image has `fetchpriority="high"` when it is the LCP element.
@@ -431,10 +431,16 @@ curl -s "$URL" | grep -c '<h1'   # must be 1
 # DevTools — Lighthouse → Mobile + Performance
 ```
 
+### Reading Lighthouse results as an agent
+
+- Run Lighthouse with `--output=json` and extract what you need with `jq` (`.categories`, `.audits["largest-contentful-paint-element"]`, `.audits["layout-shifts"]`). Do not load the whole report into context: it embeds base64 screenshots (`final-screenshot`, `screenshot-thumbnails`, `full-page-screenshot`) that cost tokens and add nothing to the audit.
+- When you have to read a screenshot, a filmstrip or a trace chart, crop and enlarge the region in question before reading values off it.
+- Thresholds, metric definitions and tool names change (INP replaced FID; DevTools panels get merged). Check web.dev and the Chrome DevTools docs for the current values before reporting a pass or fail against them.
+
 ### Browser tools
 
 - **Web Vitals extension** (Chrome) — live LCP/INP/CLS overlay during browsing.
-- **Chrome DevTools → Performance Insights** — automated bottleneck detection per metric.
+- **Chrome DevTools → Performance panel, Insights sidebar** — automated bottleneck detection per metric (the separate Performance Insights panel was folded into it).
 - **PageSpeed Insights** — combined lab + field, with diagnostics.
 - **Search Console → Core Web Vitals report** — aggregate field data per page group, 28-day rolling.
 
@@ -475,4 +481,4 @@ When asked to **audit** a page or site, return:
 1. ...
 ```
 
-Then offer to apply each fix. Apply approved fixes one at a time, confirming each.
+Then ask which fixes to apply: all, one severity tier, or single findings. Apply every approved fix with targeted edits, without asking again per fix. Report anything else you notice as a follow-up instead of fixing it. Afterwards re-run the affected checks and update the summary.
